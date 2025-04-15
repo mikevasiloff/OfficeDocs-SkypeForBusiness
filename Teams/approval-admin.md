@@ -4,7 +4,7 @@ author: MicrosoftHeidi
 ms.author: heidip
 manager: jtremper
 ms.reviewer: corod
-ms.date: 04/30/2024
+ms.date: 04/15/2025
 ms.topic: how-to
 audience: admin
 ms.service: msteams
@@ -40,9 +40,6 @@ Users can pin the Approvals app to save it to the menu bar.
 The first approval created from the Approvals app triggers the provisioning of the Approval solution in the default Microsoft Dataverse environment. Approvals created from the Approvals app are stored in the default Microsoft Dataverse environment.
 
 This article describes the Approvals app requirements and roles.
-
-> [!NOTE]
-> This feature hasn't been released to Government Community Cloud High (GCCH) and Department of Defense (DOD) users yet.
 
 ## Prerequisites
 
