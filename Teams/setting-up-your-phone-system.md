@@ -4,7 +4,7 @@ author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: roykuntz
-ms.date: 03/07/2024
+ms.date: 04/25/2025
 ms.topic: install-set-up-deploy
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -30,28 +30,25 @@ description: Learn how to set up Microsoft Teams Phone for your organization in 
 
 # Set up Teams Phone in your organization
 
-This article provides a roadmap to content for setting up Microsoft Teams Phone--Microsoft's technology for enabling call control and Private Branch Exchange (PBX) capabilities in the Microsoft 365 cloud. This article is for administrators and IT professionals.
+This article provides a high-level roadmap to content for setting up Microsoft Teams Phone--Microsoft's technology for enabling external calling and phone system capabilities in the Microsoft 365 cloud.
 
-If you're still planning your voice solution, start by reading [Plan your voice solution](cloud-voice-landing-page.md), which helps you decide which Microsoft voice solution is right for your organization.
+Teams Phone deployments will vary in scope for each organization. The steps outlined in this article are general guidelines and can be modified for your deployment.
 
-### Licenses and voice enablement 
+## Prerequisites
 
-To use Teams Phone features, your users must have a Teams Phone Standard or E5 license. For more information about licensing, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
+The following guidance assumes you're adding Teams Phone to an existing Teams deployment. If need to deploy Teams as part of your Teams Phone deployment, then start by [Setting up Teams in your org](deploy-enterprise-setup.md).
 
-In addition to licensing, the users must be "voice enabled."
+Before starting with your Teams Phone deployment, ensure you have a fundamental understanding of the knowledge provided in the following articles.
 
-To voice enable your users, you can use the Teams admin center or PowerShell.
+- [Calling in Teams Overview](cloud-voice-landing-page.md)
+- [Teams Phone features](here-s-what-you-get-with-phone-system.md)
+- [Teams Phone licensing](teams-phone-licensing.md)
 
-- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
-- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
+## Provisioning steps - example
 
-A few features, such as Auto attendant, do not require a user to be voice enabled. 
+To enable Teams Phone in your organization, a series of tasks must be completed.
 
-To learn more about Teams Phone features and requirements, including which features require a user to be voice enabled, see [What is Teams Phone](what-is-phone-system-in-office-365.md) and [Teams Phone features](here-s-what-you-get-with-phone-system.md).
-
-**PSTN connectivity** - To enable your users to make and receive external calls, you'll need to connect Teams Phone to the Public Switched Telephone Network (PSTN). PSTN connectivity options are also introduced in this article.  
-
-**Overview of steps** - This article introduces the following steps. Each step contains links to more detailed information.
+**Overview of steps** - This article introduces the following steps. Each step contains a summary of the tasks to perform and links to more detailed information.
  
 - [Step 1: Buy and assign a Teams Phone license](#step-1-buy-and-assign-a-teams-phone-license)
 - [Step 2: Choose a PSTN connectivity option](#step-2-choose-a-pstn-connectivity-option)
@@ -71,9 +68,16 @@ For each user who uses Teams Phone, you must assign a Teams Phone license to tha
 
 Don't assign the **Microsoft Teams Phone Resource Account** license to any user other than resource accounts.
 
-You can assign a license to a single user or you can assign licenses to multiple users in bulk. For more information about available Teams Phone licenses and how to acquire and assign licenses, see [Teams add-on licenses](/microsoftteams//teams-add-on-licensing/microsoft-teams-add-on-licensing) and [Assign Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses).
+For licensing considerations, see [Teams Phone licensing](teams-phone-licensing.md).
 
-The Teams Phone with Calling Plan license bundle is Microsoft’s all-in-the-cloud solution. This option provides Private Branch Exchange (PBX) capabilities and external calls to the Public Switched Telephone Network (PSTN) with Microsoft as your carrier. If the Teams Phone with Calling Plan bundle is available in your location, you should consider this option. But if your PSTN calling requirements are more complex, Microsoft offers several PSTN connectivity options for making external calls.
+In addition to licensing, the users must be "voice enabled."
+
+To voice enable your users, you can use the Teams admin center or PowerShell.
+
+- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
+
+You can assign a license to a single user or you can assign licenses to multiple users in bulk. For more information about available Teams Phone licenses and how to acquire and assign licenses, see [Teams add-on licenses](/microsoftteams//teams-add-on-licensing/microsoft-teams-add-on-licensing) and [Assign Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses).
 
 ## Step 2: Choose a PSTN connectivity option
 
@@ -89,6 +93,8 @@ Microsoft options for making external calls to the PSTN include:
 
 For more information about all connectivity options and which one is the best solution for your organization, see [PSTN connectivity options](pstn-connectivity.md) and [Voice and PSTN connectivity license options](/microsoftteams//teams-add-on-licensing/microsoft-teams-add-on-licensing#voice-and-pstn-connectivity).
 
+> [!Note]
+> For user migrations to PSTN, Shared Calling allows migrating large groups of users to Teams Phone without assigning phone numbers, but still allows users to make calls. Shared calling enables user migration as an effective first step in your migration and supports a phased approach to your Teams Phone road map. See [Shared Calling](shared-calling-plan.md).
 
 ## Step 3: Get and assign phone numbers for your users and services
 

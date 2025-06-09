@@ -2,13 +2,14 @@
 title: Teams Optional Connected Experiences 
 ms.author: danbrown
 author: DHB-MSFT
-manager: laurawi
+manager: dansimp
 audience: Admin
 ms.topic: concept-article
 ms.service: msteams
 ms.collection: 
   - M365-collaboration
   - privacy-teams
+  - must-keep
 ms.reviewer: 
 ms.date: 10/18/2024
 ms.localizationpriority: high

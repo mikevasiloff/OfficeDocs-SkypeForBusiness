@@ -2,8 +2,8 @@
 title: Allow broadcast production in Teams meetings with NDI and SDI hardware
 ms.author: wlibebe
 author: wlibebe
-ms.reviewer: bryanyce
-ms.date: 5/23/2024
+ms.reviewer: christi.balaki
+ms.date: 5/29/2025
 manager: pamgreen
 ms.topic: how-to
 audience: admin
@@ -23,21 +23,21 @@ appliesto:
 
 # Allow broadcast production in Teams meetings with NDI and SDI hardware
 
-Teams offers two options for broadcasting Teams meeting content: Network Device Interface(NewTek NDI®) and Serial Digital Interface (SDI):
+Teams offers two options for broadcasting Teams meeting content:
 
-- NewTek NDI® is a modern solution for connecting multiple media devices, such as studio cameras and mixers, without physical connections. Instead, NDI® technology enables connectivity over a local intranet, including on a local machine. This technology is a widely adopted industry standard for producing live content for streams, with significant awareness and adoption in the professional broadcast world.
+- Network Device Interface (NewTek NDI®) is a modern solution for connecting multiple media devices, such as studio cameras and mixers, without physical connections. Instead, NDI® technology enables connectivity over a local intranet, including on a local machine. This technology is a widely adopted industry standard for producing live content for streams, with significant awareness and adoption in the professional broadcast world.
 
-- SDI, known for its reliable long-distance transmission, is a widely used technology for sending video through cables. It's a goto choice in professional broadcasting because it carries uncompressed, high-quality video along with audio and other data. Hardware devices from AJA Video Systems and Blackmagic Design provide connectivity to legacy broadcast devices that use SDI.
+- Serial Digital Interface (SDI), known for its reliable long-distance transmission, is a widely used technology for sending video through cables. It's a goto choice in professional broadcasting because it carries uncompressed, high-quality video along with audio and other data. Hardware devices from AJA Video Systems and Blackmagic Design provide connectivity to legacy broadcast devices that use SDI.
 
 NDI® and SDI technology is supported in all locales.
 
-As an admin, you can allow your users to use NDI® and SDI for broadcast production in their meetings. For the most secure solution, don't enable this policy as a global setting.
+As an admin, you can allow your users to use NDI® and SDI for broadcast production in their meetings. For the most secure solution, don't turn on this policy as a global setting.
 
-## 1. Enable the broadcast production policy
+## 1. Turn on the broadcast production policy
 
-To enable NDI® and SDI broadcast features for a user, you can use the Teams admin center or PowerShell.
+To turn on NDI® and SDI broadcast features for a user, you can use the Teams admin center or PowerShell.
 
-### Enable broadcast production in the Teams admin center
+### Manage broadcast production in the Teams admin center
 
 1. Open the Teams admin center.
 2. Expand **Meetings** from the navigation pane.
@@ -47,7 +47,7 @@ To enable NDI® and SDI broadcast features for a user, you can use the Teams adm
 6. Toggle **Broadcast production with NDI and SDI hardware** to  **On**.
 7. Select **Save**
 
-### Enable broadcast production in PowerShell
+### Manage broadcast production in PowerShell
 
 You can use the **`-ContentSharingInExternalMeetings`** parameter in the [**CsTeamsMeetingPolicy**](/powershell/module/teams/set-csteamsmeetingpolicy) cmdlet to enable broadcast production for your users.
 
@@ -65,3 +65,6 @@ For details on how your user can turn on production capabilities, see [Broadcast
 ## Related topics
 
 - [Plan for meetings](plan-meetings.md)
+- [Manage RTMP-In for Teams meetings, webinars, and town halls](meetings-rtmp-in.md)
+- [Allow live streaming with RTMP-Out for Teams meetings and events](stream-teams-meetings.md)
+- [Using an encoder for live event streaming with Microsoft Teams](teams-encoder-setup.md)

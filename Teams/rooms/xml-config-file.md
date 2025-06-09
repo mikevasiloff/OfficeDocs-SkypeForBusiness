@@ -86,6 +86,8 @@ Any text editor can be used to create a settings file. The **XML Elements** tabl
   <DefaultFoRExperience>0</DefaultFoRExperience>
   <ShowMeetingChat>true</ShowMeetingChat>
   <OpenMeetingChatByDefault>true</OpenMeetingChatByDefault>
+  <PrioritizeVideoParticipantsGallery>true</PrioritizeVideoParticipantsGallery>
+  <HideMeForAllLayouts>false</HideMeForAllLayouts>
   <EnablePublicPreview>false</EnablePublicPreview>
   <NoiseSuppressionDefault>1</NoiseSuppressionDefault>
   <RoomLanguageSwitchEnabled>true</RoomLanguageSwitchEnabled>
@@ -182,6 +184,8 @@ If a variable value is of the wrong type, elements are out of order, elements ar
 | `<SingleFoRDefaultContentLayout>` | String |  | In single display mode, you can set the default layout between Content+people and Content only:<br><ul><li><b>0</b> Content only</li><li><b>1</b> Content+people (default)</li></ul><br> For more information, see [Remotely configure layout, scale, and resolution on Teams Rooms displays](manage-front-room-scale-res.md).|
 | `<ShowMeetingChat>` | Boolean &#x2777; | First &#x2776; |Enabled by default. If disabled, meeting chat functionality (including chat bubbles and chat selection) isn't available in any meeting layout on the Teams Rooms device. |
 |`<OpenMeetingChatByDefault>`| Boolean ❷ | First ❶ |Enabled by default. If disabled, chat panel will not show by default in meetings using Gallery view.|
+|`<PrioritizeVideoParticipantsGallery>`| Boolean ❷ | First ❶ |Enabled by default. Video participants appear on the main stage with audio participants on the side or bottom rail. If disabled, audio and video participants are mixed together.|
+|`<HideMeForAllLayouts>`| Boolean ❷ | First ❶ |Disabled by default. If enabled, preview video will be hidden for all layouts.|
 | `<EnablePublicPreview>` | Boolean &#x2777; | First &#x2776; | Disabled by default. If true, public preview is enabled and end-users can access features in public preview on enabled Teams Rooms. See [Public preview for Microsoft Teams Rooms on Windows](../public-preview-doc-updates.md#public-preview-for-microsoft-teams-rooms-on-windows) for more information. |
 | `<NoiseSuppressionDefault>` | String | First &#x2776; | Controls noise suppression levels in Teams.<br><ul><li><b>0</b> Off. Use OEM-provided noise suppression only.</li><li><b>1</b> High. Suppresses all background noises (stationary and non-stationary) that aren't speech.</li></ul> |
 | `<SendLogs>` | Container | First &#x2776; |  |

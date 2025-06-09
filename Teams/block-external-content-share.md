@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.service: msteams
 ms.subservice: meetings
 ms.reviewer: maahma
-ms.date: 5/22/2024
+ms.date: 5/29/2025
 ms.localizationpriority: medium
 ms.collection: 
   - M365-collaboration
@@ -47,7 +47,7 @@ Follow these steps in the Teams admin center to manage the types of meetings you
 3. Under **Meetings**, select **Meeting Policies**.
 4. Either select an existing policy or create a new one.
 5. Navigate to the **Content sharing** section.
-6. Set **Participants can share content in external meetings hosted by** to your chosen value of either **Any org**, **Trusted orgs and guests**, or **No other orgs**.
+6. Set **Participants can share content in external meetings hosted by** to your chosen value of either **Any org** (default), **Trusted orgs and guests**, or **No other orgs**.
 7. Select **Save**
 
 ### Prevent users from sharing content in external meetings using PowerShell
@@ -65,28 +65,6 @@ For users with this policy to only share content in meetings that trusted orgs a
 ```powershell
 Set-CsTeamsMeetingPolicy -Identity <policy name> -ContentSharingInExternalMeetings EnabledForTrustedOrgs
 ```
-
-### Supported and unsupported meeting types and platforms
-
-This feature supports the following meeting types and platforms:
-
-- Meetings scheduled through Outlook and Teams calendar
-- Desktop T2.1 (Windows and Mac)
-- Mobile (Android and iOS)
-- Web
-- VDI 2.0
-- Shared channel meetings
-- Private or public channel meetings
-
-This feature doesn’t support the following meeting types and platforms:
-
-- [Microsoft Teams free meetings](https://www.microsoft.com/microsoft-teams/free)
-- Meetings scheduled through Graph
-- Group Calls/1:1 calls
-- Meet now
-- MTR [Windows, Surface Hub, Android], CVI, VDI 1.0
-- Classic Teams
-- TFL and TFW meeting federation
 
 ## Platform support
 

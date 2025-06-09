@@ -122,7 +122,7 @@ There are some things that you must install or configure for any server that's r
 |Media Foundation   |For Windows Server 2016, the Windows Media Format Runtime installs with Microsoft Media Foundation.  <br/> All Front End Servers and Standard Edition servers used for conferencing require Windows Media Format Runtime to run the Windows Media Audio (.wma) files that the Call Park, Announcement, and Response Group applications play for announcements and music.   |
 |Windows Identity Foundation   |We need Windows Identity Foundation 3.5 to support server-to-server authentication scenarios for Skype for Business Server 2019.  <br/> <li> For Windows Server 2016, there's no need to download anything. Open **Server Manager**, and go to the **Add Roles and Features Wizard**. **Windows Identity Foundation 3.5** is listed under the **Features** section. If it's selected, all set. Otherwise, select it, and then select **Next** to reach the **Install** button.  |
 |Remote Server Administration Tools   |Role Administration Tools: AD DS and AD LDS tools   |
-   
+
  **Front End Servers and Standard Edition server**
   
 |Software/role|Details|
@@ -338,17 +338,17 @@ Supported topologies in Skype for Business Server 2019 are as follows:
 We have diagrams and descriptions to help you determine what topology you have in your environment, or what you may have to set up prior to installing Skype for Business Server 2019. To keep it simple, we're also including a key:
   
 ![The is a key to the icons used for Skype for Business topology diagrams.](../../SfbServer/media/cc0dbc17-cf81-4b79-bf99-4614cc6828a0.png)
-  
+
 #### Single forest with single domain
 
 ![Diagram of Active Directory single forest with a single domain.](../../SfbServer/media/24921a0b-3a3e-4bad-8427-49300e2e3f7a.png)
-  
+
 It doesn't get easier than this. It's a single domain forest, a common topology.
   
 #### Single forest with a single tree and multiple domains
 
 ![A single forest, single tree and mutiple domains diagram.](../../SfbServer/media/63b9f0dd-6bac-4ba9-ae68-8be032d09dcb.png)
-  
+
 This diagram shows a single forest, again, but it has one or more child domains also (there are three in this specific example). So the domain the users are created in might be different from the domain Skype for Business Server 2019 is deployed to. Why worry about this situation? It's important to remember that when you deploy a Skype for Business Server Front End pool, all the servers in that pool need to be in a single domain. You can have cross-domain administration via Skype for Business Server support of Windows universal administrator groups.
   
 In the previous diagram, you can see that users from one domain are able to access Skype for Business Server pools from the same domain or from different domains, even if those users are in a child domain.
@@ -356,7 +356,7 @@ In the previous diagram, you can see that users from one domain are able to acce
 #### Single forest with multiple trees and disjoint namespaces
 
 ![A single forest, multiple  trees and disjoint namespaces diagram.](../../SfbServer/media/5ede77a1-f5d2-499c-a2c8-d02f3c2f7cd7.png)
-  
+
 You may have a topology similar to this diagram, where you have one forest, but within that forest are multiple domains, with separate AD namespaces. In this case, this diagram is a good illustration, because it includes users in three different domains accessing Skype for Business Server 2019. Solid lines indicate they're accessing a Skype for Business Server pool in their own domain, whereas a dashed line indicates they're going to a pool in a different tree altogether.
   
 As you can see, users in the same domain, the same tree, or even a different tree can access pools successfully.
@@ -364,7 +364,7 @@ As you can see, users in the same domain, the same tree, or even a different tre
 #### Multiple forests in a central forest topology
 
 ![Multiple forests in a central forest topology diagram.](../../SfbServer/media/fec40746-4254-4c84-86b9-aad4a616ea2f.png)
-  
+
 Skype for Business Server 2019 does support multiple forests configured in a central forest topology. If you're not sure that's what you have, the central forest in the topology uses objects in it to represent users in the other forests, and hosts user accounts for any users in the forest.
   
 How does this work? A directory synchronization product (such as Forefront Identity Manager, or FIM) manages your organization's user accounts throughout their existence. When an account is created or deleted from a forest, that change is synched up to the corresponding contact in the central forest.
@@ -375,7 +375,7 @@ Clearly, if your AD infrastructure is in place, moving to this topology might no
 <a name="BKMK_multipleforestopology"> </a>
 
 ![Multiple forests in a resource forest topology diagram.](../../SfbServer/media/41efa3b6-d9e6-47df-992b-fefcfc39a80d.png)
-  
+
 A resource forest topology is also supported; it's where a forest is dedicated to running your server applications, like Microsoft Exchange Server and Skype for Business Server 2019. This resource forests also hosts a synchronized representation of active user objects, but no logon-enabled user accounts. So the resource forest is a shared services environment for other forests in which user objects reside, and they have a forest-level trust relationship with the resource forest.
   
 Exchange Server can be deployed in the same resource forest as Skype for Business Server or in a different forest.
@@ -395,7 +395,7 @@ In this topology, there are one or more user forests, and Skype for Business Ser
 <a name="BKMK_multipleforestopology"> </a>
 
 ![Shows two AD forests, one user forest and one resource forest. The two forests have a trust relationship. They are synchronized with Microsoft 365 using Microsoft Entra Connect. All users are enabled for Skype for Business via Microsoft 365.](../../SfbServer/media/6d54558d-8786-4ebf-90f6-55ae3fdb5ae7.jpg)
-  
+
 With this scenario, there are multiple forests on-premises, with a resource forest topology. There is a full trust relationship between the Active Directory forests. The Microsoft Entra Connect tool is used to synchronize accounts between the on-premises user forests and Microsoft 365 or Office 365.
   
 The organization also has Microsoft 365 or Office 365, and uses [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to synchronize their on-premises accounts with Microsoft 365 or Office 365. Users who are enabled for Skype for Business are enabled via Microsoft 365 or Office 365 and Skype for Business Online. Skype for Business Server isn't deployed on-premises.
@@ -473,6 +473,9 @@ So certificate planning is a must. Now, let's look at a list of some of the thin
 
   > [!NOTE]
   > Using the RSASSA-PSS signature algorithm is unsupported and may cause errors on login and call forwarding issues, among other problems. 
+ 
+  > [!NOTE]
+  > Skype for Business Server 2019 does not support CNG certificates.
   
 - Encryption key lengths of 1024, 2048, and 4096 are supported. Key lengths of 2048 and greater are recommended.
     

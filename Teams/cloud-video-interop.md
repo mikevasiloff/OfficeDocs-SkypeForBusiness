@@ -9,7 +9,7 @@ ms.subservice: meetings
 audience: admin
 search.appverid: MET150
 ms.reviewer: adam.jacobs
-ms.date: 5/6/2024
+ms.date: 5/29/2025
 f1.keywords:
 - NOCSH
 description: Use Cloud Video Interop(CVI) as an intermediate solution to allow third-party meeting room devices to join Microsoft Teams meetings. This article explains how you can plan and set up Cloud Video Interop(CVI) for users in your organization and has release notes.
@@ -28,7 +28,7 @@ appliesto:
 
 # Manage and set up Cloud Video Interop for Microsoft Teams
 
-Cloud Video Interop (CVI) is a Microsoft Qualified third-party solution that enables third-party SIP and H.323 video room devices (VTCs) to join Microsoft Teams meetings. As an admin, you can set CVI for your org.
+Cloud Video Interop (CVI) is a Microsoft Qualified third-party solution that enables third-party SIP and H.323 video room devices (VTCs) to join Microsoft Teams meetings. As an admin, you can manage CVI for your organization.
 
 With Microsoft Teams, you get rich online content collaboration in meetings that include audio, video, and content sharing. This collaboration can be enjoyed through the desktop and web client, and through many partner devices that integrate natively with Microsoft Teams. However, many customers have already invested in video communication devices, which can be expensive to upgrade. CVI provides an easy solution, which allows you to keep using your existing solutions until you're ready to upgrade.
 
@@ -48,10 +48,10 @@ While CVI provides a great intermediate solution, we encourage our customers to 
 
 ### Office 365 US Government and third-party services
 
-Office 365 allows you to integrate third-party apps into SharePoint Online sites, Skype for Business, Teams, Office apps included in Microsoft 365 Apps for enterprise (such as Word, Excel, PowerPoint, and Outlook), and Outlook Web App. In addition, Office 365 supports integration with third-party service providers. These third-party apps and services might involve storing, transmitting, and processing your organization's customer data on third-party systems. The Office 365 compliance and data protection commitments don't cover third-party systems outside of the Office 365 infrastructure. **You should review the privacy and compliance statements from the third parties when assessing the appropriate use of these services for your organization.**
+Office 365 allows you to integrate third-party apps into SharePoint sites, Skype for Business, Teams, Office apps included in Microsoft 365 Apps for enterprise (such as Word, Excel, PowerPoint, and Outlook), and Outlook Web App. In addition, Office 365 supports integration with third-party service providers. These third-party apps and services might involve storing, transmitting, and processing your organization's customer data on third-party systems. The Office 365 compliance and data protection commitments don't cover third-party systems outside of the Office 365 infrastructure. **You should review the privacy and compliance statements from the third parties when assessing the appropriate use of these services for your organization.**
 
 > [!NOTE]
-> The Pexip Teams Connector must be hosted in the Arizona or Texas Azure regions for GCC High. The Virginia Azure region does not support the hosting of the Pexip Teams Connector for GCC High.
+> The Pexip Teams Connector must be hosted in the Arizona or Texas Azure regions for GCC High. The Virginia Azure region doesn't support the hosting of the Pexip Teams Connector for GCC High.
 
 ## CVI overview
 
@@ -63,12 +63,12 @@ The following diagram shows the high-level architecture of our partner solutions
 
 :::image type="content" source="media/teams-cloud-video-interop-partner-solution.png" alt-text="Diagram describing a Teams CVI partner solution.":::
 
-### Partners Certified for Microsoft Teams
+### Partners certified for Microsoft Teams
 
 The following partners have video interop solutions for Microsoft Teams. Your company might choose to work with any combination of these partners within your enterprise and choose the best support plan these partners offer for their CVI solution.
 
 > [!WARNING]
-> Microsoft has only certified the CVI partners listed in the following table for video interoperability within Teams meetings. Microsoft doesn't support granting other 3rd parties with Graph API permissions which provide similar capabilities.
+> Microsoft has only certified the CVI partners listed in the following table for video interoperability within Teams meetings. Microsoft doesn't support granting other third parties with Graph API permissions which provide similar capabilities.
 
 |Partner|Partner solution|
 |----|---|
@@ -78,7 +78,8 @@ The following partners have video interop solutions for Microsoft Teams. Your co
 |![The logo representing Poly RealConnect.](media/polycom.png) | <a href="https://aka.ms/PolyRealConnect" target="_blank">Poly RealConnect Service</a> |
 
 > [!NOTE]
-> Poly (RealConnect Service) is no longer on-boarding additional customers, their respective services are now in maintenance only mode.
+> Poly (RealConnect Service) is no longer on-boarding more customers. Their respective services are now in maintenance only mode.
+
 ## Deploy CVI
 
 When deploying a CVI solution, it's important to understand that you're deploying a partner solution. You need to plan your deployment, get set up with provisioning details and partner tenant key, and consent to the video interop app in your organization. The general steps you should take to deploy CVI are listed in the following diagram.
@@ -103,7 +104,7 @@ To configure CVI, follow these steps.
     - Cisco VCS-e
     - Polycom RPAD
 
-3. **Configure integrated rooms with exchange and OTD**- In most cases, additional relay would need to be set up and configured in your environment.
+3. **Configure integrated rooms with exchange and OTD**- In most cases, extra relay would need to be set up and configured in your environment.
 
 ### 3. Provision  
 
@@ -153,13 +154,13 @@ Depending on the partner solution, there are several ways to join a CVI-enabled 
 
 ## SIP Guest Join
 
-SIP Guest Join (SGJ) is a new CVI capability, *offered by specific CVI partners. This feature provides the facility to utilize your existing CVI subscription for meetings which have been scheduled by external orgs, this was previously not possible due to:
+SIP Guest Join (SGJ) is a new CVI capability, offered by select certified CVI partners. It allows organizations to use their existing CVI subscriptions to join meetings hosted by external organizations—something that was previously not possible due to the following limitations:
 
 1. The CVI partner application wasn't located or consented to within the external organization
 
 1. The Teams meeting initiation wouldn't contain CVI join coordinates
 
-Due to the absence of CVI join coordinates within the external organization's Teams meeting invitations, it is required that One Touch Join calendaring be configured for VTCs enabled for SGJ. Once the Teams meeting invitation is parsed by the CVI partner calendaring solution, their respective services will join the external meeting as a guest. **There is no lobby bypass capability for SGJ-enabled meetings**.
+Due to the absence of CVI join coordinates within the external organization's Teams meeting invitations, it's required to configure One Touch Join calendaring for VTCs enabled for SGJ. Once the CVI partner calendaring solution parses the Teams meeting invitation, their respective services join the external meeting as a guest. **There is no lobby bypass capability for SGJ-enabled meetings**.
 
 *Refer to CVI release notes for partners which offer SGJ.
 
@@ -201,7 +202,7 @@ Microsoft continues to work with CVI partners to make meetings between Microsoft
 |CY23Q1|Support for Microsoft Teams Premium, "Watermark Feature"|Phase 2: Full Watermark support, CVI Partners will create Watermark overlay with both video and content displayed. **Note:** *at this time Teams meetings only support Watermark for trusted VTCs, i.e., Lobby Bypass must be enabled*|Delivered to CVI Partners|TBD|Available|Planned|Available|
 |CY23Q2|SIP Guest Join|The ability to join Teams Meetings with VTCs when CVI coordinates aren't present within the invite|Delivered to CVI Partners|TBD|Available|Available|TBD|
 |CY23Q3|SIP and H.323 Calling with Teams Rooms|Teams Rooms Pro calling feature, which creates the ability to perform bi-directional calling between Teams Rooms on Windows and VTC devices|Delivered to CVI Partners|TBD|TBD|[Available](https://azuremarketplace.microsoft.com/marketplace/apps/pexip.pexip_teams_room_sip_calling?tab=Overview)|TBD|
-|CY24Q2|Support for Microsoft Teams video retransmission (RTX)|Microsoft Teams now supports video retransmission or RTX. This video packet loss mechanism provides additional media resiliency for Teams call legs|Delivered to CVI Partners|Available|Available|Available|Available|
+|CY24Q2|Support for Microsoft Teams video retransmission (RTX)|Microsoft Teams now supports video retransmission or RTX. This video packet loss mechanism provides more media resiliency for Teams call legs|Delivered to CVI Partners|Available|Available|Available|Available|
 
 *Poly (RealConnect Service) is in maintenance only mode. No new customers are being on-boarded.
 

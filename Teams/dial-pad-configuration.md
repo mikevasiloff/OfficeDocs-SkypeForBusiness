@@ -1,13 +1,14 @@
 ---
-title: Teams dial pad configuration
+title: Teams dial pad access
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.reviewer: cbland
-ms.date: 05/21/2024
+ms.reviewer: roykuntz
+ms.date: 05/08/2025
 ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection:
   - M365-voice
@@ -19,25 +20,34 @@ appliesto:
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-description: "Learn about how to configure the dial pad in the Teams client so that users can access Public Switched Telephone Network (PSTN) functionality."
+description: "Learn about how to validate configuration requirements to display a dial pad in the Teams client so that users can make telephone calls."
 ---
 
 # Dial pad configuration
 
-In the Teams client, the dial pad enables users to access Public Switched Telephone Network (PSTN) functionality. The dial pad is available for users with a Teams Phone license, provided they're configured properly. The following criteria are all required for the dial pad to show:
+In the Calls app of the Teams client, a dial pad enables users to enter phone numbers to make external telephone calls. The dial pad is available for users with a Teams Phone license, provided they're configured properly.
 
-- User has an enabled Teams Phone ("MCOEV") license
+If all steps are not completed when you [Set up Teams Phone](setting-up-your-phone-system.md), the dial pad may not display for the user.
+
+The following prerequisites are necessary for the dial pad to display:
+
+- User is assigned with a Teams Phone ("MCOEV") license
 - User is homed online and not in Skype for Business on premises
-- User has Enterprise Voice enabled
-- User has Allow Private Calling enabled in Teams Calling Policy
+- User is Enterprise Voice enabled
+- User has Make private calls enabled in Teams Calling Policy
 
-To successfully place a call using the dial pad, the user must have one of the following:  Microsoft Calling Plan, Operator Connect, is enabled for Direct Routing, or is able to use Shared Calling. For more information about Shared Calling, see [Plan for Shared Calling](shared-calling-plan.md).
+> [!Note]
+> In order to use the dial pad to make a call, the user must also have one of the following [PSTN connectivity options](pstn-connectivity.md):  Microsoft Calling Plan, Operator Connect, Teams Phone Mobile, Direct Routing, or is able to use [Shared Calling](shared-calling-plan.md).
 
-The following sections describe how to use PowerShell to check the criteria. In most cases, you need to look at various properties in the output of the [Get-CsOnlineUser](/powershell/module/teams/get-csonlineuser) cmdlet. Examples assume $user is either the UPN (UserPrincipalName) or SIP address of the user.
+This article provides PowerShell cmdlets that you can use to validate the prerequisite configurations that are necessary for the dial pad to display to the user.
 
-## User has an enabled Teams Phone ("MCOEV") license
+In most cases, you need to look at various properties in the output of the [Get-CsOnlineUser](/powershell/module/teams/get-csonlineuser) cmdlet. Examples assume $user is either the UPN (UserPrincipalName) or SIP address of the user.
 
-Make sure that the assigned plan for the user shows the **CapabilityStatus attribute set to Enabled** and the **Capability set to MCOEV** (Teams Phone license). You might see MCOEV, MCOEV1, and so on. All are acceptable--as long as the Capability starts with MCOEV. For more information on the Teams Phone license, see [Microsoft Teams add-on licensing](/MicrosoftTeams/teams-add-on-licensing/assign-teams-add-on-licenses).
+## User is assigned with a Teams Phone ("MCOEV") license
+
+In this first validation check, you are validating that the user has a Teams Phone license assigned.
+
+From the PowerShell cmdlet output, make sure that the assigned plan for the user shows the ***CapabilityStatus*** attribute set to **Enabled** and the ***Capability*** set to **MCOEV** (MCOEV indicates a Teams Phone license). You might see MCOEV, MCOEV1, and so on. All are acceptable--as long as the ***Capability*** starts with **MCOEV**.
 
 To check that the attributes are set correctly, use the following command:
 
@@ -54,66 +64,7 @@ AssignedTimestamp   Capability      CapabilityStatus ServiceInstance            
 07-02-2020 12:28:48 Teams           Enabled          TeamspaceAPI/NA001                       57ff2da0-773e-42df-b2af-...
 ```
 
-## User has Microsoft Calling Plan or is enabled for Direct Routing
-
-**If the user has Microsoft Calling Plan**, make sure that the **CapabilityStatus attribute is set to Enabled**, and that the **Capability is set to MCOPSTN**. You might see MCOPSTN1, MCOPSTN2, and so on. All are acceptable--as long as the Capability starts with MCOPSTN.
-
-To check the attributes, use the following command:
-
-```PowerShell
-(Get-CsOnlineUser -Identity $user).AssignedPlan
-```
-
-The output will look like the following. You only need to check the **CapabilityStatus** and the **Capability** attributes:
-
-```PowerShell
-AssignedTimestamp   Capability      CapabilityStatus ServiceInstance                          ServicePlanId
------------------   ----------      ---------------- ---------------                          -------------
-07-02-2020 12:28:48 MCOEV           Enabled          MicrosoftCommunicationsOnline/NOAM-4A-S7 4828c8ec-dc2e-4779-b502-...
-07-02-2020 12:28:48 MCOPSTN2        Enabled          MicrosoftCommunicationsOnline/NOAM-4A-S7 5a10155d-f5c1-411a-a8ec-...
-07-02-2020 12:28:48 Teams           Enabled          TeamspaceAPI/NA001                       57ff2da0-773e-42df-b2af-...
-```
-
-**If the user is enabled for Direct Routing**, the user must be assigned a non-null value for OnlineVoiceRoutingPolicy. To check the attribute, use the following command:
-
-```PowerShell
-Get-CsOnlineUser -Identity $user|Select OnlineVoiceRoutingPolicy
-```
-
-The output should have a non-null value, for example:
-
-```PowerShell
-OnlineVoiceRoutingPolicy
-------------------------
-Test_Policy
-```
-
- > [!NOTE]
-> If your tenant is configured with a Global OnlineVoiceRoutingPolicy that applies to all users, then a user assigned policy is not required.
-
-## User has Enterprise Voice enabled
-
-Before you can enable voice for your users, you must assign a license to them first. To enable voice for your users, you can use the Teams admin center or PowerShell.
-
-- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
-- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
-
-To check if the user has Enterprise Voice enabled, use the following PowerShell command:
-
-```PowerShell
-Get-CsOnlineUser -Identity $user|Select EnterpriseVoiceEnabled
-```
-
-The output should look like:
-
-```PowerShell
-EnterpriseVoiceEnabled
-----------------------
-                  True
-```
-
- > [!NOTE]
-> When assigning a phone number, Enterprise Voice enabled is automatically set to True. If a phone number is assigned and the value is False, you must use the [Set-CsPhoneNumber](/powershell/module/teams/set-csphonenumberassignment) cmdlet to set the value to True.
+To learn more about Teams Phone licenses, see [Teams Phone licensing](teams-phone-licensing.md).
 
 ## User is homed online and not in Skype for Business on premises
 
@@ -131,11 +82,41 @@ RegistrarPool                 HostingProvider
 sippoolbn10M02.infra.lync.com sipfed.online.lync.com
 ```
 
-## User has Teams Calling Policy enabled
+## User is Enterprise Voice enabled
 
-The user's effective TeamsCallingPolicy must have AllowPrivateCalling set to true. By default, users inherit the global policy, which has AllowPrivateCallingPolicy set to true by default.
+A prerequisite to validating this step is ensuring the user has a Teams Phone license assigned. Assigning a Teams Phone license to a user opens a gate for the user's account to be configured as Enterprise Voice Enabled.
 
-To get the TeamsCallingPolicy for a user and to check that AllowPrivateCalling is set to true, use the following command:
+If the license and M365 Phone System app are assigned to the user but they still don't see their dial pad, the Enterprise Voice Enabled status may be set to false.
+
+To update a user account so that their Enterprise Voice Enabled status is set to *true*, check their status in Teams admin center or in PowerShell.
+
+- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
+- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
+
+To check if the user is Enterprise Voice Enabled, use the following PowerShell command:
+
+```PowerShell
+Get-CsOnlineUser -Identity $user|Select EnterpriseVoiceEnabled
+```
+
+The output should look like:
+
+```PowerShell
+EnterpriseVoiceEnabled
+----------------------
+                  True
+```
+
+ > [!NOTE]
+> When assigning a telephon number to a licensed user, Enterprise Voice Enabled is automatically set to True. If a phone number is assigned and the value is False, you must use the TAC or PowerShell cmdlet to manually set the value to True.
+
+## User has Make Private Calls enabled in Teams Calling Policy
+
+In PowerShell, the user's effective TeamsCallingPolicy must have AllowPrivateCalling set to true. Unless you assign a custom policy, users automatically inherit the global calling policy, which has AllowPrivateCallingPolicy set to true by default.
+
+In the Teams admin center, the calling policy setting is indicated as ***Make private calls***.
+
+Using PowerShell, to get the TeamsCallingPolicy for a user and to check that AllowPrivateCalling is set to true, use the following command:
 
 ```PowerShell
 if (($p=Get-CsUserPolicyAssignment -Identity $user -PolicyType TeamsCallingPolicy) -eq $null) {Get-CsTeamsCallingPolicy -Identity Global} else {Get-CsTeamsCallingPolicy -Identity $p.PolicyName}

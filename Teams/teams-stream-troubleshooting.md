@@ -66,8 +66,11 @@ Many viewers watch live events, which can strain your network and download bandw
 
 Viewers receive the Teams live event's stream via TCP HTTPS. The following URLs should bypass any proxy servers within your environment, and have SSL inspection disabled:
 
-- *.media.azure.net
-- bmc.cdn.office.net
+- *.bmc.cdn.office.net
+- *.ml.cdn.office.net
+- *.cdn.ml.gcc.teams.microsoft.com (Microsoft 365 U.S. Government Community Cloud (GCC))
+- *.cdn.ml.gov.teams.microsoft.us (Microsoft 365 U.S. Government GCC High Cloud (GCC High))
+- *.cdn.ml.dod.teams.microsoft.us (Microsoft 365 U.S. Government DoD Cloud (DoD))
 
 ### I can't create a live event
 

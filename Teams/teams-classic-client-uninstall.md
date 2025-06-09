@@ -97,6 +97,14 @@ To remove the Classic Teams client from a macOS device, execute the following co
 sudo rm -rf /Applications/Microsoft\ Teams\ classic.app
 # Remove Classic Teams cache
 rm -rf ~/Library/Application\ Support/Microsoft/Teams
+# Remove Classic Teams preferences
+defaults delete com.microsoft.teams
+# Unload Classic Teams Updater Daemon
+sudo launchctl bootout system /Library/LaunchDaemons/com.microsoft.teams.TeamsUpdaterDaemon.plist
+# Remove Classic Teams Updater Daemon
+sudo rm -f /Library/LaunchDaemons/com.microsoft.teams.TeamsUpdaterDaemon.plist
+# Remove Classic Teams Updater log
+sudo rm -rf /Library/Logs/Microsoft/Teams/updater.log
 ```
 
 Make sure you have the necessary permissions to execute these commands. This process will completely remove the Classic Teams client and its associated file.

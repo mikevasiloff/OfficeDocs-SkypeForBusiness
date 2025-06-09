@@ -28,6 +28,9 @@ The Event feed in the Teams Rooms Pro Management portal is the way to view and h
 
 Events are informative and differ from tickets and signals. They don't need to be triaged, but one or more can be used to flag rooms as **unhealthy**. Flagging a room as unhealthy from the events feed then creates a support ticket.
 
+> [!Note]
+> This feature is available with a Teams Rooms Pro license.
+
 ## Event feed
 
 Events represent activity of the past like issues that occurred briefly, changes to the device, or interactions with the device. Events are informative and differ from health signals, which represent the current condition of devices. They don't need to be triaged, but one or more can be used to flag rooms as unhealthy.

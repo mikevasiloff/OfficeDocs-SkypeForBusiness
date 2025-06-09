@@ -21,6 +21,7 @@ ms.custom:
 - okr_smb
 - intro-overview
 - chat-teams-channels-revamp
+- teams-chat-and-channels
 ms.collection: 
 - M365-collaboration
 appliesto: 
@@ -101,7 +102,7 @@ The following table shows a comparison of Teams features for each channel type.
 |Planner|Yes|No|No|
 |Bots, connectors, and messaging extensions|Yes|No|No|
 |Supported in class teams|Yes|Yes|No|
-|Tags|Yes|No|No|
+|Tags|Yes|Yes|Yes|
 |Analytics|Yes|Yes|No|
 
 ## Org-wide teams

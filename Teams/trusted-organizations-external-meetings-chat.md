@@ -19,6 +19,7 @@ f1.keywords:
 ms.custom: 
 - ms.teamsadmincenter.externalaccess.overview
 - chat-teams-channels-revamp
+- guest-access-external-collab
 appliesto: 
   - Microsoft Teams
 ms.localizationpriority: medium

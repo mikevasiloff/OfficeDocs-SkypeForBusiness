@@ -35,7 +35,7 @@ On the **Signal settings** page, all signals are listed and can be sorted by **S
 
 ## [Windows](#tab/MTRW)
 
-These are the signals that are available currently for Microsoft Teams Rooms on Windows. 
+These are the signals that are available currently for Microsoft Teams Rooms on Windows with Teams Rooms Pro licenses.  
 
 |**Signal name**|**Status**|**Description**|**Category**|**Severity**|
 |:-----|:-----|:-----|:-----|:-----|

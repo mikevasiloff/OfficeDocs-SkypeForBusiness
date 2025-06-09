@@ -19,6 +19,7 @@ ms.custom:
   - chat-teams-channels-revamp
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done
+  - teams-chat-and-channels
 ms.collection:
   - M365-collaboration
 appliesto:
@@ -31,7 +32,7 @@ Over time, a team created in Microsoft Teams might fall out of use or you might 
 
 When you archive a team, all activity for that team ceases. Archiving a team also archives private channels in the team and their associated site collections.  However, you can still add or remove members and update roles and you can still view all the team activity in standard and private channels, files, and chats.
 
-When you delete a team, team activity in standard and private channels (and associated site collections), files, and chats are also deleted.
+When you delete a team, team activity in standard and private channels (and associated site collections), files, and chats are also deleted. If the deleted team has sites under retention, then they won't be deleted until the retention period expires.
 
 > [!IMPORTANT]
 > Archived teams can be reactivated, but you can't directly restore a team that has been deleted. Consider archiving the team first, and postpone the deletion until you're sure that you no longer need the team.

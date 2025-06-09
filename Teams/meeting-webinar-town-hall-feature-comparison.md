@@ -1,7 +1,7 @@
 ---
 title: Meetings, webinars, and town halls feature comparison
-ms.reviewer: bryanyce
-ms.date: 11/5/2024
+ms.reviewer: chbalaki
+ms.date: 5/1/2025
 ms.topic: article
 ms.author: wlibebe
 author: wlibebe
@@ -30,6 +30,8 @@ description: Learn which features are available in Teams meetings, webinars, and
 
 **APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Town halls
 
+## Feature comparison
+
 The following table shows which features are available in meetings, webinars, and town halls:
 
 |Feature|Meetings|Webinars|Town halls|
@@ -54,18 +56,17 @@ The following table shows which features are available in meetings, webinars, an
 |[Download webinar transcripts](https://support.microsoft.com/office/manage-webinar-recordings-in-microsoft-teams-8cf1ba61-c9d8-4628-8b5d-0dcdb8503144)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[eCDN](streaming-ecdn-enterprise-content-delivery-network.md)|For view-only meetings only.|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[eCDN analytics](/ecdn/technical-documentation/analytics)|For view-only meetings only(Teams Premium).|![Image of a x for no](/office/media/icons/cancel-teams.png)|Teams Premium|
-|[Email communication for events](manage-email-communications.md)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
+|[Email customization for events](manage-email-communications.md)|![Image of a x for no](/office/media/icons/cancel-teams.png)|Premium|Premium|
 |[End-to-end encryption](teams-end-to-end-encryption.md)|Premium|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[External participants can give or request control](meeting-who-present-request-control.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Green room](https://support.microsoft.com/office/green-room-for-teams-meetings-5b744652-789f-42da-ad56-78a68e8460d5)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
-|[Hide attendee names](hide-attendee-names.md)|Premium|Premium|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Intelligent meeting recap](intelligent-recap-calls-meetings.md)|Premium or Microsoft 365 Copilot|Premium or Microsoft 365 Copilot|Premium or Microsoft 365 Copilot|
-|[Interpreter agent](interpreter-agent-teams.md)|Copilot|Premium and Microsoft 365 Copilot|Premium and Microsoft 365 Copilot|
+|[Interpreter agent](interpreter-agent-teams.md)|Premium or Microsoft 365 Copilot|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Join verification check](join-verification-check.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Language interpretation](https://support.microsoft.com/office/use-language-interpretation-in-microsoft-teams-meetings-b9fdde0f-1896-48ba-8540-efc99f5f4b2e)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Limit presenter role permissions](presenter-role-reduction.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[Live captions](meeting-transcription-captions.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
-|[Live stream meetings with RTMP-In](stream-teams-meetings.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
+|[Live stream with RTMP-Out](stream-teams-meetings.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Live transcription](https://support.microsoft.com/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[Lobby](who-can-bypass-meeting-lobby.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Manage what attendees see](https://support.microsoft.com/office/manage-what-attendees-see-in-teams-meetings-19bfd690-8122-49f4-bc04-c2c5f69b4e16)|Premium|Premium|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
@@ -73,6 +74,8 @@ The following table shows which features are available in meetings, webinars, an
 |[Meeting themes](meeting-themes.md)|Premium|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Microsoft 365 Copilot in Teams meetings and events](copilot-teams-transcription.md)|Microsoft 365 Copilot|Microsoft 365 Copilot|Microsoft 365 Copilot for organizers, co-organizers, and presenters only.|
 |[Microsoft Teams Rooms (Windows) can join as a presenter](https://support.microsoft.com/office/microsoft-teams-rooms-windows-e667f40e-5aab-40c1-bd68-611fe0002ba2)<sup>2</sup> |![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
+|[Microsoft Teams Rooms (Windows) can join as an attendee](https://support.microsoft.com/office/microsoft-teams-rooms-windows-e667f40e-5aab-40c1-bd68-611fe0002ba2)<sup>2</sup> |![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
+|[Microsoft Teams Rooms (Android) can join as an attendee or presenter](https://support.microsoft.com/en-us/office/microsoft-teams-rooms-android-68517298-d513-46be-8d6d-d41db5e6b4b2)<sup>3</sup> |![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[Outlook add-in](outlook-add-in-authentication-policy-requirements.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[Participants can give or request control](meeting-who-present-request-control.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[PowerPoint Live](https://support.microsoft.com/office/present-from-powerpoint-live-in-microsoft-teams-28b20e74-7165-499c-9bd4-0ad975d448ad)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
@@ -83,6 +86,7 @@ The following table shows which features are available in meetings, webinars, an
 |[Q&A](manage-qna-for-teams.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[Quality of Service (QoS)](meetings-real-time-media-traffic.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[Reactions](manage-reactions-meetings.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|Premium|
+|[Real time town hall insights](https://support.microsoft.com/office/town-hall-insights-in-microsoft-teams-def99575-61bf-4ea2-ad0e-c6e75dce7741)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|Premium|
 |[Record automatically](meeting-recording.md#auto-recording)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[Recordings automatically expire](meeting-recording.md#expiration-policy)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[Recording storage and permissions](tmr-meeting-recording-change.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
@@ -94,7 +98,6 @@ The following table shows which features are available in meetings, webinars, an
 |[Speaker coach](meeting-speaker-coach.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|For organizers and co-organizers.|
 |[Streaming encoders](teams-encoder-setup.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[Town hall attendee reactions](https://support.microsoft.com/office/schedule-a-town-hall-in-microsoft-teams-d493b5cc-9f61-4dac-8027-d837dafb7a4c#bkmk_townhall_reactions)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|Premium|
-|[Town hall insights](https://support.microsoft.com/office/town-hall-insights-in-microsoft-teams-def99575-61bf-4ea2-ad0e-c6e75dce7741)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|Premium|
 |[Video effects](meeting-policies-audio-and-video.md)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
 |[View-only attendees](view-only-meeting-experience.md)|10,000<sup>3</sup>|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
 |[VOD](manage-vod-publishing.md)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|![Image of a checkmark for yes](/office/media/icons/success-teams.png)|
@@ -105,9 +108,26 @@ The following table shows which features are available in meetings, webinars, an
 
 <sup>1</sup> Your users can use breakout rooms if a webinar has fewer than 300 attendees. However, if the number of attendees increases to above 300, breakout rooms aren't supported.
 
-<sup>2</sup> Only Microsoft Teams Rooms on Windows with a Pro license can join meetings and events as a presenter. However, Teams Rooms can't send chat messages. To allow Rooms to join as a presenter in meetings, organizers must set **Who can present** to either **Organizer or co-organizer only** or **Specific people**.
+<sup>2</sup> Only Microsoft Teams Rooms on Windows with a Pro license are officially supported to join meetings and events as a presenter or as an attendee. To allow Rooms to join as a presenter in meetings, organizers must set **Who can present** to either **Organizer or co-organizer only** or **Specific people**. To allow Rooms to join as an atteendee in townhalls, organizers must add the room during the townhall creation as an attendee. To allow Rooms to join as an atteendee in webinars, the registered attendee must send the registration link to the room.  
+
+<sup>3</sup> The experience on Microsoft Teams Rooms on Android is not officially supported. The existent experience will change since only Teams Rooms on Android with a Pro license will be officially supported to join meetings and events as a presenter or an attendee.
+
 
 <sup>3</sup> The usual maximum is increased to 20,000 until further notice.
+
+## Capacity comparison
+
+The following table details capacity for meetings, webinars, and town halls:
+
+|Feature|Meetings|Webinars|Town halls|
+|:------|:-------|:-------|:---------|
+|Duration|30 hours|30 hours|30 hours|
+|Recording maximum length|4 hours or 1.5 GB. When this limit is reached, the recording ends and automatically restarts.|4 hours or 1.5 GB. When this limit is reached, the recording ends and automatically restarts.|4 hours or 1.5 GB. When this limit is reached, the recording ends and automatically restarts.|
+|Interactive participants|1,000 (Enterprise plans)<br>300 (Business plans)|1,000|Town halls: 10,000<br> Teams Premium town halls: 50,000|
+|View-only participants|10,000<sup>1</sup> (Enterprise plans only)|![Image of a x for no](/office/media/icons/cancel-teams.png)|![Image of a x for no](/office/media/icons/cancel-teams.png)|
+|Maximum total participants|11,000<sup>1</sup> (Enterprise plans only)|1,000|Town halls: 10,000<br> Teams Premium town halls: 50,000|
+
+<sup>1</sup> The usual maximum is increased to 20,000 until further notice. The maximum total participants for meetings is the sum of the interactive participants plus view-only participants.
 
 ## Related topics
 

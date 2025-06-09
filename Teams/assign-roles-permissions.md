@@ -13,7 +13,9 @@ description: Learn to assign team owner and member roles and permissions in Micr
 f1.keywords:
 - NOCSH
 ms.localizationpriority: medium
-ms.custom: chat-teams-channels-revamp
+ms.custom: 
+- chat-teams-channels-revamp
+- teams-chat-and-channels
 ms.collection: 
 - M365-collaboration
 appliesto: 

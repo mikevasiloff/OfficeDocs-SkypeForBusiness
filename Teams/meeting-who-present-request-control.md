@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.service: msteams
 ms.subservice: meetings
 ms.reviewer: nakulm, bryannyce
-ms.date: 04/29/2024
+ms.date: 04/30/2025
 audience: admin
 ms.localizationpriority: medium
 search.appverid: MET150
@@ -74,9 +74,6 @@ Let's look at the following example.
 | Adele | Location1MeetingPolicy | Off |
 
 Daniela can give control of the shared desktop or window to other participants in a meeting or webinar Adele organizes. However, Adele can't give control to other participants.
-
-> [!NOTE]
-> To give and take control of shared content during sharing, both users must be using the Teams desktop client. Control isn't supported when either user is using Teams in a browser.
 
 #### PowerShell
 

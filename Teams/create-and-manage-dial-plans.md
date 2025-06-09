@@ -4,7 +4,7 @@ author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: mikedav, roykuntz, jastark
-ms.date: 02/22/2024
+ms.date: 04/25/2025
 ms.topic: how-to
 ms.assetid: 7af17c94-5f8f-4452-ae1d-01f495b4dc94
 ms.tgt.pltfrm: cloud
@@ -36,7 +36,7 @@ After you plan the dial plans for your organization and figured out all the norm
 
 1. In the left navigation of the Microsoft Teams admin center, go to **Voice** > **Dial plans**.
 1. Select **Add**, and then enter a name and description for the dial plan.
-1. Under **Normalization rules**, configure and associate one or more [normalization rules](what-are-dial-plans.md#normalization-rules) for the dial plan. Each dial plan must have at least one normalization rule associated with it. To do this, do one or more of the following:
+1. Under **Normalization rules**, configure and associate one or more [normalization rules](phone-normalization-rules.md) for the dial plan. Each dial plan must have at least one normalization rule associated with it. To do this, do one or more of the following:
     - To create a new normalization rule and associate it with the dial plan, select **Add**, and then define the rule.
     - To edit a normalization rule that's already associated with the dial plan, select the rule by clicking to the left of the rule name, and then select **Edit**. Make the changes you want, and then select **Save**.
     - To remove a normalization rule from the dial plan, select the rule by clicking to the left of the rule name, and then select **Delete**.
@@ -217,9 +217,19 @@ Run these to add the existing on-premises dial plan named OPDP1 as a tenant dial
     New-CsTenantDialPlan -Identity $dp.SimpleName -Description $dp.Description -SimpleName $dp.SimpleName -NormalizationRules $NormRules
     ```
 
+### Name and simple name
+
+For user dial plans, specify a descriptive name that identifies the users to which the dial plan will be assigned.
+
+The dial plan Simple Name is an attribute of the dial plan that is prepopulated with a string that is derived from the dial plan name. The Simple Name field is editable in PowerShell, which enables you to create a more descriptive naming convention for your dial plans. The Simple Name value can't be empty and must be unique.
+
+A best practice is to develop a naming convention for your entire organization and then uses this convention consistently across all sites and users.
+
+We recommend that you type the common, recognizable name of the ***geographic location*** or ***group of users*** to which the corresponding dial plan applies.
+
 ## Related articles
 
-- [What are dial plans?](what-are-dial-plans.md)
+- [Plan dial plans](dial-plans-routing-overview.md)
 - [Transferring phone numbers common questions](./phone-number-calling-plans/port-order-overview.md)
 - [Different kinds of phone numbers used for Calling Plans](different-kinds-of-phone-numbers-used-for-calling-plans.md)
 - [Manage phone numbers for your organization](manage-phone-numbers-for-your-organization/manage-phone-numbers-for-your-organization.md)

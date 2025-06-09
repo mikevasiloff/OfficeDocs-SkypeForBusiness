@@ -22,6 +22,8 @@
       items:
         - name: Overview
           href: ../hybrid/decommission-on-prem-overview.md
+        - name: Move numbers to the cloud
+          href: ../hybrid/decommission-move-on-prem-phone-numbers.md
         - name: Move users to the cloud
           href: ../hybrid/decommission-move-on-prem-users.md
         - name: Disable hybrid to complete migration to Teams Only

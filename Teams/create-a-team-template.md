@@ -13,7 +13,9 @@ description: Learn how to create a custom team template in Microsoft Teams.
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-ms.custom: chat-teams-channels-revamp
+ms.custom: 
+- chat-teams-channels-revamp
+- teams-chat-and-channels
 ms.collection: 
 - M365-collaboration
 appliesto: 

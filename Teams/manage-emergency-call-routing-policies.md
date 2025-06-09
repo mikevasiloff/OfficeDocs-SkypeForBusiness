@@ -4,7 +4,7 @@ author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: jastark, roykuntz
-ms.date: 10/02/2019
+ms.date: 04/25/2025
 ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -37,10 +37,10 @@ You manage emergency call routing policies by going to **Voice** > **Emergency p
 
 For users, you can use the global (Org-wide default) policy or create and assign custom policies. Users automatically get the global policy unless you create and assign a custom policy. Keep in mind that you can edit the settings in the global policy but you can't rename or delete it. For network sites, you create and assign custom policies.
 
-If you assigned an emergency call routing policy to a network site and to a user and if that user is at that network site, the policy that's assigned to the network site overrides the policy that's assigned to the user.
+If you assigned an emergency call routing policy to a network site and to a user assigned a Direct Routing number and if that user is at that network site, the policy that's assigned to the network site overrides the policy that's assigned to the user.
 
 > [!NOTE]
-> If Shared Calling for Calling Plans or Operator Connect is configured in the same Tenant with Direct Routing, site assigned emergency call routing polices cannot be used. 
+> If Shared Calling for Calling Plans or Operator Connect is configured in the same Tenant with Direct Routing, site assigned emergency call routing policies cannot be used. 
 
 ## Create a custom emergency call routing policy
 
@@ -53,7 +53,7 @@ If you assigned an emergency call routing policy to a network site and to a user
 5. Define one or more emergency numbers. Under **Emergency numbers**, click **Add**, and then do the following:
     1. **Emergency dial string**: Enter the emergency dial string. This dial string indicates that a call is an emergency call and the route pattern must match this dial string exactly.
         > [!NOTE]
-        > **For Direct Routing, Teams clients no longer send emergency calls with a "+" in front of the emergency dial string. Be sure the voice route pattern to match an emergency dial string reflects this change.**
+        > For Direct Routing, Teams clients no longer send emergency calls with a "+" in front of the emergency dial string. Be sure the voice route pattern to match an emergency dial string reflects this change.
     2. **Emergency dial mask**: For each emergency number, you can specify zero or more emergency dial masks. A dial mask is the number that you want to translate into the value of the emergency dial string. A dial mask allows for alternate emergency numbers to be dialed and still have the call reach emergency services. <br>For example, you add 112 as the emergency dial mask, which is the emergency service number for most of Europe, and 911 as the emergency dial string. A Teams user from Europe who is visiting may not know that 911 is the emergency number in the United States, and when they dial 112, the call is made to 911. To define multiple dial masks, separate each value by a semicolon. For example, 112;212.
     3. **PSTN usage record**: Select the Public Switched Telephone Network (PSTN) usage record. The PSTN usage record is used to determine which route is used to route emergency calls from users who are authorized to use them. The route associated with this usage should point to a Session Initiation Protocol (SIP) trunk dedicated to emergency calls or to an Emergency Location Identification Number (ELIN) gateway that routes emergency calls to the nearest Public Safety Answering Point (PSAP).
 

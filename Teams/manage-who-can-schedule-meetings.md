@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.service: msteams
 ms.subservice: meetings
 ms.reviewer: bryannyce
-ms.date: 4/30/2024
+ms.date: 4/30/2025
 audience: admin
 ms.localizationpriority: medium
 search.appverid: MET150
@@ -99,7 +99,7 @@ If a meeting policy setting is turned off and then turned on again for a user, a
 
 This setting controls whether Teams meetings can be scheduled from within Outlook (Windows, Mac, web, and mobile).
 
-When you turn off this setting, users can't schedule Teams meetings when they create a new meeting in Outlook. For example, in Outlook on Windows, the **New Teams Meeting** option doesn't show up in the ribbon.
+When you turn off this setting, users can't schedule Teams meetings when they create a new meeting in Outlook. For example, in Outlook on Windows, the **New Teams Meeting** option doesn't show up in the ribbon. To learn more, see [Admin - authentication requirements and functionality of the Teams Meeting add-in in Outlook](outlook-add-in-authentication-policy-requirements.md).
 
 ## Related topics
 

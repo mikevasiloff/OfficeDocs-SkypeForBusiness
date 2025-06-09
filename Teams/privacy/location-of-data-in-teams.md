@@ -2,7 +2,7 @@
 title: Location of data in Microsoft Teams
 ms.author: danbrown
 author: DHB-MSFT
-manager: laurawi
+manager: dansimp
 ms.topic: reference
 audience: admin
 ms.service: msteams
@@ -16,6 +16,7 @@ f1.keywords:
 ms.collection: 
   - M365-collaboration
   - privacy-teams
+  - must-keep
 appliesto: 
   - Microsoft Teams
 ms.custom: seo-marvel-apr2020

@@ -9,6 +9,7 @@ ms.topic: article
 ms.assetid: 6fc2687c-0abf-43b8-aa54-7c3b2a84b67c
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection: 
   - M365-voice
@@ -35,8 +36,8 @@ Auto attendants can redirect calls, based on callers' input, to one of the follo
 
 - **Operator** - the operator defined for the Auto attendant. Defining an operator is optional. The operator can be defined as any of the other destinations in this list.
 - **Person in the organization** - a person in your organization who can receive voice calls. This person can be an online user or a user hosted on-premises using Skype for Business Server.
-- **Voice app** - Choose the Auto attendant or Call queue when choosing this destination.
-- **Resource account** - Choose the resource account associated with the Auto attendant or Call queue when choosing this destination.
+- **Voice app** - Choose the Auto attendant or Call queue when choosing this destination. The call priority can be set when the destination is a Call queue.
+- **Resource account** - Choose the resource account associated with the Auto attendant or Call queue when choosing this destination. The call priority can be set when the resource account is associated with a call queue.
 - **Voicemail** - the voice mailbox associated with a Microsoft 365 group that you specify. You can choose if you want voicemail transcriptions and the "Please leave a message after the tone." system prompt.
   - In Microsoft 365 admin center, enable **Let people outside the organization email this team** for the Microsoft 365 group that you specify.
 - **External phone number** - any phone number. See [external transfer technical details](create-a-phone-system-auto-attendant.md?tabs=general-info#external-phone-number-transfers---technical-details).
@@ -55,14 +56,11 @@ Auto attendants can redirect calls, based on callers' input, to one of the follo
 
 ## What's new for Auto attendants in the past six months
 
+- May 20
+  - [Call priorities](aa-cq-call-priorities.md) can be set when transferring calls to resource accounts assigned to call queues or directly to call queues.
+
 - December 11
   - [Nested Auto attendants and Call queues](./plan-auto-attendant-call-queue.md#nested-auto-attendants-and-call-queues) that no longer require a resource account and associated licensing are now supported in Teams admin center.
-
-- November 21
-  - [Dial by name improvements](#dial-by-name-improvements) for when a search returns multiple people with the same name.
-
-- November 5
-  - [Nested Auto attendants and Call queues](./plan-auto-attendant-call-queue.md#nested-auto-attendants-and-call-queues) no longer require a resource account and associated licensing.
 
 ## Steps to create an Auto attendant
 

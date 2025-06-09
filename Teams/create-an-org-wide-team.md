@@ -22,6 +22,7 @@ appliesto:
 ms.custom: 
   - seo-marvel-apr2020
   - chat-teams-channels-revamp
+  - teams-chat-and-channels
 ---
 
 # Use organization-wide teams in Microsoft Teams to help everyone collaborate

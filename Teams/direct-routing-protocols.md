@@ -3,15 +3,16 @@ title: "Teams Phone Direct Routing: Definitions and RFC standards"
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.date: 12/16/2019
+ms.date: 05/06/2025
 ms.topic: article
 ms.service: msteams
+ms.subservice: teams-calling
 audience: admin
 ms.collection: 
   - M365-voice
   - m365initiative-voice
   - Tier1
-ms.reviewer: nmurav
+ms.reviewer: filippse
 search.appverid: MET150
 f1.keywords: 
   - NOCSH

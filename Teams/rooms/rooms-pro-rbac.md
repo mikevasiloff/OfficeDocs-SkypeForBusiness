@@ -3,8 +3,8 @@ title: Role-based access control in the Microsoft Teams Rooms Pro Management Por
 author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
-ms.reviewer: altsou
-ms.date: 1/27/2025
+ms.reviewer: ayerragangu
+ms.date: 4/21/2025
 ms.topic: article
 audience: Admin
 ms.service: msteams
@@ -23,12 +23,13 @@ f1keywords:
 
 # Role-based access control in the Microsoft Teams Rooms Pro Management Portal
 
-Role-based access control (RBAC) in the Microsoft Teams Rooms Pro Management portal helps you manage user access to room resource data in your organization. By assigning roles to your portal users, you can limit what they can see and change. Each role has a set of permissions that determine what users with that role can access and change within your organization.
+Role-based access control (RBAC) in the Microsoft Teams Rooms Pro Management portal helps you manage user access to room resource data in your organization. By assigning roles to your portal users, you can limit what they can see and change. Each role has a set of permissions that determines what users with that role can access and change within your organization.
 
 To create, edit, or assign roles, your account must have one of the following permissions:
 
-- Global Administrator through Microsoft Entra ID
-- Teams Rooms Pro Manager through the Microsoft Teams Rooms Pro Management portal
+- Global Administrator or Teams Administrator through Microsoft Entra ID.
+
+- Teams Rooms Pro Manager through the Microsoft Teams Rooms Pro Management portal.
 
 > [!IMPORTANT]
 >Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -45,6 +46,61 @@ To see roles, in the left navigation of the Microsoft Teams Rooms Pro Management
 
 ## Built-in roles
 
+You can assign the below MIcrosoft Entra built-in roles to groups or users to provide access to Microsoft Teams Rooms Pro management portal using [Microsoft Entra Admin center](https://entra.microsoft.com/#home). 
+
+- **Global Administrator**: Has full access to the Microsoft Teams Rooms Pro Management portal.
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+- **Teams Administrator**: Access to manage and configure Microsoft Teams service-related entities
+
+- **Teams Device Administrator**: Access to manage and configure Teams certified devices
+
+- **Global Reader**: Read-only access to the Microsoft Teams Rooms Pro Management portal
+
+In the **Roles** section under **Settings**, you can view the supported Microsoft Entra built-in roles along with their permissions and current assignments. To add or manage additional assignments, please use the [Microsoft Entra Admin center](https://entra.microsoft.com/#home).
+
+![Screenshot showing the user's image.](media/rooms-pro-rbac/image.png)
+
+> [!NOTE]
+> Teams Administrator or Teams Devices Administrator assigned to an Administrative Unit (AU), can't access the Teams Rooms Pro Management portal, as AUs aren't currently supported. To grant access, consider assigning the users to one of the [Teams Rooms Pro Management built-in roles](/microsoftteams/rooms/rooms-pro-rbac) (Teams Rooms Pro Manager, Site Lead, and Site Technician) or [create a custom role](/microsoftteams/rooms/rooms-pro-rbac).
+
+The following table summarizes what each Entra built-in role can do in Microsoft Teams Rooms Pro management portal.
+
+|Features|Permissions|Global Administrator|Teams Administrator|Teams Devices Administrator|Global Reader|
+| -------- | -------- | -------- | -------- | -------- | -------- |
+|Room Management|View|✔|✔|✔ |✔  |
+||Modify|✔|✔|✔  ||
+||Unenroll|✔|✔|✔  ||
+|Room Actions|Read-only actions|✔|✔|✔   |✔  |
+||Read-write actions|✔|✔|✔  ||
+|Room groups|Create|✔  |✔  |✔  ||
+||View|✔  |✔  |✔  |✔  |
+||Modify|✔  |✔  |✔  ||
+|Update management|Create|✔  |✔  |✔  ||
+||View|✔  |✔  |✔  |✔  |
+||Modify|✔  |✔  |✔  ||
+|Reports|view|✔  |✔  |✔  |✔  |
+|Ticket management|View|✔  |✔  |✔  |✔  |
+||Modify|✔  |✔  |✔  ||
+|Role management|View|✔  |✔  ||✔  |
+||Modify|✔  |✔  |||
+|Inventory management|View|✔  |✔  |✔  |✔  |
+||Modify|✔  |✔  |✔  ||
+|Microsoft Teams rooms Pro Management Service settings|View|✔  |✔  |✔   ||
+||Modify|✔  |✔  |✔  ||
+|Digital signage room management|View|✔  |✔  |✔  |✔  |
+||Modify|✔  |✔  |✔  ||
+|Digital signage tenant management|View|✔  |✔  |✔  |✔  |
+||Modify|✔  |✔  |✔  ||
+|Settings -> ServiceNow|View|✔  |✔  |||
+||Modify|✔  |✔  |||
+|Settings -> Signals|View|✔  |✔  |||
+||Modify|✔  |✔  |||
+
+## Microsoft Teams Rooms Pro management built-in roles
+
 You can assign built-in roles to groups or users without further configuration. Keep in mind that you can't delete or edit the name, description, type, or permissions of a built-in role.
 
 - **Teams Rooms Pro Manager**: Has full access to the Microsoft Teams Rooms Pro Management portal.
@@ -53,7 +109,7 @@ You can assign built-in roles to groups or users without further configuration. 
 
 The following table summarizes what each role can do.
 
-|Features |Permission |Teams Rooms Pro Manager  |Site Lead  |Site Tech  |
+|Features |Permission |Teams Rooms Pro Manager |Site Lead |Site Tech  |
 |---------|---------|---------|---------|---------|
 |Room management     |View        |&#10004;           |&#10004;           |&#10004;  |
 |    |Modify         |&#10004;           |&#10004;           |&#10004; |
@@ -75,9 +131,10 @@ The following table summarizes what each role can do.
 |    |Modify         |&#10004;           |         ||
 |Microsoft Teams Rooms Pro Management service settings    |View         |&#10004;           |         ||
 |    |Modify        |&#10004;           |         ||
+
 ## Create a custom role
 
-If the built-in roles do not suit your organizational needs, you can create a role and configure its permissions as desired. To create a role, you must be a Global Administrator or Teams Rooms Pro Manager role. 
+If the built-in roles do not suit your organizational needs, you can create a role and configure its permissions as desired. To create a role, you must be a Global Administrator/ Teams Administrator or Teams Rooms Pro Manager role. 
 
 > [!IMPORTANT]
 >Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -93,7 +150,7 @@ If the built-in roles do not suit your organizational needs, you can create a ro
 
 ## Assign a role
 
-To assign roles, you must be a Global Administrator or Teams Rooms Pro Manager role or have a role with role management permissions.
+To assign roles, you must be a Global Administrator/ Teams Administrator or Teams Rooms Pro Manager role or have a custom role with role management permissions.
 
 > [!IMPORTANT]
 >Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.

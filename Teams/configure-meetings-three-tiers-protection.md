@@ -115,7 +115,7 @@ As an admin, you can control meeting recordings and transcripts in the following
 - The **Who can record** option in sensitivity labels and meeting templates (per meeting)
 - The **Record automatically** option in sensitivity labels and meeting templates (per meeting)
 
-If your organization or certain people or groups within it should never be able to record meetings, you can turn off the feature by using the [**Meeting recording**](meeting-recording.md#allow-or-prevent-users-from-recording-meetings) admin meeting policy.
+If your organization or certain people or groups within it should never be able to record meetings or events, you can turn off recording through the admin meeting, webinar, and town hall [recording policies](meeting-recording.md#allow-or-prevent-users-from-recording).
 
 If your organization or certain people or groups within it should never be able to transcribe meetings, you can turn off the feature by using the [**Transcription**](meeting-transcription-captions.md#live-transcription) admin meeting policy.
 

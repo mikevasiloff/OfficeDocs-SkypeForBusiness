@@ -16,6 +16,8 @@ appliesto:
 ms.collection: 
   - M365-collaboration
   - essentials-manage
+ms.custom:
+  - teams-chat-and-channels
 ---
 
 # Manage Teams with policies

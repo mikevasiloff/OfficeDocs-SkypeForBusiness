@@ -1,13 +1,14 @@
 ---
-title: "Call park and retrieve in Microsoft Teams"
-author: sfrancis206
-ms.author: scottfrancis
+title: "Configure call park and retrieve in Microsoft Teams"
+author: mkbond007
+ms.author: mabond
 manager: pamgreen
 ms.reviewer: roykuntz
-ms.date: 12/14/2023
+ms.date: 04/24/2025
 ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection: 
   - M365-voice
@@ -23,10 +24,10 @@ ms.custom:
  - Phone System
  - ms.teamsadmincenter.callparkpolicies.overview
  - seo-marvel-apr2020
-description: Learn about how to use call park and retrieve to place a call on hold in Microsoft Teams.
+description: Learn about how to configure call park and retrieve to place a call on hold in Microsoft Teams.
 ---
 
-# Configure Call park and retrieve
+# Configure call park and retrieve
 
 Call park and retrieve lets a user place a call on hold. When a call is parked, the service generates a unique code for call retrieval. The user who parked the call or someone else can then use that code with a supported app or device to retrieve the call. For more information on how your users can park a call, see [Park a call in Teams](https://support.office.com/article/park-a-call-in-teams-8538c063-d676-4e9a-8045-fc3b7299bb2f).
 
@@ -47,8 +48,8 @@ You can specify a timeout as the number of seconds to wait before ringing back w
 To configure call park and retrieve, you must be a Teams administrator. Call park and retrieve is turned off by default. You can enable it for users and create user groups by using the call park policy. Assign the same call park policy to users who need to park and retrieve calls amongst themselves.  
 
 > [!NOTE]
-> When users are **not** assigned the same call park policy, retrieving parked calls will fail.
-> 
+> When users are **not** assigned the same call park policy, retrieving parked calls fails.
+>
 > Call park and retrieve is only available in [Teams Only deployment mode](teams-and-skypeforbusiness-coexistence-and-interoperability.md). It isn't supported on Skype for Business IP phones.
 
 You can configure call park and retrieve by using the Teams admin center or by using PowerShell.

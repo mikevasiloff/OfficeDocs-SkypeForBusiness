@@ -47,7 +47,9 @@ Certified for Microsoft Teams personal peripherals offer a range of features des
   - Join a Teams meeting from the pre-join screen (Teams button click).
   - Bring a Teams meeting screen to the foreground of your screen (Teams button click).
   - Raise (and lower) hand in a Teams meeting (Teams button press and hold).
-  
+    
+- __Teams Button Support on Multiple Connected Peripheral Devices:__ You can now use the Teams button across peripheral devices without having to manually select a specific device in the Teams devices settings. This ensures a more seamless experience navigating across multiple certified for Microsoft Teams personal peripheral USB devices (with a wire or a dongle) connected to the same host device (such as your laptop). For example, you can use the Teams button on headset A to bring up the meeting pre-join screen, then use the Teams button on headset B to join the meeting, and then use the Teams button on your connected speakerphone to raise hand in the meeting, and so on.
+
 For more information regarding the Teams button, see [Microsoft Teams button on your certified Teams device](https://support.microsoft.com/office/use-the-microsoft-teams-button-on-your-certified-teams-device-ed5ec8f0-6f09-46aa-b80c-3372de084a98).
 
 - **LED Indicator Light:** Indicating different states with colors flashing on or around the peripheral buttons (such as the Teams button flashing when receiving a meeting join notification).

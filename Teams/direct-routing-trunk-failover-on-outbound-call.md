@@ -4,10 +4,11 @@ ms.author: scottfrancis
 author: sfrancis206
 manager: pamgreen
 audience: ITPro
-ms.reviewer: 
-ms.date: 12/04/2018
+ms.reviewer: filippse
+ms.date: 05/06/2025
 ms.topic: article
 ms.service: msteams
+ms.subservice: teams-calling
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 

@@ -123,6 +123,7 @@ The following tables compare the Teams Rooms Basic and Teams Rooms Pro licenses 
 |                                                      | Microsoft Teams Rooms Basic | Microsoft Teams Rooms Pro |
 |:-----------------------------------------------------|:---------------------------:|:-------------------------:|
 | **Teams video gallery with multiple layout options** | &#x2714;                    | &#x2714;                  |
+| **Meeting chat**                                     |                             | &#x2714;                  |
 | **Front row**                                        |                             | &#x2714;                  |
 | **Together mode**                                    |                             | &#x2714;                  |
 | **Large gallery (up to 50 videos)**                  |                             | &#x2714;                  |

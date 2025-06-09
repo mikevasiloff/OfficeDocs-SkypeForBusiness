@@ -20,6 +20,7 @@ f1.keywords:
 ms.custom: 
   - NewAdminCenter_Update
   - chat-teams-channels-revamp
+  - teams-chat-and-channels
 appliesto: 
   - Microsoft Teams
 ---

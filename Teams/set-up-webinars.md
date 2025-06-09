@@ -38,9 +38,6 @@ For more information on how to plan for webinars in your organization, see [Plan
 
 To learn more about the webinar experience for your users, see [Get Started with Teams webinars](https://support.microsoft.com/office/42f3f874-22dc-4289-b53f-bbc1a69013e3).
 
-> [!NOTE]
-> The webinar experience isn't available for Microsoft 365 DoD.
-
 ## Manage who can schedule webinars
 
 You can use the Teams admin center or PowerShell to manage who can schedule webinars in your organization.

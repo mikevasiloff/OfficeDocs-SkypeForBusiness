@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
 audience: Admin
-ms.custom: 
+ms.custom: teams-chat-and-channels
 ms.collection: 
 f1.keywords: 
   - NOCSH

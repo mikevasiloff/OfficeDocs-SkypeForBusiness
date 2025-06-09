@@ -47,8 +47,6 @@ The first two settings just allow an app for use in your organization, the permi
 * If your organization isn't migrated to unified app management, allow apps and agents in Teams admin center and under the **Integrated apps** page in [Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
 * If your organization is migrated to unified app management, allow apps and agents in Teams admin center or under the **Integrated apps** page in [Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
 
-For more information, see [manage apps that work across Teams, Outlook, and Microsoft 365 App](manage-apps-across-m365.md).
-
 Teams admin center lets you create two types of permissions policies:
 
 * **Global (Org-wide default)** policy exists by default and applies to all users. Any changes made to this policy affect all users.

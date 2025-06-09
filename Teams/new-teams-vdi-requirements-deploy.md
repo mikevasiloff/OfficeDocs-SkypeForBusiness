@@ -41,7 +41,7 @@ In addition, virtual machines must meet the minimum requirements listed here:
 
 |Requirement |Version|
 |:-----|:-----|
-|Windows|- Windows 10.0.19041 or higher (excluding Windows 10 LTSC for Teams desktop app) </br>- Windows Server 2019 (10.0.17763) </br>- Windows Server 2022 (20348.2402) or higher</br>- -Windows Server 2025 (26100.2886) or higher, in public preview</br>- Windows Server 2016 is NOT supported. Plan upgrades.</br>- WebView2 framework required in Windows Server and Windows 10/11 Multi-User environments|
+|Windows|- Windows 10.0.19041 or higher (excluding Windows 10 LTSC for Teams desktop app) </br>- Windows Server 2019 (10.0.17763) </br>- Windows Server 2022 (20348.2402) or higher</br>- -Windows Server 2025 (26100.2886) or higher</br>- Windows Server 2016 is NOT supported. Plan upgrades.</br>- WebView2 framework required in Windows Server and Windows 10/11 Multi-User environments|
 |Webview2|Update to the most current version. Learn more: [Enterprise management of WebView2 Runtimes](/microsoft-edge/webview2/concepts/enterprise)|
 |Classic Teams app |Version 1.6.00.4472 or later to see the Try the new Teams toggle. Important: Classic Teams is only a requirement if you want users to be able to switch between classic Teams and new Teams. This prerequisite is optional if you only want your users to see the new Teams client. |
 |Settings |Turn on the **Show Notification Banners** setting in System > Notifications > Microsoft Teams to receive Teams Notifications. |
@@ -95,6 +95,7 @@ The following minimum versions are necessary to support the new Teams client:
 - Remote Desktop Client for Windows 1.2.2606
 - Remote Desktop Client for Mac 10.7.7
 - Windows 365 app for Windows via the Microsoft Store
+- Web browsers do not support Microsoft Teams optimization
 
 In addition, you must deploy the following registry key on the virtual desktop for the new Teams client to be optimized:
 
@@ -255,7 +256,7 @@ Computer Configuration > Administrative Templates > Windows Components > App Pac
 Known limitations:
 
 - Classic Teams on Windows Server 2019 isn't displaying the app switcher toggle if Classic Teams version is lower than 1.6.00.33567
-- New Teams on Windows Server 2019 needs [FSLogix 2210 HotFix 4](/fslogix/overview-release-notes#fslogix-2210-hotfix-4-29888427471).
+- If you are using FSLogix as the Profile Manager solution, New Teams on Windows Server 2019 needs [FSLogix 2210 HotFix 4](/fslogix/overview-release-notes#fslogix-2210-hotfix-4-29888427471) or higher (Microsoft recommends the latest available version).
 
 ### Outlook presence integration with New Teams in Windows Server 2019
 
@@ -462,7 +463,25 @@ This error is caused by GPOs affecting Windows Installer, and includes [**Disabl
 
 #### Deployment method for non-persistent environments where Teams auto-update is disabled
 
-You can install the MSI that is located in the new Teams installation directory from an Admin Command prompt using:  
+>[!Note]
+> teamsbootstrapper.exe (Product version 1.0.2508703) now supports an additional parameter that installs Teams Meeting Add In (TMA) for Outlook automatically, in a machine-wide installation fashion (i.e msiexec /ALLUSERS=1).
+>
+>-Fresh install (will provision Teams and install TMA machine-wide): teamsbootstrapper.exe -p --installTMA
+>
+>-If Teams was already provisioned and you want to install TMA only: teamsbootstrapper.exe --installTMA
+>
+>-Uninstall TMA (Outlook Classic must be closed): teamsbootstrapper.exe --uninstallTMA
+>
+>-Uninstall Teams and TMA (Outlook Classic must be closed): teamsbootstrapper.exe -x
+>
+>-If Teams is not provisioned (is not present or failed to provision), TMA will not be installed
+>
+>-Running teamsbootstrapper.exe -p or teamsbootstrapper.exe -p -o "full path to msix" alone will not install TMA machine-wide
+>
+>-Outlook Classic must be closed when trying to uninstall TMA using the bootstrapper
+
+
+If Administrators don't want to use the new --installTMA flag, they can still install the TMA MSI that is located in the new Teams installation directory from an Admin Command prompt using:  
 
 ```powershell
 
@@ -642,8 +661,9 @@ Learn more: [Manage accounts and organizations in Microsoft Teams](https://suppo
   - After sealing the golden image and deploying it at scale (with provisioning tools like Citrix MCS/PVS or VMware Instant-Clones), users log in to the virtual machines and click on the new Teams icon, but aren't able to launch the app. The issue is caused by a failed registration of the MSIX package at the user level with different profile management software (FSLogix before 2210 HotFix 4, Citrix CPM 2308 or 2311 **but not on 2402**, Ivanti UEM, and so on), even though the staging of the package was successful (the OS stored the package’s contents on the disk in the %ProgramFiles%\WindowsApps directory). This issue can be confirmed by running Get-AppxPackage -name MsTeams for the affected users. Running this code returns an empty output.
   - If Get-AppxPackage -name MsTeams -allusers is now run from an elevated powershell command window, the output shows that Teams is registered (see line PackageFullName) and the Status is **OK**.
   - This issue is fixed in FSLogix 2210 HotFix 4.
-- Teams meetings can't be launched when selecting a link from Outlook. There's an authentication prompt (Access to '{tenant}' tenant is denied) when users attempt to join an **external** meeting. This is fixed on New Teams 24091.214.2846.1452.
-- The PowerShell window shows after New Teams is provisioned. If the virtual machine's OS has the right KB fixes (see [Deploy the new Microsoft Teams client](#deploy-the-new-microsoft-teams-client), the second bullet in the Notes section), then Admins can delete this registry key and the Powershell window won't show anymore:
+- When using Azure Virtual Desktops or Windows 365, and the MAC Remote Desktop Client or Windows app, Microsoft Teams UI doesn't enumerate all the peripherals connected to the device. Instead, only the device selected at the macOS-level is shown in the Devices' drop-down menu of Microsoft Teams. The peripheral is labeled. An example of this labeling is "MAC device name" + "Speakers".
+- Teams meetings can't be launched when selecting a link from Outlook. There's an authentication prompt (Access to '{tenant}' tenant is denied) when users attempt to join an **external** meeting. This is fixed in new Teams 24091.214.2846.1452.
+- The PowerShell window shows after new Teams is provisioned. If the virtual machine's OS has the right KB fixes (see [Deploy the new Microsoft Teams client](#deploy-the-new-microsoft-teams-client), the second bullet in the Notes section), then admins can delete this registry key and the Powershell window won't show anymore:
 
  ```powershell
  Location: "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run"

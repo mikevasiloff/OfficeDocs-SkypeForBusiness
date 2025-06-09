@@ -3,7 +3,7 @@ title: Migration guide Android AOSP management for Microsoft Teams Android devic
 author: mstonysmith
 ms.author: tonysmit
 ms.reviewer: tjaved
-ms.date: 3/28/2025
+ms.date: 5/09/2025
 manager: pamgreen
 audience: Admin
 ms.topic: upgrade-and-migration-article
@@ -66,6 +66,7 @@ In order for Teams Android Devices to enroll in AOSP Device Management successfu
    ![Screenshot of AOSP enrollment profile.](media/android-migration-guide/aosp-enrollment-profile.png)
 
 > [!NOTE]
+> There is a limit of one enrollment profile per tenant which can have the **For Microsoft Teams devices** toggle set as **Enabled**.
 > An expired enrollment token prevents devices from completing a successful sign-in and blocks new devices from enrolling.
 
 6. Select **Next**.

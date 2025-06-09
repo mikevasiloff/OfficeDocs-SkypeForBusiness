@@ -30,6 +30,8 @@ Admins can install Microsoft Teams apps that work on Microsoft Outlook and the M
 
 Unified app management changes a few app governance methods. Previously, you used app setup policy to preinstall apps for users. If your organization is now migrated to use app centric management feature, then you use it to preinstall apps. Follow the applicable method to provide apps to your users, without them having to install apps on their own.
 
+You can't preinstall certain apps for users because many of these apps do not support the scopes required for admin installation. You can't select these apps in the **Setup policies** page and are denoted as -- in the **Manage apps** page when migrated to app centric management.
+
 ### Install apps using app setup policy
 
 If you aren't using app centric management, then you preinstall apps using app setup policy. To know more, see [overview of app setup policy](teams-app-setup-policies.md). Ensure that the following prerequisites are met.

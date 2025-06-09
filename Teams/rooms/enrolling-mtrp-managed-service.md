@@ -3,8 +3,8 @@ title: Accessing the Pro Management portal
 author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
-ms.reviewer: srpall
-ms.date: 1/27/2025
+ms.reviewer: ayerragangu
+ms.date: 4/21/2025
 ms.topic: article
 audience: Admin
 ms.service: msteams
@@ -23,7 +23,19 @@ f1keywords:
 
 # Accessing the Pro Management portal
 
-To access the Teams Rooms Pro Management portal, you need to assign one or more users to the Teams Rooms Pro Manager role and then complete the enrollment steps using that user.
+To access the Teams Rooms Pro Management portal, you need to assign one or more users to the below roles and then complete the enrollment steps using that user.
+
+1. **Microsoft Entra built-in roles:** Global Administrator, Teams Administrator, Teams Devices Administrator, Global Reader.
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+2. **Teams Rooms Pro Manager** through the Microsoft Teams Rooms Pro Management portal.
+
+[Assign Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) to the users using the [Microsoft Entra Admin center](https://entra.microsoft.com/#home).
+
+> [!NOTE]
+> A Teams Administrator or a Teams Devices Administrator assigned to an Administrative Unit (AU), won't able to access Teams Rooms Pro Management portal, as AUs aren't yet supported. In such cases, consider assigning the users to the Teams Rooms Pro Management built-in roles (**Teams Rooms Pro Manager**, **Site Lead**, and **Site Technician**) or create a custom role. Check [Role Based Access Control](/microsoftteams/rooms/rooms-pro-rbac) for more information.
 
 ## Assign users to the Teams Rooms Pro Manager role
 
@@ -32,10 +44,10 @@ Complete the following steps to assign users to the Teams Rooms Pro Manager role
 1. Log in to the [Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/) with the same administrator privileges as that used to log in to the Microsoft 365 admin center.
 1. Navigate to **Settings** > **Settings** > **Roles** and then select **Teams Rooms Pro Manager**.
 1. Under __Teams Rooms Pro Manager__ select the **Assignments** tab and then select **Add**.
-4. Follow the wizard to name the assignment and select the users who should be added to it. The assignment will apply to all rooms and room groups.
+1. Follow the wizard to name the assignment and select the users who should be added to it. The assignment will apply to all rooms and room groups.
 5. At the end of the assignment wizard, select **Add assignment**.
 
-Users who are assigned the Teams Rooms Pro Manager role are responsible for the day-to-day management and monitoring of Teams Rooms and will have access to all rooms and features within the Teams Rooms Pro management portal. To assign additional roles to restrict access to specific rooms and users, see more under [Role Based Access Control](/microsoftteams/rooms/rooms-pro-rbac)
+Users who are assigned to the above-mentioned Microsoft Entra built-in roles or to the Teams Rooms Pro Manager role are responsible for the day-to-day management and monitoring of Teams Rooms and will have access to all rooms and features within the Teams Rooms Pro management portal. To assign additional roles to restrict access to specific rooms and users, see more under [Role Based Access Control](/microsoftteams/rooms/rooms-pro-rbac).
 
 After you've assigned users to the Teams Rooms Pro Manager role, continue to the [Enroll a Teams Rooms device](enroll-a-device.md) to add a Teams Rooms device to the Teams Rooms Pro management portal.
 

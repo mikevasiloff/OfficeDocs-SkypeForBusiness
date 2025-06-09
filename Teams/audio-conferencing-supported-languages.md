@@ -1,10 +1,10 @@
 ---
 title: "Audio Conferencing supported languages"
-ms.author: jenz
-author: jenzamora
+ms.author: wlibebe
+author: wlibebe
 manager: pamgreen
 ms.reviewer: oscarr
-ms.date: 02/22/2024
+ms.date: 5/1/2025
 ms.topic: reference
 ms.assetid: 572ca0c8-b9f0-4948-9409-e12ee0b94aa0
 ms.tgt.pltfrm: cloud
@@ -52,17 +52,17 @@ When setting up Audio Conferencing in Microsoft 365 or Office 365, you can choos
 |English |United States |en-US |
 |Estonian |Estonia |et-EE |
 |Filipino |Philippines |fil-PH |
-|Finnish |Finland |fi-FL |
+|Finnish |Finland |fi-FI |
 |French |Canada |fr-CA |
 |French |France |fr-FR |
 |German |Germany |de-DE |
 |Georgian |Georgia |ka-GE |
 |Greek |Greece |el-GR |
-|Hebrew | Israel <br/> | he-IL <br/> |
+|Hebrew | Israel | he-IL |
 |Hindi |India |hi-IN |
 |Hungarian |Hungary |hu-HU |
 |Indonesian |Indonesia |id-ID |
-|Italian |Italy | it-IT <br/> |
+|Italian |Italy | it-IT |
 |Japanese |Japan |ja-JP |
 |Korean |Korea |ko-KR |
 |Latvian |Latvia |lv-LV |
@@ -75,7 +75,7 @@ When setting up Audio Conferencing in Microsoft 365 or Office 365, you can choos
 |Romanian |Romania |ro-RO |
 |Russian |Russia |ru-RU |
 |Slovak |Slovakia |sk-SK |
-|Slovenian |Slovenia |sk-SK |
+|Slovenian |Slovenia |sl-SI |
 |Spanish |Mexico |es-MX |
 |Spanish |Spain |es-ES |
 |Swedish |Sweden |sv-SE |

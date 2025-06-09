@@ -1,5 +1,5 @@
 ---
-title: Teams meeting recording and transcript storage and permissions in OneDrive for Business and SharePoint
+title: Teams meeting recording and transcript storage and permissions in OneDrive and SharePoint
 ms.author: wlibebe
 author: wlibebe
 ms.reviewer: yudma, yujin1, lisma, ritikag
@@ -22,14 +22,14 @@ appliesto:
   - Microsoft Teams
 ---
 
-# Teams meeting recording and transcript storage and permissions in OneDrive for Business and SharePoint
+# Teams meeting recording and transcript storage and permissions in OneDrive and SharePoint
 
 **APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Town halls ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Calls
 
 > [!NOTE]
 > When organizers turn off Microsoft 365 Copilot in Teams meetings and events, recording and transcription are also turned off. To learn more about Copilot, see [Manage Microsoft 365 Copilot in Teams meetings and events](copilot-teams-transcription.md).
 
-When users in your organization record and transcribe Teams meetings, the recordings and transcripts are stored in either OneDrive for Business and SharePoint. Depending on where your users access the file, the recording plays on the video player in OneDrive or SharePoint. This article helps you, as an admin, understand recording and transcript storage and permissions for OneDrive for Business and SharePoint.
+When users in your organization record and transcribe Teams meetings, the recordings and transcripts are stored in either OneDrive for work or school and SharePoint. Depending on where your users access the file, the recording plays on the video player in OneDrive or SharePoint. This article helps you, as an admin, understand recording and transcript storage and permissions for OneDrive and SharePoint.
 
 To learn about your recording policies, see [Teams meeting recording](meeting-recording.md). To learn how to block the download of Teams meeting recording files from SharePoint or OneDrive, see [Block the download of Teams meeting recording files from SharePoint or OneDrive](block-download-meeting-recording.md).
 
@@ -76,12 +76,12 @@ For details on shared mailboxes, see [About shared mailboxes - Microsoft 365 a
 
 ### Video on Demand (VOD)
 
-When organizers record webinars and town halls, the recordings are stored in OneDrive. Once an organizer uses VOD to publish event recordings, the recordings are stored in Sharepoint Embedded File Storage Containers. Only the event organizers can manage the recordings of past town halls in their calendar.
+When organizers record webinars and town halls, the recordings are stored in OneDrive. Once an organizer uses VOD to publish event recordings, the recordings are stored in SharePoint Embedded File Storage Containers. Only the event organizers can manage the recordings of past town halls in their calendar.
 
 > [!NOTE]
-> As an admin, although you can find the event recording in the Sharepoint Embedded Container, you can only delete the recording in the Teams admin center.
+> As an admin, although you can find the event recording in the SharePoint Embedded Container, you can only delete the recording in the Teams admin center.
 
-To learn more about Sharepoint Embedded File Storage Containers, see [Overview of SharePoint Embedded](/sharepoint/dev/embedded/overview).
+To learn more about SharePoint Embedded File Storage Containers, see [Overview of SharePoint Embedded](/sharepoint/dev/embedded/overview).
 
 #### Delete a VOD event recording
 
@@ -96,7 +96,7 @@ To learn more about VOD, see [Manage VOD publishing for webinars and town halls]
 
 ### Microsoft Teams Rooms meetings
 
-For **Microsoft Teams Rooms meetings**, when a user creates a meeting using the **Meet now** button in a Teams Room, the Teams Room itself becomes the meeting organizer, and by default, the recording is stored in the Teams Room's OneDrive account, if available. However, none of the meeting participants have full permissions to the file. If you want meeting participants to have full permissions to the recording file, avoid assigning a OneDrive license to your Teams Room's resource account.
+For **Microsoft Teams Rooms meetings**, when a user creates a meeting using the **Meet now** button in a Teams Room, the Teams Room itself becomes the meeting organizer, and by default, the recording is stored in the Teams Room's OneDrive account, if available. However, none of the meeting participants have full permissions to the file. To give meeting participants full permissions to the recording file, avoid assigning a OneDrive license to your Teams Room's resource account.
 
 When a Teams Room's resource account doesn't have a OneDrive license and storage, the recording gets saved to the co-organizer's or recording initiator's OneDrive. For details on what happens if a co-organizer or recording doesn't have a OneDrive account, see the **Recording storage for organizers without OneDrive accounts** section in this article.
 
@@ -123,11 +123,11 @@ If a Teams meeting recording fails to successfully upload to OneDrive because th
 
 ### Videos
 
-Videos are just like any other file in OneDrive and SharePoint. Handling ownership and retention after an employee leaves follows the standard [OneDrive and SharePoint process](/onedrive/retention-and-deletion).
+Videos are just like any other file in OneDrive and SharePoint. Handling ownership and retention after someone leaves follows the standard [OneDrive and SharePoint process](/onedrive/retention-and-deletion).
 
 ### Retention labels
 
-To learn how to apply retention labels to Teams meeting recordings, see [How to autoapply a retention label](/microsoft-365/compliance/apply-retention-labels-automatically).
+To learn how to apply retention labels to Teams meeting recordings, see [How to auto-apply a retention label](/microsoft-365/compliance/apply-retention-labels-automatically).
 
 ### Planning for storage
 
@@ -164,7 +164,7 @@ Here are the most relevant sections to help you get started:
 - [How long it takes for retention labels to take effect](/purview/apply-retention-labels-automatically#how-long-it-takes-for-retention-labels-to-take-effect)
 
 > [!NOTE]
-> When creating a retention label policy in Microsoft Purview, the minimum retention period is 1 day, which means the recordings and accompanying transcripts will only be deleted after 1 day.
+> When you create a retention label policy in Microsoft Purview, the minimum retention period is one day. The recordings and accompanying transcripts are deleted after one day.
 
 ### Captions
 
@@ -185,11 +185,11 @@ You can use the **Meetings automatically expire** setting in the Teams admin cen
 |1:1 call with internal parties             |Callee                 |Callee’s OneDrive account                        |Callee is owner and has full permissions. <br /><br />Caller has read-only access, but no sharing or download permissions. <br /><br />|
 |1:1 call with an external call             |Caller                 |Caller’s OneDrive account                        |Caller is owner and has full permissions.<br /> <br />Callee has no access. Caller must share it to the Callee.|
 |1:1 call with an external call             |Callee                 |Callee’s OneDrive account                        |Callee is owner and has full permissions.<br /><br />Caller has no access. Callee must share it to the Caller.|
-|Group call                                 |Any member of the call |Group member who selected Record’s OneDrive account  |Member who selected Record has full permissions. <br /><br /> Other group members from the same tenant have Read rights. <br /><br /> Other group members from different tenant have no permissions to it.|
-|Adhoc/Scheduled meeting                    |Organizer              |Organizer’s OneDrive account                     |Organizer has full permissions to the recording. Co-organizers and organizer have edit permissions and can share. <br /> <br />  All other members of the meeting from the same tenant as the organizer have read access, but no sharing and download permissions.|
-|Adhoc/Scheduled meeting                    |Other meeting member   |Organizer’s OneDrive account                                  |Organizer has full permissions to the recording. Co-organizers and organizer have edit permissions and can share. <br /> <br />  All other members of the meeting from the same tenant as the organizer have read access.|
-|Adhoc/Scheduled meeting with external participants|Organizer              |Organizer’s OneDrive account                     |Organizer has full permissions to the recording. Co-organizers and organizer have edit permissions and can share. <br /> <br />  All other members of the meeting from the same tenant as the organizer have read access. <br /><br /> All other external participants have no access, and the Organizer must share it to them.|
-|Adhoc/Scheduled meeting with external participants|Other meeting member   |Organizer’s OneDrive account                                  |Organizer has full permissions to the recording. Co-organizers and organizer have edit permissions and can share. <br /><br /> All other members of the meeting from the same tenant as the organizer have read access. <br /><br />All other external participants have no access, and the Organizer must share it to them.|
+|Group call                                 |Any member of the call |Group member who selected Record’s OneDrive account  |Member who selected Record has full permissions. <br /><br /> Other group members from the same organization have Read rights. <br /><br /> Other group members from different organization have no permissions to it.|
+|Adhoc/Scheduled meeting                    |Organizer              |Organizer’s OneDrive account                     |Organizer has full permissions to the recording. Co-organizers and organizer have edit permissions and can share. <br /> <br />  All other members of the meeting from the same organization as the organizer have read access, but no sharing and download permissions.|
+|Adhoc/Scheduled meeting                    |Other meeting member   |Organizer’s OneDrive account                                  |Organizer has full permissions to the recording. Co-organizers and organizer have edit permissions and can share. <br /> <br />  All other members of the meeting from the same organization as the organizer have read access.|
+|Adhoc/Scheduled meeting with external participants|Organizer              |Organizer’s OneDrive account                     |Organizer has full permissions to the recording. Co-organizers and organizer have edit permissions and can share. <br /> <br />  All other members of the meeting from the same organization as the organizer have read access. <br /><br /> All other external participants have no access, and the Organizer must share it to them.|
+|Adhoc/Scheduled meeting with external participants|Other meeting member   |Organizer’s OneDrive account                                  |Organizer has full permissions to the recording. Co-organizers and organizer have edit permissions and can share. <br /><br /> All other members of the meeting from the same organization as the organizer have read access. <br /><br />All other external participants have no access, and the Organizer must share it to them.|
 |Channel meeting                            |Channel Member         |Teams SharePoint location for that channel. Channel meeting recording upload to SharePoint isn't supported for IP-based restrictions. We recommend using [Azure conditional access](/azure/active-directory/conditional-access/overview). |Member who selected on Record has edit permissions to the recording. <br /> <br />Every other member’s permissions are based on the Channel SharePoint permissions.|
 
 ## Related topics

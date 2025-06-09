@@ -3,7 +3,7 @@ title: IT Admins- Manage and create custom meeting backgrounds for Teams meeting
 author: wlibebe
 ms.author: wlibebe
 manager: pamgreen
-ms.date: 04/10/2024
+ms.date: 4/30/2025
 ms.reviewer: margidesai
 ms.topic: article
 ms.tgt.pltfrm: cloud
@@ -33,7 +33,7 @@ description: Using approved corporate assets like backgrounds to create custom b
 
 Custom meeting backgrounds are images that you, as an admin, can upload for your users to display in the background of their video feed during meetings.
 
-Customization in Teams meetings allows organizations to extend their visual identities across the meeting experience. Using custom meeting backgrounds helps foster internal corporate culture building and increase overall brand awareness with both internal and external meeting participants. With the help of your organization's brand management and corporate communications teams, you can easily set up and create custom meeting backgrounds for various business units and departments within a single tenant.
+Customization in Teams meetings allows organizations to extend their visual identities across the meeting experience. Using custom meeting backgrounds helps foster internal corporate culture building and increase overall brand awareness with both internal and external meeting participants. With the help of your organization's brand management and corporate communications teams, you can easily set up and create custom meeting backgrounds for various business units and departments.
 
 Only you and Teams Premium licensed users that you assign this custom background policy to can use custom meeting backgrounds during meetings. Your users can still upload their own backgrounds for meetings, regardless of whether they have a Teams Premium license or not.
 
@@ -51,7 +51,7 @@ Before setting up custom meeting backgrounds for your Teams meetings, check to m
 
 You can upload and manage custom meeting backgrounds for Teams meetings in the Teams admin center.
 
-### Enable the custom background policy
+### Turn on the custom background policy
 
 To enable the custom background policy, follow these steps:
 
@@ -63,11 +63,11 @@ To enable the custom background policy, follow these steps:
    - Alternatively, you could select **Meeting Policies** and then select the **Customize meeting visuals** button in the upper right-hand corner.
 
 4. Within your chosen policy, navigate to the **Meeting Backgrounds** section.
-5. Toggle the **Use background images from my organization** setting from **Off** to **On** to enable the setting.
+5. Toggle the **Use background images from my organization** setting from **Off** to **On** to turn on the setting.
 
 ### Add custom background images
 
-When you toggle **Use background images from my organization** to **On**, an **+Add** button appears. Once you select **+Add**, a pane called **Managing Backgrounds** opens, allowing you to add your custom background images.  These images are displayed on the end users’ interfaces, ordered by the time of upload.
+When you toggle **Use background images from my organization** to **On**, an **+Add** button appears. Once you select **+Add**, a pane called **Managing Backgrounds** opens, allowing you to upload your custom background images. These images are displayed on the end users’ interfaces, ordered by the time of upload.
 
 Uploaded images must adhere to the following parameters. You can upload:
 
@@ -80,7 +80,7 @@ Uploaded images must adhere to the following parameters. You can upload:
 > [!NOTE]
 > Only end users with a Teams Premium license have these images in their background settings panel to use during meetings.
 
-### Add a frosted glass background effect
+#### Add a frosted glass background effect
 
 Frosted glass backgrounds blend the privacy of background blur with the personalization of your chosen image to create a polished background that looks like frosted glass windows.
 
@@ -156,7 +156,11 @@ Only Teams Premium licensed users can use the meeting backgrounds in their Backg
 
 While only licensed end users can select their choice of uploaded backgrounds, anyone can view the backgrounds that are applied to a meeting. These users include the following types:
 
-- In-tenant, Teams Premium licensed users
-- In-tenant, nonlicensed users
+- In-org, Teams Premium licensed users
+- In-org, non-licensed users
 - External Users
 - Anonymous users
+
+## Related topics
+
+- [Teams Premium meetings customization options](custom-meetings-overview.md)

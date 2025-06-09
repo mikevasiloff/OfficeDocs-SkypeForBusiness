@@ -21,6 +21,7 @@ ms.custom:
   - ms.teamsadmincenter.dashboard.helparticle.quickstartteamsadmin
   - intro-get-started
   - chat-teams-channels-revamp
+  - teams-chat-and-channels
 appliesto: 
   - Microsoft Teams
 ---

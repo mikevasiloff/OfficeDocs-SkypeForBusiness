@@ -4,7 +4,7 @@ author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
 ms.reviewer: kimmatlock
-ms.date: 2/21/2025
+ms.date: 5/12/2025
 ms.topic: article
 audience: Admin
 ms.service: msteams
@@ -94,6 +94,34 @@ Completed With Errors| APP RESTART FAILED|XML with new settings has been written
 |Failed |DEVICE IN MEETING | Device is currently in a meeting.| Try again later. |
 | Failed |DEVICE DISCONNECTED | Device was disconnected when we attempted to execute the settings change, so no changes occurred.|Reapply the settings change.|
 
+## Device Settings Jobs for bulk changes
+
+[!INCLUDE[Preview-feature](../includes/preview-feature.md)]
+
+For Teams Rooms Pro management administrators, a job can be created to apply one or more settings to one or more Teams Rooms on Windows devices through the Teams Rooms Pro management portal.   The device setting job acts as a parent container for each of the individual jobs that execute for the selected setting changes across the devices selected.  In this way, you'll have an overall status of the completion of the parent job, along with the status for each individual device settings job.  A filter has been added to easily sort on a parent job status (Submitted, Running, Completed, Completed with errors, Cancelled, and Failed).  
+
+When selecting either the **Apply Now** or **Schedule during Nightly Maintenance window**, the parent job creates individual jobs for each room device selected.  At the individual room level, you can see the job under the **Room > Activity** pane.  If the device is in a call or unmonitored, the individual job can fail or be rescheduled for another attempt to apply the settings change.  If one of the individual jobs fails, the parent job is reflected as **Completed with Errors**.  An export button has been provided to download the entire job details along with statuses of each individual job.
+
+### Create a Job
+
+1. In the left navigation of the Microsoft Teams Rooms Pro Management portal, go to **Settings** > **Device Settings**.
+
+1. Select **Create job**.  A wizard is presented to step through creating the job.
+
+1. Select **Settings** changes to be applied to devices.
+
+1. Add **rooms** or **groups of rooms** where the setting changes are to be applied.
+
+1. **Schedule** whether the settings changes should **apply now** or **schedule in the nightly maintenance window**.
+
+1. Give the job a **name** for reference in the Device Settings Job dashboard.
+
+1. Review the job details.  When you're ready, select **Create job**.  The job will be queued to execute.
+
+### Device Settings Job Detail (for bulk changes)
+
+Details of the job created are available by selecting the job from list on the Device settings job dashboard. A Setting jobs detail pane is presents with three tabs: **General, Settings and Devices**, along with an Export button. Filters are also available to sort through devices for quick reference of individual job statuses. 
+
 ## Settings available
 
 Teams Rooms devices have settings that can either be applied on the device and synchronized with the Teams Rooms Pro management portal or from the Teams Rooms Pro management portal to the device. Here are the settings that are visible in the portal.
@@ -121,94 +149,94 @@ Teams Rooms devices have settings that can either be applied on the device and s
 |:------|:------|:------|:------|
 |Exchange sign in address|Text| Device's resource account sign-in address.|Information only|
 |Supported meeting mode|Text|Teams only are displayed.|Information only|
-|Public Preview|Text| Enrolls the device into Teams Ring 3.6 Public Preview. |Enabling this setting enables Public Preview features on your Teams Rooms device. Use caution as devices in early preview rings aren't supported by Microsoft Support.|
+|Public Preview|Text| Enrolls the device into Teams Ring 3.6 Public Preview. |Enabling this setting enables Public Preview features on your Teams Rooms device. Use caution as devices in early preview rings aren't supported by Microsoft Support. Available for Individual or bulk changes.|
 
 ### Meetings
 
 |**Field**|**Input**|**Description**|**Note**|
 |:------|:------|:------|:------|
-|Default content layout in single display mode|Radio buttons|Focus on Content and People OR Focus on Content only|Set the default content layout for single display mode. Meeting participants can change the default content layout during meetings.|
-|Show Meeting Chat|Toggle| Enabled by default. |If disabled, meeting chat functionality (including chat bubbles and chat selection) isn't available in any meeting layout on the Teams Rooms device.|
-|Open Chat by Default|Checkbox| Enabled by default. |Checkbox won't be visible if Show Meeting Chat is disabled. If disabled, chat panel won't show by default in meetings using Gallery view.|
-|Front Row Experience|Toggle|Enabled by default. |If false, Front row is disabled. For more information, see [Remotely configure Front Row on Teams Rooms](/microsoftteams/rooms/manage-front-row).|
-|Default Layout Experience|Radio button|Front row default|Select the default meeting join layout as Gallery or Front Row.|
-|Front Row Video Size|Dropdown|Medium (default), Small, Large|Sets the size of Front row to provide more or less space for remote participant video and shared content.|
-|Right front row panel|Dropdown|Show raised hand list, Show meeting chat, Hide the panel|Configure the position of the raised hand and chat components in the meeting panels to the left and right of meeting content on front-of-room displays.|
-|Left front row panel|Dropdown|Show raised hand list, Show meeting chat, Hide the panel|Configure the position of the raised hand and chat components in the meeting panels to the left and right of meeting content on front-of-room displays.|
-|Automatic Screen sharing|Toggle| Disabled by default.| If true, a connected HDMI ingest will be automatically shared on the Front of Room display and when in a Teams Meeting it's automatically shared to remote participants. If false, a connected HDMI ingest will be automatically shared on the Front of Room display in and out of a Teams meeting but it will not be shared to remote participants in the meeting automatically, users need to select the share icon to shared content to remote participants.|
-|Show meeting name|Toggle| Enabled by default.| If disabled, the meeting name is hidden from the console and Front of Room calendar displays.|
-|Autoleave if everyone else left the meeting|Toggle|Disabled by default.|If true, device will automatically leave the meeting if it's the only participant in the meeting for more than 5 minutes before or after the scheduled meeting time.|
-|HDMI ingest audio sharing|Toggle|Disabled by default. |When disabled, audio from a connected HDMI ingest isn't shared to Teams Meeting participants.|
-|Enable room capacity notifications|Toggle|Enabled by default. |Enabled by default to provide warnings to in room participants that the room has reached capacity (this requires the room capacity be set in Exchange and a camera capable of people counting). Set to false if you wish to disable these warnings.|
+|Default content layout in single display mode|Radio buttons|Focus on Content and People OR Focus on Content only|Set the default content layout for single display mode. Meeting participants can change the default content layout during meetings. Available for Individual or bulk changes.|
+|Show Meeting Chat|Toggle| Enabled by default. |If disabled, meeting chat functionality (including chat bubbles and chat selection) isn't available in any meeting layout on the Teams Rooms device. Available for Individual or bulk changes.|
+|Open Chat by Default|Checkbox| Enabled by default. |Checkbox won't be visible if Show Meeting Chat is disabled. If disabled, chat panel won't show by default in meetings using Gallery view.  Available for Individual or bulk changes.|
+|Front Row Experience|Toggle|Enabled by default. |If false, Front row is disabled. For more information, see [Remotely configure Front Row on Teams Rooms](/microsoftteams/rooms/manage-front-row).  Available for Individual or bulk changes.|
+|Default Layout Experience|Radio button|Front row default|Select the default meeting join layout as Gallery or Front Row.  Available for Individual or bulk changes.  Available for Individual or bulk changes.|
+|Front Row Video Size|Dropdown|Medium (default), Small, Large|Sets the size of Front row to provide more or less space for remote participant video and shared content. Available for Individual or bulk changes.|
+|Right front row panel|Dropdown|Show raised hand list, Show meeting chat, Hide the panel|Configure the position of the raised hand and chat components in the meeting panels to the left and right of meeting content on front-of-room displays. Available for Individual or bulk changes.|
+|Left front row panel|Dropdown|Show raised hand list, Show meeting chat, Hide the panel|Configure the position of the raised hand and chat components in the meeting panels to the left and right of meeting content on front-of-room displays. Available for Individual or bulk changes.|
+|Automatic Screen sharing|Toggle| Disabled by default.| If true, a connected HDMI ingest will be automatically shared on the Front of Room display and when in a Teams Meeting it's automatically shared to remote participants. If false, a connected HDMI ingest will be automatically shared on the Front of Room display in and out of a Teams meeting but it will not be shared to remote participants in the meeting automatically, users need to select the share icon to shared content to remote participants. Available for Individual or bulk changes.|
+|Show meeting name|Toggle| Enabled by default.| If disabled, the meeting name is hidden from the console and Front of Room calendar displays. Available for Individual or bulk changes.|
+|Autoleave if everyone else left the meeting|Toggle|Disabled by default.|If true, device will automatically leave the meeting if it's the only participant in the meeting for more than 5 minutes before or after the scheduled meeting time. Available for Individual or bulk changes.|
+|HDMI ingest audio sharing|Toggle|Disabled by default. |When disabled, audio from a connected HDMI ingest isn't shared to Teams Meeting participants. Available for Individual or bulk changes.|
+|Enable room capacity notifications|Toggle|Enabled by default. |Enabled by default to provide warnings to in room participants that the room has reached capacity (this requires the room capacity be set in Exchange and a camera capable of people counting). Set to false if you wish to disable these warnings. Available for Individual or bulk changes.|
 |Show Captions|Toggle|Disabled by default. |When enabled, captions will be displayed.|
 |Filter Profane words in captions and transcripts|Toggle| Enabled by default. |When captions are on, use of profane words are redacted.|
-|Enable People Count|Toggle|Enabled by default. |If true, people count will be enabled for Teams Rooms.|
-|Require passcode for all Teams meetings|Toggle| Disabled by default. If true, users are required to enter the correct meeting ID and passcode to join all Teams meetings scheduled in the room with a Microsoft Teams Room Pro license.|
-|Require passcode for all Private Teams meetings|Toggle| Disabled by default.| If true, users are required to enter the correct meeting ID and passcode to join all private Teams meetings scheduled in the room with a Microsoft Teams Room Pro license.|
-|Join third-party meetings|Checkbox|Cisco Webex, Zoom, GotoMeetings, RingCentral Meetings, Amazon Chime|May require calling plan to enable. For more information, see [Join third-party meetings](/microsoftteams/rooms/third-party-join?tabs=MTRW).|
-|Join with room info|Radio button|Uses conference room account info to join third party meetings.
-|Join with custom info|Radio button| Disabled by default.|If this value is set to true, you must specify both *CustomDisplayNameForThirdPartyMeetings* and *CustomDisplayEmailForThirdPartyMeetings* must be specified.|
-|Show Room Facilitator QR code|Toggle|Disabled by default.||
+|Enable People Count|Toggle|Enabled by default. |If true, people count will be enabled for Teams Rooms. Available for Individual or bulk changes.|
+|Require passcode for all Teams meetings|Toggle| Disabled by default. If true, users are required to enter the correct meeting ID and passcode to join all Teams meetings scheduled in the room with a Microsoft Teams Room Pro license.|Available for Individual or bulk changes.|
+|Require passcode for all Private Teams meetings|Toggle| Disabled by default.| If true, users are required to enter the correct meeting ID and passcode to join all private Teams meetings scheduled in the room with a Microsoft Teams Room Pro license. Available for Individual or bulk changes.|
+|Join third-party meetings|Checkbox|Cisco Webex, Zoom, GotoMeetings, RingCentral Meetings, Amazon Chime|May require calling plan to enable. For more information, see [Join third-party meetings](/microsoftteams/rooms/third-party-join?tabs=MTRW). Available for Individual or bulk changes.|
+|Join with room info|Radio button|Uses conference room account info to join third party meetings.|Available for Individual or bulk changes.|
+|Join with custom info|Radio button| Disabled by default.|If this value is set to true, you must specify both *CustomDisplayNameForThirdPartyMeetings* and *CustomDisplayEmailForThirdPartyMeetings* must be specified. Available for Individual or bulk changes.|
+|Show Room Facilitator QR code|Toggle|Disabled by default.|Available for Individual or bulk changes.|
 
 ### Device
 
 |**Field**|**Input**|**Description**|**Note**|
 |:------|:------|:------|:------|
-|Dual Monitor mode|Toggle|Disabled by default. |Dual screen mode is enabled. Otherwise, the device uses single screen mode.|
-|Allow content duplication|Checkbox|Disabled by default.|When checkbox is selected, content is shown on both screens in dual screen mode, when out of meeting.|
-|Enable Resolution and Scaling:|Toggle|Disabled by default. |If true, the display resolution and scale setting will be applied. This setting affects both the main front-of-room display and extended front-of-room display once this setting is enabled. For more information, see [Remotely configure layout, scale, and resolution on Teams Rooms displays](/microsoftteams/rooms/manage-front-room-scale-res).|
-|Main Front of Room Display Resolution (Width)|Number| Enter a value. |The width entered could be unsupported. Valid resolutions (width x height) are: 1920x1080, 2560x1080, 3840x2160, 3840x2560, 5120x2160. **Note**: *Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.*|
-|Main Front of Room Display (Height)|Number|Enter a value.|The height entered could be unsupported. Valid resolutions (width x height) are: 1920x1080, 2560x1080, 3840x2160, 3840x2560, 5120x2160. **Note**: *Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.*|
-|Main Front of Room scaling|Slider|Input numeric value of scaling.|Valid values are 100 (recommended), 125, 150, 175, 200, 225, 250, and 300. If you input greater than 300 and your front-of-room display only supports up to 300, it's set to 300. For more information, see [Remotely configure layout, scale, and resolution on Teams Rooms displays](/microsoftteams/rooms/manage-front-room-scale-res).|
-|Extended Front of Room Display Resolution (width)|Number|Enter a value.|The width entered could be unsupported. Valid resolutions (width x height) are: 1920x1080, 2560x1080, 3840x2160, 3840x2560, 5120x2160. Note: Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.|
-|Extended Front of Room Display Resolution (height)|Number|Enter a value.|The height entered could be unsupported. Valid resolutions (width x height) are: 1920x1080, 2560x1080, 3840x2160, 3840x2560, 5120x2160. **Note**: *Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.*|
-Extended Front of Room scaling|Slider|Input numeric value of scaling.|Valid values are 100 (recommended), 125, 150, 175, 200, 225, 250, and 300. If you input greater than 300 and your front-of-room display only supports up to 300, it's set to 300. For more information, see [Remotely configure layout, scale, and resolution on Teams Rooms displays](/microsoftteams/rooms/manage-front-room-scale-res). **Note**: *Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.*|
-|Disable Split video gallery|Toggle| Default is false. |This setting is only applicable to dual-display rooms. Specify true to disable splitting video gallery across both screens. This will also disable Front row layout, and any settings associated with Front row layout.|
-|Remove Front of room calendar|Toggle|Disabled by default.|Remove the calendar on front-of-room displays.|
-|Allow Bluetooth beaconing|Toggle|Enabled by default.|When checked, proximity-based meeting invitations using Bluetooth are automatically accepted.|
-|Remote control from personal devices|Checkbox|Enabled by default.|When checked, room remote connections are allowed. Room Remote won't work if only ultrasound is turned on.|
+|Dual Monitor mode|Toggle|Disabled by default. |Dual screen mode is enabled. Otherwise, the device uses single screen mode. Available for Individual or bulk changes.|
+|Allow content duplication|Checkbox|Disabled by default.|When checkbox is selected, content is shown on both screens in dual screen mode, when out of meeting. Available for Individual or bulk changes.|
+|Enable Resolution and Scaling:|Toggle|Disabled by default. |If true, the display resolution and scale setting will be applied. This setting affects both the main front-of-room display and extended front-of-room display once this setting is enabled. For more information, see [Remotely configure layout, scale, and resolution on Teams Rooms displays](/microsoftteams/rooms/manage-front-room-scale-res). Available for Individual or bulk changes.|
+|Main Front of Room Display Resolution (Width)|Number| Enter a value. |The width entered could be unsupported. Valid resolutions (width x height) are: 1920x1080, 2560x1080, 3840x2160, 3840x2560, 5120x2160.  Available for Individual or bulk changes.   **Note**: *Changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.  This is normal.*|
+|Main Front of Room Display (Height)|Number|Enter a value.|The height entered could be unsupported. Valid resolutions (width x height) are: 1920x1080, 2560x1080, 3840x2160, 3840x2560, 5120x2160. Available for Individual or bulk changes. **Note**: *Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.  This is normal.*|
+|Main Front of Room scaling|Slider|Input numeric value of scaling.|Valid values are 100 (recommended), 125, 150, 175, 200, 225, 250, and 300. If you input greater than 300 and your front-of-room display only supports up to 300, it's set to 300. For more information, see [Remotely configure layout, scale, and resolution on Teams Rooms displays](/microsoftteams/rooms/manage-front-room-scale-res).   Available for Individual or bulk changes.|
+|Extended Front of Room Display Resolution (width)|Number|Enter a value.|The width entered could be unsupported. Valid resolutions (width x height) are: 1920x1080, 2560x1080, 3840x2160, 3840x2560, 5120x2160. Note: Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.  This is normal. Available for Individual or bulk changes.|
+|Extended Front of Room Display Resolution (height)|Number|Enter a value.|The height entered could be unsupported. Valid resolutions (width x height) are: 1920x1080, 2560x1080, 3840x2160, 3840x2560, 5120x2160. Available for Individual or bulk changes. **Note**: *Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.*  |
+|Extended Front of Room scaling|Slider|Input numeric value of scaling.|Valid values are 100 (recommended), 125, 150, 175, 200, 225, 250, and 300. If you input greater than 300 and your front-of-room display only supports up to 300, it's set to 300. For more information, see [Remotely configure layout, scale, and resolution on Teams Rooms displays](/microsoftteams/rooms/manage-front-room-scale-res). Available for Individual or bulk changes. **Note**: *Any changes are applied to the device. However, in the Settings Job History, it results in a Completed with Errors message.*|
+|Disable Split video gallery|Toggle| Default is false. |This setting is only applicable to dual-display rooms. Specify true to disable splitting video gallery across both screens. This will also disable Front row layout, and any settings associated with Front row layout.  Available for Individual or bulk changes.|
+|Remove Front of room calendar|Toggle|Disabled by default.|Remove the calendar on front-of-room displays. Available for Individual or bulk changes.|
+|Allow Bluetooth beaconing|Toggle|Enabled by default.|When checked, proximity-based meeting invitations using Bluetooth are automatically accepted. Available for Individual or bulk changes.|
+|Remote control from personal devices|Checkbox|Enabled by default.|Allow Bluetooth beaconing must be true. When checked, room remote connections are allowed. Room Remote won't work if only ultrasound is turned on.  Available for Individual or bulk changes.|
 |Enable Ultrasound beacon|Toggle|Enabled by default.|Enables Ultrasound signaling beacons from compatible consoles. For more information [Proximity Join using Bluetooth and ultrasound](/microsoftteams/rooms/proximity-join?tabs=portal)|
-|Automatically accept proximity-based meeting invites|Checkbox|Enabled by default.|When checked, proximity-based meeting invitations using Bluetooth are automatically accepted.|
-|Show Room QR Code|Toggle|Enabled by default.|When toggled on, Proximity-based meeting invitations via QR code are automatically accepted. For more information, see [Join meetings with QR codes](/microsoftteams/rooms/teams-rooms-qr-codes).
-|Send feedback to the Teams Rooms Pro Management portal|Toggle|Enabled by default.|Allows logs to be sent with feedback submitted using Report a problem. To ensure logs and feedback with larger sizes are delivered, adjust the message size restriction for your mailboxes on the Exchange admin center.|
+|Automatically accept proximity-based meeting invites|Checkbox|Enabled by default.|When checked, proximity-based meeting invitations using Bluetooth are automatically accepted. Available for Individual or bulk changes.|
+|Show Room QR Code|Toggle|Enabled by default.|When toggled on, Proximity-based meeting invitations via QR code are automatically accepted. For more information, see [Join meetings with QR codes](/microsoftteams/rooms/teams-rooms-qr-codes). Available for Individual or bulk changes.|
+|Send feedback to the Teams Rooms Pro Management portal|Toggle|Enabled by default.|Allows logs to be sent with feedback submitted using Report a problem. To ensure logs and feedback with larger sizes are delivered, adjust the message size restriction for your mailboxes on the Exchange admin center.  Available for Individual or bulk changes.|
 
 ### Coordinated meetings
 
 |**Field**|**Input**|**Description**|**Note**|
 |:------|:------|:------|:------|
-|Coordinated Meetings|Toggle|Container for the configuration elements for Coordinated Meetings.|Determines whether Teams is configured to participate in Coordinated Meetings with other devices.|
-|Turn on this device’s microphone|Toggle|Disabled by default.|To avoid causing an echo effect, make sure only one device's microphone is enabled.|
-|Let people enable when joining a meeting|Checkbox|Disabled by default.||
-|Turn on this device’s camera|Toggle|Disabled by default.||
-|Let people enable when joining a meeting|Toggle|Disabled by default.||
-|Turn on whiteboarding for this device|Toggle|Disabled by default.||
-|Let people enable when joining a meeting|Checkbox|Disabled by default.||
+|Coordinated Meetings|Toggle|Container for the configuration elements for Coordinated Meetings.|Determines whether Teams is configured to participate in Coordinated Meetings with other devices. Available for Individual or bulk changes.|
+|Turn on this device’s microphone|Toggle|Disabled by default.|To avoid causing an echo effect, make sure only one device's microphone is enabled. Available for Individual or bulk changes when coordinated meetings toggle is on.|
+|Let people enable when joining a meeting|Checkbox|Disabled by default.|Available for Individual or bulk changes when coordinated meetings toggle is on.|
+|Turn on this device’s camera|Toggle|Disabled by default.|Available for Individual or bulk changes when coordinated meetings toggle is on.|
+|Let people enable when joining a meeting|Toggle|Disabled by default.|Available for Individual or bulk changes when coordinated meetings toggle is on.|
+|Turn on whiteboarding for this device|Toggle|Disabled by default.|Available for Individual or bulk changes when coordinated meetings toggle is on.|
+|Let people enable when joining a meeting|Checkbox|Disabled by default.|Available for Individual or bulk changes when coordinated meetings toggle is on.|
 |Trusted device accounts|String|Separate with commas.|This is a comma-separated list of UPNs for each Teams Rooms device or Surface Hub that the device should accept meeting join requests from, or to which meeting join requests should be sent.|
 
 ### Peripherals
 
 |**Field**|**Input**|**Description**|**Note**|
 |:------|:------|:------|:------|
-|Conference Microphone|Dropdown|Select option|Set the microphone used as the recording device in a conference.|
-|Conference audio speaker|Dropdown|Select option|Set the device to be used as speaker for the conference. This setting is used to set the speaker device used in a call.|
-|Conference audio speaker default volume|Slider||Adjusts the conference audio speaker volume.|
-|Default Speaker|Dropdown||Set the device to be used to play the audio from an HDMI ingest source.|
-|Default Speaker volume|Slider||Adjusts the default speaker volume.|
-|Ultrasound Speaker|Toggle||This field won't appear unless there's a supported ultrasonic device discovered.|
-|Default Camera|Dropdown||Set the default camera.|
-|Enable Cloud intelliframe|Toggle|Disabled by default.|Allows Teams Rooms to break up the single video feed of the room into a composite view made up of focused and framed video tiles that feature in-room attendees.|
-|Multiple Camera views|Toggle|Disabled by default.|Enable to set up multiple cameras. For more information, see [Multi Camera](/microsoftteams/rooms/multicamera-view).|
-|Additional Camera(s)|Dropdown||Add up to three cameras.|
-|Content camera|Dropdown||Select the camera configured in room to share analog whiteboard content in a meeting.|
-|Allow content enhancement|Checkbox||When set to true (the default), the content camera image is digitally enhanced: the whiteboard edge is detected and an appropriate zoom is selected, ink lines are enhanced, and the person writing on the whiteboard is made transparent. Set to false if you intend to send a raw video feed to meeting participants for spaces where a whiteboard isn't drawn on with a pen and instead the camera is used to show sticky notes, posters, or other media.|
-|Content camera inverted|Checkbox||Specify if the content camera is physically installed upside down. For content cameras that support automatic rotation, specify false.|
-|Enable noise suppression|Toggle|Disabled by default.|Controls noise suppression levels in Teams. **Off** Use OEM-provided noise suppression only. **On** Suppresses all background noises (stationary and nonstationary) that aren't speech.|
+|Conference Microphone|Dropdown|Select option|Set the microphone used as the recording device in a conference.  Available for Individual setting changes. Not available for bulk setting changes|
+|Conference audio speaker|Dropdown|Select option|Set the device to be used as speaker for the conference. This setting is used to set the speaker device used in a call. Available for Individual setting changes. Not available for bulk setting changes.|
+|Conference audio speaker default volume|Slider||Adjusts the conference audio speaker volume. Available for Individual or bulk changes.|
+|Default Speaker|Dropdown||Set the device to be used to play the audio from an HDMI ingest source. Available for Individual setting changes. Not available for bulk setting changes.|
+|Default Speaker volume|Slider||Adjusts the default speaker volume.  Available for Individual or bulk changes.|
+|Ultrasound Speaker|Toggle||This field won't appear unless there's a supported ultrasonic device discovered.  |
+|Default Camera|Dropdown||Set the default camera.  Available for Individual setting changes. Not available for bulk setting changes.|
+|Enable Cloud intelliframe|Toggle|Disabled by default.|Allows Teams Rooms to break up the single video feed of the room into a composite view made up of focused and framed video tiles that feature in-room attendees. Available for Individual or bulk changes.|
+|Multiple Camera views|Toggle|Disabled by default.|Enable to set up multiple cameras. For more information, see [Multi Camera](/microsoftteams/rooms/multicamera-view).  Available for Individual setting changes. Not available for bulk setting changes.|
+|Additional Camera(s)|Dropdown||Add up to three cameras.  Available for Individual setting changes. Not available for bulk setting changes.|
+|Content camera|Dropdown||Select the camera configured in room to share analog whiteboard content in a meeting. Available for Individual setting changes. Not available for bulk setting changes.|
+|Allow content enhancement|Checkbox||When set to true (the default), the content camera image is digitally enhanced: the whiteboard edge is detected and an appropriate zoom is selected, ink lines are enhanced, and the person writing on the whiteboard is made transparent. Set to false if you intend to send a raw video feed to meeting participants for spaces where a whiteboard isn't drawn on with a pen and instead the camera is used to show sticky notes, posters, or other media.  Available for Individual setting changes. Not available for bulk setting changes.|
+|Content camera inverted|Checkbox||Specify if the content camera is physically installed upside down. For content cameras that support automatic rotation, specify false.  Available for Individual setting changes. Not available for bulk setting changes.|
+|Enable noise suppression|Toggle|Disabled by default.|Controls noise suppression levels in Teams. **Off** Use OEM-provided noise suppression only. **On** Suppresses all background noises (stationary and nonstationary) that aren't speech.  Available for Individual or bulk changes.|
 
 ### Theming
 
 |**Field**|**Input**|**Description**|
 |:------|:------|:------|
-|Theming|Dropdown|Select a default background.|
+|Theming|Dropdown|Select a default background.  Available for Individual or bulk changes.|
 
 > [!Note]
 > Currently, managing custom backgrounds from Teams rooms on windows isn't supported in the Teams Rooms Pro management portal.
@@ -225,7 +253,7 @@ The ability to change specific digital settings is permission based.  If you don
 |Display Period|Header||
 |Activate signage when device has been idle for X minutes|Number|Set the activation time in range of 1 to 100 minutes.|
 |Deactivate signage with meeting is starting in X minutes|Number|Set the deactivation time in range of 1 to 100 minutes.|
-|Allow screen time-out when device is idle|Toggle|Enable to respect OS screen time-out settings. Disable to keep signage active on idle devices.|
+|Allow screen time out when device is idle|Toggle|Enable to respect OS screen time out settings. Disable to keep signage active on idle devices.|
 |Signage source|Selection|Reflects the trusted third-party signage sources where the room is enrolled in.|
 
 ## Related articles

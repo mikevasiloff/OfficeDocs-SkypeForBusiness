@@ -21,6 +21,7 @@ ms.custom:
 - ms.teamsadmincenter.messagingpolicies.overview
 - seo-marvel-apr2020
 - chat-teams-channels-revamp
+- teams-chat-and-channels
 description: Learn about Messaging policies and how they can be used to control chat messaging in Teams.
 ---
 

@@ -11,6 +11,7 @@ ms.date: 01/17/2025
 description: Learn how to set up and manage Live chat on your website and connect with customers in real time.
 ms.localizationpriority: medium
 search.appverid: MET150
+ms.custom: teams-chat-and-channels
 ms.collection: 
   - M365-collaboration
 f1.keywords:
@@ -24,6 +25,8 @@ appliesto:
 Live chat allows your website's visitors to chat easily with your business through a chat widget on your customer-facing website. Visitors submit queries to your website’s chat, connecting them directly to your support team in Teams.
 
 This article teaches you how to set up and manage the live chat widget for Microsoft Teams.
+
+Live chat is currently available in the US only with worldwide availability in Q2 of 2025. This post will be updated with the country and region availability list as the feature becomes available. 
 
 ## Requirements and limitations for live chat
 
@@ -70,6 +73,19 @@ You must consent to adding the live chat bot to your organization.
 1. Paste the code snippet into your website’s code and publish your website.
 
 The Live chat widget is now added to your website and ready for customers to use.
+
+## Add an AI chatbot to your live chat experience
+
+For tenants with a Microsoft Copilot Studio license, you can add an AI chatbot to your live chat widget to answer frequently asked customer questions before customers are connected to your support team. Learn more about Copilot Studio at [Microsoft Copilot Studio](https://www.microsoft.com/microsoft-copilot/microsoft-copilot-studio).
+
+1. Go to **Teams Admin App** in Teams.
+1. Select **Live chat** in the left rail **Admin** app menu.
+1. Select **Set up** on the suggestion **Save time with AI-generated responses** to set up the chatbot. This suggestion is only available to the admin if they have a Microsoft Copilot Studio license. In this step, add users to be assigned customer requests.
+1. Add your company's public website and select **Add AI agent**.
+
+The AI chatbot is now added to your live chat widget on your website. The AI chatbot answers your customer's questions based on information available in your website. If no answer is found or if the website visitor wants to talk to a human agent, a Teams customer request is sent to your support team (same experience as live chat).
+
+- When a customer on the website asks a question, Teams creates a request and automatically assigns it to the next available customer service member.
 
 ## What your customers and support people experience
 

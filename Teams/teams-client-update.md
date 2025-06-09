@@ -29,7 +29,7 @@ Keeping Microsoft Teams up-to-date is crucial for maximizing productivity and st
 
 ## Servicing agreement
 
-As part of a modern online service, the Teams client is updated twice a month. The client automatically installs updates when they become available to that client. Because we stagger the availability of updates worldwide, some clients in your organization might receive new updates before others. Because Teams is governed by the Modern Lifecycle Policy, it's expected that users remain on the most up-to-date version of the desktop client. Auto-updates ensure that users have the latest capabilities, performance enhancements, security, and service reliability.
+As part of a modern online service, the Teams client is updated twice a month. The client automatically installs updates when they become available to that client. Because we stagger the availability of updates worldwide using [safe deployment practices](/devops/operate/safe-deployment-practices), some clients in your organization might receive new updates before others. Because Teams is governed by the [Modern Lifecycle Policy](/lifecycle/policies/modern), it's expected that users remain on the most up-to-date version of the desktop client. Auto-updates ensure that users have the latest capabilities, performance enhancements, security, and service reliability.
 
 To identify when desktop clients fall out of date, an in-app alert is displayed if the user's current version is between one and three months old, and if there's a new version available. This in-app messaging encourages users to update to the latest version of Teams or, if necessary, to reach out to their IT admin to do so. Users on Teams desktop clients that are more than three months old will see a blocking page. This page gives the options to update now, reach out to their IT admin, or continue to Teams on the web.
 
@@ -127,7 +127,7 @@ Applications= {
     ...
     }
 ```
-  - Custom channel:
+- Custom channel:
 ```xml
 Applications= {
       ...

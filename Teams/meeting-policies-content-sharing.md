@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.service: msteams
 ms.subservice: meetings
 ms.reviewer: kamila.korsec, mario.novoselec
-ms.date: 5/30/2024
+ms.date: 5/29/2025
 audience: admin
 ms.localizationpriority: medium
 search.appverid: MET150
@@ -28,7 +28,7 @@ description: Learn to manage meeting policy settings in Teams for content sharin
 
 **APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png) Town halls
 
-Content sharing settings control how users present a screen or app during a chat, meeting, webinar, or town hall. You can configure admin settings for screen sharing mode, PowerPoint sharing, whiteboard, and shared notes. (For information about how to manage who can present and who can request control, see [Manage who can present and request control in Teams meetings](meeting-who-present-request-control.md).)
+Content sharing settings control how users present a screen or app during a chat, meeting, webinar, or town hall. You can configure admin settings for screen sharing mode, PowerPoint sharing, whiteboard, and shared notes. For information about how to manage who can present and who can request control, see [Manage who can present and request control in Teams meetings](meeting-who-present-request-control.md).
 
 For town halls, only presenters, organizers, and co-organizers can use shared notes and screen sharing.
 
@@ -53,8 +53,6 @@ You can also use the [Set-CsTeamsMeetingPolicy](/powershell/module/teams/set-cst
 - AllowDocumentCollaboration
 - AllowSharedNotes
 
-[Learn more about using the csTeamsMeetingPolicy cmdlet](/powershell/module/teams/set-csteamsmeetingpolicy).
-
 ## Screen sharing mode
 
 This setting is a per-user policy. The setting controls whether a user can share a desktop and window in a Teams meeting.
@@ -67,7 +65,7 @@ This setting is a per-user policy. The setting controls whether a user can share
 
 ## PowerPoint Live
 
-This is a per-user policy. This setting controls whether the user can share PowerPoint slide decks in a meeting. External participants, including anonymous, guest, and external access users, inherit the policy of the meeting organizer. For details on how your users use PowerPoint Live, see [Present from PowerPoint Live in Microsoft Teams](https://support.microsoft.com/office/present-from-powerpoint-live-in-microsoft-teams-28b20e74-7165-499c-9bd4-0ad975d448ad).
+This is a per-user policy. This setting controls whether the user can share PowerPoint presentations in a meeting. External participants, including anonymous, guest, and external access users, inherit the policy of the meeting organizer. For details on how your users use PowerPoint Live, see [Present from PowerPoint Live in Microsoft Teams](https://support.microsoft.com/office/present-from-powerpoint-live-in-microsoft-teams-28b20e74-7165-499c-9bd4-0ad975d448ad).
 
 Let's look at the following example.
 
@@ -76,7 +74,7 @@ Let's look at the following example.
 |Daniela   | Global   | On       |
 |Amanda   | Location1MeetingPolicy        | Off   |
 
-Amanda can't share PowerPoint slide decks in meetings even if she's the meeting organizer. Daniela can share PowerPoint slide decks even if Amanda organizes the meeting. Amanda can view the PowerPoint slide decks shared by others in the meeting, even though she can't share PowerPoint slide decks.
+Amanda can't share PowerPoint presentations in meetings even if she's the meeting organizer. Daniela can share PowerPoint presentations even if Amanda organizes the meeting. Amanda can view the PowerPoint presentations shared by others in the meeting, even though she can't share PowerPoint presentations.
 
 ## Whiteboard
 
@@ -153,8 +151,8 @@ Set-CsTeamsMeetingPolicy -AllowSharedNotes $true
 ## Related articles
 
 - [Manage who can present and request control in Teams meetings and webinars](meeting-who-present-request-control.md)
+- [Manage chat for sensitive Teams meetings](manage-chat-sensitive-meetings.md)
+- [Prevent users from sharing content in external Teams meetings](teams-encoder-setup.md)
 - [Teams policy reference - Content sharing](settings-policies-reference.md#content-sharing)
-
 - [Teams PowerShell overview](teams-powershell-overview.md)
-
 - [Assign policies to your users in Teams](policy-assignment-overview.md)

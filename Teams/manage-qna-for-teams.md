@@ -2,8 +2,8 @@
 title: Manage Q&A in Teams meetings and events
 author: wlibebe
 ms.author: wlibebe
-ms.reviewer: sameer.sitaram
-ms.date: 4/18/2024
+ms.reviewer: sameer.sitaram, pallaviverma
+ms.date: 4/30/2025
 manager: pamgreen
 ms.topic: how-to
 ms.service: msteams
@@ -22,9 +22,11 @@ description: Learn about how IT Admins can set up, use, and manage Q&A in Q&A fo
 
 **APPLIES TO:** ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Meetings ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Webinars ![Image of a checkmark for yes](/office/media/icons/success-teams.png)Town halls
 
-Q&A allows presenters, organizers, and co-organizers to take questions from attendees and answer them in real time. This feature is best suited for large, structured meetings and events– like town halls, webinars, all hands, and trainings. Town hall and webinar organizers and co-organizers can export the event's questions and answers to a CSV file.
+Q&A allows presenters, organizers, and co-organizers to take questions from attendees and answer them in real time. This feature is best suited for large, structured meetings and events– like town halls, webinars, all hands, and trainings.
 
-Your organization might have requirements to limit which organizers can use Q&A. As an admin, you can control whether an organizer can enable Q&A in their meetings and events.
+In Teams town halls and webinars, organizers and co-organizers can allow presenters to manage the Q&A sessions. They can also turn on moderation to review and approve questions before they appear in the Q&A feed. Moderators can respond or post either as themselves or as **Organizer**, ensuring a unified voice across all moderators. Additionally, organizers and co-organizers can export the event's questions and answers to a CSV file.
+
+As an admin, you can control whether an organizer can use Q&A in their meetings and events.
 
 To learn more about Q&A for your users, see [Q&A in Microsoft Teams meetings](https://support.microsoft.com/office/q-a-in-microsoft-teams-meetings-f3c84c72-57c3-4b6d-aea5-67b11face787).
 
@@ -34,7 +36,7 @@ To learn more about Q&A for your users, see [Q&A in Microsoft Teams meetings](ht
 ## Prerequisites
 
 - Verify that access to [Viva Engage’s IPs and URLs](/microsoft-365/enterprise/urls-and-ip-address-ranges) isn't blocked.
-  - If you have a GCC tenant, verify that your firewall isn't blocking access to GCC services hosted from `https://web.gov.yammer.com` and `https://*.rt.gov.yammer.com`.
+  - If you have a GCC environment, verify that your firewall isn't blocking access to GCC services hosted from `https://web.gov.yammer.com` and `https://*.rt.gov.yammer.com`.
 - To allow users in your organization to add Q&A to Teams meetings and events, you must confirm that sign-ins for the Office 365 Viva Engage service are enabled in Microsoft Entra ID.
 Follow these steps to confirm that sign-ins are enabled:
   - Go to the **Microsoft Entra admin center** > **Identity** > **Applications** > **Enterprise Applications** > **Viva Engage** > **Properties**.
@@ -52,9 +54,9 @@ Follow these steps to control which organizers can use Q&A in their meetings and
 2. Expand **Meetings** from the navigation pane.
 3. Under **Meetings**, select **Meeting policies**.
 4. Either select an existing policy or create a new one.
-5. Navigate to the **Meeting Engagement** section and toggle **Q&A** **On** or **Off**.
+5. Navigate to the **Meeting Engagement** section and toggle the **Q&A** setting **On** or **Off**.
 6. Select **Save**.
-7. Assign the policy to specific Microsoft 365 groups, users, or subscriptions that you want to allow or prevent from setting up Q&A.
+7. Assign the policy to specific groups, users, or subscriptions that you want to allow or prevent from setting up Q&A.
 
 ### PowerShell
 
@@ -76,19 +78,19 @@ Set-CsTeamsMeetingPolicy -Identity Global -QnAEngagementMode Disabled
 
 Q&A defaults to the user’s language for Teams. When there’s a difference in the languages available for Teams versus Viva Engage, the following language defaults occur:
 
-- **Nearest Primary Language**—Viva Engage defaults to the nearest primary language, if available. For example, Viva Engage doesn’t have a French Canadian (fr-CA) version, so it displays content in French (fr-FR) instead.
-- **Unsupported Language**—If Viva engage doesn't support the language at all, Viva Engage defaults to US English (en-US).
+- **Nearest Primary Language**- Viva Engage defaults to the nearest primary language, if available. For example, Viva Engage doesn’t have a French Canadian (fr-CA) version, so it displays content in French (fr-FR) instead.
+- **Unsupported Language**- If Viva engage doesn't support the language at all, Viva Engage defaults to US English (en-US).
 
 ## eDiscovery
 
 eDiscovery for Q&A works the same as eDiscovery for any other Viva Engage content.
 
-- If you use Q&A in your tenant’s Teams application, this content is available in eDiscovery regardless of the configuration or existence of your Viva Engage network. To use eDiscovery for standard Viva Engage content, your Viva Engage network needs to be in [Native Mode](/viva/engage/overview-native-mode).
-- All GCC tenants using Teams Q&A are automatically in native mode. No action is required to activate native mode for these tenants.
+- If you use Q&A in your organization's Teams application, this content is available in eDiscovery regardless of the configuration or existence of your Viva Engage network. To use eDiscovery for standard Viva Engage content, your Viva Engage network needs to be in [Native Mode](/viva/engage/overview-native-mode).
+- All GCC environments using Teams Q&A are automatically in native mode. No action is required to activate native mode for these environments.
 - When you perform eDiscovery, you can determine whether messages were generated in Viva Engage or through Q&A in Teams. In the File Metadata section, you can find that information in the Item Class field.
 - If your organization uses the Q&A, powered by Viva Engage, the content Q&A generates is considered Viva Engage content and is discoverable. For more information about eDiscovery in Microsoft 365 apps, see [eDiscovery solutions in Microsoft 365.](/microsoft-365/compliance/ediscovery)
 - If the meeting organizer enables anonymous posting, the questions attendees post are ingested into the organizer’s mailbox for eDiscovery.
-- When external participants (users from an external organization using external access) from a different Microsoft 365 tenant, or guests join a Teams meeting that is hosted in your Microsoft 365 tenant, any questions they post into Q&A are ingested within your Microsoft 365 tenant.
+- When external participants (users from an external organization using external access) from a different organization, or guests join a Teams meeting that is hosted in your organization, any questions they post into Q&A are ingested within your organization.
 
 ## Data Storage
 
@@ -124,7 +126,7 @@ The lifecycle of data generated by Q&A in Teams depends on your Viva Engage Data
 Retention of content follows the retention policies set for Viva Engage – regardless of whether you have different policies set for Viva Engage and Teams.
 
 > [!NOTE]
-> If your Viva Engage Network isn't in Native Mode, the policies created here apply only to Q&A data. In Native Mode, all Viva Engage users are in Microsoft Entra ID, all groups are Microsoft 365 groups, and all files are stored in SharePoint Online.
+> If your Viva Engage Network isn't in Native Mode, the policies created here apply only to Q&A data. In Native Mode, all Viva Engage users are in Microsoft Entra ID, all groups are Microsoft 365 groups, and all files are stored in SharePoint.
 
 ## Related topics
 

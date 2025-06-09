@@ -3,12 +3,13 @@ title: Considerations for Direct Routing
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.reviewer: roykuntz
-ms.date: 05/08/2024
+ms.reviewer: filippse
+ms.date: 05/06/2025
 ms.topic: article
 ms.assetid: 589bf5f5-490a-4215-8588-99bab7d33e31
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection:
   - M365-voice

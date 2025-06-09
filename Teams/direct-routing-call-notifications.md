@@ -3,9 +3,10 @@ title: Manage call notifications for Direct Routing
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.date: 10/17/2019
+ms.date: 05/06/2025
 ms.topic: article
 ms.service: msteams
+ms.subservice: teams-calling
 audience: admin
 ms.collection: 
   - M365-voice

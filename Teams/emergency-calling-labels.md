@@ -3,11 +3,12 @@ title: "Emergency calling disclaimer labels"
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.reviewer: mikedav, jastark, oscarr
-ms.date: 04/23/2018
+ms.reviewer: roykuntz, jastark
+ms.date: 05/02/2025
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection: 
   - M365-voice

@@ -60,7 +60,7 @@ Organizers with a Teams Premium license have two options for who can record and 
 
 The meeting organizer normally makes this choice when they create the meeting. To restrict recording to organizers in meetings with sensitive information, use a meeting template or sensitivity label to enforce this setting.
 
-If you need to prevent meetings from being recorded entirely, you must use the [Meeting recording meetings policy](meeting-recording.md#allow-or-prevent-users-from-recording-meetings) in the Teams admin center. This setting applies to the people or groups that you specify, but can't be applied via a meeting template or sensitivity label.
+If you need to prevent meetings, webinars, and town halls from being recorded entirely, you must use the [recording policies](meeting-recording.md#allow-or-prevent-users-from-recording) in the Teams admin center. This setting applies to the people or groups that you specify, but can't be applied through a meeting template or sensitivity label.
 
 > [!NOTE]
 > Meeting templates only allow you to manage who can record. To manage who can record and transcribe, use a Sensitivity label.

@@ -12,6 +12,7 @@ ms.collection:
 - M365-collaboration
 ms.custom:
 - admindeeplinkTEAMS
+- teams-chat-and-channels
 search.appverid: MET150
 f1.keywords:
 - NOCSH

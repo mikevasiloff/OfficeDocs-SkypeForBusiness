@@ -39,6 +39,7 @@ Teams Rooms is governed by the Modern Lifecycle Policy. For more information, se
 
 |Release |Published to <br/> Microsoft Store |
 |--- |--- |
+|[5.3.111.0](#531110-4222025) | 4/22/2025 |
 |[5.3.69.0](#53690-3172025) | 3/17/2025 |
 |[5.2.115.0](#521150-9262024) | 9/26/2024 |
 |[5.1.28.0](#51280-882024) | 8/8/2024 |
@@ -64,6 +65,15 @@ Teams Rooms is governed by the Modern Lifecycle Policy. For more information, se
 Teams Rooms app updates happen either using the Microsoft Store or using [manual update](manual-update.md). Updates are applied to the Universal Windows Platform (UWP) application that is installed locally on the device.
 
 Features with the :::image type="icon" source="../media/mtr-pro-icon.png"::: icon are available only with Teams Rooms Pro license.
+
+### 5.3.111.0 (4/22/2025)
+
+Introduced in this update: 
+
+- **Live transcription** :::image type="icon" source="../media/mtr-pro-icon.png"::: **:** Users can start or stop transcription and view the meeting transcript directly from Teams Rooms devices. Users can also change the meeting spoken language, translate the transcript to their desired language, as well as view the original and translated transcript side by side, ensuring that the transcript is accurate and meaningful for non-English speakers. IT admins can allow or prevent users (including resource accounts) from transcribing meetings using the meeting transcription policy in Teams admin center. [Learn more](/Microsoftteams/meeting-transcription-captions#transcription).
+- **Translated captions** :::image type="icon" source="../media/mtr-pro-icon.png"::: **:** Captions on Teams Rooms support additional languages and translation capabilities, enhancing meeting accessibility and inclusivity for non-English speaking users. Users can change the meeting spoken language directly from Teams Rooms devices and translate the spoken language as desired, allowing for real-time translation of captions. IT admins can turn on captions by default for all calls and meetings, as well as turn off the filtering of any profanity in captions and transcripts as necessary. To configure calling and meeting policies in the Teams admin center, see [Enable call captions](/microsoftteams/call-recording-transcription-captions#enable-call-captions) and [Manage live captions](/microsoftteams/meeting-transcription-captions#live-captions). 
+- **Updated Gallery view:** The updated Gallery View in Teams Rooms on Windows arranges all participants in consistent tile sizes, prioritizes video on the meeting stage, offers additional layout options, increases video for single and dual displays, and more. In 1:1 calls/meetings, preview video will be positioned at the bottom right, overlapping the other participant, on the primary display. This provides a unified meeting experience across both Teams Rooms and desktop. [Learn more](https://support.microsoft.com/en-us/office/microsoft-teams-rooms-windows-e667f40e-5aab-40c1-bd68-611fe0002ba2).
+
 
 ### 5.3.69.0 (3/17/2025)
  >[!NOTE]
@@ -767,6 +777,7 @@ Introduced in this update:
 
 |Release  |Release date  |
 |---------|---------|
+|[1449/1.0.96.2025126202](#144910962025126202-may-2025) | May 2025 |
 |[1449/1.0.96.2025031102](#144910962025031102-march-2025) | March 2025 |
 |[1449/1.0.96.2025020302](#144910962025020302-february-2025) | February 2025 |
 |[1449/1.0.96.2025010301](#144910962025010301-january-2025) | January 2025 |
@@ -803,13 +814,27 @@ Introduced in this update:
 
 Features with :::image type="icon" source="../media/mtr-pro-icon.png"::: are only available with Teams Rooms Pro license.
 
+### 1449/1.0.96.2025126202 (May 2025)
+
+Introduced in this update:
+
+- **Preview of Facilitator agent note taking in Rooms for offline/ad hoc discussions:** Power your ad-hoc in-person discussions by inviting the Facilitator agent in your Teams Room. Learn more here: Facilitator in Teams Rooms - Microsoft Teams | Microsoft Learn
+- **New Microsoft-managed policy to help further secure your tenants against potential threats to accounts using device code flow (DCF) authentication.**
+- **Disabled auto accept for external tenant nudges:** Teams Rooms on Android will now also no longer automatically accept any Proximity joins using an external account for security reasons.
+- **Local PTZ controls:** If the camera is not currently auto-framing the room, in-room users can control the Pan-Tilt-Zoom (PTZ) of the active camera to keep the focus where they want it. 
+- **Speaker recognition and attribution in Teams Rooms on Android:** Microsoft Teams Rooms on Android will soon support Intelligent Speakers, providing advanced speaker recognition to clearly identify who said what in meeting transcripts. This feature significantly enhances Microsoft 365 Copilot and AI Recap, enabling accurate, personalized summaries and actionable insights from your meetings. This capability seamlessly integrates with both intelligent speakers and your existing room speakers via the cloud. Each participant is securely recognized through a unique voice profile, ensuring precise attribution in live transcripts and maximizing the effectiveness of your Teams meeting experience.
+- **Proximity join performance and reliability improvements:** These enhancements are for standalone consoles where calls used to drop sometimes and then rejoin automatically a few seconds later.
+-	**Call Join performance improvements:** Multiple improvements to call join performance in standalone consoles. These improvements should significantly reduce the time it takes for the console to join a meeting, especially the ones with more than 50 participants.
+
+
 ### 1449/1.0.96.2025031102 (March 2025)
 
 Resolved Issues:
 
 - Fixed an issue where app wasn't functional after pressing back key on paired remote with some Logi devices.
 - Resolved an issue where local HDMI ingest sharing indicator status wasn't synced between display and console. 
-- Fixed an issue where Custom background resets to default. 
+- Fixed an issue where Custom background resets to default.
+- Fixed a bug that prevented Teams Rooms Android device from joining a meeting when invited from QR code or Bluetooth proximity.
 
 ### 1449/1.0.96.2025020302 (February 2025)
 
@@ -817,7 +842,6 @@ Resolved Issues:
 
 - Fixed an issue where pairing loss affected functionality of certain Teams Rooms on Android systems.
 -	Resolved an issue where the meeting UI (user interface) was misaligned after pressing the back button.
--	Fixed a bug that prevented Teams Rooms Android device from joining a meeting when invited from QR code or Bluetooth proximity.
 -	UI fixes and improvements for dual screen setups.
 -	Resolved an issue where users weren't able to file feedback using “Report a problem”. 
 
@@ -854,7 +878,7 @@ Introduced in this update:
 - **Receive Cloud IntelliFrame** :::image type="icon" source="../media/mtr-pro-icon.png":::. Cloud IntelliFrame enhances non-AI cameras, showing in-room participants in individual frames like remote attendees for a more natural, engaging experience. Teams Rooms on Android can now receive Cloud IntelliFrame video feeds, bringing uniformity across Windows and Android devices. [Learn more](/microsoftteams/devices/cloud-intelliframe). 
 - **Whiteboard enhancements**. When using the whiteboard outside of meetings, your content is retained even when a meeting begins. The whiteboard's contents are preserved and shared with remote participants instantly. You can also use the 'Follow me' function to guide participants as you navigate, and collaborative cursors let you see everyone working in real-time.   
 - **Net Promoter Score (NPS) survey**. Users can rate how likely they are to recommend Microsoft Teams Rooms from 1 to 5 and provide additional comments on NPS surveys delivered on Teams Rooms on Android devices. NPS surveys will show up periodically after meetings end. IT admins can manage policies and allow or prevent room accounts from getting NPS surveys using PowerShell. [Learn more](/microsoftteams/manage-feedback-policies-in-teams).
-- **Admin email support for Report a problem**. IT admins can designate an email address for receiving 'Report a problem' submissions from Teams Rooms on Android devices. The email address can be set from the device settings. 
+- **Admin email support for Report a problem**. IT admins can designate an email address for receiving 'Report a problem' submissions from Teams Rooms on Android devices. The email address can be set from the Teams admin settings on the device or from the Teams Rooms on Android configuration profile on the Teams admin center. Once the email is set up, the 'Report a problem' option shows up on the app for users to submit issues to the organization.    
 
 <sup>1</sup> The swap screens setting will only be available on devices with the proper firmware support. If you don’t see the setting on your device, contact the device manufacturer for firmware support timelines.   
 <sup>2</sup> Due to device capability requirements and performance implications, 3x3 video gallery support for dual displays is available on the following Teams Rooms on Android devices: Yealink MeetingBar A40, Poly Studio X52, and Poly Studio G62. 

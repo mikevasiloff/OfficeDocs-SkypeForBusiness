@@ -1,13 +1,14 @@
 ---
 title: "What is Teams Phone"
 ms.reviewer: roykuntz
-ms.date: 03/07/2024
+ms.date: 05/01/2025
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.topic: concept-article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection: 
   - M365-voice
@@ -24,62 +25,45 @@ ms.custom:
   - Phone System
   - seo-marvel-apr2020
   - intro-overview
-description: "In this article, you'll learn about Microsoft Teams Phone System technology in Microsoft 365."
+description: "Learn about Microsoft Teams Phone System in Microsoft 365."
 ---
 
 # What is Teams Phone
 
 This article is for administrators and IT professionals who are evaluating Microsoft Teams Phone--Microsoft's technology for enabling call control and Private Branch Exchange (PBX) capabilities in the Microsoft 365 cloud.
 
-Teams Phone works with Teams clients and certified devices. Teams Phone allows you to replace your existing PBX system with a set of features directly delivered from Microsoft 365.
+By default, calls between Teams users in your organization are handled natively within Teams, and never go to the Public Switched Telephone Network (PSTN), removing operator toll costs for calls that stay internal to your organization.
+To see more about Teams calling in general, see [Teams calling overview](cloud-voice-landing-page.md).
 
-Calls between users in your organization are handled internally within Teams Phone, and never go to the Public Switched Telephone Network (PSTN)--thereby removing long-distance costs on internal calls. 
+To enhance user calling experiences with the ability to make and receive domestic and international *telephone* calls, **Teams Phone** provides add-on options to Teams for connecting users with the PSTN.
 
-For making external calls, Teams Phone provides add-on options for connecting to the PSTN. For more information about voice solutions and PSTN connectivity options, see [Plan your Teams voice solution](cloud-voice-landing-page.md) and [Connect to the PSTN](#connect-to-the-public-switched-telephone-network-pstn). 
+The add-on options comprising of **Teams Phone** include the following:
 
-### Licenses and voice enablement 
+- User or resource account licensing for the appropriate Teams Phone application
+  - For licensing options, see [Teams Phone licensing](teams-phone-licensing.md).
 
-To use Teams Phone features, your users must have a Teams Phone Standard or E5 license. For more information about licensing, see [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md).
+- At least one PSTN operator solution that allows you to access the PSTN and acquire phone numbers for your tenant.
+  - You can have more than one PSTN integration with your tenant, and any combination of PSTN solutions are supported.
+  - For PSTN connectivity options, see [Plan your Teams voice solution](cloud-voice-landing-page.md) and [PSTN connectivity options](pstn-connectivity.md).
 
-In addition to licensing, the users must be "voice enabled."
+> [!NOTE]
+> A PSTN solution is separate from a Teams Phone license. A PSTN solution provides a customer's tenant with phone numbers and PSTN access to domestic, international, and emergency calling. The Teams Phone license entitles a Teams user to *enhanced calling capabilities* within the tenant and *access* to the PSTN solution.
 
-To voice enable your users, you can use the Teams admin center or PowerShell.
+Teams Phone allows you to replace your existing PBX system with a set of features delivered from the same platform that provides your enterprise productivity tools.
 
-- In the Teams admin center, go to a **Users** > **Manage users** and select the user you want to edit. Under the **Account** tab > **Assigned phone number**, turn **Enterprise Voice** to **On** and select **Save**.
-- For PowerShell, use the [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet and set the `-EnterpriseVoiceEnabled` parameter to `$true`.
+Teams Phone can be used in all desktop and mobile Teams clients. Teams Phone can also be used on certified, third-party hardware devices. To learn more about desk phones, see [Phones for Microsoft Teams](./phones/phones-for-teams.md).
 
-## Teams Phone features
+If you have another phone system or a contact center in your organization, Teams Phone supports coexistent integrations.
 
-With Teams Phone, users in your organization can use Teams to place and receive calls, transfer calls, and mute or unmute calls. Teams Phone users can click a name in their address book, and place Teams calls to that person. To place and receive calls, Teams Phone users can use their mobile devices, a headset with a laptop or PC, or one of many IP phones that work with Teams. 
+Teams Phone works with all Teams clients and with certified, third-party devices, and includes a rich set of features, empowering end users to manage their own phone call workflows.
 
-For more information about Teams Phone features, including which features require a user to be voice enabled, see [Teams Phone features](here-s-what-you-get-with-phone-system.md).
+Teams also provides administrators with a comprehensive set of voice policy settings that can control the features at a global, group, and user level.
 
-You can manage calling options and settings by using the Teams admin center and by using PowerShell.
+Administering **Teams Phone** builds on *the same model for administration* as outlined for **native Teams calling** in [Calling in Teams overview](cloud-voice-landing-page.md), and includes administration of extra calling features that are available to users licensed for Teams Phone.
 
-## Connect to the Public Switched Telephone Network (PSTN)
-  
-For external calling, Teams Phone can be connected to the PSTN in one of several ways:
-  
-- Purchase a Microsoft Calling Plan (domestic or domestic and international). Microsoft Calling Plan is an all-in-the-cloud solution with Microsoft as your PSTN carrier. For more information, see [Teams Phone and Calling Plans](calling-plan-landing-page.md).
+Teams Phone also includes extra enterprise phone system features for your organization, like auto attendants and call queues.
 
-- Use your existing telephony infrastructure for on-premises PSTN connectivity.
-
-  You can connect your on-premises telephony infrastructure to Teams Phone by using Operator Connect or Direct Routing. 
-
-For more information about all PSTN Connectivity options, see [PSTN connectivity options](pstn-connectivity.md).
-
-
-## Teams Phone with services
-
-Teams Phone can be used for services and voicemail, such as:
-
-- **Auto attendants** -  Auto attendants can be used to create a menu system for your organization that lets external and internal callers move through the system to locate and place or transfer calls to company users or departments in your organization. See [What are Cloud auto attendants?](what-are-phone-system-auto-attendants.md).
-
-- **Call queues** -  Call queue greetings can be used when someone calls in to a phone number for your organization. These greetings include the ability to automatically put the calls on hold and to search for the next available call agent to handle the call. The people on hold can also listen to music while on hold. You can create single or multiple call queues for your organization. See [Create a Cloud call queue](create-a-phone-system-call-queue.md).
-
-- **Voicemail** - Cloud Voicemail is automatically set up and provisioned for all Teams users. See [Set up Cloud Voicemail](set-up-phone-system-voicemail.md).
-
-For more information about features, see [Here's what you get with Teams Phone](here-s-what-you-get-with-phone-system.md). If you're ready to get started, see [Set up Teams Phone in your organization](setting-up-your-phone-system.md).
+To learn more about what is included with Teams Phone, see [Teams Phone features](here-s-what-you-get-with-phone-system.md).
 
 ## Need help with your Teams Phone deployment?
 

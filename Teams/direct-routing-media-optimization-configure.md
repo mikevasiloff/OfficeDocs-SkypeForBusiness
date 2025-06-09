@@ -3,9 +3,10 @@ title: Configure Local Media Optimization for Direct Routing
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.date: 04/07/2020
+ms.date: 05/06/2025
 ms.topic: how-to
 ms.service: msteams
+ms.subservice: teams-calling
 audience: admin
 ms.collection:
   - M365-voice

@@ -1,13 +1,14 @@
 ---
 title: "User accounts in hybrid environment with PSTN"
-ms.reviewer:
-ms.date: 06/04/2018
+ms.reviewer: pavellatif
+ms.date: 05/01/2025
 ms.author: scottfrancis
 author: sfrancis206
 manager: pamgreen
 audience: ITPro
 ms.topic: article
 ms.service: msteams
+ms.subservice: teams-calling
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection:
@@ -20,6 +21,7 @@ f1.keywords:
 - NOCSH
 description: "Learn about different combinations of user creation and which combinations are supported or unsupported."
 ms.custom: seo-marvel-mar2020
+ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # User accounts in a hybrid environment with PSTN connectivity

@@ -62,7 +62,7 @@ As Teams administrator, you have the following controls on upload and use of cus
 | Custom app governance | Setting available to admins | Impact on users |
 |-----------------------|-----------------------------|-----------------|
 | Allow or disallow specific users from uploading custom apps | Use [app setup policy](#allow-users-to-upload-custom-apps) | You apply app setup policy to specific users to allow or disallow them from uploading custom app in personal context or in a team. Users can still submit custom apps for your approval. |
-| Allow or disallow all users from uploading custom apps | Use [custom app setting in Org-wide app settings](manage-apps.md#manage-org-wide-app-settings) | Users can't upload custom apps even in their personal context. Users can still submit custom apps for your approval. |
+| Allow or disallow all users from using uploaded custom apps and agents | Use [custom app setting in Org-wide app settings](manage-apps.md#manage-org-wide-app-settings) | Users across the organization can access uploaded custom apps and agents. |
 | Restrict app access for a few users | Use [app permission policy](teams-app-permission-policies.md) | You granularly control which users have access to what particular custom app (also applies to third-party apps). |
 | Delete a custom app | [Delete an app](#delete-custom-apps-from-your-organizations-catalog) | The deleted app isn't available in your org. Existing app users also can't use it anymore. |
 
@@ -97,9 +97,7 @@ Alternatively, an org user can submit an updated custom app for your approval. W
 
 Microsoft Teams provides granular control over who can add custom apps to a team. To control if custom apps can be added to a team or not, admins and team owners use the following settings. These settings don't affect the ability to block third-party apps.
 
-* [**Org-wide app settings**](manage-apps.md#manage-org-wide-app-settings) for entire organization: The setting named **Let users interact with custom apps in preview** lets you either allow or disallow all your users across the organization to upload custom apps. Users can upload custom apps only for their personal use or within their teams.
-
-   :::image type="content" source="media/teams-custom-app-policy-and-settings-org-wide.png" alt-text="Screenshot showing the org-wide custom app settings.":::
+* [**Org-wide app settings**](manage-apps.md#manage-org-wide-app-settings) for entire organization: The setting named **Let users interact with custom apps in preview** lets you either allow or disallow all your users across the organization to interact with custom apps.
 
 * [**App setup policy**](#app-setup-policy-settings-for-custom-apps) for specific users: The setting named **Upload custom apps** in the app setup policy lets assigned users upload custom apps. You can use this setting to allow specific users in your org to upload custom apps.
 

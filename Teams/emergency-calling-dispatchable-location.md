@@ -4,7 +4,7 @@ author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: roykuntz
-ms.date: 01/22/2024
+ms.date: 04/25/2025
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -60,7 +60,7 @@ Emergency addresses for Teams can be categorized by different types. The followi
 
 3. An address automatically suggested by the operating system.
 
-4. An address the administrator statically assigns to the user.
+4. An address the administrator statically associates to the Phone Number assigned to the user.
 
 
 ## Emergency address classification and routing

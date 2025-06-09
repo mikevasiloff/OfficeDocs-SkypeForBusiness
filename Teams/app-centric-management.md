@@ -58,20 +58,23 @@ When using this functionality, you determine access to apps using one of the fol
 
 | New option | Who gets the app | How does it map with previous settings |
 |------------|------------------|----------------------------------------|
-| `Everyone` | Available to all org users, new users, and guests | Same effect as allowing an app and global (Org-wide default) app permission policy allowing all users to use it. |
-| `Specific users or groups` | Only the users and groups that you select can use the app. The supported group types are security groups, Microsoft 365 groups, dynamic user membership groups, nested groups, and the distribution lists. | Same as using a custom app permission policy to restrict the use of app to selected users or groups. |
+| `Everyone` | Available to all org users, new users, and guests. | Same effect as allowing an app and global (Org-wide default) app permission policy allowing all users to use it. |
+| `Specific users or groups` | Only the users and groups that you select can use the app. The supported group types are security groups, Microsoft 365 groups, dynamic user membership groups, nested groups, and the distribution lists. Guests can't use the app if this option is selected and even if guests are assigned to the app. | Same as using a custom app permission policy to restrict the use of app to selected users or groups. |
 | `No one` | Not available to any user | Same as a blocked app. |
 
 The method to allow users access to an app changes with this functionality. In the past, to allow access to a user, you'd add the app as an allowed app in a policy and assign that policy to the user. Using this functionality, you just modify the availability of an app to let selected users use it. Also, you don't have to create multiple policies for different combinations of apps and allowed users.
 
 ## Migrate to app centric management
 
+> [!IMPORTANT]
+> Starting from April 2025, your tenant is automatically migrated to app centric management. After the migration, you can't access the migration wizard. However, until the migration is complete, you can use the wizard and have the option to complete the migration manually. For more information, see [understand the auto-migration process](#understand-the-auto-migration-process).
+
 Previously, we automatically migrated organizations that weren't using any custom policies. Admins can now do an on-demand migration. Understand the difference between the two types of migration.
 
 | Type of migration | Who does it   | Requirement                             | How is it done                        |
 |-------------------|---------------|-----------------------------------------|---------------------------------------|
-| Assisted          | Administrator | Org uses one or more custom policies    | Guided UI in admin center             |
-| Automatic         | Microsoft     | Org uses only the default global policy | Automatic, without admin intervention |
+| Assisted          | Administrator | Org uses one or more custom policies    | Guided UI in admin center. This is transitioned to automatic migration. See [Message Center post MC688930](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC688930) for timelines.              |
+| Automatic         | Microsoft     | Org uses only the default global policy | Automatic, without admin intervention. One or more custom policies are being rolled out. See [Message Center post MC688930](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC688930) for timelines.|
 
 To migrate your organization, follow these steps:
 
@@ -102,7 +105,10 @@ To migrate your organization, follow these steps:
 
     :::image type="content" source="media/acm-verify-per-app.png" alt-text="Screenshot showing the option to verify available of for each user and users who receive a particular app."  lightbox="media/acm-verify-per-app-large.png":::
 
-1. On the final review UI, you can see the apps, their availability, and the Org-wide app settings that apply after the migration. You can download this information as a CSV file to evaluate further. For example, you can use the inventory mapping from Step 1 to ensure that the app availability is as intended. Once assured, select **Start migration** and follow the prompts. Migration may take up to 24 hours to complete.
+1. On the final review UI, you can see the apps, their availability, and the Org-wide app settings that apply after the migration. You can download this information as a CSV file to evaluate further. For example, you can use the inventory mapping from Step 1 to ensure that the app availability is as intended. Once assured, select **Start migration** and follow the prompts.
+
+    > [!NOTE]
+    > The migration completes in minutes, but it may take up to 24 hours for the changes to reflect for all users. After the migration is complete, you can start making changes to app availability through the new UI. You can also use PowerShell cmdlets to update app availability at any time after the migration. UI or PowerShell changes take up to 24 hours to apply to all users, consistent with anytime UI or PowerShell updates occur, not just immediately after migration completion.
 
     :::image type="content" source="media/acm-migration-review.png" alt-text="Screenshot showing the last UI to review all settings."  lightbox="media/acm-migration-review-large.png":::
 
@@ -113,14 +119,18 @@ During migration, you can save a draft of the migration progress using the **Fin
 
 After migration, your blocked apps continue to remain unavailable to users. The statuses of such apps show as `unblocked` now, but the apps are assigned to `No one` in the `Available to` column on the Manage apps page. It means that org user can't use the app, just as you intended before. Users can view the apps in store and [request access to apps](user-requests-approve-apps.md).
 
+After migration, any admin consent to app permissions that was previously granted is retained. App permissions are a different concept from permission policies, which app centric management is replacing. For more information, see [grant and manage consent to Teams app permissions](manage-consent-app-permissions.md).
+
+### Understand the auto-migration process
+
+Auto-migration maintains the same access defined in app permission policies when there is no conflict between a user’s assigned policies. If a user is assigned to a custom app permission policy that blocks an app, while the Global permission policy allows the same app, Microsoft auto-migrates the app as allowed for that user. During the auto migration, one security group is created for each custom app permission policy. All users currently assigned to an app permission policy are then added to the corresponding security group for that policy. These groups are assigned to each app they are allowed in their respective policy, maintaining their app access. Administrators manage these groups like any others to customize the app centric management assignments, such as adding and removing users or removing the group and replacing it with another group.
+
 ## Add or modify app availability for users
 
 To allow users to add and use an app or a Copilot agent, you must assign users or groups to an app. To make any app or Copilot agent available in your organization, ensure the following:
 
 * If your organization isn't migrated to unified app management, allow apps and Copilot agents in Teams admin center and under the **Integrated apps** page in [Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
 * If your organization is migrated to unified app management, allow apps and Copilot agents in Teams admin center or under the **Integrated apps** page in [Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps).
-
-For more information, see [manage apps that work across Teams, Outlook, and Microsoft 365 App](manage-apps-across-m365.md).
 
 > [!NOTE]
 > It takes up to 24 hours for the availability changes to take effect. In rare cases, it may take up to six days for the changes to reflect in the client.
@@ -191,8 +201,9 @@ When your tenant's admin center receives this feature, the following updates are
 |  Global permission policy for Microsoft apps was `Allow all` or Global permission policy for Microsoft apps was `Block an app(s), allow all others`  |  `Allow users install available apps by default` for Microsoft apps is set to on |
 |  Global permission policy for Microsoft apps was `Block all` or Global permission policy for Microsoft apps was `Allow app(s), Block all others` | `Allow users install available apps by default` for Microsoft apps is set to off |
 |  Third party app setting in the Org-wide app settings was set to on; New third party app setting in the org-wide app setting was set to on; Global permission policy for third party apps was `Allow all`; or Global permission policy for third party apps was `Block an app(s), allow all others`  |  `Allow users install available apps by default` for third party apps is set to on |
-|  third party app setting in the Org-wide app settings was set to off; New third party app setting in the org-wide app setting was set to off; Global permission policy for third party apps was `Block all`; or Global permission policy for third party apps was `Allow app(s), Block all others` | `Allow users install available apps by default` for third party apps is set to off |
+|  Third party app setting in the Org-wide app settings was set to off; New third party app setting in the org-wide app setting was set to off; Global permission policy for third party apps was `Block all`; or Global permission policy for third party apps was `Allow app(s), Block all others` | `Allow users install available apps by default` for third party apps is set to off |
 | Third party app setting in the Org-wide app settings was set to on; New third party app setting in the org-wide app setting was set to off; Global permission policy for third party apps was `Block all`; or Global permission policy for third party apps was `Allow app(s), Block all others` | `Allow users install available apps by default for third party apps` is set to off |
+|  Third Party App Setting is off; permission policy is `Block an app(s), allow all others` | `Allow users install available apps by default for third party apps` is set to off |
 |  Global permission policy for Custom apps was `Allow all` or Global permission policy for Custom apps was `Block an app(s), allow all others` | `Allow users install available apps by default` for custom apps is set to on |
 |  Global permission policy for custom apps was `Block all` or Global permission policy for custom apps was `Allow app(s), Block all others` | `Allow users install available apps by default` for custom apps is set to off |
 
@@ -213,7 +224,12 @@ When your tenant's admin center receives this feature, the following updates are
 
 * After you switch to this feature, you can't access, edit, or use permission policies. Once your organization migrates, you can't revert the migration.
 
-* You can't update app availability in bulk.
+* You can't update app availability in bulk in Teams admin center, but you can do so through PowerShell. For more details on PowerShell cmdlets for app availability, see [Update-M365TeamsApp](/powershell/module/teams/update-m365teamsapp?view=teams-ps&preserve-view=true).
+
+* Details of automatic migration for app permission policies:
+    * During the migration, [create one security group](/microsoft-365/admin/email/create-edit-or-delete-a-security-group?view=o365-worldwide&preserve-view=true) per custom app permission policy. All users assigned to the app permission policy are assigned to the corresponding groups. 
+    * After the migration, you can view and manage the groups.
+    * There is no change of app permissions during the migration, except where an app is allowed in the global policy but blocked in the custom app permission policy. Here, the app is allowed for all users in the group. This is the only instance where there is a change in app permissions in the tenant.
 
 ## Related articles
 

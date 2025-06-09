@@ -1,13 +1,14 @@
 ---
-title: Configure network settings - Location-Based Routing
+title: Configure network settings - Location-Based Routing in India
 ms.author: scottfrancis
 author: sfrancis206
 manager: pamgreen
 ms.topic: article
-ms.reviewer: roykuntz
-ms.date: 09/01/2023
+ms.reviewer: filippse
+ms.date: 05/06/2025
 audience: admin
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 description: Learn how to create and set up network regions, sites, and subnets for Location-Based Routing for Direct Routing and for Operator Connect for India.
 ms.localizationpriority: medium

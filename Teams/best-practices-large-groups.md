@@ -20,6 +20,7 @@ appliesto:
 ms.custom: 
   - seo-marvel-mar2020
   - chat-teams-channels-revamp
+  - teams-chat-and-channels
 ---
 
 # Manage large teams in Microsoft Teams - Best practices

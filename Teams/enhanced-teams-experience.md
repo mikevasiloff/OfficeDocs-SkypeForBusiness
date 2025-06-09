@@ -67,8 +67,6 @@ Teams Premium provides more ways to safeguard and monitor users' Teams experienc
 
 - **External domain activity report** - Understand how your organization communicates with trusted external organizations over chat.
 
-- **Hide attendee names** - Meeting and webinar organizers can hide the names of attendees from other attendees in the stage, roster, and chat.
-
 - **Manage what attendees see** - Meeting organizers can decide whose avatars or video feeds to spotlight during a Teams meeting while others are hidden from view.
 
 - **Organizer can restrict participants from copying or forwarding meeting chat messages, live captions, and transcript** - Control whether organizers can restrict participants from copying or forwarding meeting chat messages, live captions, transcripts, and AI-generated insights in the meeting recaps. This setting also restricts forwarding and sharing messages to Outlook.
@@ -96,7 +94,6 @@ Teams Premium provides more ways to safeguard and monitor users' Teams experienc
   | Custom user policy packages |Yes| [Managing policy packages in Teams](manage-policy-packages.md) | No end-user control |
   | End-to-end encryption (E2EE) | Yes |[Encryption for sensitive meetings](end-to-end-encrypted-meetings.md) | [Use encryption](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-meetings-a8326d15-d187-49c4-ac99-14c17dbd617c)  |
   | External domain activity report|No, contact support for assistance.| [Microsoft Teams external domain activity report](/microsoftteams/teams-analytics-and-reports/external-domain-activity-report) | No end-user control |
-  | Hide attendee names | Yes |[Allow meeting and webinar organizers to hide the names of attendees](hide-attendee-names.md) | [Hide attendee names in Teams meetings and webinars](https://support.microsoft.com/office/hide-attendee-names-in-teams-meetings-and-webinars-00389c74-ee61-48b5-bad8-8295600085ed) |
   | Manage what attendees see | No, contact support for assistance.| No admin control | [Manage what attendees see in Teams meetings](https://support.microsoft.com/office/manage-what-attendees-see-in-teams-meetings-19bfd690-8122-49f4-bc04-c2c5f69b4e16)|
   | Manage which eCDN provider view-only meetings use |Yes |[Enterprise content delivery networks for streaming Microsoft Teams events](streaming-ecdn-enterprise-content-delivery-network.md#manage-the-ecdn-solution-for-premium-town-halls-and-view-only-meetings)|No end user control |
   | Microsoft eCDN |Yes |[How to enable Microsoft eCDN](/ecdn/how-to/enable-microsoft-ecdn-for-your-tenant)|No end user control |
@@ -123,7 +120,6 @@ The following table describes platform support for Teams Premium advanced manage
 | Custom user policy packages |N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
 | End-to-end encryption (E2EE) |Yes|Yes|Yes|No (users can't join)|Yes|Yes|Yes|No (users can't join)|No (users can't join)|No (users can't join)|Yes|No|No|Yes|Yes|
 | External domain activity report |N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
-| Hide attendee names |Yes|Yes|Yes|Yes|No|No|No|No|No|No|No|No|Yes|Yes|Yes|
 | Manage what attendees see |Yes|Yes|No|Yes|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Yes|Yes|Yes|
 | Organizer can restrict participants from copying or forwarding meeting chat messages, live captions, and transcripts |Yes|Yes|Yes<sup>1</sup>|Yes|N/A|N/A|N/A|No|N/A|N/A|Yes|Yes|Yes|Yes|Yes|
 | Real-time telemetry and retention |N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|N/A|
@@ -255,7 +251,6 @@ Teams Premium provides more ways to elevate Teams webinars in your organization 
 - **Custom emails for webinars** - Organizers and co-organizers can customize the webinar email templates sent to attendees.
 - **Custom webinar reminder email send times** - Webinar reminder emails are automatically sent to registrants an hour before the event starts. With Teams Premium, organizers can edit the send time to notify attendees sooner.
 - **Enable and manage the waitlist for webinars beyond capacity** - When the webinar's registration reaches capacity, organizers can manage overflow registration requests through a waitlist.
-- **Hide attendee names** - Meeting and webinar organizers can hide the names of attendees from other attendees in the stage, roster, and chat.
 - **Limit registration start and end times** - Organizers can set a time window during which potential attendees can register for their webinar.
 - **Manage what attendees see** - Webinar organizers can decide whose avatars or video feeds to spotlight during a Teams webinar while others are hidden from view.
 - **Manually approve registrants** - Organizers can approve or deny requests to register for their webinar.
@@ -265,7 +260,6 @@ Teams Premium provides more ways to elevate Teams webinars in your organization 
   | -------------------- | ----------- | ----------- | ----------- |
   | Custom emails for webinars| Yes| [Manage email communications](manage-email-communications.md) |[Manage webinar emails in Microsoft Teams](https://support.microsoft.com/office/manage-webinar-emails-in-microsoft-teams-d0006848-f707-494f-b0a4-eeebcbc723be) |
   | Enable and manage the waitlist for webinars beyond capacity| No, contact support for assistance.| No admin control|[Manage webinar registration in Microsoft Teams](https://support.microsoft.com/office/manage-webinar-registration-in-microsoft-teams-923f382a-0cca-433a-b38d-7461971192d1) |
-  | Hide attendee names | Yes | [Allow meeting and webinar organizers to hide the names of attendees](hide-attendee-names.md) | [Hide attendee names in Teams meetings and webinars](https://support.microsoft.com/office/hide-attendee-names-in-teams-meetings-and-webinars-00389c74-ee61-48b5-bad8-8295600085ed)|
   | Limit registration start and end times | No, contact support for assistance.| No admin control|[Manage webinar registration in Microsoft Teams](https://support.microsoft.com/office/manage-webinar-registration-in-microsoft-teams-923f382a-0cca-433a-b38d-7461971192d1) |
   | Manage what attendees see | No, contact support for assistance.| No admin control | [Manage what attendees see in Teams meetings](https://support.microsoft.com/office/manage-what-attendees-see-in-teams-meetings-19bfd690-8122-49f4-bc04-c2c5f69b4e16)|
   | Manually approve registrants |No, contact support for assistance.| No admin control |[Manage webinar registration in Microsoft Teams](https://support.microsoft.com/office/manage-webinar-registration-in-microsoft-teams-923f382a-0cca-433a-b38d-7461971192d1) |
@@ -279,7 +273,6 @@ The following table describes platform support for Teams Premium webinar feature
 | -------------------- | ----------- | ----------- | ------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |
 | Custom emails and reminders for webinars|Yes|Yes|N/A|Yes|N/A|N/A|N/A|N/A|N/A|N/A|N/A|No|Yes|Yes|
 | Enable and manage the waitlist for webinars beyond capacity|Yes|Yes|N/A|Yes|N/A|N/A|N/A|N/A|N/A|N/A|N/A|No|Yes|Yes|
-| Hide attendee names |Yes|Yes|Yes|Yes|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Yes|Yes|Yes|
 | Limit registration start and end times|Yes|Yes|N/A|Yes|N/A|N/A|N/A|N/A|N/A|N/A|N/A|No|Yes|Yes|
 | Manage what attendees see |Yes|Yes|No|Yes|N/A|N/A|N/A|N/A|N/A|N/A|N/A|Yes|Yes|Yes|
 | Manually approve registrants |Yes|Yes|No|Yes|No|No|No|No|No|No|No|No|Yes|Yes|
@@ -396,12 +389,14 @@ Teams Premium and Teams Phone provide access to Queues app, a Teams-native solut
 - **Call queue management**: Admins can now delegate authorized users, also known as leads or supervisors, to manage and configure Call queues and Auto attendants directly from the Teams client. Authorized users can configure Call queues and Auto attendants from Call settings and they can opt agents into and out of the queue from Queues app.
 - **Real-time metrics**: The number of waiting calls, average wait time, longest call waiting time metrics, and more are included in real-time metrics within the Queues app. The analytics report shows activity made in the queue from 12:00 AM local time of the signed in user. For more information on real-time reports, see [Auto attendant and Call queue real-time reports](aa-cq-real-time-reports.md).
 - **Historical reporting**: View historical metrics for call queues, and auto attendants, and agent queue actions. Historical metrics report up to the past 27 days. For more information on historical reports, see [Auto attendant and Call queue historical reports](aa-cq-cqd-historical-reports.md).
+- **Monitor, Whisper, Barge, Takeover** - Authorized users can enter into a monitoring session with selected agents for private coaching. Authorized users can listen to customer calls, whisper to agents with private messages, even barge into or takeover the calls. For information about configuring Monitor, Whisper, Barge, and Takeover, see [Manage voice applications policies in Microsoft Teams](manage-voice-applications-policies.md).
 
   | Feature/Task  | Can admins turn this feature on/off? | Documentation for admins |Documentation for end users |
   | -------------------- | ----------- | ----------- |----------- |
   |Call queue management|Yes, with [voice application policies](manage-voice-applications-policies.md) for Authorized users|[Manage the Queues app for Microsoft Teams](manage-queues-app.md)|[Use the Queues app for Microsoft Teams](https://support.microsoft.com/office/370ad83e-c2c1-4a9f-8a59-16c98be102e9)|
   |Real-time metrics|Yes, with [voice application policies](manage-voice-applications-policies.md) for Authorized users|[Auto attendant and Call queue real-time reports](aa-cq-real-time-reports.md)|No, end users can view reports if authorized.|
   |Historical reporting|Yes, with voice application policies for Authorized users|[Auto attendant and Call queue historical reports](aa-cq-cqd-historical-reports.md)|No, end users can view reports if authorized.|
+  |Monitor, Whisper, Barge, Takeover|Yes, with voice application policies for Authorized users|[Manage voice applications policies in Microsoft Teams](manage-voice-applications-policies.md)||
 
 Queues app is now generally available and is enabled by default for all Teams users in your organization who are assigned both a Teams Premium and Teams Phone license and who and are voice enabled.
 
@@ -411,7 +406,7 @@ For more information about Queues app, see [Manage the Queues app for Microsoft 
 
 The following table describes platform support for Queues app:
 
-|Feature|Windows|MAC|Mobile|Web|Microsoft Teams Rooms- Windows|Microsoft Teams Rooms- Android|Touch boards for Teams Rooms|Direct guest join|CVI|View-only mode|External communication with unmanaged Teams users|Anonymous users support|VDI WebRTC classic optimization|VDI SlimCore-based optimization|Exchange on-premises|
+|Feature|Windows|Mac|Mobile|Web|Microsoft Teams Rooms - Windows|Microsoft Teams Rooms - Android|Touch boards for Teams Rooms|Direct guest join|CVI|View-only mode|External communication with unmanaged Teams users|Anonymous users support|VDI WebRTC classic optimization|VDI SlimCore-based optimization|Exchange on-premises|
 | -------------------- | ----------- | ----------- | ------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |------------ |
 | Queues app|Yes|Yes|No|No|No|No|No|N/A|No|N/A|N/A|N/A|Yes|Yes|Partial|
 

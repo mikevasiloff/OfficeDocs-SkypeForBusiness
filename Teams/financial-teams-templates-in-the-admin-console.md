@@ -18,6 +18,7 @@ ms.custom:
   - NewAdminCenter_Update
   - seo-marvel-apr2020
   - chat-teams-channels-revamp
+  - teams-chat-and-channels
 appliesto:
   - Microsoft Teams
 ---
