@@ -4,7 +4,7 @@ ms.author: wlibebe
 author: wlibebe
 manager: pamgreen
 ms.reviewer: vivekmo
-ms.date: 5/8/2024
+ms.date: 5/29/2025
 ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -54,7 +54,7 @@ You can manage the types of meetings your users can join through the Teams admin
 
 ### Prevent users from joining external meetings using the Teams admin center
 
-Follow these steps in the Teams admin center to manage the types of meetings your users can join:
+To manage the types of meetings your users can join:, follow these steps in the Teams admin center:
 
 1. Open the Teams admin center.
 2. Select **Meetings** from the navigation pane.
@@ -90,8 +90,4 @@ Set-CsTeamsMeetingPolicy -Identity <policy name> -ExternalMeetingJoin  Disabled
 - [Plan for meetings](plan-meetings.md)
 - [Meetings, webinars, and live events overview](quick-start-meetings-live-events.md)
 - [Feature comparison](meeting-webinar-town-hall-feature-comparison.md)
-- [New-CsTeamsMeetingPolicy](/powershell/module/teams/new-csteamsmeetingpolicy)
 - [Set-CsTeamsMeetingPolicy](/powershell/module/teams/set-csteamsmeetingpolicy)
-- [Grant-CsTeamsMeetingPolicy](/powershell/module/teams/grant-csteamsmeetingpolicy)
-- [Get-CsTeamsMeetingPolicy](/powershell/module/teams/get-csteamsmeetingpolicy)
-- [Remove-CsTeamsMeetingPolicy](/powershell/module/teams/remove-csteamsmeetingpolicy)

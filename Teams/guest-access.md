@@ -15,6 +15,7 @@ f1.keywords:
 ms.custom: 
 - ms.teamsadmincenter.orgwidesettings.guestaccess.overview
 - chat-teams-channels-revamp
+- guest-access-external-collab
 ms.collection: 
 - Teams_ITAdmin_GuestAccess
 - M365-collaboration
@@ -27,6 +28,9 @@ description: Guest access in Microsoft Teams allows teams in your organization t
 # Guest access in Microsoft Teams
 
 With guest access, you can provide access to teams, documents in channels, resources, chats, and applications to people outside your organization, while maintaining control over your corporate data. Anyone with a business or consumer email account, such as Outlook, Gmail, or others, can participate as a guest in Teams. If you haven't set up guest access yet, go through the steps in the [Collaborate with guests in a team](/microsoft-365/solutions/collaborate-as-team).
+
+>[!IMPORTANT]
+> All Guests must be added to at least one Team before guest access features and functionality will be available to the guest account. [Learn more](https://support.microsoft.com/office/add-guests-to-a-team-in-microsoft-teams-fccb4fa6-f864-4508-bdde-256e7384a14f).
 
 > [!NOTE]
 > If you just want to find, call, chat, and set up meetings with people in other Microsoft 365 organizations, use [external access](trusted-organizations-external-meetings-chat.md).

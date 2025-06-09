@@ -1,13 +1,14 @@
 ---
 title: "Configure a Session Border Controller for multiple tenants"
 ms.reviewer: filippse
-ms.date: 06/17/2024
+ms.date: 05/06/2025
 ms.author: scottfrancis
 author: sfrancis206
 manager: pamgreen
 audience: ITPro
 ms.topic: how-to
 ms.service: msteams
+ms.subservice: teams-calling
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 

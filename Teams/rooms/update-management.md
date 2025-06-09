@@ -4,7 +4,7 @@ author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
 ms.reviewer: vapati
-ms.date: 2/28/2025
+ms.date: 5/05/2025
 ms.topic: how-to
 audience: Admin
 ms.service: msteams
@@ -25,16 +25,17 @@ f1keywords:
 
 A modern meeting room is equipped with a Microsoft Teams Rooms device and other peripherals such as a camera, microphone, or speaker, and potentially more devices to create an inclusive and effective meeting experience. Equipment from different kinds of OEMs provides the exact organizational experience desired; however, they must be maintained with software and firmware on an ongoing basis.  
 
-Microsoft Teams Rooms Pro Management provides the assurance that each room in your organization is maintained== to deliver a Teams Room that is always ready. Microsoft's goal is to reduce complexity and legwork for your operational staff with intelligence and automation. Troubleshooting or diagnostics is performed as quickly as possible.
+Microsoft Teams Rooms Pro Management provides the assurance that each room in your organization is maintained to deliver a Teams Room that is always ready. Microsoft's goal is to reduce complexity and legwork for your operational staff with intelligence and automation. Troubleshooting or diagnostics is performed as quickly as possible.
+
+## Licensing
+
+Teams Rooms with Teams Rooms Pro licenses can orchestrate their updates through Teams Rooms Pro management.  For Teams Rooms on Windows devices that have a Teams Rooms Standard and Teams Rooms Basic license, their updates are managed through the device's nightly maintenance window.
 
 ## Transitioning a device to Pro Management
 
-Room devices onboarding to Pro Management usually have a change management history and practice that is different from our guidance.  
+Room devices onboarding to Pro Management usually may have a change management history and practice that is different from our guidance.  
 
-- To  benefit from Pro Management, you must transition change management for all updates under Pro Management portfolio.
-- Multiple sources of change management  impact incident Service Level Agreements (SLAs) as there's a discovery and remediation that will restart anew if an incident happens in the room.
-- Microsoft has implemented controls and checks to implement policies that may differ from one organization to another, and the ability to intervene in exceptional situations.
-- Eventually, the room devices are updated to common standards, except for exceptions due to issues with a specific hardware installation.  
+To benefit from Pro Management, you must transition change management to allow all updates to be applied through Teams Rooms Pro Management.
 
 ## Transitioning devices: Basic readiness checks
 
@@ -53,43 +54,32 @@ There are a few prerequisites for receiving updates through the Pro Management s
 |:- |:- |
 |Logitech Sync Services  |Should be installed and running on the Logitech meeting room devices. Required Sync services are installed automatically from Windows Updates unless blocked. The full Sync package can also be installed. |
 |Windows OS updates |Should be kept enabled and not redirected to WSUS, nor blocked from a networking perspective. Neither GPO nor MDM policies should be used to manage OS updates. |
-|Microsoft Store updates   |Should be turned off. Managed Services will turn off Store updates if found on. |
-|Anti-Virus Software |If you are running AV software on these devices, you should ensure that AV has exclusions in place for Teams and Skype dlls. See [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) for more details. |
-|Additional Software |Additional software such as third-party remote desktop viewing, etc. should be reviewed with Managed Services to rule out side-effects. |
-|Additional Change Management|Can interfere with covered updates, and` shouldn't be introduced. |
+|Microsoft Store updates   |Should be turned off. Teams Rooms Pro management will turn off Store updates if found on. |
+|Anti-Virus Software |Only Microsoft Defender is the supported anti-virus tool on Teams Rooms for Windows devices. If you are running any other AV software on these devices, you should ensure that AV has exclusions in place for Teams and Skype dlls. See [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) for more details. |
+|Additional Software |Additional software such as third-party remote desktop viewing, etc. is not supported. If issues arise, where additional software has been added, you should remove software to rule out side-effects. |
+|Additional Change Management|Can interfere with covered updates, and shouldn't be introduced.|
 
 ## Managed updates – How it works 
 
-There are two primary ways how updates are managed:  
-
-- **Automatically managed**: Updates are installed in your room device based on Pro Management assessment. No intervention is required for the updates managed in our portfolio.
-- **Ring validated**: Set up a ring system to preview updates on specific devices so that you can monitor them without the associated leg work. Ring setup provides an additional layer of due diligence before broad rollouts.  
-
-### Automatically managed
-
-If you choose to be automatically managed, then no action is needed for the updates on your part. However, you should review the current portfolio of updates supported by the Pro Management service. The portfolio is constantly getting new additions, and it is our priority to cover the most frequent and impactful updates to ensure your room stability. Check the current list (under the “Update Management” section of this doc) to plan any extra change management needed for your organization.  
-
-**Recommendation:** Don't install updates that are covered by the Pro Management service on any managed device on your own.
+Updates are installed in your room device based on **Ring validation.**  Set up a ring system to preview updates on specific devices so that you can monitor them without the associated leg work. Ring setup provides an additional layer of due diligence before broad rollouts.  
 
 ### Ring validation
 
-When choosing ring validation, review the following sections on how rings work in the Pro Management portal and the options available to customize it for your organization. Even with ring validation, attempts are made to ensure that rooms aren't past due on recommended updates. Depending on the situation, a room might receive “catch up” updates to ensure it complies with Microsoft recommendations.  
-
- Check for announcements on the portal home page and within the Pro Management documentation as new types of software and firmware become available in the portfolio.
+Review the following sections on how rings work in the Pro Management portal and the options available to customize it for your organization. With ring validation, attempts are made to ensure that rooms aren't past due on recommended updates. Depending on the situation, a room might receive “catch up” updates to ensure it complies with Microsoft recommendations.  
 
 ### Scheduling
 
 Updates are scheduled for rooms based on the equipment in the room and if they aren't meeting recommended standards for applicable software and firmware.
 
-- To help our customers meet change management requirements, update deployment start on **Wednesdays** in the staging ring. If a critical update is required, this schedule is bypassed and the update released as soon as it’s available.
 - Updates are sequenced based on the need in a particular room. 
 - If you have setup rings to validate the updates, the update progresses through the ring order. 
-- A new update can supersede an update that is queued up if it's determined that room stability improves, based on your situation.  
+- A new update can supersede an existing update that is queued.
+
 - Updates are typically applied during our nightly maintenance window – which is room local time **12:00am – 5:00am** to avoid any kind of interruptions.
 
 ## Microsoft Teams Rooms app update lifecycle policy
 
-The MTR engineering team’s support policy states that all support ends after the 12 (12) month lifecycle for a version has expired or if more than two updates have been released since then. Then, customers must update to a supported version. Reference [Microsoft Teams Rooms app version support - Microsoft Teams | Microsoft Docs](rooms-lifecycle-support.md) for detailed service description.
+The MTR engineering team’s support policy states that all support ends after the twelve (12) month lifecycle for a particular version (N) has expired or if more than two updates have been released (N-2). Then, customers must update to a supported version (N or N-1). Reference [Microsoft Teams Rooms app version support - Microsoft Teams | Microsoft Docs](rooms-lifecycle-support.md) for detailed service description.
 
 
 ## Update Management experience walk-through  
@@ -137,9 +127,9 @@ The detailed room view displays the relevant updates and their status under the 
 
 ### Rings  
 
-Rings are used to reduce the risk of issues derived from the deployment of the feature updates. This is done by gradually deploying the update to the entire site. Each ring should have a list of Microsoft Teams Rooms rooms and a corresponding rollout schedule. Defining rings is generally a one-time event (or at least infrequent), but IT should revisit these groups from time to time to ensure that the sequencing is still correct.  
+Rings are used to reduce the risk of issues derived from the deployment of the feature updates. This is done by gradually deploying the update to the entire site. Each ring should have a list of Microsoft Teams Rooms and a corresponding rollout schedule. Defining rings is generally a one-time event (or at least infrequent), but IT should revisit these groups from time to time to ensure that the sequencing is still correct.  
 
-The **Rings** tab lists  all the rings in your tenant. There are three preconfigured rings:  
+The **Rings** tab lists all the rings in your tenant. There are three preconfigured rings:  
 
 - **Staging**: Assign rooms to the Staging ring, which is your testbed. All new updates roll out here first. Generally, you'll want to ensure that your staging ring represents rooms with the diversity of device types in your environment. If there are certain types of rooms with an uncommon configuration or a history of seeing issues, please consider representing them in Staging.
 
@@ -213,11 +203,13 @@ Moving rooms from one ring to another is possible in two ways:
 Automated updates in Pro Management orchestrate updates throughout your organization. However, you have the visibility and control to intervene if needed. Here are the ways: 
 
 - In the event of an update failure, a ticket is automatically generated for tracking. 
-- If you see an update causing issues, you can pause the update with the **Pause** button. Hitting the Pause button prompts creation of a Record an issue ticket for your team to investigate.
-- If you see an update has failed in a room and you have corrected a plausible reason such as network disconnect, you can retry the update with **Retry all failed** button.  
+- If you see an update causing issues, you can pause the update with the **Pause** button. Once the update is Paused, it remains paused forever.  
+
+- If you see an update has failed in a room and you have corrected a plausible reason, such as network disconnect, you can retry the update with **Retry all failed** button.  
 - There may be urgent situations when you may decide to make an update available earlier. In this case, you can use the **Force updates** button. When using the Force Update option, you have the choice to force the update immediately or when next the room is available.  
+
+Should you have questions or issues related to updates not applying to your devices, open a Microsoft support ticket with corresponding logs for further investigation.
 
 > [!NOTE]
 > **We do not recommend “Force Updates”** as a general update management strategy, as you may encounter known issues with those updates.
-
-- Further, to ensure good change management practices, we log every force update internally in the service. In the future, we expect to make that visible to you as well.
+> > 

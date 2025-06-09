@@ -15,7 +15,8 @@ ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection:
   - M365-collaboration
-  - tier2
+  - essentials-overview
+  - essentials-get-started
 f1.keywords:
   - CSH
 ms.custom:

@@ -26,6 +26,9 @@ description: Enable and manage SMS in Microsoft Teams
 
 This article is for IT administrators and IT professionals who are administering the Short Message Service (SMS) usage in Microsoft Teams. You can manage SMS for Teams through the Teams admin center.
 
+> [!NOTE]
+> SMS in Teams is only available on Calling Plan phone numbers in the United States (including Puerto Rico) and Canada.
+
 ## Prerequisites
 
 ### Brand and Campaign
@@ -58,21 +61,44 @@ As an administrator, you must be assigned one of the following Role-Based Access
 
 For more information about Teams administrator roles, see [Use Microsoft Teams administrator roles to manage Teams](using-admin-roles.md).
 
-## Turn on SMS for a user
+## Manage SMS in Teams for Users
 
-To enable SMS in Teams for a user, you must turn on SMS for a user's phone number. 
+### SMS status for phone numbers
 
-In Teams admin center, navigate to the left side rail, select **Voice** > **Phone numbers** > **Numbers**, and then find and select the number for the user. In the contextual menu just above the list of phone numbers, select **Enable SMS**.
+Not all phone numbers support SMS in Teams. In the Teams admin center, under **Voice** > **Phone numbers** > **Numbers**, the **SMS status** shows whether a number can use SMS in Teams and displays the phone number's current SMS in Teams status. The following table lists the **SMS status** values and their descriptions.
+
+|SMS status |Description|
+| -------- | -------- |
+|Not available| SMS in Teams isn't available on the phone number. SMS might not be available due to the current phone number's configuration&mdash;for example, the phone number is assigned to a Resource Account, or the phone number itself doesn't support SMS.|
+|Not Activated| SMS in Teams is available on the phone number, but you haven't activated it yet. You can select **Enable SMS** to activate SMS in Teams for this phone number.|
+|In Progress|SMS in Teams activation is in progress and might take up to two hours.|
+|Activated|SMS in Teams is activated on the phone number. You can select **Disable SMS** to turn off SMS in Teams for this phone number.|
+
+#### Turn on SMS for a user
+
+To enable SMS in Teams for a user, you must turn on SMS for a user's phone number.
+
+1. In Teams admin center, navigate to the left side rail, select **Voice** > **Phone numbers** > **Numbers**.
+1. Find and select the number for the user.
+1. In the contextual menu just above the list of phone numbers, select **Enable SMS**.
 
 If the number isn't already assigned to a user, you can assign that number to a user. For more information on number management, see [Manage phone numbers for users](assign-change-or-remove-a-phone-number-for-a-user.md).
 
-## Turn off SMS for a user
+#### Turn off SMS for a user
 
-To turn off SMS for a user in Teams admin center, navigate to the left side rail, select **Voice** > **Phone numbers** > **Numbers**, and then find and select the number for the user. In the contextual menu just above the list of phone numbers, select **Disable SMS**.
+To turn off SMS for a user, do the following steps:
+
+1. In the Teams admin center, navigate to the left side rail, select **Voice** > **Phone numbers** > **Numbers**.
+1. Find and select the number for the user.
+1. In the contextual menu just above the list of phone numbers, select **Disable SMS**.
 
 ## SMS usage report
 
-To view itemized SMS reporting in Teams admin center, navigate to the left side rail, select **Reports & analytics** > **Usage reports** > **PSTN and SMS Usage**, choose a date range, and select **Run report**.
+To view itemized SMS reporting, do the following steps:
+
+1. In Teams admin center, navigate to the left side rail, select **Reports & analytics** > **Usage reports** > **PSTN and SMS Usage**.
+1. Choose a date range.
+1. Select **Run report**.
 
 For more information, see [Microsoft Teams PSTN Usage report](.\teams-analytics-and-reports\pstn-usage-report.md).
 

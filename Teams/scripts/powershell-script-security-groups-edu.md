@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 
   - M365-collaboration
-  - tier1
+  - essentials-security
 appliesto: 
   - Microsoft Teams
 ms.custom:

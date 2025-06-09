@@ -58,17 +58,29 @@ Teams users must have a phone number with PSTN calling enabled to use SIP Gatewa
 
 >[!note]
 >SIP Gateway Feature Codes:
+>
+>
 > DND -
 > \*30\* (Set DND From SIP Device)
+>
 > \*31\* (Reset Teams DND Status from SIP Device)
+>
+>
 > Call Forwarding - (https://support.microsoft.com/office/call-forwarding-call-groups-and-simultaneous-ring-in-microsoft-teams-a88da9e8-1343-4d3c-9bda-4b9615e4183e)
 > \*32\* - Reset Call Forwarding Status
+>
 > \*33\* (Set "Call Forwarded To" Number)
+>
 > \*34\* (Set "Forward on Timeout")
+>
 > \*35\* (Setup Simultaneous Ring)
+>
+>
 > Device Validation -
+>
 > \*55\* - OTP validation from devices provisioned through Teams Admin Center
 > Voicemail -
+>
 > \*99\* - Check voicemail
 
 ### Hardware, software, and licenses
@@ -102,6 +114,11 @@ If you have a 3PIP or SIP device, you must have the following:
 |          |8851<sup>1</sup>       |11.1.1MPP   |12-0-3MPP  |   |   |
 |          |8861<sup>1</sup>       |11.1.1MPP   |12-0-3MPP  |   |   |
 |          |8865<sup>1</sup>       |11.1.1MPP   |12-0-3MPP  |   |   |
+|          |8875<sup>1</sup>       |PhoneOS 3.3.1   |PhoneOS 3.3.1  |   |   |
+|          |9841<sup>1</sup>       |PhoneOS 3.3.1   |PhoneOS 3.3.1  |   |   |
+|          |9851<sup>1</sup>       |PhoneOS 3.3.1   |PhoneOS 3.3.1  |   |   |
+|          |9861<sup>1</sup>       |PhoneOS 3.3.1   |PhoneOS 3.3.1  |   |   |
+|          |9871<sup>1</sup>       |PhoneOS 3.3.1   |PhoneOS 3.3.1  |   |   |
 |          |ATA191-MPP<sup>3</sup>       |11.2.2MPP   |11-2-2MPP0101-013  |   |   |
 |          |ATA192-MPP<sup>3</sup>       |11.2.2MPP   |11-2-2MPP0101-013  |   |   |
 |**Poly**  |           |            |           |The device will auto reboot and install the selected firmware.|[Poly Lens Provisioning Guide](https://info.lens.poly.com/docs/category/lens-assisted-provisioning)|
@@ -127,12 +144,12 @@ If you have a 3PIP or SIP device, you must have the following:
 |          |VVX501<sup>2</sup>    |5.9.5       |6.4.6.2640 |   |   |
 |          |VVX600<sup>3</sup>     |5.9.5       |5.9.7.3480 |   |   |
 |          |VVX601<sup>2</sup>    |5.9.5       |6.4.6.2640 |   |   |
-|          |Rove B1<sup>1</sup>    |8.0.5.0002  |8.0.5.0002 |   |   |
-|          |Rove B2<sup>1</sup>    |8.0.5.0002  |8.0.5.0002 |   |   |
-|          |Rove B4<sup>1</sup>    |8.0.5.0002  |8.0.5.0002 |   |   |
-|          |Rove 20<sup>1</sup>    |8.0.5.0003  |8.0.5.0003 |   |   |
-|          |Rove 30<sup>1</sup>    |8.0.5.0002  |8.0.5.0002 |   |   |
-|          |Rove 40<sup>1</sup>    |8.0.5.0002  |8.0.5.0002 |   |   |
+|          |Rove B1<sup>1</sup>    |8.0.11|8.0.11 |   |   |
+|          |Rove B2<sup>1</sup>    |8.0.11 |8.0.11|   |   |
+|          |Rove B4<sup>1</sup>    |8.0.11|8.0.11|   |   |
+|          |Rove 20<sup>1</sup>    |8.0.11|8.0.11|   |   |
+|          |Rove 30<sup>1</sup>    |8.0.11|8.0.11|   |   |
+|          |Rove 40<sup>1</sup>    |8.0.11|8.0.11|   |   |
 |          |Edge E100<sup>2</sup>  |8.1.0.12774  |8.2.2.1176 |   |   |
 |          |Edge E220<sup>2</sup>  |8.1.0.12774  |8.2.2.1176 |   |   |
 |          |Edge E300<sup>2</sup>  |8.1.0.12774  |8.2.2.1176 |   |   |
@@ -281,6 +298,27 @@ If you have a 3PIP or SIP device, you must have the following:
 |**Snom**|       |     |              |                |   |
 |          |D717<sup>3</sup>          |10.1.141.13     |10.1.141.13 |IP Phone   |   |
 |          |D735<sup>3</sup>          |10.1.141.13     |10.1.141.13 |IP Phone   |   |
+|**2N**|       |           |           |   |[2N EMEA Support](https://www.2n.com/en-GB/support/#verticaltabscontainer-do-you-need-support-or-help) <br> [2N NOAM Support](https://www.2n.com/en-US/support/#verticaltabscontainer-do-you-need-support-or-help) <br> [2N APAC Support](https://www.2n.com/en-AU/support/#verticaltabscontainer-do-you-need-support-or-help)|
+|          |SIP Speaker Horn        |2.46.1     |2.46.1     | |   |
+|          |SIP Speaker             |2.46.1     |2.46.1     | |   |
+|          |Sentrio Cabin           |2.46.1     |2.46.1     | |   |
+|          |Lift IP 2.0              |2.46.1     |2.46.1     | |   |
+|          |Indoor View - WiFi      |2.46.1     |2.46.1     | |   |
+|          |Indoor View             |2.46.1     |2.46.1     | |   |
+|          |Indoor Compact	         |2.46.1     |2.46.1     | |   |
+|          |Indoor Talk             |2.46.1     |2.46.1     | |   |
+|          |Clip	                   |2.46.1     |2.46.1     | |   |
+|          |IP Style	               |2.46.1     |2.46.1     | |   |
+|          |IP Verso 2.0             |2.46.1     |2.46.1     | |   |
+|          |IP Verso	               |2.46.1     |2.46.1     | |   |
+|          |IP Vario	               |2.46.1     |2.46.1     | |   |
+|          |IP Solo                 |2.46.1     |2.46.1     | |   |
+|          |IP One                  |2.46.1     |2.46.1     | |   |
+|          |IP Safety               |2.46.1     |2.46.1     | |   |
+|          |IP Force	               |2.46.1     |2.46.1     | |   |
+|          |IP Base                 |2.46.1     |2.46.1     | |   |
+|          |IP Video Kit	           |2.46.1     |2.46.1     | |   |
+|          |IP Audio Kit            |2.46.1     |2.46.1     | |   |
 
 <sup>1</sup> Device supports dynamic location discovery through LLDP with SIP Gateway.
 

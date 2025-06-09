@@ -8,6 +8,7 @@ ms.date: 01/06/2025
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 ms.collection:
   - M365-voice
   - m365initiative-voice
@@ -32,7 +33,7 @@ Teams SMS enables businesses to communicate with customers directly through SMS 
 
 ## How we handle opt-out requests for SMS
 
-If an individual requests to opt-out of future messages on Teams SMS, then all further traffic from that number is automatically stopped.  You must ensure that you don't send more messages for that messaging campaign from the same number. If you separately obtain express consent to message for another purpose, then you must ask the customer to respond with a START message to resubscribe or send messages from a different number for that campaign. You must also ensure that you don't send additional messages to the same recipient from new or different numbers unless the sender of those messages has independent prior consent (express or implied) to contact the recipient. To learn more on Opt-out handling, see [Opt-out messaging](sms-setup-campaign.md#opt-out-messaging).
+If an individual requests to opt-out of future messages on Teams SMS, then all further traffic from that number is automatically stopped.  You must ensure that you don't send more messages for that messaging campaign from the same number. If you separately obtain express consent to message for another purpose, then you must ask the customer to respond with a START message to resubscribe or send messages from a different number for that campaign. You must also ensure that you don't send additional messages to the same recipient from new or different numbers unless the sender of those messages has independent prior consent (express or implied) to contact the recipient. To learn more on Opt-out handling, see [Opt-out messaging](sms-setup-campaign.md#opt-out-message).
 
 ## Message content
 

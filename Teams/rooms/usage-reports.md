@@ -24,6 +24,9 @@ description: This article helps you in monitoring the usage of your devices in t
 
 There are reports for health and usage that are available in the **Reporting** node in the Teams Rooms Pro Management portal. The **Reporting** node contains data for the health and usage of your Microsoft Teams Rooms in the Pro Management portal. The **Overview** tab surfaces tenant-wide health trends of your rooms. The **Health** tab displays a list of rooms with their corresponding health data. Room usage based on calendar information and call quality data is visible under the **Usage** tab.
 
+>[!Note]
+> This feature is available with a Teams Rooms Pro or Teams Shared Device license.
+
 ## Export tickets
 
 The ticket export feature lets you export all active and closed ticket history information within a select date range. Exporting tickets lets you easily access and analyze your ticket history data for better decision making.  

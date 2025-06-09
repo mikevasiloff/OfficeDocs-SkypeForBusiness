@@ -9,7 +9,9 @@ ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
 audience: Admin
-ms.custom: chat-teams-channels-revamp
+ms.custom: 
+  - chat-teams-channels-revamp
+  - teams-chat-and-channels
 ms.collection: 
   - M365-collaboration
   - m365-frontline

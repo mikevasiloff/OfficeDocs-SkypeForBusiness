@@ -20,6 +20,7 @@ f1.keywords:
 ms.custom: 
   - ms.teamsadmincenter.dashboard.allteamsdocuments
   - intro-overview
+  - teams-chat-and-channels
 appliesto: 
   - Microsoft Teams
 ---

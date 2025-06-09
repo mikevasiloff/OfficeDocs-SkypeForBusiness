@@ -1,5 +1,5 @@
 ---
-ms.date: 05/01/2024
+ms.date: 04/28/2025
 title: Emergency numbers country and region reference
 author: sfrancis206
 ms.author: scottfrancis
@@ -26,216 +26,210 @@ ms.custom: seo-marvel-mar2020
 
 # Emergency numbers for countries and regions
 
-The following table lists country, ISO country code, and the associated emergency numbers for that country.
+The following table lists the ISO country code and the associated emergency numbers for that country.
 
-|Country|ISO Country Code|Emergency Numbers|
-|---|---|---|
-|Aland Islands |AX |112 |
-|Albania |AL |112<br>126<br>127<br>128<br>129 |
-|Algeria |DZ |1021<br>104<br>1055<br>1548 |
-|American Samoa |AS |911 |
-|Andorra |AD |110<br>112<br>116<br>118 |
-|Angola|AO|111<br>115<br>116|
-|Anguilla |AI |911 |
-|Antigua & Barbuda |AG |911<br>999 |
-|Argentina|AR|109<br>911<br>100<br>101<br>106<br>107<br>128|
-|Armenia |AM |911<br>100<br>101<br>102<br>103<br>104<br>177 |
-|Australia|AU|000<br>000 DialMask=112<br>106<br>132500|
-|Austria|AT|112<br>122<br>128<br>133<br>140<br>141<br>142<br>144<br>147|
-|Azerbaijan |AZ |112<br>101<br>102<br>103<br>104<br>199 |
-|Bahamas |BS |911<br>919 |
-|Bahrain  |BH |112<br>199<br>990<br>992<br>994<br>999 |
-|Bangladesh |BD |999<br>16163 |
-|Barbados |BB |211<br>311<br>511<br>911 |
-|Belarus |BY |112<br>101<br>102<br>103<br>104 |
-|Belgium|BE|100<br>101<br>102<br>103<br>105<br>106<br>107<br>108<br>110<br>112<br>117<br>119|
-|Belize |BZ |911<br>936<br>990 |
-|Benin|BJ |112<br>117<br>118 |
-|Bermuda |BM |911 |
-|Bhutan |BT |113<br>110<br>112<br>999 |
-|Bolivia|BO |110<br>111<br>115<br>119<br>156<br>160<br>176 |
-|Bosnia & Herzegovina |BA |121<br>122<br>123<br>124<br>1282 | 
-|Botswana |BW |112<br>116<br>991<br>997<br>998<br>999 | 
-|Bouvet Island|BV|Not applicable (uninhabited)|
-|Brunei Darussalam |BN |991<br>993<br>995<br>998 |
-|Bulgaria|BG|112<br>166<br>150<br>160|
-|Burkina Faso |BF |15<br>16<br>17<br>18<br>112<br>199<br>1010<br>1111<br>1130 |
-|Burundi |BI |113<br>413 | 
-|Brazil|BR|128<br>180<br>185<br>190<br>191<br>192<br>193<br>194<br>197<br>198|
-|Cabo Verde |CV |112 |
-|Cambodia|KH|117<br>118<br>119<br>666|
-|Cameroon|CM|117<br>118<br>119|
-|Canada|CA|911<br>911 DialMask=1911<br>911 DialMask=9911<br>933|
-|Cayman Islands |KY |911 |
-|Central African Republic |CF |114<br>117<br>118 |
-|Chad |TD |114<br>115 |
-|Chile|CL|130<br>131<br>132<br>133<br>134<br>135<br>136<br>137<br>138<br>1400|
-|China |CN |110 <br>119<br>120<br>122 |
-| Christmas Island | CX | 000 |
-| Cocos Islands | CC | 000 |
-|Colombia|CO|123<br>111<br>112<br>119<br>125<br>146<br>156|
-| Comoros | KM | 111   <br>     112<br>     113<br>     115<br>     117<br>     118 |
-| Congo | CG | 112 |
-| Cook Islands | CK | 999<br>     996<br>     22664<br>     22499 |
-|Costa Rica|CR|911<br>112<br>1117<br>1118|
-|Côte d'Ivoire|CI|100<br>110<br>111<br>170<br>180<br>185<br>145|
-|Croatia|HR|192<br>193<br>194<br>195<br>1987<br>116000<br>116006<br>116111<br>112|
-|Cyprus|CY|112<br>199|
-|Czech Republic|CZ|112<br>150<br>155<br>156<br>158|
-|Germany|DE|110<br>112|
-|Denmark|DK|112<br>114|
-| Djibouti | DJ | 17<br>     18<br>     19 |
-| Dominica | DM | 911 |
-|Dominican Republic|DO|911|
-|Ecuador|EC|911|
-| Egypt | EG | 122<br>     123<br>     180 |
-|El Salvador|SV|911<br>913<br>132|
-| Equatorial   Guinea | GQ | 112<br>     113<br>     114<br>     115<br>     116 |
-|Estonia|EE|112|
-|Eswatini|SZ|999<br>933<br>977|
-| Ethiopia | ET | 911<br>     112<br>     907<br>     939<br>     991<br>      |
-| Faroe Islands | FO | 112<br>     114 |
-| Fiji | FJ | 911<br>     910<br>     913<br>     915<br>     917<br>     919 |
-|Finland|FI|112|
-|France|FR|112<br>115<br>116000<br>119<br>15<br>17<br>18|
-|French Guiana|GF|112<br>15<br>17<br>18<br>196|
-| Gabon | GA | 112<br>     177<br>     1333<br>     1488 |
-| Gambia | GM | 112<br>     116<br>     117<br>     118 |
-| Georgia | GE | 112<br>     111<br>     114<br>     123<br>     125<br>     144 |
-| Ghana | GH | 112<br>     116<br>     190<br>     191<br>     192<br>     193 |
-| Gibraltar | GI | 999 |
-|Greece|GR|112<br>100<br>166<br>199<br>108<br>197<br>11112|
-| Greenland | GL | 112<br>     113<br>     114 |
-| Grenada | GD | 911<br>     399<br>     434<br>     677<br>     724<br>     774 |
-|Guadeloupe|GP|112<br>15<br>17<br>18<br>114<br>196|
-| Guam | GU | 911 |
-|Guatemala|GT|110<br>122<br>123<br>1554|
-| Guernsey | GG | 999 |
-| Guinea | GN | 18<br>     19<br>     115<br>     117 |
-| Guinea-Bissau | GW | 121<br>     118<br>     119 |
-| Haiti | HT | 114<br>     116<br>     122 |
-| Heard Island &<br>     McDonald Islands | HM | Not   applicable (uninhabited) |
-| Honduras | HN | 911<br>     198<br>     100 |
-|Hong Kong SAR|HK|999|
-|Hungary|HU|104<br>105<br>107<br>112|
-|Indonesia|ID|112<br>110<br>119<br>113|
-| Iceland | IS | 112 |
-|India|IN|112<br>100<br>101<br>102|
-| Iraq | IQ | 104<br>     115<br>     122<br>      |
-|Ireland|IE|999<br>112|
-| Isle of Man | IM | 999 |
-|Israel|IL|100<br>101<br>102<br>104<br>105|
-|Italy|IT|112<br>113<br>114<br>115<br>118|
-| Jamaica | JM | 110<br>     112<br>     119 |
-|Japan|JP|110<br>119<br>118|
-| Jersey | JE | 999 |
-| Jordan | JO | 911<br>     191<br>     193<br>     199 |
-|Kazakhstan|KZ|103<br>112|
-|Kenya|KE|109<br>112<br>999<br>114<br>117<br>110|
-| Kuwait | KW | 112<br>     152 |
-| Kyrgyzstan | KG | 112<br>     101<br>     102<br>     103<br>     161 |
-| Lao People's<br>     Democratic Republic <br>     (the) | LA | 1191<br>     1169<br>     1190<br>     1192<br>     1195<br>     1199 |
-|Latvia|LV|110<br>113<br>114<br>115<br>116006<br>116123<br>116000<br>116111<br>112|
-| Lebanon | LB | 112<br>     125<br>     140<br>     175 |
-| Lesotho | LS | 112 |
-| Liberia | LR | 911<br>     144<br>     4455 |
-| Libya | LY | 1415<br>     112<br>     193<br>     1515 |
-| Liechtenstein | LI | 112<br>     117<br>     118<br>     143<br>     144<br>     145<br>     147<br>     1414 |
-|Lithuania|LT|112|
-|Luxembourg|LU|112<br>113|
-| Madagascar | MG | 17<br>     117<br>     118 |
-| Malawi | MW | 997<br>     490<br>     491<br>     990<br>     998<br>     999<br>     4312 |
-|Malaysia|MY|999<br>112|
-| Maldives | MV | 102<br>     104<br>     105<br>     115<br>     118<br>     119<br>     191 |
-|Malta|MT|112|
-|Martinique|MQ|112<br>15<br>17<br>18<br>114<br>191<br>196|
-| Mauritania | MR | 101<br>     117<br>     118 |
-| Mauritius | MU | 112<br>     999<br>     114<br>     115 |
-|Mayotte|YT|112<br>15<br>17<br>18<br>114<br>191<br>196|
-|Mexico|MX|911|
-| Moldova | MD | 112 |
-|Monaco |MC |17<br>18<br>112<br>196 |
-| Mongolia | MN | 101<br>     102<br>     103 |
-| Montenegro | ME | 112<br>     122<br>     123<br>     124<br>     129 |
-| Morocco | MA | 15<br>     19<br>     177 |
-| Mozambique | MZ | 117<br>     119<br>     198 |
-| Namibia | NA | 112<br>     924<br>     998<br>     9682<br>     10111 |
-| Nepal | NP | 100<br>     101<br>     102<br>     103<br>     104 |
-|Netherlands|NL|112|
-|New Zealand|NZ|111|
-|Nicaragua|NI|102<br>115<br>118|
-| Niger | NE | 15<br>     118<br>     17<br>     8383<br>     18 |
-| Nigeria | NG | 112 |
-| Norfolk Island | NF | 000 |
-| North   Macedonia | MK | 112<br>     192<br>     193<br>     194 |
-| Northern Mariana Islands | MP | 911 |
-|Norway|NO|110<br>112<br>113|
-| Oman | OM | 9999<br>     112 |
-| Pakistan | PK | 15<br>     16<br>     115<br>     130<br>     1122 |
-| Palestine | PS | 100<br>     101<br>     177 |
-|Panama|PA|911<br>103<br>104|
-| Papua New Guinea | PG | 110<br>     111<br>     112 |
-| Paraguay | PY | 911 |
-|Peru|PE|105<br>106<br>110<br>115<br>116|
-|Philippines|PH|911|
-|Poland|PL|984<br>985<br>986<br>987<br>989<br>991<br>992<br>993<br>994<br>995<br>996<br>997<br>998<br>999<br>112|
-|Portugal|PT|112<br>117|
-|Puerto Rico|PR|911<br>911 DialMask=1911<br>911 DialMask=9911<br>933|
-| Qatar | QA | 999 |
-|Reunion|RE|112<br>15<br>17<br>18<br>196|
-|Romania|RO|112<br>113|
-|Russia |RU |112<br>101<br>102<br>103<br>104 |
-|Rwanda|RW|112<br>110<br>113<br>912|
-|Saint Barthélemy|BL|112<br>15<br>17<br>18|
-|Saint Martin|MF|112<br>15<br>17<br>18|
-| São Tomé e   Príncipe | ST | 112<br>     113 |
-| Saudi Arabia | SA | 911<br>     112<br>     123<br>     992<br>     993<br>     996<br>     997<br>     998<br>     999 |
-| Senegal | SN | 17<br>     18<br>     123<br>     1515 |
-| Serbia | RS | 112<br>     192<br>     193<br>     194 |
-| Seychelles | SC | 112<br>     111<br>     133<br>     141<br>     151<br>     160<br>     999 |
-|Singapore|SG|993<br>995<br>999|
-|Sint Maarten|SX|911<br>912<br>913<br>919|
-|Slovakia|SK|112<br>150<br>155<br>158|
-|Slovenia|SI|113<br>116000<br>116111<br>116123<br>112|
-| Somalia | SO | 555<br>     777<br>     888<br>     999 |
-|South Africa|ZA|10111<br>10177<br>112<br>116<br>107<br>17737<br>1020<br>139|
-|South Korea|KR|112<br>119<br>122|
-|Spain|ES|061<br>062<br>080<br>085<br>091<br>092<br>112|
-|Sri Lanka|LK|110<br>112<br>119|
-| St. Lucia | LC | 911<br>     999 |
-| St. Vincent and the<br>     Grenadines | VC | 999<br>     911 |
-| Sudan | SD | 333<br>     777<br>     999 |
-|Svalbard|SJ|112|
-|Sweden|SE|112<br>11313<br>11414<br>1177|
-|Switzerland|CH|112<br>117<br>118<br>143<br>144<br>145<br>147<br>1414|
-|Taiwan|TW|112<br>110<br>119|
-| Tajikistan | TJ | 112<br>     101<br>     102<br>     103<br>     104 |
-| Tanzania | TZ | 110<br>     111<br>     112<br>     113<br>     114<br>     115 |
-|Thailand|TH|191<br>1669<br>199|
-| Timor-Leste | TL | 112 |
-| Togo | TG | 117<br>     118<br>     9200 |
-|Trinidad & Tobago |TT |911<br>811<br>990<br>999 |
-| Tunisia | TN | 190<br>     193<br>     194<br>     197<br>     198 |
-|Türkiye|TR|112<br>132<br>156<br>158<br>177|
-| Turkmenistan | TM | 001<br>     002<br>     003<br>     004<br>     009 |
-|Turks & Caicos Islands |TC |911 |
-|Uganda|UG|999<br>112|
-| Ukraine | UA | 112 |
-| United Arab Emirates | AE | 112<br>     911<br>     991<br>     992<br>     997<br>     998<br>     999 |
-|United Kingdom|GB|999<br>112<br>18000 (Text Relay)|
-|United States Minor Outlying Islands|UM|911|
-|United States|US|911<br>911 DialMask=1911<br>911 DialMask=9911<br>933<br>933 DialMask=9933|
-|United States Virgin Islands|VI|911|    
-| Uruguay | UY | 911<br>     104<br>     105<br>     106<br>     108<br>     112<br>     128 |
-|Uzbekistan|UZ|112<br>101<br>102<br>103|
-| Venezuela | VE | 911 |
-|VietNam|VN|113<br>114<br>115|
-| Western   Sahara | EH | 15<br>     19<br>     177 |
-|Zambia|ZM|999<br>991<br>993|
-|Zimbabwe|ZW|N/A|
-
-
-
-
-
-
+| Country                                      | ISO Country Code | International Country Prefix | Emergency Numbers                                                                                     | Emergency Numbers with DialMask                                                                                                     |
+| -------------------------------------------- | ---------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Andorra                                      | AD               | +376                         | 110<br>112<br>116<br>118                                                                              | 376110<br>376112<br>376116<br>376118                                                                                                |
+| United Arab Emirates                         | AE               | +971                         | 112<br>911<br>991<br>992<br>997<br>998<br>999                                                         | 971112<br>971911<br>971991<br>971992<br>971997<br>971998<br>971999                                                                  |
+| Antigua & Barbuda                            | AG               | +1                           | 911<br>999                                                                                            | 1911<br>1999                                                                                                                        |
+| Anguilla                                     | AI               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Albania                                      | AL               | +355                         | 112<br>126<br>127<br>128<br>129                                                                       | 355112<br>355126<br>355127<br>355128<br>355129                                                                                      |
+| Armenia                                      | AM               | +374                         | 911<br>100<br>101<br>102<br>103<br>104<br>177                                                         | 374911<br>374100<br>374101<br>374102<br>374103<br>374104<br>374177                                                                  |
+| Angola                                       | AO               | +244                         | 111<br>115<br>116                                                                                     | 244111<br>244115<br>244116                                                                                                          |
+| Argentina                                    | AR               | +54                          | 109<br>911<br>100<br>101<br>106<br>107<br>128                                                         | 54109<br>54911<br>54100<br>54101<br>54106<br>54107<br>54128                                                                         |
+| American Samoa                               | AS               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Austria                                      | AT               | +43                          | 112<br>122<br>128<br>133<br>140<br>141<br>142<br>144<br>147                                           | 43112<br>43122<br>43128<br>43133<br>43140<br>43141<br>43142<br>43144<br>43147                                                       |
+| Australia                                    | AU               | +61                          | 000<br>106<br>132500                                                                                  | 112<br>61000<br>61112<br>61106<br>61132500                                                                                          |
+| Aland Islands                                | AX               | +358                         | 112                                                                                                   | 358112                                                                                                                              |
+| Azerbaijan                                   | AZ               | +994                         | 112<br>101<br>102<br>103<br>104<br>199                                                                | 994112<br>994101<br>994102<br>994103<br>994104<br>994199                                                                            |
+| Bosnia & Herzegovina                         | BA               | +387                         | 121<br>122<br>123<br>124<br>1282                                                                      | 387121<br>387122<br>387123<br>387124<br>3871282                                                                                     |
+| Barbados                                     | BB               | +1                           | 911<br>211<br>311<br>511                                                                              | 1911<br>1211<br>1311<br>1511                                                                                                        |
+| Bangladesh                                   | BD               | +880                         | 999<br>16163                                                                                          | 880999<br>88016163                                                                                                                  |
+| Belgium                                      | BE               | +32                          | 100<br>101<br>102<br>103<br>105<br>106<br>107<br>108<br>110<br>112<br>117<br>119                      | 32100<br>32101<br>32102<br>32103<br>32105<br>32106<br>32107<br>32108<br>32110<br>32112<br>32117<br>32119                            |
+| Burkina Faso                                 | BF               | +226                         | 15<br>16<br>17<br>18<br>112<br>199<br>1010<br>1111<br>1130                                            | 22615<br>22616<br>22617<br>22618<br>226112<br>226199<br>2261010<br>2261111<br>2261130                                               |
+| Bulgaria                                     | BG               | +359                         | 112<br>166<br>150<br>160                                                                              | 359112<br>359166<br>359150<br>359160                                                                                                |
+| Bahrain                                      | BH               | +973                         | 112<br>199<br>990<br>992<br>994<br>999                                                                | 973112<br>973199<br>973990<br>973992<br>973994<br>973999                                                                            |
+| Burundi                                      | BI               | +257                         | 113<br>413                                                                                            | 257113<br>257413                                                                                                                    |
+| Benin                                        | BJ               | +229                         | 112<br>117<br>118                                                                                     | 229112<br>229117<br>229118                                                                                                          |
+| Saint Barthélemy                             | BL               | +590                         | 112<br>15<br>17<br>18                                                                                 | 590112<br>59015<br>59017<br>59018                                                                                                   |
+| Bermuda                                      | BM               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Brunei Darussalam                            | BN               | +673                         | 991<br>993<br>995<br>998                                                                              | 673991<br>673993<br>673995<br>673998                                                                                                |
+| Bolivia                                      | BO               | +591                         | 110<br>111<br>115<br>119<br>156<br>160<br>176                                                         | 591110<br>591111<br>591115<br>591119<br>591156<br>591160<br>591176                                                                  |
+| Brazil                                       | BR               | +55                          | 128<br>180<br>185<br>190<br>191<br>192<br>193<br>194<br>197<br>198                                    | 55128<br>55180<br>55185<br>55190<br>55191<br>55192<br>55193<br>55194<br>55197<br>55198                                              |
+| Bahamas                                      | BS               | +1                           | 911<br>919                                                                                            | 1911<br>1919                                                                                                                        |
+| Bhutan                                       | BT               | +975                         | 113<br>110<br>112<br>999                                                                              | 975113<br>975110<br>975112<br>975999                                                                                                |
+| Bouvet Island                                | BV               | +47                          | N/A                                                                                                   |N/A                                                                                                                                  |
+| Botswana                                     | BW               | +267                         | 112<br>116<br>991<br>997<br>998<br>999                                                                | 267112<br>267116<br>267991<br>267997<br>267998<br>267999                                                                            |
+| Belarus                                      | BY               | +375                         | 112<br>101<br>102<br>103<br>104                                                                       | 375112<br>375101<br>375102<br>375103<br>375104                                                                                      |
+| Belize                                       | BZ               | +501                         | 911<br>990<br>936                                                                                     | 501911<br>501990<br>501936                                                                                                          |
+| Canada                                       | CA               | +1                           | 911<br>933                                                                                            | 1911<br>9911<br>19911<br>1933<br>11911                                                                                              |
+| Cocos Islands                                | CC               | +61                          | 000                                                                                                   | 61000                                                                                                                               |
+| Central African Republic                     | CF               | +236                         | 114<br>117<br>118                                                                                     | 236114<br>236117<br>236118                                                                                                          |
+| Congo                                        | CG               | +242                         | 112                                                                                                   | 242112                                                                                                                              |
+| Switzerland                                  | CH               | +41                          | 112<br>117<br>118<br>143<br>144<br>147<br>145<br>1414                                                 | 41112<br>41117<br>41118<br>41143<br>41144<br>41147<br>41145<br>411414                                                               |
+| Côte d'Ivoire                                | CI               | +225                         | 100<br>110<br>111<br>170<br>180<br>185<br>145                                                         | 225100<br>225110<br>225111<br>225170<br>225180<br>225185<br>225145                                                                  |
+| Cook Islands                                 | CK               | +682                         | 999<br>996<br>22664<br>22499                                                                          | 682999<br>682996<br>68222664<br>68222499                                                                                            |
+| Chile                                        | CL               | +56                          | 130<br>131<br>132<br>133<br>134<br>135<br>136<br>137<br>138<br>1400                                   | 56130<br>56131<br>56132<br>56133<br>56134<br>56135<br>56136<br>56137<br>56138<br>561400                                             |
+| Cameroon                                     | CM               | +237                         | 117<br>118<br>119                                                                                     | 237117<br>237118<br>237119                                                                                                          |
+| China                                        | CN               | +86                          | 110<br>119<br>120<br>122                                                                              | 86110<br>86119<br>86120<br>86122                                                                                                    |
+| Colombia                                     | CO               | +57                          | 123<br>111<br>112<br>119<br>125<br>146<br>156                                                         | 57123<br>57111<br>57112<br>57119<br>57125<br>57146<br>57156                                                                         |
+| Costa Rica                                   | CR               | +506                         | 911<br>112<br>1117<br>1118                                                                            | 506911<br>506112<br>5061117<br>5061118                                                                                              |
+| Cabo Verde                                   | CV               | +238                         | 112                                                                                                   | 238112                                                                                                                              |
+| Christmas Island                             | CX               | +61                          | 000                                                                                                   | 61000                                                                                                                               |
+| Cyprus                                       | CY               | +357                         | 112<br>199                                                                                            | 357112<br>357199                                                                                                                    |
+| Czech Republic                               | CZ               | +420                         | 112<br>150<br>155<br>156<br>158                                                                       | 420112<br>420150<br>420155<br>420156<br>420158                                                                                      |
+| Germany                                      | DE               | +49                          | 110<br>112                                                                                            | 49110<br>49112                                                                                                                      |
+| Djibouti                                     | DJ               | +253                         | 17<br>18<br>19                                                                                        | 25317<br>25318<br>25319                                                                                                             |
+| Denmark                                      | DK               | +45                          | 112<br>114                                                                                            | 45112<br>45114                                                                                                                      |
+| Dominica                                     | DM               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Dominican Republic                           | DO               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Algeria                                      | DZ               | +213                         | 1021<br>104<br>1055<br>1548                                                                           | 2131021<br>213104<br>2131055<br>2131548                                                                                             |
+| Ecuador                                      | EC               | +593                         | 911                                                                                                   | 593911                                                                                                                              |
+| Estonia                                      | EE               | +372                         | 112                                                                                                   | 372112                                                                                                                              |
+| Egypt                                        | EG               | +20                          | 122<br>123<br>180                                                                                     | 20122<br>20123<br>20180                                                                                                             |
+| Western Sahara                               | EH               | +212                         | 15<br>19<br>177                                                                                       | 21215<br>21219<br>212177                                                                                                            |
+| Spain                                        | ES               | +34                          | 061<br>062<br>080<br>085<br>091<br>092<br>112                                                         | 34061<br>34062<br>34080<br>34085<br>34091<br>34092<br>34112                                                                         |
+| Ethiopia                                     | ET               | +251                         | 911<br>112<br>907<br>939<br>991                                                                       | 251911<br>251112<br>251907<br>251939<br>251991                                                                                      |
+| Finland                                      | FI               | +358                         | 112                                                                                                   | 358112                                                                                                                              |
+| Fiji                                         | FJ               | +679                         | 911<br>910<br>913<br>915<br>917<br>919                                                                | 679911<br>679910<br>679913<br>679915<br>679917<br>679919                                                                            |
+| Faroe Islands                                | FO               | +298                         | 112<br>114                                                                                            | 298112<br>298114                                                                                                                    |
+| France                                       | FR               | +33                          | 112<br>115<br>116000<br>119<br>15<br>17<br>18                                                         | 33112<br>33115<br>33116000<br>33119<br>3315<br>3317<br>3318                                                                         |
+| Gabon                                        | GA               | +241                         | 112<br>177<br>1333<br>1488                                                                            | 241112<br>241177<br>2411333<br>2411488                                                                                              |
+| United Kingdom                               | GB               | +44                          | 999<br>112<br>18000                                                                                   | 44999<br>44112<br>4418000                                                                                                           |
+| Grenada                                      | GD               | +1                           | 911<br>399<br>434<br>677<br>724<br>774                                                                | 1911<br>1399<br>1434<br>1677<br>1724<br>1774                                                                                        |
+| Georgia                                      | GE               | +995                         | 112<br>111<br>114<br>123<br>125<br>144                                                                | 995112<br>995111<br>995114<br>995123<br>995125<br>995144                                                                            |
+| French Guiana                                | GF               | +594                         | 112<br>15<br>17<br>18<br>196                                                                          | 594112<br>59415<br>59417<br>59418<br>594196                                                                                         |
+| Guernsey                                     | GG               | +44                          | 999                                                                                                   | 44999                                                                                                                               |
+| Ghana                                        | GH               | +233                         | 112<br>116<br>190<br>191<br>192<br>193                                                                | 233112<br>233116<br>233190<br>233191<br>233192<br>233193                                                                            |
+| Gibraltar                                    | GI               | +350                         | 999                                                                                                   | 350999                                                                                                                              |
+| Greenland                                    | GL               | +299                         | 112<br>113<br>114                                                                                     | 299112<br>299113<br>299114                                                                                                          |
+| Gambia                                       | GM               | +220                         | 112<br>116<br>117<br>118                                                                              | 220112<br>220116<br>220117<br>220118                                                                                                |
+| Guinea                                       | GN               | +224                         | 18<br>19<br>115<br>117                                                                                | 22418<br>22419<br>224115<br>224117                                                                                                  |
+| Guadeloupe                                   | GP               | +590                         | 112<br>15<br>17<br>18<br>114<br>196                                                                   | 590112<br>59015<br>59017<br>59018<br>590114<br>590196                                                                               |
+| Equatorial Guinea                            | GQ               | +240                         | 112<br>113<br>114<br>115<br>116                                                                       | 240112<br>240113<br>240114<br>240115<br>240116                                                                                      |
+| Greece                                       | GR               | +30                          | 112<br>100<br>166<br>199<br>108<br>197<br>11112                                                       | 30112<br>30100<br>30166<br>30199<br>30108<br>30197<br>3011112                                                                       |
+| Guatemala                                    | GT               | +502                         | 110<br>122<br>123<br>1554                                                                             | 502110<br>502122<br>502123<br>5021554                                                                                               |
+| Guam                                         | GU               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Guinea-Bissau                                | GW               | +245                         | 121<br>118<br>119                                                                                     | 245121<br>245118<br>245119                                                                                                          |
+| Hong Kong SAR                                | HK               | +852                         | 999                                                                                                   | 852999                                                                                                                              |
+| Heard Island &<br>McDonald Islands           | HM               | +672                         | N/A                                                                                                   | N/A                                                                                                                                 |
+| Honduras                                     | HN               | +504                         | 911<br>198<br>100                                                                                     | 504911<br>504198<br>504100                                                                                                          |
+| Croatia                                      | HR               | +385                         | 192<br>193<br>194<br>195<br>1987<br>116000<br>116006<br>116111<br>112                                 | 385192<br>385193<br>385194<br>385195<br>3851987<br>385116000<br>385116006<br>385116111<br>385112                                    |
+| Haiti                                        | HT               | +509                         | 114<br>116<br>122                                                                                     | 509114<br>509116<br>509122                                                                                                          |
+| Hungary                                      | HU               | +36                          | 104<br>105<br>107<br>112                                                                              | 36104<br>36105<br>36107<br>36112                                                                                                    |
+| Indonesia                                    | ID               | +62                          | 112<br>110<br>119<br>113                                                                              | 62112<br>62110<br>62119<br>62113                                                                                                    |
+| Ireland                                      | IE               | +353                         | 999<br>112                                                                                            | 353999<br>353112                                                                                                                    |
+| Israel                                       | IL               | +972                         | 100<br>101<br>102<br>104<br>105                                                                       | 972100<br>972101<br>972102<br>972104<br>972105                                                                                      |
+| Isle of Man                                  | IM               | +44                          | 999                                                                                                   | 44999                                                                                                                               |
+| India                                        | IN               | +91                          | 112<br>100<br>101<br>102                                                                              | 91112<br>91100<br>91101<br>91102                                                                                                    |
+| Iraq                                         | IQ               | +964                         | 104<br>115<br>122                                                                                     | 964104<br>964115<br>964122                                                                                                          |
+| Iceland                                      | IS               | +354                         | 112                                                                                                   | 354112                                                                                                                              |
+| Italy                                        | IT               | +39                          | 112<br>113<br>114<br>115<br>118                                                                       | 39112<br>39113<br>39114<br>39115<br>39118                                                                                           |
+| Jersey                                       | JE               | +44                          | 999                                                                                                   | 44999                                                                                                                               |
+| Jamaica                                      | JM               | +1                           | 110<br>112<br>119                                                                                     | 1110<br>1112<br>1119                                                                                                                |
+| Jordan                                       | JO               | +962                         | 911<br>191<br>193<br>199                                                                              | 962911<br>962191<br>962193<br>962199                                                                                                |
+| Japan                                        | JP               | +81                          | 110<br>119<br>118                                                                                     | 81110<br>81119<br>81118                                                                                                             |
+| Kenya                                        | KE               | +254                         | 109<br>112<br>999<br>114<br>117<br>110                                                                | 254109<br>254112<br>254999<br>254114<br>254117<br>254110                                                                            |
+| Kyrgyzstan                                   | KG               | +996                         | 112<br>101<br>102<br>103<br>161                                                                       | 996112<br>996101<br>996102<br>996103<br>996161                                                                                      |
+| Cambodia                                     | KH               | +855                         | 117<br>118<br>119<br>666                                                                              | 855117<br>855118<br>855119<br>855666                                                                                                |
+| Comoros                                      | KM               | +269                         | 111<br>112<br>113<br>115<br>117<br>118                                                                | 269111<br>269112<br>269113<br>269115<br>269117<br>269118                                                                            |
+| South Korea                                  | KR               | +82                          | 112<br>119<br>122                                                                                     | 82112<br>82119<br>82122                                                                                                             |
+| Kuwait                                       | KW               | +965                         | 112<br>152                                                                                            | 965112<br>965152                                                                                                                    |
+| Cayman Islands                               | KY               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Kazakhstan                                   | KZ               | +7                           | 103<br>112                                                                                            | 7103<br>7112                                                                                                                        |
+| Lao People's<br>Democratic Republic<br>(the) | LA               | +856                         | 1191<br>1169<br>1190<br>1192<br>1195<br>1199                                                          | 8561191<br>8561169<br>8561190<br>8561192<br>8561195<br>8561199                                                                      |
+| Lebanon                                      | LB               | +961                         | 112<br>125<br>140<br>175                                                                              | 961112<br>961125<br>961140<br>961175                                                                                                |
+| St. Lucia                                    | LC               | +1                           | 911<br>999                                                                                            | 1911<br>1999                                                                                                                        |
+| Liechtenstein                                | LI               | +423                         | 112<br>117<br>118<br>143<br>144<br>147<br>145<br>1414                                                 | 423112<br>423117<br>423118<br>423143<br>423144<br>423147<br>423145<br>4231414                                                       |
+| Sri Lanka                                    | LK               | +94                          | 110<br>112<br>119                                                                                     | 94110<br>94112<br>94119                                                                                                             |
+| Liberia                                      | LR               | +231                         | 911<br>144<br>4455                                                                                    | 231911<br>231144<br>2314455                                                                                                         |
+| Lesotho                                      | LS               | +266                         | 112                                                                                                   | 266112                                                                                                                              |
+| Lithuania                                    | LT               | +370                         | 112                                                                                                   | 370112                                                                                                                              |
+| Luxembourg                                   | LU               | +352                         | 112<br>113                                                                                            | 352112<br>352113                                                                                                                    |
+| Latvia                                       | LV               | +371                         | 110<br>113<br>114<br>115<br>116006<br>116123<br>116000<br>116111<br>112                               | 371110<br>371113<br>371114<br>371115<br>371116006<br>371116123<br>371116000<br>371116111<br>371112                                  |
+| Libya                                        | LY               | +218                         | 1415<br>112<br>193<br>1515                                                                            | 2181415<br>218112<br>218193<br>2181515                                                                                              |
+| Morocco                                      | MA               | +212                         | 15<br>19<br>177                                                                                       | 21215<br>21219<br>212177                                                                                                            |
+| Monaco                                       | MC               | +377                         | 112<br>17<br>18<br>196                                                                                | 377112<br>37717<br>37718<br>377196                                                                                                  |
+| Moldova                                      | MD               | +373                         | 112                                                                                                   | 373112                                                                                                                              |
+| Montenegro                                   | ME               | +382                         | 112<br>122<br>123<br>124<br>129                                                                       | 382112<br>382122<br>382123<br>382124<br>382129                                                                                      |
+| Saint Martin                                 | MF               | +590                         | 112<br>15<br>17<br>18                                                                                 | 590112<br>59015<br>59017<br>59018                                                                                                   |
+| Madagascar                                   | MG               | +261                         | 17<br>117<br>118                                                                                      | 26117<br>261117<br>261118                                                                                                           |
+| North Macedonia                              | MK               | +389                         | 112<br>192<br>193<br>194                                                                              | 389112<br>389192<br>389193<br>389194                                                                                                |
+| Mongolia                                     | MN               | +976                         | 101<br>102<br>103                                                                                     | 976101<br>976102<br>976103                                                                                                          |
+| Northern Mariana Islands                     | MP               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Martinique                                   | MQ               | +596                         | 112<br>15<br>17<br>18<br>114<br>191<br>196                                                            | 596112<br>59615<br>59617<br>59618<br>596114<br>596191<br>596196                                                                     |
+| Mauritania                                   | MR               | +222                         | 101<br>117<br>118                                                                                     | 222101<br>222117<br>222118                                                                                                          |
+| Malta                                        | MT               | +356                         | 112                                                                                                   | 356112                                                                                                                              |
+| Mauritius                                    | MU               | +230                         | 112<br>999<br>114<br>115                                                                              | 230112<br>230999<br>230114<br>230115                                                                                                |
+| Maldives                                     | MV               | +960                         | 102<br>104<br>105<br>115<br>118<br>119<br>191                                                         | 960102<br>960104<br>960105<br>960115<br>960118<br>960119<br>960191                                                                  |
+| Malawi                                       | MW               | +265                         | 997<br>490<br>491<br>990<br>998<br>999<br>4312                                                        | 265997<br>265490<br>265491<br>265990<br>265998<br>265999<br>2654312                                                                 |
+| Mexico                                       | MX               | +52                          | 911                                                                                                   | 52911                                                                                                                               |
+| Malaysia                                     | MY               | +60                          | 999<br>112                                                                                            | 60999<br>60112                                                                                                                      |
+| Mozambique                                   | MZ               | +258                         | 117<br>119<br>198                                                                                     | 258117<br>258119<br>258198                                                                                                          |
+| Namibia                                      | NA               | +264                         | 112<br>924<br>998<br>9682<br>10111                                                                    | 264112<br>264924<br>264998<br>2649682<br>26410111                                                                                   |
+| Niger                                        | NE               | +227                         | 15<br>118<br>17<br>8383<br>18                                                                         | 22715<br>227118<br>22717<br>2278383<br>22718                                                                                        |
+| Norfolk Island                               | NF               | +6723                        | 000                                                                                                   | 6723000                                                                                                                             |
+| Nigeria                                      | NG               | +234                         | 112                                                                                                   | 234112                                                                                                                              |
+| Nicaragua                                    | NI               | +505                         | 102<br>115<br>118                                                                                     | 505102<br>505115<br>505118                                                                                                          |
+| Netherlands                                  | NL               | +31                          | 112                                                                                                   | 31112                                                                                                                               |
+| Norway                                       | NO               | +47                          | 110<br>112<br>113                                                                                     | 47110<br>47112<br>47113                                                                                                             |
+| Nepal                                        | NP               | +977                         | 100<br>101<br>102<br>103<br>104                                                                       | 977100<br>977101<br>977102<br>977103<br>977104                                                                                      |
+| New Zealand                                  | NZ               | +64                          | 111                                                                                                   | 64111                                                                                                                               |
+| Oman                                         | OM               | +968                         | 9999<br>112                                                                                           | 9689999<br>968112                                                                                                                   |
+| Panama                                       | PA               | +507                         | 911<br>103<br>104                                                                                     | 507911<br>507103<br>507104                                                                                                          |
+| Peru                                         | PE               | +51                          | 105<br>106<br>110<br>115<br>116                                                                       | 51105<br>51106<br>51110<br>51115<br>51116                                                                                           |
+| Papua New Guinea                             | PG               | +675                         | 110<br>111<br>112                                                                                     | 675110<br>675111<br>675112                                                                                                          |
+| Philippines                                  | PH               | +63                          | 911                                                                                                   | 63911                                                                                                                               |
+| Pakistan                                     | PK               | +92                          | 15<br>16<br>115<br>130<br>1122                                                                        | 9215<br>9216<br>92115<br>92130<br>921122                                                                                            |
+| Poland                                       | PL               | +48                          | 984<br>985<br>986<br>987<br>989<br>991<br>992<br>993<br>994<br>995<br>996<br>997<br>998<br>999<br>112 | 48984<br>48985<br>48986<br>48987<br>48989<br>48991<br>48992<br>48993<br>48994<br>48995<br>48996<br>48997<br>48998<br>48999<br>48112 |
+| Puerto Rico                                  | PR               | +1                           | <br>911<br>933                                                                                        | 1911<br>9911<br>19911<br>1933<br>11911                                                                                              |
+| Palestine                                    | PS               | +970                         | 100<br>101<br>177                                                                                     | 970100<br>970101<br>970177                                                                                                          |
+| Portugal                                     | PT               | +351                         | 112<br>117                                                                                            | 351112<br>351117                                                                                                                    |
+| Paraguay                                     | PY               | +595                         | 911                                                                                                   | 595911                                                                                                                              |
+| Qatar                                        | QA               | +974                         | 999                                                                                                   | 974999                                                                                                                              |
+| Reunion                                      | RE               | +262                         | 112<br>15<br>17<br>18<br>196                                                                          | 262112<br>26215<br>26217<br>26218<br>262196                                                                                         |
+| Romania                                      | RO               | +40                          | 112<br>113                                                                                            | 40112<br>40113                                                                                                                      |
+| Serbia                                       | RS               | +381                         | 112<br>192<br>193<br>194                                                                              | 381112<br>381192<br>381193<br>381194                                                                                                |
+| Russia                                       | RU               | +7                           | 112<br>101<br>102<br>103<br>104                                                                       | 7112<br>7101<br>7102<br>7103<br>7104                                                                                                |
+| Rwanda                                       | RW               | +250                         | 112<br>110<br>113<br>912                                                                              | 250112<br>250110<br>250113<br>250912                                                                                                |
+| Saudi Arabia                                 | SA               | +966                         | 911<br>112<br>123<br>992<br>993<br>996<br>997<br>998<br>999                                           | 966911<br>966112<br>966123<br>966992<br>966993<br>966996<br>966997<br>966998<br>966999                                              |
+| Seychelles                                   | SC               | +248                         | 112<br>111<br>133<br>141<br>151<br>160<br>999                                                         | 248112<br>248111<br>248133<br>248141<br>248151<br>248160<br>248999                                                                  |
+| Sudan                                        | SD               | +249                         | 333<br>777<br>999                                                                                     | 249333<br>249777<br>249999                                                                                                          |
+| Sweden                                       | SE               | +46                          | 112<br>11313<br>11414<br>1177                                                                         | 46112<br>4611313<br>4611414<br>461177                                                                                               |
+| Singapore                                    | SG               | +65                          | 993<br>995<br>999                                                                                     | 65993<br>65995<br>65999                                                                                                             |
+| Slovenia                                     | SI               | +386                         | 113<br>116000<br>116111<br>116123<br>112                                                              | 386113<br>386116000<br>386116111<br>386116123<br>386112                                                                             |
+| Svalbard                                     | SJ               | +47                          | 112                                                                                                   | 47112                                                                                                                               |
+| Slovakia                                     | SK               | +421                         | 112<br>150<br>155<br>158                                                                              | 421112<br>421150<br>421155<br>421158                                                                                                |
+| Senegal                                      | SN               | +221                         | 17<br>18<br>123<br>1515                                                                               | 22117<br>22118<br>221123<br>2211515                                                                                                 |
+| Somalia                                      | SO               | +252                         | 555<br>777<br>888<br>999                                                                              | 252555<br>252777<br>252888<br>252999                                                                                                |
+| São Tomé e Príncipe                          | ST               | +239                         | 112<br>113                                                                                            | 239112<br>239113                                                                                                                    |
+| El Salvador                                  | SV               | +503                         | 911<br>913<br>132                                                                                     | 503911<br>503913<br>503132                                                                                                          |
+| Sint Maarten                                 | SX               | +1                           | 911<br>912<br>913<br>919                                                                              | 1911<br>1912<br>1913<br>1919                                                                                                        |
+| Eswatini                                     | SZ               | +268                         | 999<br>933<br>977                                                                                     | 268999<br>268933<br>268977                                                                                                          |
+| Turks & Caicos Islands                       | TC               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| Chad                                         | TD               | +235                         | 114<br>115                                                                                            | 235114<br>235115                                                                                                                    |
+| Togo                                         | TG               | +228                         | 117<br>118<br>9200                                                                                    | 228117<br>228118<br>2289200                                                                                                         |
+| Thailand                                     | TH               | +66                          | 191<br>1669<br>199                                                                                    | 66191<br>661669<br>66199                                                                                                            |
+| Tajikistan                                   | TJ               | +992                         | 112<br>101<br>102<br>103<br>104                                                                       | 992112<br>992101<br>992102<br>992103<br>992104                                                                                      |
+| Timor-Leste                                  | TL               | +670                         | 112                                                                                                   | 670112                                                                                                                              |
+| Turkmenistan                                 | TM               | +993                         | 001<br>002<br>003<br>004<br>009                                                                       | 993001<br>993002<br>993003<br>993004<br>993009                                                                                      |
+| Tunisia                                      | TN               | +216                         | 190<br>193<br>194<br>197<br>198                                                                       | 216190<br>216193<br>216194<br>216197<br>216198                                                                                      |
+| Türkiye                                      | TR               | +90                          | 112<br>132<br>156<br>158<br>177                                                                       | 90112<br>90132<br>90156<br>90158<br>90177                                                                                           |
+| Trinidad & Tobago                            | TT               | +1                           | 911<br>811<br>990<br>999                                                                              | 1911<br>1811<br>1990<br>1999                                                                                                        |
+| Taiwan                                       | TW               | +886                         | 112<br>110<br>119                                                                                     | 886112<br>886110<br>886119                                                                                                          |
+| Tanzania                                     | TZ               | +255                         | 110<br>111<br>112<br>113<br>114<br>115                                                                | 255110<br>255111<br>255112<br>255113<br>255114<br>255115                                                                            |
+| Ukraine                                      | UA               | +380                         | 112                                                                                                   | 380112                                                                                                                              |
+| Uganda                                       | UG               | +256                         | 999<br>112                                                                                            | 256999<br>256112                                                                                                                    |
+| United States Minor Outlying Islands         | UM               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| United States                                | US               | +1                           | 911<br>933                                                                                            | 1911<br>19911<br><11911<br>9911<br>9933<br>1933<br>19933<br>11933                                                                   |
+| Uruguay                                      | UY               | +598                         | 911<br>104<br>105<br>106<br>108<br>112<br>128                                                         | 598911<br>598104<br>598105<br>598106<br>598108<br>598112<br>598128                                                                  |
+| Uzbekistan                                   | UZ               | +998                         | 112<br>101<br>102<br>103                                                                              | 998112<br>998101<br>998102<br>998103                                                                                                |
+| St. Vincent and the<br>Grenadines            | VC               | +1                           | 999<br>911                                                                                            | 1999<br>1911                                                                                                                        |
+| Venezuela                                    | VE               | +58                          | 911                                                                                                   | 58911                                                                                                                               |
+| United States Virgin Islands                 | VI               | +1                           | 911                                                                                                   | 1911                                                                                                                                |
+| VietNam                                      | VN               | +84                          | 113<br>114<br>115                                                                                     | 84113<br>84114<br>84115                                                                                                             |
+| Mayotte                                      | YT               | +262                         | 112<br>15<br>17<br>18<br>114<br>191<br>196                                                            | 262112<br>26215<br>26217<br>26218<br>262114<br>262191<br>262196                                                                     |
+| South Africa                                 | ZA               | +27                          | 10111<br>10177<br>112<br>116<br>107<br>17737<br>1020<br>139                                           | 2710111<br>2710177<br>27112<br>27116<br>27107<br>2717737<br>271020<br>27139                                                         |
+| Zambia                                       | ZM               | +260                         | 999<br>991<br>993                                                                                     | 260999<br>260991<br>260993                                                                                                          |
+| Zimbabwe                                     | ZW               | +263                         | N/A                                                                                                   | N/A                                                                                                                                 |

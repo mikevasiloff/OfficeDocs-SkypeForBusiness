@@ -4,7 +4,7 @@ author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
 ms.reviewer: srpall
-ms.date: 2/28/2025
+ms.date: 5/05/2025
 ms.topic: article
 audience: Admin
 ms.service: msteams
@@ -24,6 +24,9 @@ f1keywords:
 # Standards and Room planner
 
 Using smart recommendations from your environment, you can build and curate standards. You can then publish your standards to a region, site, building, or a specific meeting room to share planned rooms with partners to track room deployments.
+
+> [!NOTE]
+> This feature is available with a Teams Rooms Pro or Teams Shared Device license.
 
 ## View meeting room types
 

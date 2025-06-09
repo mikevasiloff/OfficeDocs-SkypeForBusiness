@@ -21,12 +21,16 @@ appliesto:
 ms.custom: 
   - seo-marvel-apr2020
   - chat-teams-channels-revamp
+  - guest-access-external-collab
 description: This article describes the Microsoft Teams functionality available to guests.
 ---
 
 # Guest experience in Teams
 
 When a guest is invited to join a team, they receive a welcome email message. This message includes some information about the team and what to expect now that they're a member. The guest must accept the invitation before they can access the team and its channels. They can accept the invite in the Teams client or by selecting **Open Microsoft Teams** in the email message.
+
+>[!IMPORTANT]
+> All Guests must be added to at least one Team before guest access features and functionality will be available to the guest account. [Learn more](https://support.microsoft.com/office/add-guests-to-a-team-in-microsoft-teams-fccb4fa6-f864-4508-bdde-256e7384a14f).
 
 > [!NOTE]
 > After a guest is added to a team, it may take a few hours before they have access.

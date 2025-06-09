@@ -9,6 +9,7 @@ ms.topic: article
 ms.assetid: 6fc2687c-0abf-43b8-aa54-7c3b2a84b67c
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection: 
   - M365-voice
@@ -45,8 +46,8 @@ An Auto attendant can redirect calls to the following destinations:
   - Defining an operator is optional but recommended.
   - An operator can be any of the other destinations in this list.
 - **Person in the organization** - a person in your organization who is able to receive voice calls. This person can be an online user or a user hosted on-premises using Skype for Business Server.
-- **Voice app** - another Auto attendant or a Call queue.
-- **Resource account** - the resource account associated with another Auto attendant or Call queue.
+- **Voice app** - another Auto attendant or a Call queue. The call priority can be set when the destination is a call queue.
+- **Resource account** - the resource account associated with another Auto attendant or Call queue. The call priority can be set when the resource account is associated with a call queue.
 - **Voicemail** - the voice mailbox associated with a Microsoft 365 group, distribution list, or mail-enabled security group that you specify.
   - You can choose if you want voicemail transcriptions and the "Please leave a message after the tone." system prompt.
 - **External phone number** - any phone number. See [external transfer technical details](create-a-phone-system-auto-attendant.md?tabs=additional-resources).
@@ -64,7 +65,7 @@ For more information on when to use **Voice app** or **Resource account** as the
 
 Call queues place the caller on hold until an agent assigned to the queue is available to take their call. There are three situations where a caller might be directed out of the queue:
 
-- **Call overflow** - if the number of calls waiting in the queue exceeds the limit that you set, then new callers are redirected out of the queue.
+- **Call overflow** - if the number of calls waiting in the queue exceeds the limit that you set, then new callers are redirected out of the queue. 
 - **Call timeout** - if a caller stays in the queue longer than the configured timeout setting, they're redirected out of the queue.
 - **No agents** - if there are no agents opted or logged into the queue, callers may be redirected out of the queue.
 
@@ -82,21 +83,31 @@ For more information on when to use **Voice app** or **Resource account** as the
 
 ## Call flow diagram
 
-The following diagram shows an example of call routing using Auto attendants and Call queues.
+The following call flow diagrams show 3 different examples of call routing using Auto attendants and Call queues.
 
-![Diagram of call routing using Auto attendants and Call queues.](media/attendant-and-queue-call-routing.png)
+:::image type="content" source="media/cq-call-priorities-scenario-1.svg" alt-text="Screenshot showing the call flow for call priority based on dialed resource account phone number.":::
 
 In this example:
 
-- The zero (0) key redirects callers to an operator. The operator for the Auto attendant is configured as a **Person in the organization**.
-- The one (1) key redirects callers to the sales Call queue. This Call queue is connected to a team that contains the sales team assigned to the queue.
-- The two (2) key redirects callers to the support Call queue. This Call queue is connected to a team that contains the support team assigned to the team.
-- The support Call queue has a direct phone number via an intervening Auto attendant. Having an Auto attendant answer the support line allows for separate off hours and holiday call routing.
-- The three (3) key redirects users to another Auto attendant for the company directory. The company directory Auto attendant allows callers to call individuals in the organization by dialing their name or extension.
+- The call queues are open 24/7.
+- Call priorities are assigned based on the resource account phone number dialed by the caller.
+
+:::image type="content" source="media/cq-call-priorities-scenario-2.png" alt-text="Screenshot showing the call flow for call priority based on auto attendant menu choices.":::
+
+In this example:
+
+- The auto attendant assigns the call priority based on the menu option selected by the caller.
+
+:::image type="content" source="media/cq-call-priorities-scenario-3.svg" alt-text="Screenshot showing the call flow for call priority call queue transfers.":::
+
+In this example:
+
+- The auto attendant assigned a call priority of 3 to all callers
+- Call transfers to the Tier 2 Support call queue can be prioritized over regular callers
 
 We recommend that you create one or more diagrams similar to the example given to map out your call routing. Be sure your diagram or accompanying documentation includes the following:
 
-- The Auto attendants that have direct access via phone numbers.
+- The Auto attendants and Call queues that have direct access via phone numbers (these will require resource accounts).
 - The off-hours and holiday routing requirements for each Auto attendant.
 - The membership for each Call queue. (You can add users individually or map the queue to different kinds of groups. Mapping a queue to a team provides the most versatile experience.)
 
@@ -123,6 +134,8 @@ Here are some call routing best practices:
 ## Related articles
 
 [Plan for Teams Auto attendants and Call queues](plan-auto-attendant-call-queue.md)
+
+[Call priorities](aa-cq-call-priorities.md)
 
 [Set up Auto attendants](create-a-phone-system-auto-attendant.md)
 

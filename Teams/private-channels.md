@@ -8,7 +8,9 @@ ms.date: 12/03/2024
 ms.topic: article
 ms.service: msteams
 audience: Admin
-ms.custom: chat-teams-channels-revamp
+ms.custom: 
+  - chat-teams-channels-revamp
+  - teams-chat-and-channels
 ms.collection: 
   - M365-collaboration
   - m365initiative-securecollab

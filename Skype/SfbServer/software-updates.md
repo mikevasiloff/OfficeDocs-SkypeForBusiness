@@ -17,7 +17,7 @@ description: "Find and manage updates for Skype for Business Server or Lync 2013
 
 # Skype for Business downloads and updates
 
-The _Skype for Business downloads and updates_ web page that was once on Technet has been retired. The content was reorganized into client and server pages. Follow these links to the content you need:
+The _Skype for Business downloads and updates_ web page that was previously on Technet is now retired. The content was reorganized into client and server pages. Follow these links to the content that you need:
 
 - [Updates for Skype for Business clients](sfb-client-updates.md) which contains the sections:
     - [Skype for Business 2016 client updates](sfb-client-updates.md#skype-for-business-2016-client-updates)
@@ -44,7 +44,6 @@ The _Skype for Business downloads and updates_ web page that was once on Technet
         - [Group Chat 2010 updates](sfb-server-updates.md#group-chat-2010-updates)
         - [Lync 2010 Dev Tools](sfb-server-updates.md#lync-2010-dev-tools)
         - [Lync 2010 Tools](sfb-server-updates.md#lync-2010-tools)
-        - [Lync 2010 downloadable documentation](sfb-server-updates.md#lync-2010-downloadable-documentation)
         - [Resource kit (technical reference)](sfb-server-updates.md#resource-kit-technical-reference)
         - [Group Chat](sfb-server-updates.md#group-chat)
         - [Trial Software](sfb-server-updates.md#trial-software)

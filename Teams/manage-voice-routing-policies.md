@@ -4,10 +4,11 @@ author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: filippse
-ms.date: 11/17/2023
+ms.date: 04/22/2025
 ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 audience: Admin
 f1.keywords:
 - NOCSH

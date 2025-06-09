@@ -8,7 +8,9 @@ ms.date: 06/28/2024
 ms.topic: concept-article
 ms.service: msteams
 audience: admin
-ms.custom: chat-teams-channels-revamp
+ms.custom: 
+  - chat-teams-channels-revamp
+  - guest-access-external-collab
 ms.collection: 
 - Teams_ITAdmin_GuestAccess
 - M365-collaboration
@@ -51,7 +53,8 @@ You can control whether users in your organization can communicate with Teams us
 
 #### Skype users
 
-You can control whether users in your organization can communicate with Skype users by turning external access for Skype users on or off either for the entire organization  or by using a policy to control it for individual users and groups.
+> [!WARNING]
+> Starting May 5, 2025, Skype Consumer Interoperability with Teams is no longer supported and the associated policies have been deprecated. You may still communicate with users outside of an organization through Teams external access.
 
 ## Guest access
 

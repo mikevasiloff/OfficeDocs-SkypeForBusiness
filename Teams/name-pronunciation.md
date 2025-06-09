@@ -13,6 +13,7 @@ ms.custom:
   - seo-marvel-apr2020
   - chat-teams-channels-revamp
   - admindeeplinkMAC
+  - teams-chat-and-channels
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 

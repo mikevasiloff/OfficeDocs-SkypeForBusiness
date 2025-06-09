@@ -5,9 +5,10 @@ ms.author: scottfrancis
 manager: pamgreen
 ms.topic: article
 ms.service: msteams
+ms.subservice: teams-calling
 audience: admin
-ms.reviewer: roykuntz
-ms.date: 08/10/2023
+ms.reviewer: filippse
+ms.date: 05/06/2025
 search.appverid: MET150
 description: Learn different scenarios for Location-Based Routing for Direct Routing.
 ms.localizationpriority: medium

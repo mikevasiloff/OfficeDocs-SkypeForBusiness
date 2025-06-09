@@ -16,7 +16,9 @@ ms.collection:
 - M365-collaboration
 appliesto: 
 - Microsoft Teams
-ms.custom: seo-marvel-apr2020
+ms.custom: 
+  - seo-marvel-apr2020
+  - m365-groups
 description: Learn about how Microsoft 365 groups and group memberships work with Microsoft Teams.
 ---
 

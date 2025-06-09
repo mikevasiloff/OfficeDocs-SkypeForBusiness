@@ -4,7 +4,7 @@ author: mstonysmith
 ms.author: tonysmit
 manager: pamgreen
 ms.reviewer: eviegrimshaw
-ms.date: 03/12/2025
+ms.date: 05/05/2025
 ms.topic: release-notes
 ms.service: msteams
 ms.subservice: itpro-devices
@@ -32,6 +32,15 @@ To view feature updates for Microsoft Teams Rooms, go to:
 - [Release notes for Microsoft Teams Rooms on Android](../rooms/rooms-release-note.md)
 
 ## [Teams panels](#tab/panels)
+
+## April 24, 2025
+
+**Applies to:** *Teams app version: 1449/1.0.97.2025086303*
+
+> [!IMPORTANT]
+> This update introduces a new versioning format, moving away from using dates. Going forward, this format will be used 1449/1.0.94.*year of release.internal codes*.
+
+- **Occupancy state** Teams panels can now smartly utilize signals from Teams Rooms devices or occupancy sensors paired with panels to indicate when a room is in use (e.g. LED glow), so you’re not surprised to find an available room is actually occupied. Requires a Teams Rooms Pro or Shared Devices. For more information, see [Occupancy state on Teams panels](/microsoftteams/devices/teams-panels-occupancy). Note that this feature hasn't started to roll out to GCC. Stay tuned for updates. 
 
 ## April 2025
 
@@ -215,15 +224,76 @@ To add a mobile system OS scanner:
 
 ## [Teams phones](#tab/phones)
 
+## May 27, 2025
+
+**Applies to:** *Teams app version: 1449/1.0.94.2025042103 (Yealink MP52, Crestron UC-Px, UX-Px-I, UC-2 and Audiocodes C488HD, C450HD)*
+
+- Authentication token and back-end calendar fixes 
+
+This update also includes these features, which were already available for certified Teams Phones:
+
+- Copilot-generated summaries for call transfers
+
+- Line Keys for Shared Line, Collaborative call delegation, Call queues and Call transfers
+
+- External Contacts Management
+
+- Line keys on touch, non-touch and sidecar devices for speed dials
+
+- Queues app 
+
+- Shared line call history 
+
+- App pinning on home screen using dedicated settings 
+
+- Collaborative call delegation 
+
+- Multi-banner updates 
+
+- Critical bug fixes and improvements 
+
+For a detailed and comprehensive list of capabilities available for these device models, review release notes after December 18, 2024 until May 27, 2025.
+
+## May 26, 2025
+
+**Applies to:** *Teams app version: 1449/1.0.94.2025165302 (Poly, Yealink and Audiocodes)*
+
+- Copilot-generated summaries for call transfers: This feature provides agents with a copilot-generated summary of the call before transferring it. The summary includes key details such as caller information, call reason, prior actions, and next steps. Supports both consult and blind transfers, ensuring effective communication and improved efficiency. *Pre-requisite:* This feature requires an additional license when available in GA: M365 Copilot. Visit here for more details: [License options for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing). Transcription needs to be enabled in Calling policies for both transferor and transferee.  
+
+- Line Keys for Shared Line, Collaborative call delegation, Call queues and Call transfers: Line keys are now available for shared lines on Teams certified phone devices. Users can assign shared lines to a line key and view the boss/delegates and members of the group along with their presence. Delegates can pick up calls on behalf of the boss or group members by pressing the line key and join active calls. This is also supported for collaborative call delegation groups. Users can also now assign call queues to a line key and monitor their status if the call queue has an active ongoing call or is available. Users can pick up calls on the call queue by pressing the line key. Additionally, users can assign the transfer action to the line key, enabling them to transfer active calls to specific contacts by simply pressing that line key. This will also be supported on sidecars now, in addition to automatic syncing of speed dials, groups and shared line delegates users can now explicitly assign line keys. 
+
+- External Contacts Management: This feature allows users to add and edit external contacts using the lightweight People app on Teams phone devices. Users can manage and interact with contacts outside of their organization.
+
+- App also includes multiple bug fixes and improvements. Bug fixes impacting user experience are:
+
+  - Fixed an issue where the count of enabled Call Queues was not displaying on the Queues App
+  
+  - Fixed an issue where the delegate of a selected boss was not appearing under the Delegates tab
+  
+  - Addressed a UI issue where the Search and Dial Pad icons appeared too small under the Speed Dial, Transfer, and Consult Transfer sections of the Assign Line Key page
+  
+## May 5, 2025
+
+**Applies to:** *Teams app version: 1449/1.0.94.2025087003 (Poly, Yealink and Audiocodes)*
+
+> [!IMPORTANT]
+> Starting in June 2025, Teams applications that are older than five (5) months will no longer work be able to connect to the service. Refer to the Message Center Post, MC969451 for more details.
+
+- Bug fixes for caller name resolution in certain scenarios, improvements for Multi-Factor Authentication using Device Code Flow (DCF) wherein user account name can be used to sign-in. 
+
+- UI fixes for end call screen. Users will see a toast notification instead of a full screen view when a call ends. 
+
 ## March 28, 2025
 
 **Applies to:** *Teams app version: 1449/1.0.94.2025084203 (Poly, Yealink and Audiocodes)*
 
 > [!IMPORTANT]
-> Starting in June 2025, Teams applications that are older than five (5) months will no longer work be able to connect to the service. Please refer to the Message Center Post, MC969451 for more details.
+> Starting in June 2025, Teams applications that are older than five (5) months will no longer work be able to connect to the service. Refer to the Message Center Post, MC969451 for more details.
 
 > [!NOTE]
 > This update introduces a new versioning format, moving away from using dates. Going forward, this format will be used **1449/1.0.94.*year of release.internal codes***
+
+- This app is available for government clouds (GCCH and DoD).
 
 - Line keys are now available on touch phone devices. They will appear as an app on the home screen alongside other apps such as Calls, People, Calendar, and more. Users can assign speed dials by long pressing. For assigned contacts, users can manage and remove assignments by long pressing as well. Once assigned, outgoing calls can be placed to speed dials by pressing the line key. Additionally, the line key app can now be pinned, making it the default view on the home screen.
 
@@ -263,7 +333,7 @@ App also includes multiple bug fixes and improvements. Bug fixes impacting user 
 **Applies to:** *Teams app version: 1449/1.0.94.2025020301 (Poly, Yealink, AudioCodes)*
 
 > [!IMPORTANT]
-> Starting June 2025, Teams applications older than 5 months will no longer work. Please refer to the Message Center Post, MC969451 for more details.
+> Starting June 2025, Teams applications older than 5 months will no longer work. Refer to the Message Center Post, MC969451 for more details.
 
 Bug fixes including improvements in font rendering on side cars among others   
 
@@ -274,7 +344,7 @@ Contacts on Teams app and sidecar will now be sorted alphabetically
 **Applies to:** *Teams app version: 1449/1.0.94.2024122303 (Poly, Yealink, AudioCodes)*
 
 > [!IMPORTANT]
-> Starting June 2025, Teams applications older than 5 months will no longer work. Please refer to the Message Center Post, MC969451 for more details.
+> Starting June 2025, Teams applications older than 5 months will no longer work. Refer to the Message Center Post, MC969451 for more details.
 
 ##### Queues app
 

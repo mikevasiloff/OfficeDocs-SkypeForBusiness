@@ -36,7 +36,7 @@ For details on how your organizers can create town halls, see [Schedule a town h
 
 ## Manage who can schedule town halls
 
-You can use the Teams admin center or PowerShell to manage who can schedule town halls in your organization.
+You can use the Teams admin center or PowerShell to manage who can schedule and run town halls in your organization. 
 
 |Teams admin center value| PowerShell value|Behavior|
 |---------|---------------|---------------|
@@ -45,7 +45,7 @@ You can use the Teams admin center or PowerShell to manage who can schedule town
 
 ### Manage who can schedule town halls using the Teams admin center
 
-To manage who can schedule town halls through the Teams admin center, use the following steps:
+To manage who can schedule and run town halls through the Teams admin center, use the following steps:
 
 1. Open the Teams admin center.
 2. Expand **Meetings** from the navigation pane.
@@ -53,6 +53,8 @@ To manage who can schedule town halls through the Teams admin center, use the fo
 4. Either select an existing policy or create a new one.
 5. Toggle the **Town halls** setting **On** or **Off**.
 6. Select **Save**.
+
+If you change this value to **Off** after a user schedules a town hall, they can't run or start the town hall. 
 
 ### Manage who can schedule town halls through PowerShell
 

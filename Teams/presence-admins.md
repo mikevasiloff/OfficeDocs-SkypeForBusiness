@@ -12,6 +12,7 @@ description: Learn the Presence states in Teams and the administrative settings 
 ms.custom: 
   - seo-marvel-apr2020
   - chat-teams-channels-revamp
+  - teams-chat-and-channels
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 

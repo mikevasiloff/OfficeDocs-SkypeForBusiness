@@ -3,12 +3,13 @@ title: "IP Relay in Canada - user guide"
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.reviewer: 
-ms.date: 11/17/2023
+ms.reviewer: davlick
+ms.date: 05/07/2025
 ms.topic: article
 ms.assetid: 
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 ms.collection: 
   - M365-voice
   - m365initiative-voice

@@ -1,13 +1,14 @@
 ---
 title: "Monitor Direct Routing"
-ms.reviewer: 
-ms.date: 07/11/2018
+ms.reviewer: filippse
+ms.date: 05/06/2025
 ms.author: scottfrancis
 author: sfrancis206
 manager: pamgreen
 audience: ITPro
 ms.topic: troubleshooting
 ms.service: msteams
+ms.subservice: teams-calling
 ms.localizationpriority: medium
 search.appverid: MET150
 ms.collection: 

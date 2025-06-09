@@ -2,12 +2,13 @@
 title: "Session Border Controllers certified for Direct Routing"
 ms.author: scottfrancis
 ms.reviewer: FilippSe
-ms.date: 06/12/2024
+ms.date: 05/06/2025
 author: sfrancis206
 manager: pamgreen
 audience: ITPro
 ms.topic: article
 ms.service: msteams
+ms.subservice: teams-calling
 ms.localizationpriority: high
 search.appverid: MET150
 ms.collection:
@@ -35,16 +36,19 @@ Microsoft works with each vendor to:
 - Establish a joint support process with the SBC vendors.
 
   > [!NOTE]
-  > Microsoft only supports Phone System with Direct Routing when used with certified devices. If you encounter an issue, you must contact your SBC vendor's customer support first. If needed, the SBC vendor escalates the issue to Microsoft via internal channels. Microsoft reserves the right to reject support cases where a non-certified device is connected to Phone System through Direct Routing. If Microsoft determines that a customer's Direct Routing issue is with a vendor's SBC device, the customer needs to re-engage the SBC vendor for support.
-  >
+  > Microsoft only supports Phone System with Direct Routing when used with certified devices. If you encounter an issue, you must contact your SBC vendor's customer support first. If needed, the SBC vendor escalates the issue to Microsoft via internal channels.
+  > 
+  > To escalate SBC related issues to Microsoft support, customers must present an SBC vendor investigation report. This document, containing the vendor's ticket reference number, will be supplied by their certified SBC vendor.
+  > 
+  > Microsoft reserves the right to reject support cases where a non-certified device is connected to Phone System through Direct Routing. If Microsoft determines that a customer's Direct Routing issue is with a vendor's SBC device, the customer needs to re-engage the SBC vendor for support.
+  > 
   > The certification is granted to specific SBC firmware versions. Any SBC firmware version documented in this article is both certified and supported. Firmware versions that are higher than what is documented are supported as long as the major.minor version is the same.
-  >
-  > Example:
-  >
-  > - Supported 6.10.258 - In this case, Microsoft supports firmware versions 6.10.(258 or higher).
-  > - Recommended 6.20.100 - In this case, Microsoft recommends firmware versions 6.20.(100 or higher).
-  > - For supportability questions about specific version, reach out to your SBC vendor.
-
+> Example:
+> 
+> - Supported 6.10.258 - In this case, Microsoft supports firmware versions 6.10.(258 or higher).
+> - Recommended 6.20.100 - In this case, Microsoft recommends firmware versions 6.20.(100 or higher).
+> - For supportability questions about specific version, reach out to your SBC vendor.
+  
 The tables that follow list devices certified for Direct Routing. (For information about which SBC vendors support Local Media Optimization, see [Configure Local Media Optimization for Direct Routing](direct-routing-media-optimization-configure.md).)
 
 For more information about Direct Routing, see [Plan Direct Routing](direct-routing-plan.md).  
@@ -95,7 +99,7 @@ We're not accepting new nominations for certification until further notice.
 |[Ericsson](https://www.ericsson.com/portfolio/cloud-software-and-services/cloud-core/communication-services-udm-and-exposure/communication-services--udm/cloud-ims/enterprise-communication/sip-trunking)|vSBC 2.16|&#10004;|||||
 |[Cataleya](https://cataleya.com/cataleya-launches-orchid-cloud-revolutionary-cloud-based-wholesale-voice-business-platform/)|Orchid Link|&#10004;||3.1|||
 |[ULTATEL](https://www.ultatel.com/services/direct-routing-teams-sbc)|Teams SBC|&#10004;|&#10004;|1.6|||
-|[Mitel](https://unify.com/en/solutions/voice-platforms/session-border-controller)|Unify OpenScape Session Border Controller|&#10004;|&#10004;|V10R2.2.0 or higher|||
+|[Mitel](https://www.mitel.com/products/openscape-session-border-controller)|Unify OpenScape Session Border Controller|&#10004;|&#10004;|V10R2.2.0 or higher|||
 |[Sansay Inc.](https://www.sansay.com/solutions/microsoft-teams/)|vmVSXi|&#10004;|&#10004;|10.5.1.354-vm-S-x64|&#10004;||
 |[Enghouse Networks](https://www.enghousenetworks.com/portfolio/network-infrastructure/dialogic-session-border-controller/)|Dialogic BorderNet SBC|&#10004;|&#10004;|3.9.x|||
 |[Patton Electronics Co.](https://www.patton.com/microsoft/)|Patton SmartNode eSBC|&#10004;||3.19.x|||

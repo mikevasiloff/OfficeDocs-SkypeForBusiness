@@ -40,9 +40,9 @@ This article describes some of the limits, specifications, and other requirement
 |Number of channels per team    | 1,000 (includes deleted channels)<sup>4,7</sup>         |
 |Number of Private channels per team    | 30 (includes deleted channels)<sup>4</sup>        |
 |Number of members in a Private channel    |250|
-|Maximum size of distribution list, security group or Microsoft 365 group that can be imported in to a team    |3,500|
+|Maximum size of distribution list, security group, or Microsoft 365 group that can be imported in to a team    |3,500|
 |Maximum number of members in a Microsoft 365 group that can be converted to a team    |10,000<sup>6</sup>     |
-|Channel conversation post size | Approximately 28 KB per post<sup>5</sup> |
+|Channel conversation post size | Approximately 40 KB per post<sup>5</sup> |
 
 <sup>1</sup> Any directory object in Microsoft Entra ID counts towards this limit. Global admins are exempt from this limit, as are apps calling Microsoft Graph using [application permissions](/graph/permissions-reference).
 
@@ -52,7 +52,7 @@ This article describes some of the limits, specifications, and other requirement
 
 <sup>4</sup> Deleted channels can be restored within 30 days. During these 30 days, a deleted channel continues to be counted towards the 1,000 channel or 30 private channel per team limit. After 30 days, a deleted channel and its content are permanently deleted and the channel no longer counts toward the per-team limit.
 
-<sup>5</sup> 28 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, number of connectors, and reactions.
+<sup>5</sup> 40 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, number of connectors, and reactions.
 
 <sup>6</sup> Shared channels members from outside the team count toward this limit. Further note that teams/channel mentions are blocked in teams with over 10,000 members.
 
@@ -67,7 +67,7 @@ The following table describes the maximum number of channels and members.
 |Members in a team|25,000|Includes all users in the team and direct members in shared channels.|
 |Shared channels per team|up to 1,000 |Hosted and shared with the team. (Includes deleted channels during their 30-day recovery window.)|
 |Teams a channel can be shared with|50|Excluding parent team|
-|Members in a shared channel|5,000 direct members, including up to 50 teams. (Each team the channel is shared with counts as one member for purposes of this limit.)|Real time updates are only available to 25,000 users at a time and only 25,000 users will appear in the channel list.|
+|Members in a shared channel|5,000 direct members, including up to 50 teams. (Each team the channel is shared with counts as one member for purposes of this limit.)|Real time updates are only available to 25,000 users at a time and only 25,000 users appear in the channel list.|
 
 The following limitations also apply:
 
@@ -97,15 +97,15 @@ Users who participate in conversations that are part of the chat list in Teams m
 |Number of people in a video or audio call from chat | 20                                       |
 |Number of file attachments<sup>3</sup>              |10                                        |
 |File size limitation                                |100 MB                                    |
-|Chat size                                           | Approximately 28 KB per post<sup>4</sup> |
+|Chat size                                           | Approximately 40 KB per post<sup>4</sup> |
 
 <sup>1</sup> If you have more than 20 people in a chat, the following chat features are turned off: Outlook automatic replies and Teams status messages; typing indicator; video and audio calling; sharing; read receipts. The "Set Delivery Options" button (!) is also removed when private group chats contain more than 20 members.
 
 <sup>2</sup> Only 200 members can be added to a group chat at the same time.
 
-<sup>3</sup> If the number of attachments exceeds this limit, you'll see an error message.
+<sup>3</sup> If the number of attachments exceeds this limit, you see an error message.
 
-<sup>4</sup> 28 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions.
+<sup>4</sup> 40 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions.
 
 ### Emailing a channel
 
@@ -119,15 +119,15 @@ Users who participate in conversations that are part of the chat list in Teams m
 |Number of inline images<sup>2</sup> |50   |
 
 > [!NOTE]
-> There is a throttling limit on how many emails you can send to a channel. The limit is six emails per ten seconds per channel per user and eight emails per ten seconds per tenant per user.
+> There's a throttling limit on how many emails you can send to a channel. The limit is six emails per ten seconds per channel per user and eight emails per ten seconds per tenant per user.
 
 <sup>1</sup> If the message exceeds this limit, a preview message is generated and the user is asked to download and view the original email from the link provided.<br/>
-<sup>2</sup> If the number of attachments or images exceeds this limit, you'll see an error message.
+<sup>2</sup> If the number of attachments or images exceeds this limit, you see an error message.
 
 For more information, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 > [!NOTE]
-> Message size, file attachments, and inline images limits are the same across all Microsoft 365 and Office 365 licenses. Emailing a channel is not available in Teams for Office GCC/GCCH/DOD organizations.
+> Message size, file attachments, and inline images limits are the same across all Microsoft 365 and Office 365 licenses. Emailing a channel isn't available in Teams for Office GCC/GCCH/DOD organizations.
 
 ## Channel names
 
@@ -159,18 +159,21 @@ For more information, see [Meetings, webinars, and live events](/microsoftteams/
 ### Meeting expiration
 
 > [!NOTE]
-> A meeting URL will never stop working. The expiry only relates to any PSTN dial-in numbers, CVI coordinates, and/or underlying meeting policies and settings.
+> The expiration applies to PSTN dial-in numbers, CVI coordinates, and underlying meeting policies and settings.
 
-|Meeting type  |Meeting expires after this much time  |Each time you start or update a meeting, expiration extends by this much time  |
-|---------|---------|---------|
-|Meet now     |Start time + 8 hours         |N/A         |
-|Regular with no end time     |Start time + 60 days         | 60 days        |
-|Regular with end time     |End time + 60 days         |60 days         |
-|Recurring with no end time     |Start time + 60 days         |60 days         |
-|Recurring with end time     |End time of last occurrence + 60 days         |60 days         |
+When a meeting is joined or updated before its expiration limit, an extra 60 days are added to the expiration limit (except for Meet now meetings).
+
+|Meeting type  |Time until meeting expiration  |
+|---------|---------|
+|Scheduled meeting (one time) |60 days after meeting scheduled time|
+|Meet now (scheduled via calendar) |60 days after the link was created  |
+|Meet now (scheduled via channels)     |8 hours after the link was created  |
+|Meet now (scheduled via group chats)     |N/A |
+|Recurrent meetings with end date     |60 days from end date or 60 days from last occurrence, whichever is longer |
+|Recurrent meeting with no end date   |1 year after the last access, joined, or meeting updated |
 
 > [!NOTE]
-> Microsoft Teams meetings have a time limit of 30 hours.
+> Microsoft Teams meetings, webinars, and town halls have a time limit of 30 hours.
 
 ## Live Events
   
@@ -204,7 +207,7 @@ For more information about live events, go to [Teams live events](teams-live-eve
 >- 50 events can be hosted simultaneously across a tenant
 >- Event duration of 16 hours per broadcast
 >
-> Additionally, Live Events with up to 100,000 attendees can be planned through the Microsoft 365 assistance program. The team will assess each request and work with you to determine options that may be available. [Learn more](https://aka.ms/Stream/Blog/LiveEventOptions).
+> Additionally, Live Events with up to 100,000 attendees can be planned through the Microsoft 365 assistance program. The team assesses each request and works with you to determine available options. [Learn more](https://aka.ms/Stream/Blog/LiveEventOptions).
 
 ## Presence in Outlook
 
@@ -212,16 +215,16 @@ Teams presence in Outlook is supported on the Outlook 2013 desktop app and later
 
 ## Storage
 
-Each team in Microsoft Teams has a team site in SharePoint Online, and each channel in a team gets a folder within the default team site document library. Files shared within a conversation are automatically added to the document library, and permissions and file security options set in SharePoint are automatically reflected within Teams.
+Each team in Microsoft Teams has a team site in SharePoint, and each channel in a team gets a folder within the default team site document library. Files shared within a conversation are automatically added to the document library, and permissions and file security options set in SharePoint are automatically reflected within Teams.
 
 > [!NOTE]
 > Each [private channel](./private-channels.md) has its own SharePoint site (previously called "site collection").
 
-If you don't have SharePoint Online enabled in your tenant, Microsoft Teams users can't always share files in teams. Users in private chat also can't share files because OneDrive for Business (which is tied to the SharePoint license) is required for that functionality.
+If you don't have SharePoint enabled in your tenant, Microsoft Teams users can't always share files in teams. Users in private chat also can't share files because OneDrive for Business (which is tied to the SharePoint license) is required for that functionality.
 
-By storing the files in the SharePoint Online document library and OneDrive for Business, all compliance rules configured at the tenant level are followed. (For more, see [How SharePoint Online and OneDrive for Business interact with Microsoft Teams](sharepoint-onedrive-interact.md).)
+By storing the files in the SharePoint document library and OneDrive for Business, all compliance rules configured at the tenant level are followed. (For more, see [How SharePoint Online and OneDrive for Business interact with Microsoft Teams](sharepoint-onedrive-interact.md).)
 
-Because Teams runs on a SharePoint Online backend for file sharing, SharePoint limitations apply to the Files section within a Team. Here are the applicable storage limits for SharePoint Online.
+Because Teams runs on a SharePoint backend for file sharing, SharePoint limitations apply to the Files section within a Team. Here are the applicable storage limits for SharePoint.
 
 |Feature                 |Microsoft 365 Business Basic  |Microsoft 365 Business Standard   |Office 365 Enterprise E1  |Office 365 Enterprise E3  |Office 365 Enterprise E5  |Office 365 Enterprise F1  |
 |------------------------|---------|---------|---------|---------|---------|---------|
@@ -229,15 +232,15 @@ Because Teams runs on a SharePoint Online backend for file sharing, SharePoint l
 |Storage for Teams Files |Up to 25 TB per site or group |Up to 25 TB per site or group |Up to 25 TB per site or group |Up to 25 TB per site or group |Up to 25 TB per site or group |Up to 25 TB per site or group |
 |File upload limit  (per file)    |250 GB    |250 GB    |250 GB    |250 GB    |250 GB    |250 GB    |
 
-Channels are backed by folders within the SharePoint Online site (previously called "site collection") created for the team, so file tabs within Channels share the storage limits of the team they belong to.
+Channels are backed by folders within the SharePoint site (previously called "site collection") created for the team, so file tabs within Channels share the storage limits of the team they belong to.
 
-For more information, see [SharePoint Online limits](https://support.office.com/article/SharePoint-Online-limits-8f34ff47-b749-408b-abc0-b605e1f6d498).
+For more information, see [SharePoint limits](https://support.office.com/article/SharePoint-Online-limits-8f34ff47-b749-408b-abc0-b605e1f6d498).
 
 ## Class teams
 
 Microsoft Teams for Education provides templates designed for unique education scenarios, such as classroom teaching. More information about team types, including class teams, is available in [Choose a team type to collaborate in Microsoft Teams](https://support.microsoft.com/office/choose-a-team-type-to-collaborate-in-microsoft-teams-0a971053-d640-4555-9fd7-f785c2b99e67).
 
-A class team is a template type with additional apps included, and with limits separate to the number of team members.
+A class team is a template type with more apps included, and with limits separate to the number of team members.
 
 > [!NOTE]
 > Using class teams requires an [Office 365 Education license](https://www.microsoft.com/education/products/office).

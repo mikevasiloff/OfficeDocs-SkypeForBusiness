@@ -15,6 +15,7 @@ ms.collection:
   - M365-collaboration
   - Tier1
   - m365initiative-meetings
+ms.custom: guest-access-external-collab
 appliesto: 
   - Microsoft Teams
 f1.keywords:

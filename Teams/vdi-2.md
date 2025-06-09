@@ -4,7 +4,7 @@ author: MicrosoftHeidi
 ms.author: heidip
 manager: jtremper
 ms.topic: article
-ms.date: 02/12/2025
+ms.date: 05/29/2025
 ms.service: msteams
 audience: admin
 ms.collection: 
@@ -22,10 +22,7 @@ ms.localizationpriority: high
 
 # New VDI solution for Teams
 
-New VDI solution for Teams is a new architecture for optimizing the delivery of multimedia workloads in virtual desktops.
-
-> [!IMPORTANT]
-> Microsoft completed the General Availability rollout for Citrix customers. The new optimization requires Microsoft Teams version 24295.605.3225.8804, and client version 24110115722, as seen in **Settings** > **About Teams**.
+The new VDI solution for Teams is a new architecture for optimizing the delivery of multimedia workloads in virtual desktops.
 
 ## Components
 
@@ -34,7 +31,7 @@ New VDI solution for Teams is a new architecture for optimizing the delivery of 
 |New Teams **vdiBridge**     |Server-side virtual channel module. |New version with every new Teams version. |Bundled with new Teams. | |
 |Custom virtual channel (VC) |Custom VC owned by Microsoft Teams. |Stable API - no updates foreseen. | |Check the Citrix Studio policy **Virtual channel allow list**. |
 |Plugin                      |Client-side VC dll. Responsible also for SlimCore download and clean-up. |Not frequent (ideally no updates). |Approximately 200 KB. |Bundled with [RD Client 1.2.5405.0](/azure/virtual-desktop/whats-new-client-windows) or Windows App 1.3.252 or higher. Citrix CWA 2402 or higher can fetch and install the plugin. |
-|SlimCore                    |Media engine (operating system specific, not VDI vendor specific). |Auto-updated to a new version with each new Teams version. |Approximately 50 MB. |MSIX package hosted on Microsoft's public CDN|
+|SlimCore                    |Media engine (operating system specific, not VDI vendor specific). |Auto-updated to a new version with each new Teams version. |Approximately 50 MB. |MSIX package hosted on Microsoft's public Content Delivery Network|
 
 ## System requirements
 
@@ -42,8 +39,8 @@ New VDI solution for Teams is a new architecture for optimizing the delivery of 
 |----------------------------------|----------------|
 |New Teams                         |24193.1805.3040.8975 (for Azure Virtual Desktop/Windows 365) </br>24295.605.3225.8804 (for Citrix) |
 |Azure Virtual Desktop/Windows 365 |Windows App: 1.3.252</br>Remote Desktop Client: 1.2.5405.0 |
-|Citrix                            |VDA: 2203 LTSR CU3 or 2305 CR</br>Citrix Workspace app: 2203 LTSR (any CU), 2402 LTSR, or 2302 CR. [Only versions that have not reached EOL are supported](https://www.citrix.com/support/product-lifecycle/workspace-app.html) </br>MsTeamsPluginCitrix: 2024.41.1.1 |
-|Endpoint                          |Windows 10 1809 (SlimCore minimum requirement)</br>[Windows Enterprise LTSC](/windows/whats-new/ltsc/overview#the-long-term-servicing-channel-ltsc) Thin clients on Windows 10 2019/2021, or Windows 11 2024 are supported</br>GPOs must not block MSIX installations (see [Step 3: SlimCore MSIX staging and registration on the endpoint](#step-3-slimcore-msix-staging-and-registration-on-the-endpoint))</br>Minimum CPU: Intel Celeron (or equivalent) @ 1.10 GHz, 4 Cores, Minimum RAM: 4 GB |
+|Citrix                            |VDA: 2203 Long Term Service Release (LTSR) CU3 or 2305 Current Release</br>Citrix Workspace app: 2203 LTSR (any cumulative update), 2402 LTSR, or 2302 CR. [Only versions not at End of Life are supported](https://www.citrix.com/support/product-lifecycle/workspace-app.html) </br>MsTeamsPluginCitrix: 2024.41.1.1 |
+|Endpoint                          |Windows 10 1809 (SlimCore minimum requirement)</br>[Windows Enterprise LTSC](/windows/whats-new/ltsc/overview#the-long-term-servicing-channel-ltsc) Thin clients on Windows 10 2019/2021, or Windows 11 2024 are supported</br>GPOs must not block MSIX installations (see [Step 3: SlimCore MSIX staging and registration on the endpoint](#step-3-slimcore-msix-staging-and-registration-on-the-endpoint)) </br>Minimum CPU: Intel Celeron (or equivalent) @ 1.10 GHz, 4 Cores, Minimum RAM: 4 GB |
 
 ## Optimizing with new VDI solution for Teams
 
@@ -55,13 +52,13 @@ New VDI solution for Teams is a new architecture for optimizing the delivery of 
 
 ### Step 2: Plugin installation on the endpoint
 
-1. For Azure Virtual Desktop and Windows 365, MsTeamsPluginAvd.dll is bundled with the RD Client for Windows 1.2.5405.0, or with the Windows App Store app 1.3.252 or higher.
-   - The plugin is found in the same folder location where the RD Client is installed. It's either located at AppData\Local\Apps\Remote Desktop or C:\Program Files (x86), depending on the mode in which it was installed.
-   - The [Windows App Store](/windows-app/overview) app, since it's MSIX-based, is found in C:\Program Files\WindowsApps. Access to this folder is restricted.
+1. For Azure Virtual Desktop and Windows 365, MsTeamsPluginAvd.dll is bundled with the Remote Desktop Client for Windows 1.2.5405.0, or with the Windows App Store app 1.3.252 or higher.
+   - The plugin is found in the same folder location where the Remote Desktop Client is installed. You can find the plugin at AppData\Local\Apps\Remote Desktop or C:\Program Files (x86), depending on the mode in which it was installed.
+   - The [Windows App Store](/windows-app/overview) app, which is MSIX-based, is found in C:\Program Files\WindowsApps. Access to this folder is restricted.
 
-1. For Citrix CWA 2402 or higher, MsTeamsPluginCitrix.dll can be installed either:
+1. For Citrix Workspace app 2402 or higher, MsTeamsPluginCitrix.dll can be installed either:
 
-   - Using the user interface when installing CWA:
+   - Using the user interface when installing Citrix Workspace app:
 
      On the **Add-on(s)** page, select the **Install Microsoft Teams VDI plug-in** checkbox, and then select **Install**.
  
@@ -73,14 +70,14 @@ New VDI solution for Teams is a new architecture for optimizing the delivery of 
 
    - Via command line or scripts for managed devices using:
 
-     `C:\>CitrixWorkspaceApp.exe installMSTeamsPlugin`
+     `C:\>CitrixWorkspaceApp.exe /installMSTeamsPlugin`
 
-   - Admins can also install the plugin manually on top of any existing supported CWA (see [System Requirements](#system-requirements)) using tools like SCCM (use the Windows app package deployment type) or Intune (use the Line-of-Business app).
+   - Admins can also install the plugin manually on top of any existing supported Citrix Workspace app (see [System Requirements](#system-requirements)) using tools like SCCM (use the Windows app package deployment type) or Intune (use the Line-of-Business app).
 
      Admins can use **msiexec** with appropriate flags, as discussed in [msiexec](/windows-server/administration/windows-commands/msiexec).
 
      > [!IMPORTANT]
-     > You can find the plugin MSI download link for Citrix customers: [MsTeamsPluginCitrix.msi](https://download.microsoft.com/download/3/0/e/30e54a38-eb74-44dc-9755-36dcac09656d/MsTeamsPluginCitrix.msi).
+     > Plugin MSI download link for Citrix customers: [aka.ms/plugin](https://download.microsoft.com/download/3/0/e/30e54a38-eb74-44dc-9755-36dcac09656d/MsTeamsPluginCitrix.msi).
 
 The plugin MSI automatically detects the CWA installation folder and places MsTeamsPluginCitrix.dll in that location:
 
@@ -94,12 +91,13 @@ The plugin MSI automatically detects the CWA installation folder and places MsTe
 
 |Release note version |Details  |
 |---------------------|---------|
-|2024.41.1.1          |October 2024</br>-When using SlimCore in multimonitor set ups, a Citrix user is unable to share entire screen or individual monitors.</br>-Attempts a [Reset-AppxPackage](/powershell/module/appx/reset-appxpackage) if SlimCoreVdi MSIX package registrations fail after the virtual channel is established. |
-|2024.32.X.X          |August 2024</br>-Plugin now attempts a Reset-AppxPackage for SlimCoreVdi MSIX package, in case AppExecution alias is missing. |
+|2025.14.1.8          |May 2025</br>-The plugin can now download SlimCore packages that are 64-bit, increasing performance.|
+|2024.41.1.1          |October 2024</br>-When using SlimCore in multimonitor setups, a Citrix user is unable to share entire screen or individual monitors.</br>-Attempts a [Reset-AppxPackage](/PowerShell/module/appx/reset-appxpackage) if SlimCoreVdi MSIX package registrations fail after the virtual channel is established. |
+|2024.32.X.X          |August 2024</br>-The plugin now attempts a Reset-AppxPackage for SlimCoreVdi MSIX package in the event the AppExecution alias is missing. |
 
 ### Step 3: SlimCore MSIX staging and registration on the endpoint
 
-The plugin silently executes this step, without user or admin intervention. The staging and registration relies on the App Readiness Service (ARS) on the endpoint. It's possible that the MSIX package installation is blocked by registry keys set by a Group Policy or a third-party tool. For a complete list of applicable registry keys, see [How Group Policy works with packaged apps - MSIX](/windows/msix/group-policy-msix).
+The plugin silently executes this step, without user or admin intervention. The staging and registration relies on the App Readiness Service (ARS) on the endpoint. It's possible that registry keys set by a Group Policy or a third-party tool block the MSIX package installation. For a complete list of applicable registry keys, see [How Group Policy works with packaged apps - MSIX](/windows/msix/group-policy-msix).
 
 The following registry keys could block new media engine MSIX package installation:
 
@@ -108,15 +106,17 @@ The following registry keys could block new media engine MSIX package installati
 - AllowDevelopmentWithoutDevLicense
 
 > [!IMPORTANT]
-> Managed endpoints/thin clients where BlockNonAdminUserInstall is enabled can still allow SlimCore packages to install by applying KB505294 (Windows 11 23H2 and 22H2) and KB505293 (Windows 11 24H2), or any subsequent KB. This introduces a new Group Policy called "Allowed package family names for non-admin user install" in the Local Group Policy Editor. Administrators can then Allow list SlimCore packages by allowing a complete package familyName (for example, Microsoft.Teams.SlimCoreVdi.win-x64.2024.43_8wekyb3d8bbwe) or use Regex (for example, Microsoft.Teams.SlimCoreVdi.*_8wekyb3d8bbwe)
+> Managed endpoints/thin clients with BlockNonAdminUserInstall enabled can still allow SlimCore packages to install. Apply KB5052094 (Windows 11 23H2 and 22H2), KB5052093 (Windows 11 24H2), KB5055612 (Windows 10 22H2), or any subsequent KB.
+> This installation introduces a new Group Policy called "Allowed package family names for non-admin user install" in the Local Group Policy Editor.
+>
+>Administrators can then Allow list SlimCore packages by allowing a complete package familyName (for example, Microsoft.Teams.SlimCoreVdi.win-x64.2024.43_8wekyb3d8bbwe) or use Regex (for example, Microsoft.Teams.SlimCoreVdi.*_8wekyb3d8bbwe)
 
 > [!IMPORTANT]
-> If AllowAllTrustedApps is disabled, the new media engine (MSIX) installation fails. This issue is fixed in the Windows October cumulative update KB5031455:
+> If AllowAllTrustedApps is disabled, the new media engine (MSIX) installation fails. This issue is fixed in the following Windows cumulative updates:
 >
 > - [Windows 10: October 26, 2023—KB5031445 (OS Build 19045.3636)](https://support.microsoft.com/topic/october-26-2023-kb5031445-os-build-19045-3636-preview-03f350cb-57f9-45e6-bfd7-438895d3c7fa)
 > - [Windows 11: October 26, 2023—KB5031455 (OS Build 22621.2506)](https://support.microsoft.com/topic/october-26-2023-kb5031455-os-build-22621-2506-preview-6513c5ec-c5a2-4aaf-97f5-44c13d29e0d4)
->
-> If this optional October update isn't available for your OS build, the November security update also includes the fix.
+> - [Windows 10 1809: April 8, 2025—KB5055519 (OS Build 17763.7136)](https://support.microsoft.com/en-us/topic/april-8-2025-kb5055519-os-build-17763-7136-417d1340-ce40-4d0b-98ac-637c0f6dca35)
 
 These three registry keys can be found at either of the following locations on the user's device:
 
@@ -131,12 +131,21 @@ Some policies might change these registry keys and block app installation in you
 > [!NOTE]
 > [AppLocker](/windows/security/application-security/application-control/windows-defender-application-control/applocker/applocker-overview) or [Windows Defender Application Control](/windows/security/application-security/application-control/windows-defender-application-control/wdac-and-applocker-overview) can also prevent MSIX package installation.
 >
-> AppLocker is a defense-in-depth security feature and not considered a defensible [Windows security feature](https://www.microsoft.com/msrc/windows-security-servicing-criteria). [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview) should be used when the goal is to provide robust protection against a threat and there are expected to be no by-design limitations that would prevent the security feature from achieving this goal.
+> AppLocker is a defense-in-depth security feature and not considered a defensible [Windows security feature](https://www.microsoft.com/msrc/windows-security-servicing-criteria). Use [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview) when the goal is to provide robust protection against a threat and there you expect no by-design limitations to prevent the security feature from achieving this goal.
 
 > [!IMPORTANT]
 > Make sure there's no blocking configuration or policy, or add an exception for SlimCore MSIX packages in Local Security Policy -> Application Control Policies -> AppLocker.
 >
 > AppLocker can't process trailing wildcards, unlike Windows Defender Application Control. Since SlimCoreVdi Packages contain a version-specific PackageFamilyName (for example, Microsoft.Teams.SlimCoreVdi.win-x64.2024.36_8wekyb3d8bbwe), customers can add AppX or MSIX exclusions by relying on the PublisherID 8wekyb3d8bbwe instead.
+>
+> Administrators using the more granular per-application ['AllAppList'](/windows/configuration/assigned-access/configuration-file#allapplist) to define the list of applications that are allowed to run need to add exceptions in this manner (since SlimCore follows the UWP model):
+>
+> &lt;App AppUserModelId="Microsoft.Teams.SlimCoreVdi.&lt;platform&gt;-&lt;architecture&gt;.&lt;release_version>_8wekyb3d8bbwe!MsTeamsVdi" /&gt;
+>
+> For example: &lt;App AppUserModelId="Microsoft.Teams.SlimCoreVdi.win-x86.2025.12_8wekyb3d8bbwe!MsTeamsVdi" /&gt;.
+>
+> To find a list of released SlimCore packages, [check this table](/officeupdates/teams-app-versioning#vdi-slimcore-version-2-msix-packages).
+
 
 ## Verifying that the end point is optimized
 
@@ -154,9 +163,9 @@ The plugin (MsTeamsPluginAvd.dll or MsTeamsPluginCitrix.dll) is responsible for 
 
 `C:\Program Files\WindowsApps\Microsoft.Teams.SlimCoreVdi.win-x64.2024.15_2024.15.1.5_x64__8wekyb3d8bbwe`
 
-The remote desktop client downloads the x64 or x86 SlimCore package, and the Citrix CWA downloads an x86 package. This folder is locked down, so users don't have access to it. Admins can take ownership by modifying ACLs, though this action isn't recommended. Instead, use PowerShell to list the MSIX apps in the endpoint:
+The remote desktop client downloads the x64 or x86 SlimCore package, and the Citrix CWA downloads an x86 package. This folder is locked down, so users don't have access to it. Admins modify ACLs to take ownership, though this action isn't recommended. Instead, use PowerShell to list the MSIX apps in the endpoint:
 
-```powershell
+```PowerShell
 PowerShellCopy
 
 Get-AppxPackage Microsoft.Teams.SlimCore*
@@ -164,7 +173,7 @@ Get-AppxPackage Microsoft.Teams.SlimCore*
 
 A sample of the results that can be returned from running this PowerShell is:
 
-```powershell
+```PowerShell
 Name              : Microsoft.Teams.SlimCoreVdi.win-x64.2024.32
 Publisher         : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
 Architecture      : X64
@@ -186,36 +195,36 @@ Status            : Ok
 ```
 
 > [!IMPORTANT]
-> Microsoft stores up to 12 versions of SlimCoreVdi for compatibility purposes, and in case the user accesses different VDI environments (such as persistent, where new Teams auto-updates itself, and non-persistent, where new Teams auto-updates are disabled).
+> Microsoft stores up to 12 versions of SlimCoreVdi for compatibility purposes. We store these versions in case the user accesses different VDI environments, such as persistent, where new Teams auto-updates itself, and non-persistent, where new Teams auto-updates are disabled.
 
 If you're optimized, you can see MsTeamsVdi.exe running on your endpoint for Azure Virtual Desktop/W365 (as a child process of msrdc.exe) or Citrix (as a child process of wfica32.exe). When using Process Explorer, If you select msrdc.exe (or wfica32.exe), select **Show the lower pane** under **View** and switch to the DLL tab, you can also see the Plugin (MsTeamsPluginAvd.dll or MsTeamsPluginCitrix.dll) being loaded. This action is a useful troubleshooting step in case you're not getting the new optimization.
 
 If you enable the bottom pane and switch to the DLL tab, you can also see the Plugin being loaded. This action is a useful troubleshooting step in case you're not getting the new optimization.
 
-### VDI Status Indicator
+## VDI Status Indicator
 
-Microsoft Teams displays information about the optimization status, helping the user understand if they are optimized or not. It also shows if they are using the legacy WebRTC optimization or the new Slimcore-based one by hovering their cursor over the **Optimized** banner.
+Microsoft Teams displays information about the optimization status, helping the user understand if they're optimized or not. It also shows if they're using the legacy WebRTC optimization or the new Slimcore-based one by hovering their cursor over the **Optimized** banner.
 
-In cases where Microsoft Teams is not optimized, the user sees a warning icon.
+In cases where Microsoft Teams isn't optimized, the user sees a warning icon.
 
 ![Screenshot of the Teams app showing it's not optimized.](media/Status_Indicator_Not_Optimized_2.png)
 
-Users can attempt a repair by selecting the three dots and choosing **Optimize virtual desktop and restart**.
+Users can select the three dots and choose **Optimize virtual desktop and restart** to attempt a repair.
 
-This triggers a Teams restart, which can solve some known issues. If the user is still unoptimized, an error code displays for quick diagnosis by IT Admins based on the [connection error table](#connection-error).
+This selection triggers a Teams restart, which can solve some known issues. If the user is still unoptimized, an error code displays for quick diagnosis by IT Admins based on the [connection error table](vdi-2-troubleshooting.md#connection-error).
 
 Users are presented with a [link](https://go.microsoft.com/fwlink/?linkid=2295247) to receive more information about the error, and if it's actionable, they can try a self-remediation.
 
 ## Session roaming and reconnections
 
-New Teams loads WebRTC or SlimCore at launch time. If virtual desktop sessions are disconnected (not logged off, Teams is left running on the VM), new Teams can't switch optimization stacks unless it's restarted. As a result, users might be in fallback mode (not optimized) if they roam between different devices that don't support the new optimization architecture (for example, a MAC device that is used in BYOD while working from home, and a corporate-managed thin client in the office). In order to avoid this scenario, Teams prompts the user with a modal dialogue asking to restart the app. After the restart, users are in WebRTC optimization mode.
+New Teams loads WebRTC or SlimCore at launch time. If virtual desktop sessions are disconnected (not logged off, Teams is left running on the virtual machine), Teams can't switch optimization stacks unless restarted. As a result, users might be in fallback mode (not optimized) if they roam between different devices that don't support the new optimization architecture. For example, a MAC device used in BYOD (bring your own device) while working from home, and a corporate-managed thin client in the office. In order to avoid this scenario, Teams prompts the user with a modal dialogue asking to restart the app. After the restart, users are in WebRTC optimization mode.
 
-Additionally, users can roam from a device that only supports WebRTC to a device that supports SlimCore. In this scenario, Teams will also prompt the user with a modal dialogue asking to restart the app. After the restart, users are in SlimCore optimization mode.
+Additionally, users can roam from a device that only supports WebRTC to a device that supports SlimCore. In this scenario, Teams also prompts the user with a modal dialogue asking to restart the app. After the restart, users are in SlimCore optimization mode.
 
 |Reconnecting options                                        |If current optimization is WebRTC |If current optimization is SlimCore  |
 |------------------------------------------------------------|----------------------------------|-------------------------------------|
-|Reconnecting from an endpoint **without** the MsTeamsPlugin |Then WebRTC classic optimization </br>("AVD Media Optimized") </br>("Citrix HDX Media Optimized") |Then restart dialogue prompt</br>After restart, the user is on WebRTC classic optimization. Otherwise, Teams isn't restarted and the user is in fallback mode (server -side rendering). |
-|Reconnecting from an endpoint **with** the MsTeamsPlugin    |Then restart dialogue prompt</br>After restart, the user is on new SlimCore optimization. Otherwise, Teams isn't restarted and the user is still in WebRTC. |Then new SlimCore-based optimization |
+|Reconnecting from an endpoint **without** the MsTeamsPlugin |Then WebRTC classic optimization. </br>("AVD Media Optimized"). </br>("Citrix HDX Media Optimized"). |Then restart dialogue prompt. </br>After restart, the user is on WebRTC classic optimization. Otherwise, Teams isn't restarted and the user is in fallback mode (server -side rendering). |
+|Reconnecting from an endpoint **with** the MsTeamsPlugin    |Then restart dialogue prompt. </br>After restart, the user is on new SlimCore optimization. Otherwise, Teams isn't restarted and the user is still in WebRTC. |Then new SlimCore-based optimization. |
 
 ## Networking considerations
 
@@ -230,7 +239,7 @@ Make sure the user's device has network connectivity (UDP and TCP) to endpoint I
 
 |ID  |Category          |ER  |Addresses    |Ports                       |Notes |
 |----|------------------|----|-------------|----------------------------|------|
-|11  |Optimize required |Yes |52.112.0.0/14, 52.122.0.0/15, 2603:1063::/38 |UDP: 3478, 3479, 3480, 3481 |Media Processors and Transport Relay 3478 (STUN), 3479 (Audio), 3480 (Video), 3481 (Screenshare) |
+|11  |Optimize required |Yes |52.112.0.0/14, 52.122.0.0/15, 2603:1063::/38 |UDP: 3478, 3479, 3480, 3481 |Media Processors and Transport Relay 3478 (STUN), 3479 (Audio), 3480 (Video), 3481 (Screen share) |
 |12  |Allow required    |Yes |`*.lync.com`, `*.teams.microsoft.com`, `teams.microsoft.com` 52.112.0.0/14, 52.122.0.0/15, 52.238.119.141/32, 52.244.160.207/32, 2603:1027::/48, 2603:1037::/48, 2603:1047::/48, 2603:1057::/48, 2603:1063::/38, 2620:1ec:6::/48, 2620:1ec:40::/42 |TCP: 443, 80                |      |
 |47  |Default required  |No  |*.office.net |TCP: 443, 80                |Used for SlimCore downloads and background effects |
 |127 |Default required  |No  |*.skype.com  |TCP: 443, 80                |      |
@@ -260,7 +269,7 @@ IP blocks for signaling, media, background effects, and other options are descri
 
 1. Teams media flows connectivity is implemented using standard IETF Interactive Connectivity Establishment (ICE) for STUN and TURN procedures.
 1. Real-time media. Data encapsulated within Real-time Transport Protocol (RTP) that supports audio, video, and screen sharing workloads. In general, media traffic is highly latency sensitive. This traffic must take the most direct path possible and use UDP versus TCP as the transport layer protocol, which is the best transport for interactive real-time media from a quality perspective.
-    - As a last resort, media can use TCP/IP and also be tunneled within the HTTP protocol, but it's not recommended due to bad quality implications.
+    - As a last resort, media can use TCP/IP and also be tunneled within the HTTP protocol, but we don't recommend it due to bad quality implications.
     - RTP flow is secured using SRTP, in which only the payload is encrypted.
 1. Signaling. The communication link between the endpoint and Teams servers, or other clients, used to control activities (for example, when a call is initiated). Most signaling traffic uses UDP 3478 with fallback to HTTPS, though in some scenarios (for example, the connection between Microsoft 365 and a Session Border Controller) it uses SIP protocol. It's important to understand that this traffic is much less sensitive to latency but may cause service outages or call timeouts if latency between the endpoints exceeds several seconds.
 
@@ -295,10 +304,10 @@ Implement QoS settings for endpoints and network devices and determine how you w
 
 ### Technologies that aren't recommended with Microsoft Teams in VDI
 
-1. **VPN network**. It's not recommended for media traffic.
-1. Packet shapers. Any kind of packet sniffer, packet inspection, proxies, or packet shaper devices aren't recommended for Teams media traffic and may degrade quality significantly.
+1. **VPN network**. Not recommended for media traffic.
+1. **Packet shapers**. Any kind of packet sniffer, packet inspection, proxies, or packet shaper devices aren't recommended for Teams media traffic and may degrade quality significantly.
 
-### Microsoft Teams PowerShell policy for optimization
+## Microsoft Teams PowerShell policy for optimization
 
 The CsTeamsVdiPolicy cmdlets enabled administrators to control the type of meetings that users can create or the features that they can access while in a meeting specifically on a VDI environment, where WebRTC optimization was disabled using the VDI Partner's policy engine ([Citrix Studio](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams.html#enable-optimization-of-microsoft-teams), [VMware HTML5 ADMX template](https://docs.vmware.com/en/VMware-Horizon/2203/horizon-remote-desktop-features/GUID-8557C3D7-4B08-4C98-B474-97B795300A6E.html#GUID-8557C3D7-4B08-4C98-B474-97B795300A6E), or [this registry key](/azure/virtual-desktop/teams-on-avd) for AVD and Windows 365).
 
@@ -307,35 +316,35 @@ The default policy configurations are:
 - DisableCallsAndMeetings: False
 - DisableAudioVideoInCallsAndMeetings: False
 
-This policy is now expanded with an additional argument as the only configuration point to control whether a user can get the new optimization mode that's based on SlimCore or not (in other words, the VDI Partner's policy engines don't control the new optimization mode):
+This policy now has an additional argument as the only configuration point to control whether or not a user can get the new optimization mode based on SlimCore. In other words, the VDI Partner's policy engines don't control the new optimization mode:
 
 - VDI2Optimization: Enabled  (default value)
 
 |Name                    |Definition |Example |Notes |
 |------------------------|-----------|--------|------|
 |New-CsTeamsVdiPolicy    |Allows administrators to define new VDI policies that can be assigned to users for controlling Teams features related to meetings on a VDI environment. |`PS C:\> New-CsTeamsVdiPolicy -Identity RestrictedUserPolicy -VDI2Optimization "Disabled"` |The command shown here uses the New-CsTeamsVdiPolicy cmdlet to create a new VDI policy with the identity RestrictedUserPolicy. This policy uses all the default values for a VDI policy except one: VDI2Optimization. In this example, users with this policy can't be optimized with SlimCore. |
-|Grant-CsTeamsVdiPolicy  |Allows administrators to assign a Teams VDI policy at a per-user scope to control the type of meetings that a user can create, the features they can access on an unoptimized VDI environment, and whether a user can be optimized with the new optimization mode that's based on SlimCore. |`PS C:\> Grant-CsTeamsVdiPolicy -identity "Ken Myer" -PolicyName RestrictedUserPolicy` |In this example, a user with identity "Ken Myer" is assigned the RestrictedUserPolicy. |
+|Grant-CsTeamsVdiPolicy  |Allows administrators to assign a Teams VDI policy at a per-user scope. Admins can control the type of meetings that a user can create, the features they can access on an unoptimized VDI environment, and whether a user can be optimized with the new optimization mode based on SlimCore. |`PS C:\> Grant-CsTeamsVdiPolicy -identity "Ken Myer" -PolicyName RestrictedUserPolicy` |In this example, a user with identity "Ken Myer" is assigned the RestrictedUserPolicy. |
 |Set-CsTeamsVdiPolicy    |Allows administrators to update existing VDI policies. |`PS C:\> Set-CsTeamsVdiPolicy -Identity RestrictedUserPolicy -VDI2Optimization "Disabled"` |The command shown here uses the Set-CsTeamsVdiPolicy cmdlet to update an existing VDI policy with the Identity RestrictedUserPolicy. This policy uses all the existing values except one: VDI2Optimization; in this example, users with this policy can't be optimized with SlimCore. |
-|Remove-CsTeamsVdiPolicy |Allows administrators to delete a previously created Teams VDI policy. Users with no explicitly assigned policy fall back to the default policy in the organization. |`PS C:\> Remove-CsTeamsMeetingPolicy -Identity RestrictedUserPolicy` |In the example shown previously, the command deletes the restricted user policy from the organization's list of policies and removes all assignments of this policy from users who have the policy assigned. |
-|Get-CsTeamsVdiPolicy    |Allows administrators to retrieve information about all the VDI policies that have been configured in the organization. |`PS C:\> Get-CsTeamsVdiPolicy -Identity SalesPolicy` |In this example, Get-CsTeamsVdiPolicy is used to return the per-user meeting policy that has an Identity SalesPolicy. Because identities are unique, this command doesn't return more than one item. |
+|Remove-CsTeamsVdiPolicy |Allows administrators to delete a previously created Teams VDI policy. Users with no explicitly assigned policy fall back to the default policy in the organization. |`PS C:\> Remove-CsTeamsMeetingPolicy -Identity RestrictedUserPolicy` |In the example shown previously, the command deletes the restricted user policy from the organization's list of policies and removes all assignments of this policy from users with the policy assigned. |
+|Get-CsTeamsVdiPolicy    |Allows administrators to retrieve information about all the VDI policies configured in the organization. |`PS C:\> Get-CsTeamsVdiPolicy -Identity SalesPolicy` |In this example, Get-CsTeamsVdiPolicy is used to return the per-user meeting policy that has an Identity SalesPolicy. Because identities are unique, this command doesn't return more than one item. |
 
-### Feature list with the new optimization
+## Feature list with the new optimization
 
 |Feature                           |Available on SlimCore (Windows)                                 |Available on WebRTC (Windows) |
 |----------------------------------|----------------------------------------------------------------|------------------------------|
 |1080p                             |Yes                                                             |No                            |
-|Hardware acceleration on endpoint |Yes                                                             |No                            |
+|Hardware acceleration on endpoint |Yes <sup>2</sup>                                                |No                            |
 |Gallery View 3x3 and 7x7          |Yes                                                             |No                            |
 |Quality of Service                |Yes                                                             |No                            |
 |Noise suppression                 |Yes                                                             |Yes (AVD)                     |
 |Voice isolation                   |Yes                                                             |No                            |
 |HID                               |Yes                                                             |Yes (AVD and Omnissa)         |
 |Presenter mode                    |Yes                                                             |No                            |
-|Teams Premium                     |Yes</br>(Pending: Watermark, Townhalls, Decorate my Background) |No                            |
+|Teams Premium                     |Check the Teams Premium page                                    |Check the Teams Premium page  |
 |Organizational custom backgrounds |Yes (Teams Premium license required)                            |No                            |
-|User-uploaded background effect   |Coming soon                                                     |No                            |
+|User-uploaded background effect   |Yes <sup>3</sup>                                                            |No                            |
 |Zoom +/-                          |Yes                                                             |No                            |
-|Media bypass, Location-based routing, Operator connect <sup>1</sup> |Yes                           |No                            |
+|Media bypass, Location-based routing, Operator Connect <sup>1</sup> |Yes                           |No                            |
 |Call quality dashboard and Teams admin center|Yes                                                  |Limited                       |
 |Published app/Remote app          |No                                                              |Yes                           |
 |Give/Take control                 |Yes                                                             |Yes                           |
@@ -345,9 +354,12 @@ This policy is now expanded with an additional argument as the only configuratio
 |Share system audio                |Yes                                                             |Yes                           |
 |Secondary ringer                  |Yes                                                             |Yes                           |
 |Background blurring               |Yes                                                             |Yes                           |
-|Annotations                       |Only as presenter                                               |No                            |
+|Annotations                       |Only as presenter. <sup>4</sup>                                 |No                            |
 
-<sup>1</sup> Operator Connect in India with mobile numbers requires latitude and longitude access from the endpoint's OS and local internet breakout. Operator connect with wireline numbers can use IP or subnet to map to a location. For more details, check [Wireline and Wireless number types in India](operator-connect-india-plan.md#wireline-and-wireless-number-types-in-india).
+<sup>1</sup> Operator Connect in India with mobile numbers requires latitude and longitude access from the endpoint's OS and local internet breakout. Operator Connect with wireline numbers can use IP or subnet to map to a location. For more details, check [Wireline and Wireless number types in India](operator-connect-india-plan.md#wireline-and-wireless-number-types-in-india).
+<sup>2</sup> Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update).
+<sup>3</sup> If you join a meeting as a guest, this feature isn't supported.
+<sup>4</sup> Viewers will not see the annotations (they are hidden by the incoming video window overlay)
 
 ## SlimCore user profile on the endpoint
 
@@ -357,14 +369,14 @@ The new solution for VDI stores user-specific data on the endpoint in the follow
 - `C:\users\<user>\AppData\Local\Microsoft\TeamsVDI\citrix-default-<cloudname>\`
 
 > [!IMPORTANT]
-> Locked-down thin clients must allow these locations to be read/write, otherwise the new optimization might fail. For older Windows 10 1809 Thin Clients (such as Dell Wyse 5070 and similar models), the folder location for SlimCore profile is
+> Locked-down thin clients must allow these locations to be read/write. Otherwise the new optimization might fail. For older Windows 10 1809 Thin Clients (such as Dell Wyse 5070 and similar models), the folder location for SlimCore profile is
 `C:\Users\<user>\AppData\Local\Packages\Microsoft.Teams.SlimCoreVdi.win-<architecture>.<version>_8wekyb3d8bbwe\LocalCache\`.
 
-Logs, configurations, and AI or ML models (used in noise suppression, bandwidth estimation, etc.) are saved in this location. If these folders are purged after a user signs out (for example, locked-down thin clients without roaming profiles), MsTeamsVdi.exe recreates them and downloads the user-specific configuration (about 6 MB of data).
+Logs, configurations, and AI or ML models (used in noise suppression, bandwidth estimation, etc.) are saved in this location. If these folders are purged after a user signs out (for example, locked-down thin clients without roaming profiles), MsTeamsVdi.exe recreates them and downloads the user-specific configuration (about 12 MB of data). User-specific data can grow to ~100 MB (including ~60 MB for logs).
 
 ### SlimCore installation and upgrade process in locked down Thin Client environments (optional)
 
-By default, the MsTeamsPlugin automatically downloads and installs the right SlimCore media engine version without user or Admin intervention. But customers on restricted network environments in the branch office can opt for an alternative SlimCore distribution process, without requiring the endpoint be able to fetch SlimCore packages using https from Microsoft's public CDN.
+By default, the MsTeamsPlugin automatically downloads and installs the right SlimCore media engine version without user or Admin intervention. But customers on restricted network environments in the branch office can opt for an alternative SlimCore distribution process, without requiring the endpoint be able to fetch SlimCore packages using https from Microsoft's public Content Delivery Network.
 
 > [!NOTE]
 > For an updated list of SlimCore packages that match their corresponding new Teams version, [check this table](/officeupdates/teams-app-versioning#vdi-slimcore-version-2-msix-packages).
@@ -373,9 +385,9 @@ By default, the MsTeamsPlugin automatically downloads and installs the right Sli
 > If you must choose this method, you must guarantee that:
 >
 > 1. [Teams auto-update is disabled](new-teams-vdi-requirements-deploy.md#disable-new-teams-autoupdate-in-non-persistent-vdi) in the virtual desktop.
-> 2. The SlimCore packages are pre-provisioned to the endpoint's local storage or network share before you upgrade new Teams in the virtual desktop. Any newer Teams version requests a matching new version of SlimCore and if the plugin can't find it, the user will be in fallback mode (server-side rendering).
+> 2. The SlimCore packages are pre-provisioned to the endpoint's local storage or network share before you upgrade new Teams in the virtual desktop. Any newer Teams version requests a matching new version of SlimCore and if the plugin can't find it, the user is in fallback mode (server-side rendering).
 >
-> This is because new Teams and SlimCore versions must match.
+> This circumstance happens because the new Teams and SlimCore versions must match.
 
 #### Configuration steps
 
@@ -389,34 +401,35 @@ By default, the MsTeamsPlugin automatically downloads and installs the right Sli
    
    The regkey defines the Base URL.
 
-2. Additionally, admins must download the exact SlimCore MSIX Package version from Microsoft's CDN that matches the new Teams version you're planning to deploy in the future.
+2. Additionally, admins must download the exact SlimCore MSIX Package version from Microsoft's Content Delivery Network that matches the new Teams version you're planning to deploy in the future.
 
    > [!IMPORTANT]
    > The MSIX package needs to match the architecture or bitness of the Citrix Workspace app (x86 only) or Remote Desktop or Windows App clients: `Microsoft.Teams.SlimCoreVdi.<platform>-<architecture>.msix`.
 
-3. Place the MSIX in a specific folder with the version within the location specified in the registry key to preserve the structure. For example, C:\Temp\2024.4.1.9\Microsoft.Teams.SlimCoreVdi.win-x86.msix or //ComputerName/SharedFolder/2024.4.1.9/.
+3. To preserve the structure, place the MSIX in a specific folder with the version within the location specified in the registry key. For example, C:\Temp\2024.4.1.9\Microsoft.Teams.SlimCoreVdi.win-x86.msix or //ComputerName/SharedFolder/2024.4.1.9/.
   
    > [!NOTE]
-   > If the Plugin can't find a SlimCore MSIX package in the local or network storage, it automatically attempts to download it from the Microsoft public CDN as a fallback.
+   > If the Plugin can't find a SlimCore MSIX package in the local or network storage, it automatically attempts to download it from the Microsoft public Content Delivery Network as a fallback.
 
-#### Unified Write Filters (UWF)
+### Unified Write Filters (UWF)
 
-Customers with Thin Clients that have [Unified Write Filters](/windows/configuration/unified-write-filter/) applied should create the following exclusions in order to allow SlimCore MSIX packages to be provisioned:
+Customers with Thin Clients with [Unified Write Filters](/windows/configuration/unified-write-filter/) applied should create the following exclusions in order to allow SlimCore MSIX packages to be provisioned:
 
 - uwfmgr.exe file Add-Exclusion "C:\Program Files\WindowsApps"
 - uwfmgr.exe file Add-Exclusion "C:\Users\User\AppData\Local\Packages"
 - uwfmgr.exe file Add-Exclusion "C:\Users\User\AppData\Local\Microsoft\WindowsApps"
 - uwfmgr.exe file Add-Exclusion "C:\Users\User\AppData\Local\Microsoft\TeamsVDI"
 
-### Known issues
+## Known issues
 
 - AVD RemoteApps and Citrix Published Apps aren't supported at this time.
-- Screen Capture Protection (SCP) causes the presenter's screen to show as a black screen with only the mouse cursor on top it (as seen by the receiving side).
-- Calls drop on Teams running on the local machine that has an HID peripheral connected if a user launches a virtual desktop from that same local machine and logs into Teams. This can also happen if the user had an active virtual desktop and launches a second one that has Teams installed (or other Unified Communications apps that use optimization).
+- Screen Capture Protection (SCP) causes the presenter's screen to show as a black screen with only the mouse cursor on top (as seen by the receiving side). This issue's fixed in Teams 25060.205.3499.6849 and Remote Desktop client 1.2.6081 or Windows app 2.0.379.
+- If you lock the virtual machine (VM) during an active call, the call disconnects. This issue's fixed in 25094.303.3554.9058 or higher versions.
+- Calls drop on Teams running on the local machine that has an HID peripheral connected if a user launches a virtual desktop from that same local machine and logs into Teams. This issue can also happen if the user had an active virtual desktop and launches a second one that has Teams installed (or other Unified Communications apps that use optimization).
 - Camera self preview isn't supported at this time (either under Settings/Devices, or while on a call when selecting the down arrow on the camera icon).
-- In the Control Panel/Apps/Installed apps of the endpoint, users will see multiple "Microsoft Teams VDI" entries (one for every Slimcore package installed).
+- In the Control Panel/Apps/Installed apps of the endpoint, users see multiple "Microsoft Teams VDI" entries (one for every Slimcore package installed).
 - When doing full monitor screen sharing, the call monitor window is visible for the other participants (without any video content inside).
-- In Citrix, app sharing sessions might freeze for the other participants if the presenter is on both VDA version 2402 and CWA for Windows 2309.1 (or higher versions).
+- In Citrix, app sharing sessions might freeze for the other participants if the presenter is on both VDA (virtual delivery agent) version 2402 and CWA for Windows 2309.1 (or higher versions).
   - The issue happens when a video element is destroyed.
        - For example, a participant turns off their camera in the middle of the app sharing session.
        - If someone turns their camera **on** only, there's no issue because the video element is created, not destroyed.
@@ -426,13 +439,32 @@ Customers with Thin Clients that have [Unified Write Filters](/windows/configura
 - If you're on a video call and you open the Start menu on the virtual machine, a blank screen shows in the Teams meeting window instead of the video feed.
 - In CQD, VdiMode (x2xx) represents both VDI SlimCore Optimized and Unoptimized Fallback, which may misattribute poor call quality.
   
+## Cross Cloud Collaboration
+ 
+Organizations in Microsoft’s Public, GCC (Government Community Cloud), GCCH (Government Community Cloud High), and DoD (Department of Defense) clouds can now collaborate with each other efficiently in with the new optimization (this collaboration applies to both intra-company and inter-company). This collaboration often involves access to shared content which requires authenticated access. Previously, collaboration across clouds via Teams was limited due to the lack of optimization in audio/video. With new Teams and Slimcore based optimization, users can now enjoy a high definition user experience. For more information on Cross Cloud, check [this link](/microsoftteams/cross-cloud-meetings).
+
+The following scenarios are supported:
+
+- **Cross Cloud Anonymous** allows the scenario where a user is signed into Cloud A in Teams, and joins a meeting in a different Cloud B anonymously. Check [Manage anonymous participant access to Teams meetings, webinars, and town halls (IT admins)](/microsoftteams/anonymous-users-in-meetings) for more details.
+- **Cross-cloud Guest Access** extends functionality to allow a user to participate in rich collaboration experiences in teams, channels, documents, and Teams meetings for a full experience including audio/video optimization, screen share, file share and both 1:1 and 1:n chat. Check [here](/microsoft-365/solutions/collaborate-guests-cross-cloud?view=o365-worldwide&preserve-view=true) for more details.
+- **Cross-cloud authenticated meeting join** delivers the ability for a Teams user to join a meeting in another cloud while signed into their account in their home tenant. This feature provides the meeting host the ability to validate the identities of meeting participants without granting those participants any access to the host tenant.
+
+Minimum versions: Teams 25060.205.3499.6849. Remote Desktop Client 1.2.6186. Citrix Plugin 2024.41.1.1.
+
+Known issues: 
+-	HID only works in the primary Cloud.
+-	Muting from Teams UI doesn't play the "Mute/Unmuted" voice command in the nonprimary Cloud.
+-	More Peripherals limitations are described [here](/microsoftteams/troubleshoot/meetings/known-issues-teams-certified-peripherals)
+-	Any user signed into multiple clouds (Multi Cloud or Cross Cloud), can't get optimized with WebRTC. If the user roams to a device which doesn't support SlimCore, they're in fallback mode (server-side rendering) until they roam back to a SlimCore capable device. This issue happens because WebRTC doesn't support any Cross Cloud features.
+-	If Cross Cloud features don't appear to work even though the user meets the minimum requirements, you can quit Teams (after it gets optimized with SlimCore) and try to delete a file called ecs_settings.dat64 at the following path: %localappdata%\packages\MSTeams_8wekyb3d8bbwe\LocalCache\microsoft\MSTeams. Restart Teams.
+
 ## Citrix virtual channel allow list
 
 The [Virtual channel allow list](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/secure/virtual-channel-security#adding-virtual-channels-to-the-allow-list) policy setting in CVAD enables the use of an allow list that specifies which virtual channels can be opened in an ICA session. When enabled, all processes except the Citrix built-in virtual channels must be stated. As a result, more entries are required for the new Teams client to be able to connect to the client-side plugin (MsTeamsPluginCitrix.dll).
 
 With Citrix Virtual Apps and Desktops 2203 or later, the virtual channel allow list is **enabled by default**. These default settings deny access to the new Teams custom virtual channels as the allow list **doesn't** include the new Teams main process name.
 
-The new Teams client requires three custom virtual channels to function: MSTEAMS, MSTEAM1 and MSTEAM2. These channels are accessed by ms-teams.exe. You can use wildcards to allow the ms-teams.exe executable and custom virtual channel:
+The new Teams client requires three custom virtual channels to function: MSTEAMS, MSTEAM1 and MSTEAM2. Ms-teams.xes accesses these channels. You can use wildcards to allow the ms-teams.exe executable and custom virtual channel:
 
 - MSTEAMS,C:\Program Files\WindowsApps\MSTeams*8wekyb3d8bbwe\ms-teams.exe
 - MSTEAM1,C:\Program Files\WindowsApps\MSTeams*8wekyb3d8bbwe\ms-teams.exe
@@ -444,25 +476,25 @@ The new Teams client requires three custom virtual channels to function: MSTEAMS
 
 2. The VDA machines must be rebooted for the policy to take effect.
 
-### Screen sharing
+## Screen sharing
 
-Both outgoing screensharing and appsharing behave differently in optimized VDI when compared to the non-optimized Teams desktop client.
-As such, these activities require encoding that leverages the user's device resources (for example CPU, GPU, RAM, network, and so on).
-From a network perspective, sharing is done directly between the user's device and the other peer or conference server.
+Both outgoing screen sharing and app sharing behave differently in optimized VDI when compared to the nonoptimized Teams desktop client. As such, these activities require encoding that employs the user's device resources (for example CPU, GPU, RAM, network, and so on). From a network perspective, sharing is done directly between the user's device and the other peer or conference server.
 
-When doing a full monitor screenshare, the Teams call monitor is captured and visible to the other participants (although the video elements inside aren't visible and instead are seen as blank squares). When doing app sharing, only the application being shared is visible to the other participants and the call monitor isn't captured.
+A full monitor screen share captures the Teams call monitor and makes it visible to the other participants. The video elements inside aren't visible and instead are seen as blank squares. When doing app sharing, only the application being shared is visible to the other participants and the call monitor isn't captured.
 
-#### Citrix App Protection and Microsoft Teams compatibility
+### Citrix App Protection and Microsoft Teams compatibility
 
-Users who have App Protection enabled can still share their screen and apps while using the new optimization. Sharing requires VDA version 2402 or higher, and CWA for Windows 2309.1 or higher. Users on lower versions end up sharing a black screen instead when the App Protection module is installed and enabled.
+Users with App Protection enabled can still share their screen and apps while using the new optimization. Sharing requires VDA version 2402 or higher, and CWA for Windows 2309.1 or higher. Users on lower versions end up sharing a black screen instead when the App Protection module is installed and enabled.
 
-#### AVD Screen Capture Protection and Microsoft Teams compatibility
+### AVD Screen Capture Protection and Microsoft Teams compatibility
 
-Users who have [Screen Capture Protection](/azure/virtual-desktop/screen-capture-protection?tabs=intune) (SCP) enabled can't share their screens or apps. Other people on the call can only see a black screen. If you want to allow users to share their screen even with SCP enabled, you need to disable SlimCore optimization in the Teams Admin Center policy (so the user is optimized with WebRTC), and set the SCP policy to **Block screen capture on client**.
+Users with [Screen Capture Protection](/azure/virtual-desktop/screen-capture-protection?tabs=intune) (SCP) enabled to block screen capture on the remote desktop client (**Block screen capture on client**) can still share their screen and apps while using the new SlimCore-based optimization for Microsoft Teams. Sharing requires the following minimum versions: Teams 25060.205.3499.6849, and Remote Desktop client 1.2.6081 or Windows App 2.0.379.
 
-### Peripherals in VDI
+Users on lower versions end up sharing a black screen instead with SCP enabled.
 
-When Teams is optimized with SlimCore, Camera(s), microphone(s), and speaker(s) connected to your physical device are mapped on your virtual desktop. Teams will enumerate all the detected devices, prioritizing Default Communication Devices (as seen in the mmsys.cpl panel when run on the user's device).
+## Peripherals in VDI
+
+When Teams is optimized with SlimCore, Cameras, microphones, and speakers connected to your physical device are mapped on your virtual desktop. Teams enumerates all the detected devices, prioritizing Default Communication Devices (as seen in the mmsys.cpl panel when run on the user's device).
 SlimCore-based optimization supports Human Interface Devices (HID) for [Teams certified headsets](https://aka.ms/teamsdevices), allowing users to mute/umute and increase/decrease volume themselves directly from their headset. A Microsoft Teams button on a certified Teams device isn't currently supported.
 
 > [!NOTE]
@@ -471,6 +503,7 @@ SlimCore-based optimization supports Human Interface Devices (HID) for [Teams ce
 > See the Known Issues section.
 >
 > As a workaround, HID can be disabled via registry key on Teams 25060.205.3499.6849 or higher, where the key can be created on the endpoint.
+> (The key can also be created on the VM if you have the 2025.14.1.8 Plugin (Citrix), or the Remote Desktop client 1.2.6275 / Windows App 2.0.550.0).
 >
 > HKEY_CURRENT_USER\Software\Microsoft\Teams\HID
 >
@@ -478,21 +511,22 @@ SlimCore-based optimization supports Human Interface Devices (HID) for [Teams ce
 >
 > Type: DWORD
 >
-> Value: 1 (when set to 1, it will disable HID) (If set to 0 or the key is not present, HID is enabled)
+> Value: 1 (when set to 1, it disables HID) (If set to 0 or the key isn't present, HID is enabled)
 
-### Monitoring API
+## Monitoring API
 
-Administrators can create custom scripts to [query](/windows/win32/fileio/obtaining-directory-change-notifications) vdi_connection_info.json - this file in the virtual machine contains information about the current and last session, for example optimization status, peripherals and software versions of the different components.
-Location (in the VDA / RD Host): C:\Users\<username>\AppData\Local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\tfw
+Administrators can create custom scripts to [query](/windows/win32/fileio/obtaining-directory-change-notifications) vdi_connection_info.json - this file in the virtual machine contains information about the current and last session, such as optimization status, peripherals, and software versions of the different components.
+
+Location (in the VDA or RD Host): C:\Users\<username>\AppData\Local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\tfw
 
 Typical use cases for the monitoring API are:
-- Administrators deploying an automation script in VDA/RD Host to detect whether the client endpoint operating system has changed since the last connection, consuming the contents of the JSON file to compare the last two sessions' values, and issue their own alerts/pop-up messages.
-- Developers creating a Third party apps that report the current state of the VDI optimization connection, consuming the contents of the JSON file to retrieve all available connection, optimization, and device information of the current Teams session.
+- Administrators deploying an automation script in a VDA or RD Host to detect whether the client endpoint operating system changed since the last connection. The script consumes the contents of the JSON file to compare the last two sessions' values, and issue their own alerts/pop-up messages.
+- Developers creating third-party apps that report the current state of the VDI optimization connection. The script consumes the contents of the JSON file to retrieve all available connection, optimization, and device information of the current Teams session.
 
 Json File Structure:
 -	Timestamp - vdiConnectedState.timestamp indicates the timestamp of the session connection
--	VDI Optimization - vdiConnectedState.vdiMode indicates the optimization version (remains static for the duration of the VDI session)  
--	Connected State - connectedStack (remote = optimized, local = not optimized) (remains static for the duration of the VDI session)
+-	VDI Optimization - vdiConnectedState.vdiMode indicates the optimization version (remains static throughout the VDI session)  
+-	Connected State - connectedStack (remote = optimized, local = not optimized) (remains static throughout the VDI session)
 -	SlimCore Version on the endpoint - remoteSlimcoreVersion
 -	VdiBridge Version on the VM - bridgeVersion
 -	MS Teams Plugin Version on the endpoint - pluginVersion
@@ -507,7 +541,7 @@ Json File Structure:
 > [!NOTE]
 > When in WebRTC optimization, only the vdiConnectedState is populated, indicating which optimization the session is currently in. There's no vdiVersionInfo and device information stored in the JSON file for the session. When no optimization is available, there aren't updates made to the JSON file.
 
-### Call Quality Dashboard in VDI
+## Call Quality Dashboard in VDI
 
 Call Quality Dashboard (CQD) allows IT Pros to use aggregate data to identify problems creating media quality issues by comparing statistics for groups of users to identify trends and patterns. CQD isn't focused on solving individual call issues, but on identifying problems and solutions that apply to many users.
 
@@ -517,7 +551,7 @@ VDI user information is now exposed through numerous dimensions and filters. Che
 > The new Quality of Experience (QER) template is available in the Power BI query templates for CQD download. Version 8 now includes templates for reviewing VDI client-focused metrics.
 
 > [!IMPORTANT]
-> In CQD, the VdiMode value (x2xx) represents both VDI SlimCore Optimized and VDI SlimCore Not Connected (Unoptimized Fallback). This can lead to misinterpretation, as poor call quality in an unoptimized session may appear to be an issue with VDI SlimCore Optimization. We're working to address this limitation in telemetry. For now, we recommend you verify the actual optimization status by using Teams logs.
+> In CQD, the VdiMode value (x2xx) represents both VDI SlimCore Optimized and VDI SlimCore Not Connected (Unoptimized Fallback). This duplication can lead to misinterpretation, as poor call quality in an unoptimized session may appear to be an issue with VDI SlimCore Optimization. We're working to address this limitation in telemetry. For now, we recommend you use Teams logs to verify the actual optimization status.
 
 #### Query fundamentals
 
@@ -530,7 +564,7 @@ A well-formed CQD query/report contains all three of these parameters:
 Some examples of a well-formed query would be:
 
 1. "Show me Poor Streams [Measurement] for VDI Users with the new Optimization [Dimension] for Last Month [Filter]."
-1. "Show me Poor Appsharing [Measurement] by Total Stream Count [Dimension] for Last Month AND where First OR Second Client VDI mode was optimized [Filters]." 
+1. "Show me Poor App sharing [Measurement] by Total Stream Count [Dimension] for Last Month AND where First OR Second Client VDI mode was optimized [Filters]." 
 
 You can use many Dimension and Measurement values as filters too. You can use filters in your query to eliminate information in the same way you'd select a Dimension or Measurement to add or include information in the query.
 
@@ -546,140 +580,3 @@ CQD doesn't use Caller or Callee fields, instead it uses **First** and **Second*
 - **Second** is always the client endpoint, unless it's a server-server stream.
 
 If both endpoints are the same type (for example a person-to-person call), first versus second is set based on the internal ordering of the user agent category to make sure the ordering is consistent.
-
-## Troubleshooting
-
-- Not optimized with SlimCore and instead you see:</br>"Azure Virtual Desktop Media Optimized"</br>"Citrix HDX Optimized"
-  - Error Codes 2000 ("No Plugin") and 2001 ("Virtual Channel not available") are the most likely causes.
-  
-  1. Make sure your 'Virtual Channel Allow list' is properly configured to allow MSTEAMS, MSTEAM1, MSTEAM2.
-  2. Make sure the endpoint has the plugin, and is loaded by the VDI Client with Process Explorer:
-    - Run [process explorer](/sysinternals/downloads/process-explorer).
-    - Enable the bottom pane and switch to the DLL tab.
-    - On Azure Virtual Desktop, look for the msrdc.exe process and ensure the MsTeamsPluginAvd.dll is loaded.
-    - On Citrix, look for the wfica32.exe process and ensure the MsTeamsPluginCitrix.dll is loaded.
-  3. Restart the new Teams app. It requires two restarts to transition from WebRTC to SlimCore, when the plugin is detected for the first time.
-  4. If the problem persists, check Event Viewer in the VM for **Microsoft Teams VDI**-related errors (new Teams 24123.X.X.X or higher).
-
-- Not optimized with SlimCore and instead you see: "Azure Virtual Desktop SlimCore Media Not Connected" or "Citrix SlimCore Media Not Connected".
-  - Check the [Troubleshooting SlimCoreVdi MSIX deployment errors](#troubleshooting-slimcorevdi-msix-deployment-errors) section. MSIX or AppX-related errors are the most likely reasons for this error.
-
-### New Teams logs for VDI
-
-Teams logs can be collected by selecting Ctrl+Alt+Shift+1 while running Teams on a VM. This action produces a ZIP folder in the Downloads folder. Inside the PROD-WebLogs-*.zip file, look for the Core folder.
-
-### Vdi_debug.txt (main file for VDI-related information)
-
-|Azure Virtual Desktop/W365 |Citrix   |
-|---------------------------|---------|
-|"vdiConnectedState": {"connectedStack": "remote"}, "vdiVersionInfo": {"bridgeVersion": "2024.18.1.11", "remoteSlimcoreVersion": "2024.18.01.11", "nodeId": "1051a908af6b160e", "clientOsVersion": "10.0.22631", "rdClientVersion": "1.2.5405.0", "rdClientProductName": "Microsoft® Remote Desktop", "pluginVersion": "2024.14.01.1", "screenShareFallback": true} |"vdiConnectedState": {"connectedStack": "remote"}, "vdiVersionInfo": {"bridgeVersion": "2024.18.1.14", "remoteSlimcoreVersion": "2024.18.01.14", "nodeId": "ffffffff93eaee6a", "clientOsVersion": "10.0.22631", "rdClientVersion": "24.3.0.64", "rdClientProductName": "Citrix Workspace", "pluginVersion": "2024.15.01.3", "screenShareFallback": true} |
-
-- **vdiConnectedState** shows the current active calling stack.
-  - **connectedStack**: **remote** indicates Teams has successfully connected to the remote endpoint through the virtual channel. It doesn't necessarily mean the calling stack is successfully initialized, so the user can still encounter calling-related failures, such as being unable to start a call.
-  - **connectedStack**: **local** indicates the virtual channel connection has failed. The user is now on fallback mode.
-- **vdiVersionInfo** provides useful information for the Teams client and the endpoint.
-  - **bridgeVersion** is tied to the version of the Teams desktop client running on the VM.
-  - **remoteSlimcroreVersion** is the version of the SlimCore VDI that's available on the endpoint.
-  - **nodeId** is a unique ID tied to the endpoint.
-  - **clientOsVersion** is the OS version for the endpoint.
-  - **rdClientVersion** is the version of the remote desktop client running on the endpoint, which is used to connect to the VM.
-  - **rdClientProductName** is the name of the remote desktop client running on the endpoint.
-  - **pluginVersion** is the version of the plugin that is integrated into the remote desktop client.
-
-### Diagnostics-logs.txt could be on weblogs\user(..)
-
-For further investigating VDI connection-related issues, using keyword **vdiBRidgeEventsHandler** provides the logs from the vdiBridge connection and disconnection event handlings, as shown (onConnected event handling) in the following example of a successful connection with the new optimization stack:
-
-`7432 2024-03-01T17:51:22.032Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - onConnected: end, currentStack=remote
-7435 2024-03-01T17:51:22.032Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - new calling stack type set: currentStack=remote
-7436 2024-03-01T17:51:22.032Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - deviceManagerService reloaded
-7445 2024-03-01T17:51:22.031Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - calling stack reinit complete with nextStack=remote
-7464 2024-03-01T17:51:21.785Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - starting calling stack reinit with nextStack=remote
-7465 2024-03-01T17:51:21.785Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - SlimCore replacement complete, remote is now available
-7467 2024-03-01T17:51:21.783Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - setVDIOptimizationModeOverride: from SlimCore to SlimCore
-7468 2024-03-01T17:51:21.782Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - onConnected: isVersionMismatch=false, forceVersion=undefined, bridgeVersion=2024.5.1.11
-7469 2024-03-01T17:51:21.782Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - cached local SlimCore for future (fallback), currentStack=local
-7470 2024-03-01T17:51:21.782Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - onConnected: start, vendorType=1, remoteSlimcoreVersion=2024.05.01.11, platform=win-x86, loadErrc=1, deployErrc=24002, nodeId=ffffffffbd7d5e77
-7471 2024-03-01T17:51:21.782Z Inf    vdiBridgeEventsHandler: VDI Mode: slimcore - enqueueBridgeCallback: adding onConnected to queue, 0 bridge callbacks in queue, isBridgeCallbacksQueueProcessing=false`
-
-### Connection error
-
-If there's a connection error, the error code can be found from the log line containing "loadErrc" and "deployErrc". A deploy error (also known as install_error) is an error that happens when the plugin was trying to download the SlimCore MSIX package from Microsoft's CDN and stage or provision it to the endpoint using the App Readiness Service for AppX. A load error is an error that happens when the plugin tried to start MsTeamsVdi.exe and establish a Remote Procedure Call (RPC) to it.
-
-The code logged here needs to be mapped using this table:
-
-|loadErrc   |deployErrc |Definition                         |Notes |
-|-----------|-----------|-----------------------------------|------|
-|0          |0          |OK                                 |Special code for 'ConnectedNoPlugin' Telemetry Messages. |
-|5          |43         |ERROR_ACCESS_DENIED                |MsTeamsVdi.exe process failed at startup. Could be caused by BlockNonAdminUserInstall being enabled. Or the endpoint could be busy registering multiple MSIX packages after a user logon and it didn't finish registering SlimCoreVdi. |
-|404        |3235       |HTTP_STATUS_NOT_FOUND              |Publishing issue: SlimCore MSIX package isn't found on CDN. |
-|1260       |10083      |ERROR_ACCESS_DISABLED_BY_POLICY    |This error usually means that Windows Package Manager can't install the SlimCore MSIX package. Event Viewer can show the hex error code 0x800704EC. AppLocker Policies can cause this error code. You can either disable AppLocker, or add an exception for SlimCoreVdi packages in Local Security Policy -> Application Control Policies -> AppLocker. Check [Step 3](#step-3-slimcore-msix-staging-and-registration-on-the-endpoint) under "Optimizing with new VDI solution for Teams". |
-|1460       |11683      |ERROR_TIMEOUT                      |MsTeamsVdi.exe process failed at startup (60-second timeout). |
-|1722       |           |RPC_S_SERVER_UNAVAILABLE           |'The RPC server is unavailable' MsTeamsVdi.exe related error. |
-|2000       |16002      |No Plugin                          |Endpoint doesn't have the MsTeamsPlugin, or if it has it, it didn't load (check with Process Explorer). |
-|2001       |           |Virtual Channel Not Available      |Error on Citrix VDA WFAPI. |
-|2003       |16026      |Custom Virtual Channels (MSTEAMS, MSTEAM1 and MSTEAM2) are blocked due to a Citrix Studio policy |Review the [Citrix virtual channel allow list](#citrix-virtual-channel-allow-list) section of this article. |
-|2005       |16043      |Teams is running as a Published App (Citrix) or RemoteApp (AVD/Windows 365) |This mode is currently not supported - Teams won't load SlimCore in this case, and users will always be optimized with WebRTC. |
-|3000       |24002      |SlimCore Deployment not needed     |This code isn't really an error. It's a good indicator that the user is on the new optimization architecture with SlimCore. |
-|3001       |24010      |SlimCore already loaded            |This code isn't really an error. It's a good indicator that the user is on the new optimization architecture with SlimCore. |
-|3004       |24035      |Plugin irresponsive                |Try restarting RDP or ICA session. |
-|3005       |24043      |Plugin timeout while downloading   |Failure to download the MSIX within 2 minutes. |
-|3007       |24058      |Load timeout                       |SlimCore download or installation timed out (slow internet or App Readiness Service is busy). |
-|4000       |           |ERROR_WINS_INTERNAL                |WINS encountered an error while processing the command. |
-|15615      |1951       |ERROR_INSTALL_POLICY_FAILURE       |SlimCore MSIX related error. To install this app, you need either a Windows developer license, or a sideloading-enabled system. AllowAllTrustedApps regkey might be set to 0? |
-|15616      |           |ERROR_PACKAGE_UPDATING             |SlimCore MSIX related error 'The application cannot be started because it is currently updating'. |
-|15700      |           |APPMODEL_ERROR_NO_PACKAGE          |The process has no package identity. There's no alias for MsTeamsVdi in %LOCALAPPDATA%\Microsoft\WindowsApps. [Feedback Hub](https://support.microsoft.com/windows/send-feedback-to-microsoft-with-the-feedback-hub-app-f59187f8-8739-22d6-ba93-f66612949332) logs are needed while reproducing the error (make sure you select **Developer Platform** as the category and **App deployment** as the subcategory) |
-|16389      |           |E_FAIL reported by Package Manager |Usually the same as Load error code 5 (ERROR_ACCESS_DENIED). Most likely caused by the BlockNonAdminUserInstall policy when the user isn't an Admin. Check [this link](/windows/client-management/mdm/policy-csp-applicationmanagement#blocknonadminuserinstall) for more details. |
-
-## Using Event Viewer on the VM for troubleshooting
-
-Every connect/disconnect event gets logged in the Event Viewer running on the Virtual Machine. The Event Viewer can also display client-side related errors. Filter by Source (Microsoft Teams VDI) and Event ID (0). Error codes can be found in the [New Teams logs for VDI](#new-teams-logs-for-vdi) section.
-
-> [!NOTE]
-> In order to be able to filter by Source, you need to run this command from an elevated powershell window:
->
-> PS C:\Windows\system32> New-EventLog -LogName Application -Source "Microsoft Teams VDI"
-
-## Troubleshooting Plugin deployment errors
-
-Diagnostic information can be found in the detailed event logs on the user's device. After install, MsTeamsPluginCitrix.dll is written into the CWA folder. Only for the Citrix platform, the following keys on the Endpoint (not VM) are created:
-
-|Key |Key type |Key name |Key value |
-|---------|---------|---------|---------|
-|HKLM\SOFTWARE\WOW6432Node\Citrix\ICA Client\Engine\Configuration\Advanced\Modules\ICA 3.0 |String |VirtualDriverEx |MicrosoftTeamsVDI |
-|HKLM\SOFTWARE\WOW6432Node\Citrix\ICAClient\Engine\Configuration\Advanced\Modules\MicrosoftTeamsVDI |String |DriverNameWin32 |MsTeamsPluginCitrix.dll |
-
-To debug installations, you can enable installer logging, but then you must use msiexec manually, and pass correct flags. For example, if the plugin isn't currently installed, it can be installed with logs like this: msiexec.exe /i MsTeamsPluginCitrix.msi /l*vx installer.log.txt.
-
-## Troubleshooting SlimCoreVdi MSIX deployment errors
-
-Make sure you review the [SlimCore MSIX staging and registration on the endpoint](#step-3-slimcore-msix-staging-and-registration-on-the-endpoint) section, as certain GPOs can prevent MSIX installations.
-
-Diagnostic information can be found in the detailed event logs on the user's device.
-
-1. Go the Event Viewer (Local) > Applications and Services Logs > Microsoft > Windows.
-1. Check for available logs under these categories:
-   - AppxPackagingOM > Microsoft-Windows-AppxPackaging/Operational
-   - AppXDeployment-Server > Microsoft-Windows-AppXDeploymentServer/Operational
-
-1. Review the logs under AppXDeployment-Server.
-
-### Error 15615
-
-Error 15615 usually means that the Windows Package Manager can't install the MSIX package with SlimCoreVdi.
-
-- Make sure the digital signature of that MSIX is trusted by the Endpoint (Go to MSIX > Properties > Digital signatures > Details). It's a valid store-friendly Microsoft signature, but customers may have something special configured.
-- Try enabling the [AllowAllTrustedApps policy](/windows/client-management/mdm/policy-csp-applicationmanagement).
-- Try to allow sideloading apps from trusted nonstore sources.
-  - On Windows 10, this setting is enabled by default, so modify it here in case it's disabled: Settings > Update and Security > For developers > Sideload apps.
-  - On Windows 11, this setting is enabled by default: Settings > Apps > Advanced app settings > Choose where to get apps > Anywhere.
-
-## Log collection
-
-Logging can be found in the following locations:
-
-- On the client:
-  - `AppData\Local\Microsoft\TeamsVDI\<vdi_vendor>-default-<cloudname>\skylib`
-  - `AppData\Local\Microsoft\TeamsVDI\<vdi_vendor>-default-<cloudname>\media-stack`
-- On the Server:
-  - `AppData\Local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Logs\skylib`

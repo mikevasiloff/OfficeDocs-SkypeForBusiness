@@ -9,11 +9,12 @@ audience: admin
 f1.keywords:
 - NOCSH
 - ms.teamsadmincenter.assignments.overview
-ms.date: 03/01/2019
+ms.date: 04/15/2025
 ms.service: msteams
 ms.subservice: teams-education
 ms.collection: 
   - M365-collaboration
+  - essentials-navigation
 search.appverid: MET150
 appliesto: 
   - Microsoft Teams

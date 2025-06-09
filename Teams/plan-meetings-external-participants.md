@@ -15,6 +15,7 @@ f1.keywords:
 ms.custom: 
   - ms.teamsadmincenter.orgwidesettings.guestaccess.overview
   - chat-teams-channels-revamp
+  - guest-access-external-collab
 ms.collection: 
   - Teams_ITAdmin_GuestAccess
   - M365-collaboration

@@ -122,9 +122,11 @@ Perform the following steps:
 
    #### Per Day vs Per Call 
 
-   - **Per Call** reporting retrieves the individual call records for each Auto attendant, Call queue, and Agent the user is authorized for and makes them available in the Power BI client. Per Call reporting also allows call records to be displayed in the local time zone selected by the user. For some customers, especially those using the CQD access role to control access, Per Call reporting might result in hitting the 90,000 default or 200,000 per query record limit. In this case, the Per Day reporting option should be selected.
+   - **Per Call** reporting retrieves the individual call records for each Auto attendant, Call queue, and Agent the user is authorized for and makes them available in the Power BI client. Per Call reporting also allows call records to be displayed in the local time zone selected by the user. For some customers, especially those using the CQD access role to control access, Per Call reporting might result in hitting the 90,000 default or 400,000 per query record limit. In this case, the Per Day reporting option should be selected.
 
-   - **Per Day** reporting retrieves one daily summary record for each Auto attendant, Call queue, and Agent. This reporting results in fewer records being returned to the client, reducing the possibility of hitting the 90,000 default or 200,000 per query record limit. Per Day reporting is based on a UTC-00:00 day (00:00:00-23:59:59 UTC) only and any UTC offset supplied by the user is ignored.
+   - **Per Day** reporting retrieves one daily summary record for each Auto attendant, Call queue, and Agent. This reporting results in fewer records being returned to the client, reducing the possibility of hitting the 90,000 default or 400,000 per query record limit. Per Day reporting is based on a UTC-00:00 day (00:00:00-23:59:59 UTC) only and any UTC offset supplied by the user is ignored.
+
+**Steps 5-8 are only performed once, the first time the template is loaded.**
 
 5. Configure the data sources authentication.
    - Select **File**, then **Options and settings**, and then **Data source settings**.
@@ -143,6 +145,12 @@ Perform the following steps:
 8. Select **Save**, then **OK**, and then **Close**.
 
 9. Select **Refresh** in the ribbon bar and the data refreshes.
+
+Depending on your Power BI Desktop settings, the following pop-up may also appear:
+
+:::image type="content" source="media/aa-cq-historical-report-06.png" alt-text="Screenshot showing data privacy screen":::
+
+Enable the *Ignore Privacy Levels* checkbox. All the data is coming from the historical report database and there is no undesirable data transfer taking place.
 
 ## Data latency for Auto attendant and Call queue analytics
 
@@ -285,7 +293,7 @@ You have to refresh the report to see any new data.
 | German (Germany)                     | Spanish (Spain, International Sort) |
 | Greek (Greece)                       | Swedish (Sweden)                    |
 | Hebrew (Israel)                      | Thai (Thailand)                     |
-| Hindi (India)                        | Turkish (Turkey)                    |
+| Hindi (India)                        | Turkish (Türkiye)                    |
 | Hungarian (Hungary)                  | Ukrainian (Ukraine)                 |
 | Icelandic (Iceland)                  | Vietnamese (Vietnam)                |
 | Indonesian (Indonesia)               | Welsh (United Kingdom)              |
@@ -492,9 +500,9 @@ If shortening the date range isn't sufficient, it's possible to increase the num
 1. Select **Yes** when prompted to apply the changes now. The report should automatically refresh.
 1. Save your report.
 
-**The maximum number of rows that can be returned is 200,000.**
+**The maximum number of rows that can be returned is 400,000.**
 
-Setting the value to a number higher than 200,000 has no effect as this value is a hard-coded limit on the server.
+Setting the value to a number higher than 400,000 has no effect as this value is a hard-coded limit on the server.
 
 Increasing the limit results in longer execution and response times.
 

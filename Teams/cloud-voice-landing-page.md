@@ -1,176 +1,156 @@
 ---
-title: Plan your voice solution in Microsoft Teams
+title: "Teams calling and cloud voice overview"
+ms.reviewer: roykuntz
+ms.date: 04/25/2025
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.date: 12/17/2024
-ms.topic: solution-overview
+ms.topic: get-started
+ms.tgt.pltfrm: cloud
 ms.service: msteams
-audience: admin
+ms.subservice: teams-calling
+search.appverid: MET150
 ms.collection: 
-  - M365-collaboration
   - M365-voice
   - m365initiative-voice
-  - m365solution-voice
-  - m365solution-scenario
   - highpri
   - Tier1
-ms.reviewer: scottfrancis
+audience: Admin
+appliesto: 
+  - Microsoft Teams
+ms.localizationpriority: medium
 f1.keywords:
 - CSH
 ms.custom: 
-  - ms.teamsadmincenter.dashboararticleautod.helparticle.cloudvoice
-  - seo-marvel-apr2020
-  - seo-marvel-may2020
-search.appverid: MET150
-description: Learn more about the Microsoft Teams cloud voice features and the deployment decisions that you'll make for your organization.
-appliesto: 
-  - Microsoft Teams
+  - Phone System
+  - intro-overview
+description: "Learn about Teams calling with Microsoft cloud voice services in Microsoft 365."
 ---
 
-# Plan your Teams voice solution
+# Teams calling overview
 
-This article helps you decide which Microsoft voice solution is right for your organization. After you've decided, the article provides a roadmap to content that will enable you to implement your chosen solution.
+This article is for IT administrators and IT professionals who are researching and planning the calling workloads in Microsoft Teams.
 
-You might want the simplest solution&mdash;Microsoft Teams Phone with Calling Plan. This option is Microsoft's all-in-the-cloud solution that provides Private Branch Exchange (PBX) functionality and calls to the Public Switched Telephone Network (PSTN), as shown in the following diagram. With this solution, Microsoft is your PSTN carrier.
+## Native Teams calling
 
-![Diagram 1 shows Teams Phone with Calling Plan.](media/voice-solutions-simple.png)
+Microsoft Teams is a Microsoft 365 application for communication and collaboration. It includes support for native 1:1 calling *and* group calling, from one Teams client to any other internal or external Teams clients.
 
-If you answer yes to the following, then Teams Phone with Calling Plan is the right solution for you:
+Native calls between Teams clients are processed by Microsoft 365 Teams cloud services and include unlimited calling.
 
-- Calling Plan is available in your region. To confirm Calling Plan availability, see [Confirm Microsoft Calling Plan availability](calling-plan-overview.md).
-- You don't need to retain your current PSTN carrier.
-- You want to use Microsoft-managed access to the PSTN.
+The Calls app in Teams allows users to originate calls to other Teams users, view call history, and access voicemail that is automatically set up for all Teams users.
 
-If you're a small to medium business (300 or fewer people), Microsoft now bundles Teams Phone with a Domestic Calling Plan. 
+Users can use a wide range of features to call each other. For example, they can select a name in their address book and place Teams calls to that person. They can transfer calls to other users, and set up distinctive rings. They make and receive calls using Teams on their mobile devices, on a laptop or PC with a headset, or one of many certified, third-party phone devices.
 
-However, your situation might be more complex. For example, you might have offices in locations where Calling Plan isn't available. Or you might need to accommodate existing, on-premises telephony infrastructure. Microsoft can solve for any PSTN or on-premises integration, with a variety of integration options.
+With the addition of a Public Switched Telephone Network (PSTN) connection to your tenant and Teams Phone licensing for your users, Teams calling also supports making and receiving external telephone calls and a rich set of enterprise-grade, telephone system features.
 
-- Teams Phone with Calling Plan
-- Teams Phone with your own PSTN carrier with Operator Connect
-- Teams Phone with your own PSTN mobile carrier with Teams Phone Mobile
-- Teams Phone  with your own PSTN carrier with Direct Routing
+For more insight on Teams calling features, see [What is Teams Phone](what-is-phone-system-in-office-365.md) and [Teams calling features](here-s-what-you-get-with-phone-system.md).
 
-You aren't limited to one integration. Just because you have a portion of users who are located in a country or region where Microsoft doesn't have a Calling Plan option doesn't mean all of your users have to be served by the one solution for those remote users.
+> [!NOTE]
+> Calling is controlled at the tenant level, per calling policy with the setting [Make private calls](settings-policies-reference.md).
+> If the **Make private calls setting** is turned off in the calling policy, users with that policy can't see the **Calls** app in their Teams client, can't escalate Chat conversations to audio calls, and can't receive incoming calls.
+>
+> With **Make private calls setting** turned on, users can call from the **Calls** app and can escalate Chat conversations to audio calls. By default, Microsoft Teams native calling is turned on via policy for all users.
 
-You can have a combination solution that uses Teams Phone with Calling Plan, Teams Phone with Operator Connect, Teams Phone with Teams Phone Mobile, and/or Teams Phone with Direct Routing.
+> [!NOTE]
+> All users licensed for Teams can make calls to other Teams users. To support users making Teams calls with other Teams users who are *external* to your organization, see [Collaborate with people outside your organization](communicate-with-users-from-other-organizations.md).
 
-For a visual summary of all the voice solution options, see the voice solutions poster.
+## Administering Teams calling
 
-[![Microsoft Voice Solutions poster.](media/microsoft-voice-solutions-thumb.png)](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) <br> [PDF](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) <br>[Visio](https://download.microsoft.com/download/7/5/c/75c13012-e20c-48bd-a6dd-ea49d1a3420d/microsoft-voice-solutions.vsdx) 
-<br>
+When planning to support Teams calling in your enterprise, consider the following topics to help you with your administrative duties:
 
-If you're interested in PSTN conferencing for meetings, you'll want to read about Microsoft's Audio Conferencing service and licensing requirements. Note that Audio Conferencing does not require a Teams Phone license. For more information, see [Audio Conferencing](audio-conferencing-in-office-365.md).
+### Administration methods
 
-## What do you need to read?
+Delivery of the Teams calling workload is accomplished through the Microsoft 365 cloud service, and administrators manage the delivery of Teams workloads and features through remote management of that cloud service.
 
-### Required for all
+#### Access
 
-Some of the sections in this article pertain to all organizations. For example, everyone should read about Teams Phone and understand the options for connecting to the Public Switched Telephone Network (PSTN).
+You can access your tenant and administer Teams Phone using two methods:
 
-| Required for all | Description |
-| :------------|:-------|
-| [**Teams Phone**](#teams-phone) | Microsoft's technology for enabling call control and Private Branch Exchange (PBX) capabilities in the Microsoft 365 cloud with Microsoft Teams. |
-| [**Public Switched Telephone Network (PSTN) connectivity options**](#public-switched-telephone-network-connectivity-options) | Choose Microsoft as your telephony carrier or connect your own telephony carrier to Microsoft Teams by using Operator Connect or Direct Routing. Combined with Teams Phone, PSTN connectivity options enable your users to make phone calls all over the world.|
+- **Teams admin center**
+  - For Commercial and Government Community Cloud (GCC) tenants, access Teams admin center via [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com)
+  - For Government Community Cloud High (GCCH) tenants, access Teams admin center via [https://admin.gov.teams.microsoft.us](https://admin.gov.teams.microsoft.us/)
+  
+- **PowerShell**
+  - To learn more about connecting to Teams and administering users, policies, and more with Teams PowerShell, see [Teams PowerShell overview](teams-powershell-overview.md).
 
-### Depending on your requirements
+- **Microsoft Graph Explorer**
+  - To learn more about working with data in Microsoft Graph using Graph Explorer, see [Use Graph Explorer](/graph/graph-explorer/graph-explorer-overview).
 
-Next, consider which of these other configurations you might need:
+#### Teams admin center overview
 
-![Diagram 2 shows other voice components, such as Phone numbers from Microsoft, Dial plans and call routing, and so on.](media/voice-consider-additional-components.png)
+To learn more about general guidance for administering the Teams admin center, see the following article.
 
-Some of the sections in this and related articles are pertinent depending on your existing deployment and requirements, for example:
+> [!div class="nextstepaction"]
+> [Teams admin center overview](manage-teams-in-modern-portal.md)
 
-- **Location-Based Routing** is only required for Direct Routing customers in geographic locations that don't allow toll bypass.
-- **Phone number management** is only required for Microsoft Calling Plan customers.
+#### Access permissions
 
-| Depending on your requirements | Description |
-| :------------|:-------|
-| [**Phone number management**](pstn-connectivity.md#phone-number-management) | How to get and manage phone numbers differs depending on your PSTN connectivity option. Read this section if you need to obtain phone numbers, transfer existing numbers, obtain service numbers, and so on. |
-| [**Call routing and dial plans**](pstn-connectivity.md#call-routing-and-dial-plans) | How to configure and manage dial plans that translate dialed phone numbers into an alternate format (typically E.164 format) for call authorization and call routing. Read this section if you need to understand what dial plans are and whether you need to specify dial plans for your organization.|
-| [**Emergency calling**](pstn-connectivity.md#emergency-calling) | How to manage and configure emergency calling differs depending on your PSTN connectivity option. Read this section if you need to understand how to manage emergency calling for your organization. |
-| [**Location-Based Routing for Direct Routing**](pstn-connectivity.md#location-based-routing-for-direct-routing) |How to use Location-Based Routing (LBR) to restrict toll bypass for Microsoft Teams users based on their geographic location. Read this section if your organization is using Direct Routing at a location that doesn't allow toll bypass. |
-| [**Network topology for cloud voice features**](pstn-connectivity.md#network-topology-for-voice-features) | If your organization is deploying Location-Based Routing (LBR) for Direct Routing or dynamic emergency calling, you must configure network settings for these features in Microsoft Teams. Read this section if you're implementing LBR for Direct Routing, or if you're implementing dynamic emergency calling with Calling Plan or Direct Routing. |
-| [**Upgrade your existing Skype for Business voice solution**](#upgrade-your-existing-skype-for-business-voice-solution-to-teams) | What you need to think about when upgrading your voice solution to Teams. Read this section if you're upgrading from an existing Skype for Business deployment to Teams. |
+To administer Teams features, you must use a privileged role assigned to the account that's used to access your Teams tenant. To learn more about permissions that allow you to administer your tenant (with Teams admin center and with PowerShell) and about Microsoft's RBAC (Role Based Access Control) for Teams, see the following article.
 
-## Teams Phone
+> [!div class="nextstepaction"]
+> [Teams administrator roles](using-admin-roles.md)
 
-Teams Phone is Microsoft's technology for enabling call control and Private Branch Exchange (PBX) capabilities in the Microsoft 365 cloud with Microsoft Teams.
+### Policies
 
-Teams Phone works with Teams clients and certified devices. Teams Phone allows you to replace your existing PBX system with a set of features directly delivered from Microsoft 365. 
+Microsoft Teams Phone supports a wide array of features that you control by policy. For example, traditional calling features, like call hold music, call park, call recording, and more, are all administered through policy. Policies can be applied at a global, group, and user level.
 
-Calls between users in your organization--regardless of geographical area--are handled internally within Teams Phone. These internal calls never go to the Public Switched Telephone Network (PSTN), so your company avoids long-distance charges.
+#### Teams policy management
 
-This article introduces the following Teams Phone key features and functionality, and the deployment decisions you'll need to consider:
+To learn about general Teams policy administration concepts, see the following article.
 
-- [Auto attendants and Call queues](#auto-attendants-and-call-queues)
-- [Cloud Voicemail](#cloud-voicemail)
-- [Calling identity](#calling-identity)
+> [!div class="nextstepaction"]
+> [Manage Teams with policies](manage-teams-with-policies.md)
 
-  ![Diagram 3 shows Teams Phone contains Auto attendants and call queries, Cloud voicemail, and Calling identity.](media/phone-system-contains.png)
+#### Voice specific policies
 
-For information about all Teams Phone features, and how to set up Teams Phone, see the following articles:
+For more information about voice settings that you can manage with Teams policy, see the following article.
 
-- [Teams Phone features](here-s-what-you-get-with-phone-system.md)
-- [Set up Teams Phone in your organization](setting-up-your-phone-system.md)<br>
-  Describes how to buy and assign Teams Phone licenses, manage phone numbers, and set up communication credits for toll-free numbers. 
+> [!div class="nextstepaction"]
+> [Manage voice policies](teams-calling-policy.md)
 
-For information about managing supported devices, see [Manage your devices in Microsoft Teams](devices/device-management.md) and [Teams Marketplace](https://www.microsoft.com/microsoft-365/microsoft-teams/across-devices?ms.url=officecomteamsdevices&rtc=1).
+### Network
 
-### Auto attendants and Call queues
+For network best practices and to ensure it supports the optimal quality of Teams calls, see the following article.
 
-Auto attendants allow you to set up menu options to route calls based on caller input. Call queues are waiting areas for callers. Used together, Auto attendants and Call queues can easily route callers to the appropriate person or department in your organization.
+> [!div class="nextstepaction"]
+> [Prepare your organization's network for Microsoft Teams](prepare-network.md)
 
-For information about Auto attendants and Call queues, see the following articles:
+### Reporting users' call activity
 
-- [Plan for Teams Auto attendants and Call queues](plan-auto-attendant-call-queue.md)
-- [Set up an Auto attendant](create-a-phone-system-auto-attendant.md)
-- [Create a Call queue](create-a-phone-system-call-queue.md) 
-- [Contoso case study: Auto attendants and Call queues](voice-case-study-call-queues.md)<br>
-  Describes how a fictional multi-national corporation, Contoso, implemented Auto attendants and Call queues for their voice solution.
+Native Teams *call history* for end-users, like other end-user activity, isn't itemized in usage reports for privacy reasons. However, with Microsoft Purview, Teams call metadata can be logged in eDiscovery investigations. To learn more about content reported in compliance investigations, see [Conduct an eDiscovery investigation of content in Microsoft Teams](/microsoft-365/compliance/ediscovery-teams-investigation).
 
-### Cloud Voicemail
+For more generic insights, you can report on the overall volume of *call activity* in the following article.
 
-Cloud Voicemail, powered by Azure Voicemail services, supports voicemail deposits to Exchange mailboxes only. It doesn't support third-party email systems. 
+> [!div class="nextstepaction"]
+> [Teams usage reporting](./teams-analytics-and-reports/teams-reporting-reference.md)
 
-Cloud Voicemail includes voicemail transcription, which is enabled for all users in your organization by default. Your business needs might require that you disable voicemail transcription for specific users or everyone throughout the organization.
+### Reporting call quality performance
 
-Cloud Voicemail is automatically set up and provisioned for Teams users.  
+Microsoft Teams includes a set of tools that can be used to analyze call quality in real-time for single calls in progress or analyze performance trends of all calls across your organization. For more information on these tools to monitor call performance and quality, see the following article.
 
-For more information about Cloud Voicemail and its configuration, see the following articles:
+> [!div class="nextstepaction"]
+> [Monitor call quality](monitor-call-quality-qos.md#monitor-and-troubleshoot-call-quality)
 
-- [Set up Cloud Voicemail](set-up-phone-system-voicemail.md)
-- [Manage voicemail policies](manage-voicemail-policies.md)
-- [Manage voicemail settings](manage-voicemail-settings.md)
+### Teams admin training
 
-### Calling identity
+A wide range of resources are available for Teams administrators to learn more about Teams foundational and advanced topics. To view training resources for Teams admins, see the following article.
 
-By default, all outbound calls use the assigned phone number as calling identity (caller ID). The recipient of the call can quickly identify the caller and decide whether to accept or reject the call. For information about configuring caller ID or to change or block the caller ID, see [Manage caller ID policies for users](caller-id-policies.md). 
+> [!div class="nextstepaction"]
+> [Teams admin training](itadmin-readiness.md)
 
-## Public Switched Telephone Network connectivity options
+## Teams Phone and enterprise telecommunications
 
-Teams Phone provides complete PBX capabilities for your organization. However, to enable users to make calls outside your organization, you need to connect Teams Phone to the Public Switched Telephone Network (PSTN). To connect Teams Phone to the PSTN, you can choose one of the following options:
+In addition to a rich set of native calling capabilities, Teams can also serve as your organization's telecommunications platform, allowing your end users to make and receive domestic and international telephone calls.
 
-- [**Teams Phone with Calling Plan**](pstn-connectivity.md#teams-phone-with-calling-plan). An all-in-the-cloud solution with Microsoft as your PSTN carrier.
+To learn more about using Teams as a phone system, see the following article.
 
-- [**Teams Phone with your own PSTN carrier by using Operator Connect**](operator-connect-plan.md). With Operator Connect, if your existing operator participates in the Microsoft Operator Connect program, they can manage the service for bringing PSTN calling to Teams. 
+> [!div class="nextstepaction"]
+> [What is Teams Phone](what-is-phone-system-in-office-365.md)
 
-- [**Teams Phone with your own PSTN mobile carrier by using Teams Phone Mobile**](operator-connect-mobile-plan.md). With Teams Phone Mobile, if your existing operator participates in the Microsoft Teams Phone Mobile program, they can manage the service for using SIM-enabled mobile phone numbers with Teams. 
+## Related articles
 
-- [**Teams Phone with your own PSTN carrier by using Direct Routing**](pstn-connectivity.md#teams-phone-with-direct-routing) to connect your on-premises environment to Teams.
-
-You can choose a combination of options, which enables you to design a solution for a complex environment, or manage a multi-step migration. You'll read more about migration later.
-
-Most Teams Phone features are the same regardless of the PSTN connectivity option you choose. There are some differences in functionality, however, that affect how you configure certain Teams Phone features, such as call routing and emergency calling. For more information about PSTN connectivity options and configuration considerations, see [PSTN connectivity options](pstn-connectivity.md).
-
-## Upgrade your existing Skype for Business voice solution to Teams
-
-For an organization that is upgrading to Teams, the ultimate goal is to move all users to TeamsOnly mode. Using Teams Phone is only supported when the user is in TeamsOnly mode. If you need basic information about upgrading to Teams, start here:
-
-- [Getting started with your Microsoft Teams upgrade](upgrade-start-here.md)
-- [About the upgrade framework](upgrade-framework.md)
-- [Upgrade strategies for IT administrators](upgrade-to-teams-on-prem-implement.md)
-
-For guidance on planning a Teams voice solution as part as your overall plan to upgrade to Teams, see [PSTN considerations for upgrading to Teams from Skype for Business on-premises](upgrade-to-teams-on-prem-pstn-considerations.md).
-
-For more information about how to implement your voice migration, see the [Contoso voice migration case study](voice-case-study-overview.md). The case study describes how a fictional multi-national corporation, Contoso, implemented a Teams voice solution for their organization.
+- [Teams Calling features](here-s-what-you-get-with-phone-system.md)
+- [Set up Teams Phone](setting-up-your-phone-system.md)
+- [Plan your Teams voice solution](cloud-voice-landing-page.md)
+- [PSTN connectivity options](pstn-connectivity.md)
+- [Microsoft Teams add-on licensing](./teams-add-on-licensing/microsoft-teams-add-on-licensing.md)

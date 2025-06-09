@@ -12,6 +12,7 @@ audience: Admin
 ms.custom: 
   - chat-teams-channels-revamp
   - admindeeplinkTEAMS
+  - teams-chat-and-channels
 ms.collection: 
   - M365-collaboration
 f1.keywords: 

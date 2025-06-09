@@ -146,6 +146,7 @@ For more information, see [IP address ranges](/azure/active-directory/conditiona
 
 > [!NOTE]
 > A SIP device must be onboarded to SIP Gateway before it can be enrolled.
+> This method is currently unavailable for GCC environment.
 
 To streamline your tasks, you can enroll SIP devices in the Teams admin center either one at a time or in batches. Here's how:
 

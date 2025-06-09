@@ -20,6 +20,7 @@ description: Use Microsoft Teams predefined templates built in Microsoft Graph t
 ms.custom: 
   - seo-marvel-mar2020
   - chat-teams-channels-revamp
+  - teams-chat-and-channels
 ---
 
 # Team templates built in Microsoft Graph for small and medium businesses

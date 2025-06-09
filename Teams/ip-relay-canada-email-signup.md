@@ -3,11 +3,12 @@ title: "IP Relay in Canada"
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.reviewer: 
-ms.date: 04/04/2018
+ms.reviewer: davlick
+ms.date: 05/07/2025
 ms.topic: article
 ms.assetid: 
 ms.service: msteams
+ms.subservice: teams-calling
 ms.collection: 
   - M365-voice
   - m365initiative-voice
@@ -28,7 +29,9 @@ description: "Learn how to get an IP Relay set up for Canada."
 
 [!INCLUDE [sfbo-retirement](../Skype/Hub/includes/sfbo-retirement.md)]
 
-To get an IP Relay account set up for Canada, complete the information below and send it in email to ptn@microsoft.com.
+Internet Protocol Relay Service, also known as IP Relay, is a service that supports people with hearing or speech disabilities, using an operator as an intermediary.
+
+To get an IP Relay account set up for Canada, open a case with the [Telephone Number Services--service desk](./manage-phone-numbers-for-your-organization/contact-tns-service-desk.md), and provide the following information.
 
 - First & Last Name:
 
@@ -57,6 +60,6 @@ To get an IP Relay account set up for Canada, complete the information below and
 > [!NOTE]
 > The email address above will receive messages left for you if you are not online when someone calls for you via IP Relay.
 
-Once your account is ready (within 24 working hours), we email you back with the User Name and Password.
+Once your account is ready (within 24 working hours), you are provided with the User Name and Password.
 
 Next, see the [IP Relay in Canada - user guide](ip-relay-canada-user-guide.md) to get started.

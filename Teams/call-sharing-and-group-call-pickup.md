@@ -49,6 +49,8 @@ Users must be assigned a Microsoft Teams Phone license to set up and use call sh
 
 Mobile devices are only notified if they're set for "banner" and "ring."
 
+SIP Devices only support the "ring" and "mute" notification modes for group call pickup. For "banner" the notification is suppressed because SIP Gateway doesn't support alerting without ringing.
+
 ## Enable the use of group call pickup
 
 You enable call groups by configuring the **TeamsCallingPolicy AllowCallGroups** setting for a user. You can use Teams admin center or PowerShell. When enabled, the user can configure their call groups in the Teams client.

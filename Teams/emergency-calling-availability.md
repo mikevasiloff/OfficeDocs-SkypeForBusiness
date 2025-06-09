@@ -1,13 +1,14 @@
 ---
-ms.date: 08/22/2019
+ms.date: 05/02/2025
 title: Emergency call routing for Calling Plans
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.reviewer: roykuntz
+ms.reviewer: roykuntz, jastark
 ms.topic: article
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection: 
   - M365-voice
@@ -68,13 +69,8 @@ PSAP - Public Safety Answering Point<br>
 | Sweden | All outbound calls to Emergency Services are dependent on the address of the caller. The address registered to the number is stored in a national EDB. When a call is made to the PSAP with the CLI, the Local PSAP system looks up the address against the number and displays it to the PSAP operator. |
 | Switzerland | All outbound calls to Emergency Services are dependent on the address of the caller. The address registered to the number is stored in a national EDB. When a call is made to the PSAP with the CLI, the Local PSAP system looks up the address against the number and displays it to the PSAP operator.  |
 | United Kingdom | All outbound calls to Emergency Services are first screened to determine the current location of the user before being routed to the local PSAP.  |
-| United States | - If a Teams client is located at a tenant-defined dynamic emergency location, emergency calls from that client are automatically routed to the PSAP serving that geographic location. <br><br> - If a Teams client is not located at a tenant-defined dynamic emergency location, emergency calls from that client are screened by a national call center to determine the location of the caller before transferring the call to the PSAP serving that geographic location. <br><br> - If an emergency caller is unable to update their emergency location to the screening center, the call will be transferred to the PSAP serving the caller's registered address.  |
-
+| United States | - If a Teams client is located at a tenant-defined dynamic emergency location, emergency calls from that client are automatically routed to the PSAP serving that geographic location. <br><br> - If a Teams client is not located at a tenant-defined dynamic emergency location, emergency calls from that client are screened by a national call center to determine the location of the caller before transferring the call to the PSAP serving that geographic location. <br><br> - If an emergency caller is unable to update their emergency location to the screening center, the call will be transferred to the PSAP serving the caller's registered address. <br><br> - To learn more, see [Emergency addresses for remote locations](emergency-calling-dispatchable-location.md). |
 
 ## Related topics
 
 - [Manage emergency calling](what-are-emergency-locations-addresses-and-call-routing.md)
-
-
-
-

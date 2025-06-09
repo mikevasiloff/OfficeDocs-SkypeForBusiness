@@ -77,7 +77,7 @@ Here are the settings that you can configure for calling policies:
 - **[Call forwarding and simultaneous ringing to external phone numbers](user-call-settings.md)**
 - **[Voicemail for inbound calls](set-up-phone-system-voicemail.md)**
 - **[Inbound calls can be routed to call groups](call-sharing-and-group-call-pickup.md)**
-- **[Delegation for inbound and outbound calls](shared-line-appearance.md)**
+- **[Delegation for inbound and outbound calls](user-call-settings.md)**
 - **[Prevent toll bypass and send calls through the PSTN](location-based-routing-enable.md)**
 - **[Music on hold for calls](music-on-hold.md)**
 - **[Busy on busy during calls](inbound-call-routing.md)**

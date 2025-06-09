@@ -10,6 +10,7 @@ audience: admin
 ms.collection: 
 - M365-collaboration
 ms.reviewer: 
+ms.custom: teams-chat-and-channels
 search.appverid: MET150
 f1.keywords:
 - NOCSH

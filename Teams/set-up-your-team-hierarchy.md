@@ -13,7 +13,9 @@ audience: admin
 ms.localizationpriority: medium
 appliesto: 
   - Microsoft Teams
-ms.custom: chat-teams-channels-revamp
+ms.custom: 
+  - chat-teams-channels-revamp
+  - teams-chat-and-channels
 ms.collection: 
 - M365-collaboration
 - m365-frontline

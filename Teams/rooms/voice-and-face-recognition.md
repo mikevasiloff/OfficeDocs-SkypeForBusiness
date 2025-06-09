@@ -50,7 +50,7 @@ By providing detailed information on how Microsoft Teams stores and handles user
 
 If the policy turns on enrollment for users and they're already enrolled, they can update their Voice and Face profile using the Teams Desktop app to make their experience even better.
 
-By default, recognition tab in the Microsoft Teams app is disabled. In the Teams app users go to **Setting** > **Recognition** to enroll their voice first, and then their face. Users must enroll their voice first before they can enroll their face. They can't however, only enroll their face. If a user removes their voice profile, their face profile is removed automatically along with it. However, if users remove their face profile, only their face profile is removed and their voice profile is still there.
+By default, recognition tab in the Microsoft Teams app is enabled. In the Teams app users go to **Setting** > **Recognition** to enroll their voice first, and then their face. Users must enroll their voice first before they can enroll their face. They can't however, only enroll their face. If a user removes their voice profile, their face profile is removed automatically along with it. However, if users remove their face profile, only their face profile is removed and their voice profile is still there.
 
 Users can delete their voice and face profile at any time using the Teams desktop app, even if the policy for enrollment was turned off.
 

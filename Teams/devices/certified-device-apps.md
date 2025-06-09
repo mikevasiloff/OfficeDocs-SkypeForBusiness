@@ -48,7 +48,8 @@ The following are supported versions of Teams admin agent app:
 |**Release date**|**App version**|**Related devices**|
 |:-----|:-----|:-----|
 |October 1, 2024|[1.0.0.202407050618.product](#100202407050618)|All certified Teams device models |
-|February 10, 2025|[1.0.0.202412110504.product](#100202012110504)|All certified Teams device models|
+|February 10, 2025|[1.0.0.202412110504.product](#100202412110504)|All certified Teams device models|
+|May 19, 2025|[1.0.0.202505080136.product](#100202505080136) (Hotfix)|All certified Teams device models (except Logitech devices)|
 
 ### 1.0.0.202407050618
 
@@ -60,7 +61,7 @@ The following are supported versions of Teams admin agent app:
 
 - Bug fixes to improve admin agent overall update reliability.
 
-### 1.0.0.202012110504
+### 1.0.0.202412110504
 
 **This release is currently available for all Teams certified devices and contains following updates:**
 
@@ -71,6 +72,12 @@ The following are supported versions of Teams admin agent app:
 - IP address support for Cisco devices.
 
 - Bug fixes to improve admin agent for better management of android devices.
+
+### 1.0.0.202505080136
+
+**This release (hotfix) is currently available for all Teams certified devices (except Logitech devices) and contains following updates:**
+
+- Bug fixes for critical security issue.
 
 ## [Intune](#tab/Intune)
 

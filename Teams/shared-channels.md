@@ -9,7 +9,9 @@ ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
 audience: Admin
-ms.custom: chat-teams-channels-revamp
+ms.custom: 
+  - chat-teams-channels-revamp
+  - teams-chat-and-channels
 ms.collection: 
 - M365-collaboration
 - m365initiative-securecollab
@@ -195,6 +197,9 @@ All the actions performed for [existing audit events](/microsoft-365/compliance/
 For information about how to prepare your app for shared channels, see [Microsoft Teams Connect shared channels](/microsoftteams/platform/concepts/build-and-test/shared-channels).
 
 The following apps are supported for use in shared channels.
+
+> [!NOTE]
+> Several of these apps are not available in DOD and GCCH environments.
 
 - Activity
 - Adobe Acrobat Sign

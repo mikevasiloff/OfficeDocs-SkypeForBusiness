@@ -1,13 +1,14 @@
 ---
 title: "Migrate to Direct Routing"
-ms.reviewer: 
-ms.date: 06/04/2018
+ms.reviewer: filippse
+ms.date: 05/06/2025
 ms.author: scottfrancis
 author: sfrancis206
 manager: pamgreen
 audience: ITPro
 ms.topic: upgrade-and-migration-article
 ms.service: msteams
+ms.subservice: teams-calling
 ms.localizationpriority: medium
 ms.custom:
   - has-azure-ad-ps-ref

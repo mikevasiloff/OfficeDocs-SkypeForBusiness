@@ -4,10 +4,11 @@ author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: jastark, roykuntz
-ms.date: 06/26/2023
+ms.date: 05/02/2025
 ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 search.appverid: MET150
 ms.collection: 
   - M365-voice
@@ -38,10 +39,12 @@ You can manage emergency locations for your organization in the Microsoft Teams 
 
 ### Using the Microsoft Teams admin center
 
-1. In the left navigation of the Microsoft Teams admin center, click **Locations** > **Emergency addresses**.
+1. In the left navigation of the Microsoft Teams admin center, select **Locations** > **Emergency addresses**.
 2. In the list, click the name of the location for which you want to add a place.
-3. On the **Places** tab, click **Add**.
-4. Enter a place name, and then click **Apply**.
+3. On the **Places** tab, select **Add**.
+4. Enter a place name.
+5. Optionally, enter an Emergency Location Identification Number (ELIN). To learn more, see [Emergency location identification number applications](considerations-direct-routing.md#emergency-location-identification-number-applications).
+6. Select **Apply**.
 
 ### Using PowerShell
 
@@ -67,6 +70,9 @@ See [Set-CsOnlineLisLocation](/powershell/module/teams/set-csonlinelislocation).
 1. In the left navigation of the Microsoft Teams admin center, click **Locations** > **Emergency addresses**.
 2. In the list, click the name of the location for which you want to remove a place.
 3. On the **Places** tab, select the place you want to remove, and then click **Delete**.
+
+> [!NOTE]
+> Places assigned to a user or a phone number can't be deleted.  To delete a place, first assign associated users and phone numbers to a different location, then delete the place.
 
 ### Using PowerShell
 

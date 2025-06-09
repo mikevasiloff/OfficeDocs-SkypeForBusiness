@@ -6,7 +6,7 @@ manager: jtremper
 ms.topic: how-to
 ms.service: msteams
 audience: admin
-ms.custom: 
+ms.custom: guest-access-external-collab
 ms.collection: 
   - Teams_ITAdmin_GuestAccess
   - M365-collaboration
@@ -37,7 +37,7 @@ If a cross-tenant connection between organizations already exists in Microsoft E
 If the connection doesn't exist, you can add it in Teams meeting settings. This adds a new organization in the cross-tenant access settings in Microsoft Entra ID using the [default settings that you've defined for inbound and outbound access and tenant restrictions](/azure/active-directory/external-identities/cross-tenant-access-settings-b2b-collaboration#configure-default-settings). (This enables B2B collaboration with the other organization if the defaults allow it.)
 
 > [!NOTE]
-> VDI clients aren't supported for cross-cloud meetings.
+> VDI clients using the new [SlimCore-based optimization](/microsoftteams/vdi-2#cross-cloud-collaboration) are supported for cross-cloud meetings. WebRTC-based optimization doesn't support cross-cloud meetings.
 
 > [!IMPORTANT]
 > The organization that you're meeting with must also configure these settings for their organization.

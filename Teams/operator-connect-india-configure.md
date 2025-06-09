@@ -3,16 +3,17 @@ title: Configure Operator Connect for India
 author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
-ms.date: 09/01/2023
+ms.date: 05/06/2025
 ms.topic: how-to
-ms.service: msteams 
+ms.service: msteams
+ms.subservice: teams-calling 
 audience: admin
 ms.collection: 
   - M365-voice
   - m365initiative-voice
   - highpri
   - Tier1
-ms.reviewer: scottfrancis
+ms.reviewer: roykuntz
 search.appverid: MET150
 f1.keywords:
 - NOCSH

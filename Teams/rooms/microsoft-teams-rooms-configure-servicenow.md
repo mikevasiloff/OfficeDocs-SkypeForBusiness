@@ -31,8 +31,10 @@ This article describes the prerequisites and steps to configure your ServiceNow 
 
 ### Teams Rooms prerequisites
 
+- Teams Rooms Pro management license
+
 - You must have an assigned Service Administrator role. For more information, see [Role-based access control with Microsoft Teams Rooms Pro Management](rooms-pro-rbac.md).
-- Please note that the ServiceNow API isn't currently available for GCC customers. We're reviewing solutions to enable this in government clouds. For integration with your ITSM workflow, it is recommended that customers consider using email notifications and your ITSM email ingest features.
+- Please note that the ServiceNow API isn't currently available for GCC or GCCH customers. We're reviewing solutions to enable this in government clouds. For integration with your ITSM workflow, it is recommended that customers consider using email notifications and your ITSM email ingest features.
 
 ### ServiceNow prerequisites
 
@@ -54,8 +56,8 @@ How your environment is configured is highly customizable and will depend on you
 | --- | --- | --- |
 | short_description | Incident description | No action needed. The Teams Rooms field is auto-filled. |
 | description | First Message | No action needed. The Teams Rooms field is auto-filled. |
-| assignment_group | Room group | Copy the assignment_group value in your ServiceNow instance and paste it into the ServiceNow value field in the configuration form. If you have more than one assignment_group, select **Add Room Group** for each additional custom value. |
-| severity | Rings | Severity is a custom value in ServiceNow. It's the fourth item in the second column of your ServiceNow instance. Copy the value and paste it into the ServiceNow value field in the configuration form. If you have more than one severity value, select **Add Ring** for each additional custom value. |
+| assignment_group | Room group |Copy the assignment_group value in your ServiceNow instance and paste it into the ServiceNow value field in the configuration form. If you have more than one assignment_group, select **Add Room Group** for each additional custom value. |
+| severity | Rings |Severity is a custom value in ServiceNow. It's the fourth item in the second column of your ServiceNow instance. Copy the value and paste it into the ServiceNow value field in the configuration form. If you have more than one severity value, select **Add Ring** for each additional custom value. |
 | Comments (optional) | Custom value* | To add a comments field to the configuration form, select **Add** at the top of the field  mapping section. Copy the comment value in your ServiceNow instance and paste it to the ServiceNow field in the configuration form. Assign it a Microsoft Teams Room field from the dropdown menu, and copy and paste the ServiceNow value. |
 | state (resolved) | Custom value* | Copy the resolution state from your ServiceNow instance and paste it into the ServiceNow value field in the configuration form. |
 | close_code | Custom value* | In the **Resolution Information** tab of your ServiceNow instance, copy the close code and paste it into the ServiceNow value field into the configuration form. |

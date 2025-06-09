@@ -2,12 +2,14 @@
 title: Data, privacy, and security for intelligent recap in Teams Premium
 ms.author: danbrown
 author: DHB-MSFT
-manager: laurawi
+manager: dansimp
 ms.topic: concept-article
 ms.service: msteams
 ms.reviewer: meajam
 audience: ITPro
-ms.collection: privacy-teams
+ms.collection: 
+- privacy-teams
+- must-keep
 hideEdit: true
 description: Learn about what content is used to provide intelligent recap and how intelligent recap uses AI
 ms.localizationpriority: medium

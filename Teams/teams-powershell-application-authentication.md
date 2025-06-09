@@ -27,12 +27,18 @@ Application-based authentication is supported now in Teams PowerShell Module wit
 All cmdlets are supported now, except for the cmdlets mentioned below. 
 
   - New-Team
-  - [Get|Set|New|Sync]-CsOnlineApplicationInstance
+  - Set-CsOnlineApplicationInstance
+  - [Get|New|Sync]-CsOnlineApplicationInstance _(not supported only in GCC High & DoD environments)_
   - \*PolicyPackage\*
   - \*-CsTeamsShiftsConnection\*
   - \*-CsBatchTeamsDeployment\*
   - [Get|Set]-CsTeamsSettingsCustomApp
   - Get-MultiGeoRegion
+  - Get-AllM365TeamsApps
+  - [Get|Update]-M365TeamsApp
+  - Get-M365UnifiedCustomPendingApps
+  - [Get|Update]-M365UnifiedTenantSettings
+  - Update-M365UnifiedCustomPendingApp
 
 
 ## Examples

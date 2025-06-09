@@ -4,7 +4,7 @@ author: sfrancis206
 ms.author: scottfrancis
 manager: pamgreen
 ms.reviewer: jastark, roykuntz
-ms.date: 05/07/2024
+ms.date: 04/25/2025
 ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
@@ -55,7 +55,7 @@ For more information, see [Manage emergency calling](what-are-emergency-location
 
 3. Enter a name and description for the policy.
 
-4. To allow your end users to configure their emergency address when they are working from a network location outside the corporate network, set the **External location lookup mode** to on .
+4. To allow your end users to configure their emergency address when they are working from a network location outside the corporate network, set the **External location lookup mode** to on.
 
 5. To show a banner to remind your end users to confirm their emergency location, set the **Emergency service disclaimer**. 
 
@@ -69,11 +69,11 @@ For more information, see [Manage emergency calling](what-are-emergency-location
     - **Conferenced in but are muted**: A Teams chat message is sent to the users and groups that you specify. They can listen (but not participate) in the conversation between the caller and the PSAP operator.
     - **Conferenced in and are unmuted**: A Teams chat message is sent to the users and groups that you specify. They can unmute to listen and participate in the conversation between the caller and the PSAP operator.
 
-9.  If you select either of the **Conference in muted** notification modes, in the **Numbers to dial for emergency calls notifications** box, you can enter a PSTN phone number of a user or group to call and join the emergency call. For example, enter the number of your organization's security desk, who will receive a call when an emergency call is made and can then listen in on the call. The PSTN phone can't be unmuted even when the mode is set to **Conferenced in muted but are able to unmute**.
+9.  If you select either of the **Conference in muted** notification modes, in the **Numbers to dial for emergency calls notifications** box, you can enter a PSTN phone number of a user or group to call and join the emergency call. For example, enter the number of your organization's security desk, who will receive a call when an emergency call is made and can then listen in on the call.
 
 10. Select **Apply**.
 
-11. To enter additional **Emergency numbers**, select **Add**. To change or delete an existing configuration, select the row in the table and select **Edit** or **Remove**.  You might want to add additional numbers for testing purposes.  
+11. You might want to add additional numbers for testing purposes to have a different notification experiences. To enter additional **Emergency numbers**, select **Add**. To change or delete an existing configuration, select the row in the table and select **Edit** or **Remove**.  
 
 11. Select **Save**.
 

@@ -2,23 +2,22 @@
 title: User location consent experience in Microsoft Teams
 ms.author: danbrown
 author: DHB-MSFT
-manager: laurawi
+manager: dansimp
 ms.topic: concept-article
 ms.service: msteams
 ms.reviewer: mimaisle
 audience: ITPro
-ms.collection: privacy-teams
+ms.collection: 
+- privacy-teams
+- must-keep
 hideEdit: true
 description: Learn about an updated user location consent experience in Microsoft Teams, including what dialogs and settings are available to Teams users and effect.
 ms.localizationpriority: medium
-ms.date: 03/25/2025
+ms.date: 04/24/2025
 appliesto: Microsoft Teams
 ---
 
 # User location consent experience in Microsoft Teams
-
-> [!NOTE]
-> The information in this article is for a preview program that's not available to everyone. The information in this article is subject to change.
 
 Microsoft is updating its policies regarding the sharing of user location data to enhance privacy, improve data security, and ensure compliance with evolving regulatory standards.
 
@@ -27,7 +26,7 @@ To enhance transparency and user control, Teams is introducing a new location co
 All new and existing Teams for Work users will be prompted to specify if they want to keep location detection on for emergency calls only, or if they consent to allowing location access used for IT admin Insights or troubleshooting (for example, via tooling such as [Call Quality Dashboard](../CQD-what-is-call-quality-dashboard.md) or [Network and Location matching via BSSID](../configure-dynamic-emergency-calling.md)).
 
 > [!IMPORTANT]
-> The new Teams location consent flow doesn't affect managed devices where the operating system location settings are controlled by the device administrator. Whether the location setting is configured as on or off, existing policies will continue to function as expected, and users will not see any of the new location consent prompts.
+> The new Teams location consent flow doesn't affect managed devices where the operating system location settings are controlled by the device administrator. Whether the location setting is configured as on or off, existing policies will continue to function as expected, and users won't see any of the new location consent prompts. This behavior applies to Windows devices only; macOS doesn't allow full MDM control over Location Services toggles due to Apple's privacy model.
 
 The new Teams location consent changes affect the following Teams features:
 
@@ -45,7 +44,6 @@ For all new Teams for Work users on Windows 11 version 24H2 or with macOS Ventur
 For all existing Teams for Work users who previously accepted or denied operating system level consent for location, they won't see this dialog a second time.
 
 The following table shows the outcomes you should be aware of based on a user’s consent choice at the operating system level.
-
 
 |Operating system permission  |License type  |Outcome  |
 |---------|---------|---------|

@@ -2,7 +2,7 @@
 title: Required desktop client diagnostic data for Microsoft Teams
 ms.author: danbrown
 author: DHB-MSFT
-manager: laurawi
+manager: dansimp
 ms.topic: reference
 ms.service: msteams
 audience: admin
@@ -16,6 +16,7 @@ f1.keywords:
 ms.collection: 
   - M365-collaboration
   - privacy-teams
+  - must-keep
 appliesto: 
   - Microsoft Teams
 ---

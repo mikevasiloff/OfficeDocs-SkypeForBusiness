@@ -65,13 +65,16 @@ Android operating system and firmware updates installed through device hardware 
 
 Microsoft applications running on this Android operating system provided by Original Equipment Manufacturers (OEM) partners are bound to Google’s support cycle for the Android OS operating system versions.
 
-The following Android operating systems versions are supported on Teams devices:
+The following Android operating systems versions are supported on Teams devices.
+
+> [!NOTE]
+> The certification end date for Android 10 and Android 11 based devices has been extended from September 3, 2025, to September 3, 2026. This extension is designed to offer you greater flexibility and peace of mind, ensuring you have ample time to manage required updates and transitions. Table below reflects updated current certification and Microsoft support end dates. 
 
 |**Android OS version**|**Android OS Google release date**|**Microsoft Teams Certification end date**|**Microsoft support end date**|
 |:-----|:-----|:-----|:-----|
 |Android 9|August 6, 2018|August 5, 2023|August 5, 2025|
-|Android 10|September 3, 2019|September 3, 2025|September 3, 2027|
-|Android 11|September 8, 2020|September 3, 2025|September 3, 2027|
+|Android 10|September 3, 2019|September 3, 2026|September 3, 2027|
+|Android 11|September 8, 2020|September 3, 2026|September 3, 2027|
 |Android 12|October 4, 2021|August 15, 2027|August 15, 2029|
 |Android 13|August 15, 2022|August 15, 2027|August 15, 2029|
 |Android 14|October 4, 2023|October 4, 2028|October 4, 2030|

@@ -4,9 +4,10 @@ ms.author: scottfrancis
 author: sfrancis206
 manager: pamgreen
 ms.topic: how-to
-ms.reviewer: roykuntz
-ms.date: 08/10/2023
+ms.reviewer: filippse
+ms.date: 05/06/2025
 ms.service: msteams
+ms.subservice: teams-calling
 audience: admin
 search.appverid: MET150
 description: Learn how to enable Location-Based Routing for Direct Routing, including enabling it for users, network sites, gateway configurations, and calling policies.

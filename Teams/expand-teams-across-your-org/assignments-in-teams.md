@@ -47,10 +47,9 @@ The following are settings related to Assignments:
 
 Guardian emails are sent each weekend to parents or guardians. The email contains information about assignments from the previous week and for the upcoming week.
 
-1. There are three ways in which you can populate each student's guardian contact information. You can select any one of the following:
-    1. **School Data Sync**: You can ingest contact information via CSV files or via API sync. To learn how to do this, see [Sync Parents and Guardian Contacts in SDS](/schooldatasync/parents-and-guardians-in-sds). If you want to leverage CSV files for populating the contacts, V2.1 is the preferred CSV file format in SDS, and you will need four CSV files: _orgs.csv_, _users.csv_, _roles.csv_, and _relationships.csv_. For more information, see [SDS V2.1 CSV File Format](/schooldatasync/sds-v2.1-csv-file-format). If you'd like to first get an overview of SDS instead, see [School Data Sync Overview](/schooldatasync/school-data-sync-overview).
-    1. **Parents App**: You can select this method if you’ve not set up SDS. An educator can add or edit parent/guardian contact information through a form-based input for each student and request their school admin for approval. Once the admin approves the request, the contact details are updated. For more information, see [Manually Update Parent Contact Information](../edu-parents-app.md#manually-update-parent-contact-information).
-    1. **Microsoft Graph**: The contact information can be updated in the ‘relatedContact resource type’, and the ‘Update’ API can be used to populate parent/guardian contact information for each student. Learn more [here](/graph/api/resources/relatedcontact?view=graph-rest-beta&preserve-view=true).  
+1. There are two ways in which you can populate each student's guardian contact information. You can select any one of the following:
+    1. **School Data Sync**: You can ingest contact information via CSV files or via API sync. To learn how to do this, see [Sync Parents and Guardian Contacts in SDS](/schooldatasync/parents-and-guardians-in-sds). If you want to use CSV files for populating the contacts, V2.1 is the preferred CSV file format in SDS, and you'll need four CSV files: _orgs.csv_, _users.csv_, _roles.csv_, and _relationships.csv_. For more information, see [SDS V2.1 CSV File Format](/schooldatasync/sds-v2.1-csv-file-format). If you'd like to first get an overview of SDS instead, see [School Data Sync Overview](/schooldatasync/school-data-sync-overview).
+    1. **Microsoft Graph**: The contact information can be updated in the 'relatedContact resource type', and the 'Update' API can be used to populate parent/guardian contact information for each student. Learn more [here](/graph/api/resources/relatedcontact?view=graph-rest-beta&preserve-view=true).  
 
 2. Turn on the Guardian Setting in the Microsoft Teams admin center navigating to [Education > Parent and guardian settings](https://admin.teams.microsoft.com/education/parent-settings), as the setting is turned off by default. This will enable teachers to send out a weekly digest.
 
@@ -66,8 +65,6 @@ To verify that Parents will get the email, the following three items must be tru
 - The emails will contain information about assignments that have a due date from the previous week or in the upcoming week.
 
 Default setting for this feature is - **Off**.
-> [!TIP]
-> If you want to learn about School Connection, which empowers parents and guardians to stay informed about their child’s assignments, grades, and insights in real-time with no extra work required from educators, see  [Set up School Connection](/microsoft-365/education/deploy/school-connection-app). 
 
 <a name="bkmakecode"> </a>
 
@@ -114,7 +111,7 @@ Select **Integrations** from the side menu, then select **Add Integration** and 
 ![Screenshot showing adding a new integration.](./educationImages/Assignments_mopo_turnitin2.png)
 
 The **TurnitinApiKey** will be given to you after you follow the prompts.
-Copy the API key and paste it into the Microsoft Teams admin center.  This is the only time you can view the key.
+Copy the API key and paste it into the Microsoft Teams admin center. This is the only time you can view the key.
 
 ![Screenshot showing copying the API key.](./educationImages/Assignments_mopo_turnitin3.png)
 
@@ -122,7 +119,7 @@ Upon clicking the **Save** button in the admin center for this setting, allow a 
 
 ## Assignments data
 
-Assignments stores information that is generated both by teachers and students. All the data is co-shared between teacher and the specific student for which the information is intended in class. There are two stores of this data, SharePoint and outside of SharePoint.
+Assignments stores information that is generated both by teachers and students. All the data is coshared between teacher and the specific student for which the information is intended in class. There are two stores of this data, SharePoint and outside of SharePoint.
 
 >[!NOTE]
 >The same rules also apply to first-party integrations such as Reading Progress.
@@ -165,7 +162,7 @@ The data about the student submissions will be exported.
 
 Bulk Export assignment data works the same way for a student, but all submissions that the teacher has access to will be exported.
 
-### Bulk Delete assignment data outside of SharePoint document libraries
+### Delete assignment data outside of SharePoint document libraries in bulk
 
 #### For a student
 
@@ -183,7 +180,7 @@ For more information, see [Configure assignments for Teams](/microsoft-365/educa
 
 You can also use Teams policies to remove Assignments and Grades for a specific user or for your entire tenant.
 
-To remove Assignments and Grades for an individual user, go to **Teams Admin Center** and navigate to **Teams apps > Permission policies** to create a new app permission policy definition.  When creating the new policy definition, set the **Microsoft apps** policy to _Block specific apps and allow all others_ and add **Assignments** and **Grades** to the list of blocked applications. Once your new policy definition is saved, assign it to the appropriate users.
+To remove Assignments and Grades for an individual user, go to **Teams Admin Center** and navigate to **Teams apps > Permission policies** to create a new app permission policy definition. When creating the new policy definition, set the **Microsoft apps** policy to _Block specific apps and allow all others_ and add **Assignments** and **Grades** to the list of blocked applications. Once your new policy definition is saved, assign it to the appropriate users.
 
 To remove Assignments and Grades for your entire tenant, go to **Teams Admin Center**, navigate to **Teams apps > Manage apps**, and search for and select **Assignments** and **Grades** from the application list. Change the status setting within the applications' settings page to _Blocked_.
 
@@ -214,7 +211,7 @@ The data pulled may include:
 
 This data isn't automatically sent to Microsoft. Users need to copy and paste the data to a Microsoft support agent regarding a support ticket.
 
-If a user pulls up the diagnostic tool then closes it, no data is sent.
+If a user pulls up the diagnostic tool and closes it, no data is sent.
 
 When the data is sent to a Microsoft support agent, it's handled as Support Data under your organization's Microsoft 365 service agreements.
 

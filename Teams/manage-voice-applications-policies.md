@@ -7,6 +7,7 @@ ms.reviewer: colongma
 ms.topic: how-to
 ms.tgt.pltfrm: cloud
 ms.service: msteams
+ms.subservice: teams-calling
 audience: admin
 ms.date: 1/29/2025
 ms.collection: 
@@ -47,7 +48,7 @@ To manage voice applications policies with PowerShell, use the following PowerSh
   - Delete an existing Teams voice applications policy.
 
 > [!IMPORTANT]
-> The global, org-wide default policy disables all configuration change capabilities for all users. This policy should not be changed.
+> The global, org-wide default policy disables all configuration change capabilities for all users. This policy shouldn't be changed.
 >
 > You must create and assign custom policies to allow authorized users to make configuration changes to auto attendants and call queues.
 >
@@ -63,7 +64,7 @@ Create custom policies that reflect the configuration changes you want to allow 
 1. From here, choose the settings you want  to allow your authorized users to configure.
 
     > [!NOTE]
-    > Choose the policy name and description carefully as these can't be changed later.
+    > Choose the policy name and description carefully as they can't be changed later.
 
 1. Select **Save**.
 
@@ -85,7 +86,7 @@ To individually assign a custom voice application policy to users, you can use t
 
 In addition to creating a TeamsVoiceApplicationsPolicy and assigning it to users, a user must also be assigned as an [Authorized user](aa-cq-authorized-users.md) to at least one auto attendant or call queue.
 
-A user must be an Authorized user to at least one auto attendant or call queue, and must have a voice applications policy assigned to perform the actions described in [Voice applications policy settings](#voice-applications-policy-settings). 
+A user must be an Authorized user to at least one auto attendant or call queue, and must have a voice applications policy assigned to perform the actions described in [Voice applications policy settings](#voice-applications-policy-settings).
 
 To learn more about the different ways that you can assign policies to users, see [Assign policies to your users in Teams](policy-assignment-overview.md).
 
@@ -110,10 +111,10 @@ Voice applications policies control the configuration changes and actions an aut
 
 Notes
 
-1. The authorized user requires a Teams Premium license to access this functionality.
-1. In order to change the holiday schedule, the authorized user must be authorized for all auto attendants that reference the holiday.
+1. Authorized users require a Teams Premium license to access this functionality.
+1. To change the holiday schedule, the authorized user must be authorized for all auto attendants that reference the holiday.
 1. This option isn't currently available for authorized users.
-   
+
 ### Auto attendant - Reporting
 
 |Teams voice applications policy setting  |Description                                                                      |PowerShell parameter           |Teams Premium required<sup>1</sup>|
@@ -132,7 +133,7 @@ Reporting values:
 
 Notes
 
-1. The authorized user requires a Teams Premium license and Queues app to access this functionality.
+1. Authorized users require a Teams Premium license and Queues app to access this functionality.
 
 ### Call queues - Features
 
@@ -155,7 +156,7 @@ Notes
 
 Notes
 
-1. The authorized user requires a Teams Premium license to access this functionality.
+1. Authorized users require a Teams Premium license to access this functionality.
 1. If the Call queue uses a distribution list, security group, Microsoft 365 group, or a Microsoft Teams channel, the owner of these can add or remove agents without a Teams Premium license or Queues app.
 1. This option isn't currently available for authorized users.
 
@@ -163,15 +164,28 @@ Notes
 
 |Teams voice applications policy setting|Description                                                      |PowerShell parameter     |Teams Premium required<sup>1</sup>|
 |--------------------------------|------------------------------------------------------------------------|--------------------------------------|---------------------|
-|Opt agent in/out of queue       |This setting allows authorized users to change an agent's opt-in status.|AllowCallQueueAgentOptChange          |Yes                  | 
-|Agent monitor mode              |This setting isn't currently available for authorized users.           |CallQueueAgentMonitorMode             |Yes<sup>2</sup>      |
-|Agent monitor notification mode |This setting isn't currently available for authorized users.           |CallQueueAgentMonitorNotificationMode |Yes<sup>2</sup>      |
+|Opt agent in/out of queue       |This setting allows authorized users to change an agent's opt-in status.|AllowCallQueueAgentOptChange          |Yes                  |
+|Agent monitor mode              |This setting allows authorized users to monitor an agent's call queue calls.<sup>2</sup>           |CallQueueAgentMonitorMode                    |Yes      |
+|Agent monitor notification mode |This setting controls if agents are notified that they're being monitored.        |CallQueueAgentMonitorNotificationMode        |Yes      |
+
+Agent monitor mode values:
+
+- **Off** (default) - The authorized user can't monitor an agent.
+- **Monitor** - The authorized user can monitor (listen only) an agent and listen to their call queue calls.
+- **Whisper** - The authorized user can monitor and whisper to an agent on a call queue call. Only the agent hears what the authorized user says.
+- **Barge** - The authorized user can monitor, whisper, and barge into an agent's call queue call.
+- **Takeover** - The authorized user can monitor, whisper, barge into, and take over an agent's call queue call.
+
+Agent monitor notification mode values:
+
+- **Off** (default) - The agent isn't notified that they're being monitored.
+- **Agent** - The agent is notified that they're being monitored.
 
 Notes
 
 1. The authorized user requires a Teams Premium license and Queues app to access this functionality.
-1. This option isn't currently available for authorized users.
-   
+1. The call queue assigned an authorized user must have **Conference mode** enabled under *Call answering*. Under *Agent selection*, you must enable **Presence-based** routing.
+
 ### Call queues - Reporting
 
 |Teams voice applications policy setting|Description|PowerShell parameter|Teams Premium required<sup>1</sup>|
